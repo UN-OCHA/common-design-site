@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "baffa5bc93d4e6feb31d32bf13a8f65a",
+    "content-hash": "75a3aaeb8672116bf921080ab8928da6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1959,6 +1959,53 @@
                 "nested package"
             ],
             "time": "2017-07-20T14:32:18+00:00"
+        },
+        {
+            "name": "drupal/admin_denied",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/admin_denied.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/admin_denied-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "598a367e904dd8062500f69033cde2442ff79156"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1506603544",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "cafuego",
+                    "homepage": "https://www.drupal.org/user/218525"
+                }
+            ],
+            "description": "Prevents password based logins by uid 1.",
+            "homepage": "https://www.drupal.org/project/admin_denied",
+            "support": {
+                "source": "https://git.drupalcode.org/project/admin_denied"
+            }
         },
         {
             "name": "drupal/core",
