@@ -1,0 +1,44 @@
+uuid: 58efa27f-3dd9-4410-b083-62b2a81e9166
+langcode: en
+status: true
+dependencies: {  }
+id: admin_user
+label: 'Admin user'
+weight: 2
+is_admin: true
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer account settings'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'export configuration'
+  - 'import configuration'
+  - 'link to any page'
+  - 'revert all revisions'
+  - 'select account cancellation method'
+  - 'synchronize configuration'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'
