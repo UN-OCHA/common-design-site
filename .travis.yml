@@ -18,9 +18,6 @@ env:
      - CODER_VERSION='dev-8.x-2.x'
      - DB=sqlite
 
-install:
-  ssh-agent -k
-
 before_script:
   # Composer.
   - sed -i '1i export PATH="$HOME/.composer/vendor/bin:$PATH"' $HOME/.bashrc
@@ -30,7 +27,10 @@ before_script:
   # Ensure the PHP environment is ready.
   - phpenv rehash
 
-  # Code sniff
+  # Composerify.
+  - composer install
+
+  # Whereever you go, there you are.
   - cd $TRAVIS_BUILD_DIR
 
 script:
