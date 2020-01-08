@@ -30,18 +30,41 @@ before_script:
   # Composerify.
   - composer install
 
+  # Nodify.
+  - npm i
+
+  # Set up database access.
+  - mysql -e "CREATE DATABASE drupal;"
+  - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
+
   # Whereever you go, there you are.
   - cd $TRAVIS_BUILD_DIR
 
 script:
+  # PHP Lint.
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
 
+  # PHPCS.
   - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 
+  # Install Drupal and import config.
+  - cd ${TRAVIS_BUILD_DIR}/html
+  - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
+  - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
+  - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
+
+  # Run a simple drush based web server.
+  - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
+  - ../vendor/bin/drush php-eval 'node_access_rebuild();'
+  - ../vendor/bin/drush cr
+
 after_success:
+  - cd $TRAVIS_BUILD_DIR
+  - npm run pwmetrics -- http://127.0.0.1:8080
+  - killall -9 php
   - echo "The tests completed without errors."
 
 after_failure:
