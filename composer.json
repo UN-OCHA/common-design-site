@@ -1,0 +1,98 @@
+{
+    "name": "un-ocha/common-design-site",
+    "description": "Common Design demo site - Drupal 8",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Lisa Corcoran",
+            "role": "Lead Engineer"
+        },
+        {
+            "name": "Peter Lieverdink",
+            "role": "Ops Engineer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "bin-dir": "vendor/bin/",
+        "sort-packages": true
+    },
+    "extra": {
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-types": ["bower-asset", "npm-asset"],
+        "installer-paths": {
+            "html/core": ["type:drupal-core"],
+            "html/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "html/modules/contrib/{$name}": ["type:drupal-module"],
+            "html/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "html/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        },
+        "merge-plugin": {
+            "include": [
+                "html/core/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "merge-extra": false
+        },
+        "preserve-paths": [
+            "html/modules/custom",
+            "html/themes/custom",
+            "html/sites/default"
+        ],
+        "patches-file": "composer.patches.json",
+        "composer-exit-on-patch-failure": true
+    },
+    "scripts": {
+        "gulp-prepare": "cd html/themes/contrib/common_design && npm install",
+        "gulp-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/gulp build",
+        "gulp-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "gulp": [
+            "@gulp-prepare",
+            "@gulp-build",
+            "@gulp-cleanup"
+        ]
+    },
+    "require": {
+        "php": ">=7.2",
+        "composer/installers": "^1.7",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.6",
+        "drupal-composer/preserve-paths": "^0.1.5",
+        "drupal/core": "8.8.1",
+        "drush/drush": "^10.1",
+        "unocha/common_design": "^2.0"
+    },
+    "require-dev": {
+        "drupal/coder": "^8.3"
+    }
+}
