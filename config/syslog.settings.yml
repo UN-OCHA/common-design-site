@@ -1,4 +1,4 @@
-identity: drupal
+identity: commondesign
 facility: 128
 format: '!base_url|!timestamp|!type|!ip|!request_uri|!referer|!uid|!link|!message'
 _core:
