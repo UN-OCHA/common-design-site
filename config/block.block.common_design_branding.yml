@@ -10,8 +10,8 @@ _core:
   default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
 id: common_design_branding
 theme: common_design
-region: header_top
-weight: 0
+region: header_logo
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:
