@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "d2b19b178baa7090744da5829cbb9601",
@@ -5453,12 +5453,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "ff97a8dfc84b53f1968eb2f4c13eb72a646c2c6a"
+                "reference": "a36b06c6701c7848b9ef063fc90e78e21f473b98"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/ff97a8dfc84b53f1968eb2f4c13eb72a646c2c6a",
-                "reference": "ff97a8dfc84b53f1968eb2f4c13eb72a646c2c6a",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/a36b06c6701c7848b9ef063fc90e78e21f473b98",
+                "reference": "a36b06c6701c7848b9ef063fc90e78e21f473b98",
                 "shasum": ""
             },
             "require": {
@@ -5469,7 +5469,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-01-14T16:44:01+00:00"
+            "time": "2020-01-15T16:07:45+00:00"
         },
         {
             "name": "webflo/drupal-finder",
