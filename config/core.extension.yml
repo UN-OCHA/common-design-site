@@ -3,6 +3,7 @@ module:
   big_pipe: 0
   block: 0
   breakpoint: 0
+  components: 0
   config: 0
   dynamic_page_cache: 0
   entity_reference_revisions: 0
