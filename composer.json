@@ -102,10 +102,11 @@
         "drupal-composer/drupal-scaffold": "^2.6",
         "drupal-composer/preserve-paths": "^0.1.5",
         "drupal/admin_denied": "^1.0",
+        "drupal/components": "^1.1",
         "drupal/core": "8.8.1",
         "drupal/paragraphs": "^1.10",
         "drush/drush": "^10.1",
-        "unocha/common_design": "master"
+        "unocha/common_design": "dev-cd-187-components"
     },
     "require-dev": {
         "drupal/coder": "^8.3"
