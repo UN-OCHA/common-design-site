@@ -21,19 +21,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "unocha/common_design",
-                "version": "dev-master",
-                "type":"drupal-theme",
-                "source": {
-                    "url": "https://github.com/UN-OCHA/common_design.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
         }
     ],
     "conflict": {
@@ -106,7 +93,7 @@
         "drupal/core": "8.8.1",
         "drupal/paragraphs": "^1.10",
         "drush/drush": "^10.1",
-        "unocha/common_design": "dev-cd-187-components"
+        "unocha/common_design": "^2.0.1"
     },
     "require-dev": {
         "drupal/coder": "^8.3"
