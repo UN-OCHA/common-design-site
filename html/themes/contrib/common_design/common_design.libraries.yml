@@ -4,33 +4,28 @@ global-styling:
       css/styles.css: {}
       css/cd/cd-ie.css: { browsers: { IE: 'lte IE 8', '!IE': false } }
 
-cd-dropdown:
+dropdown:
   js:
-    js/cd-dropdown.js: {}
-
-cd-hero:
-  css:
-    theme:
-      components/cd-hero/cd-hero.css: {}
-
-cd-menu:
-  js:
-    js/cd-menu.js: {}
+    js/bootstrap-dropdown.js: {}
   dependencies:
-    - common_design/cd-dropdown
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
 
-cd-search:
+custom-menu:
   js:
-    js/cd-search.js: {}
+    js/custom-menu.js: {}
   dependencies:
-    - common_design/cd-dropdown
+    - common_design/dropdown
 
-cd-teaser:
-  css:
-    theme:
-      components/cd-teaser/cd-teaser.css: {}
-
-#This doesn't work for IE11 support, due to conditionals being dropped in IE10
-cd-polyfill:
+search:
   js:
-    js/cd-polyfill.js: { browsers: { '!IE': false } }
+    js/custom-search.js: {}
+  dependencies:
+    - common_design/dropdown
+
+search--inline:
+  js:
+    js/custom-search--inline.js: {}
+  dependencies:
+    - common_design/dropdown

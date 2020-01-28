@@ -46,16 +46,12 @@
     padding: 0 20px;
   }
 
-  // Separator.
   &::after {
-    background: $cd-light-blue-border-color;
-    height: calc(#{$cd-global-header-height}/3);
-    width: 2px;
-    content: '';
+    color: $cd-light-blue-border-color;
+    content: '|';
     position: absolute;
     right: -1px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 0;
   }
 
   &:hover,
@@ -131,7 +127,7 @@
 
   // If there's no language switcher in the Global Header, uncomment this line
   // to apply special treatment to the last link in the list.
-  @extend .cd-user-menu--no-language-switcher;
+  //@extend .cd-user-menu--no-language-switcher;
 }
 
 .region-header-top .menu > li a {

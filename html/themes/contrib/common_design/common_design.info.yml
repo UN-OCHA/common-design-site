@@ -32,9 +32,3 @@ libraries-override:
         css/components/inline-form.css: false
         css/components/links.css: false
         css/components/menu.css: false
-
-# CD components
-component-libraries:
-  cd-components:
-    paths:
-      - components
