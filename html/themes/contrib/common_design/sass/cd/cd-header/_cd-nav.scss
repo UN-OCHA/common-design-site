@@ -2,8 +2,7 @@
 // Common Design: Main Navigation
 //——————————————————————————————————————————————————————————————————————————————
 
-
-.cd-site-header__nav-toggle {
+.cd-nav__btn {
   background: transparent;
   border: 0 none $cd-border-color;
   border-left: 1px solid $cd-border-color;
@@ -19,16 +18,16 @@
     display: none;
   }
 
-  .cd-site-header__nav-label {
+  .cd-nav__btn-label {
     font-weight: 600;
   }
 
   .cd-icon--arrow-down {
-    margin-left: 2px;
+    margin-left: 4px;
     fill: $cd-highlight-red;
   }
 
-  .open & {
+  &[aria-expanded='true'] {
     position: relative;
     z-index: 101;
     color: $cd-dark-text-color;
@@ -62,36 +61,61 @@
   }
 }
 
+// Hide default block titles
+.cd-site-header__nav-holder .block-menu h2 {
+  @extend .visually-hidden;
+}
+
 .cd-site-header__nav-holder {
   float: left;
 
   .cd-nav {
-    background: $cd-white;
-    height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
-    padding: 20px 0 36px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
-    z-index: 101; // zindex may need adjusting depending on other site content.
-    display: none;
+    @include z-index(main-menu); // zindex may need adjusting depending on other site content.
+
+    @include max-width(lg) {
+      &[data-hidden='false'] {
+        background: $cd-white;
+        height: calc(100vh - (#{$cd-global-header-height} + #{$cd-site-header-height} + 3px));
+        padding: 20px 0 36px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: calc(#{$cd-global-header-height} + #{$cd-site-header-height} + 3px);
+      }
+
+      &[data-hidden='false'] > ul {
+        display: block;
+      }
+    }
 
     @include desktop {
-      display: block;
       height: $cd-site-header-height;
       max-width: none;
       padding: 0;
       position: relative;
+      left: 0;
       right: auto;
       top: auto;
       width: auto;
+
+      // Always display on desktop.
+      &[data-hidden='true'] {
+        display: block;
+      }
     }
 
     > ul {
+      display: none;
       background: $cd-white;
+
       @include desktop {
         background: transparent;
+        display: flex;
       }
+    }
+
+    .no-js & > ul {
+      display: block;
     }
 
     ul {
@@ -100,10 +124,12 @@
       padding: 0;
     }
 
-    a {
+    a,
+    button {
       color: $cd-default-text-color;
       padding: 15px 30px;
       text-decoration: none;
+      text-align: left;
       display: block;
       @supports (display: flex) {
         display: flex;
@@ -117,24 +143,23 @@
       }
     }
 
+    button {
+      border: 0 none;
+      width: 100%;
+      background: transparent;
+    }
+
     // First level.
-    > .menu > .menu-item > a {
+    > .menu > .menu-item > a,
+    > .menu > .menu-item > button {
       font-weight: bold;
       text-transform: uppercase;
     }
   }
 
-  // Toggle mobile menu.
-  &.open .cd-nav {
-    display: block;
-  }
-
   .menu-item {
-    &.open {
-      background: $cd-white-bg-color;
-    }
-
-    > a::before {
+    > a::before,
+    > button::before {
       background: $cd-highlight-red;
     }
   }
@@ -145,7 +170,7 @@
 
     @include desktop {
       box-shadow: 0 1px 8px rgba($cd-dark-bluey-grey, 0.8);
-      left: -1px;
+      //left: -1px;
       margin: 0;
       max-width: 300px;
       min-width: 200px;
@@ -167,20 +192,12 @@
     }
   }
 
-  // Third level.
-  .menu .menu .menu {
-    a {
-      font-weight: 200;
-      padding: 10px 30px;
-    }
-  }
-
   // Active trail for mobile menu.
   @include max-width(lg) {
-
     .cd-nav > ul > li {
 
-      a {
+      a,
+      button {
         position: relative;
 
         &::before {
@@ -194,7 +211,8 @@
         }
       }
 
-      > a.is-active::before {
+      > a.is-active::before,
+      > button.is-active::before {
         background: $cd-highlight-red;
       }
 
@@ -202,14 +220,15 @@
       // Classes based on Drupal menu item configuration.
       &.menu-item--collapsed,
       &.menu-item--expanded {
-        > a.is-active::before {
+        > a.is-active::before,
+        > button.is-active::before {
           background: rgba($cd-highlight-red, 0.2);
         }
       }
 
       &.menu-item--active-trail {
-
-        a {
+        a,
+        button {
           position: relative;
 
           &::before {
@@ -229,30 +248,22 @@
       }
 
       > ul > li.menu-item--active-trail {
-
-        a::before {
+        a::before,
+        button::before {
           background: rgba($cd-highlight-red, 0.6);
         }
 
-        a.is-active::before {
+        a.is-active::before,
+        button.is-active::before {
           background: $cd-highlight-red;
         }
       }
 
     }
-
-    // Grandchild items have different top/bottom padding and therefore height.
-    .cd-nav > ul > li.menu-item--active-trail > ul > li > ul > li a::before,
-    .cd-nav > ul > li > ul > li.menu-item--active-trail > ul > li a::before {
-      height: 38px; // Height of menu item.
-    }
   }
 
-
   @include desktop {
-
     .cd-nav > .menu {
-
       @supports (display: flex) {
         flex: 1 0 auto;
       }
@@ -271,32 +282,35 @@
           }
         }
 
-        &.menu-item--active-trail a::before {
+        &.menu-item--active-trail a::before,
+        &.menu-item--active-trail button::before {
           background: $cd-highlight-red;
         }
 
-        &.open {
-          position: relative;
+        //&.js-open {
+        //  position: relative;
+        //
+        //  > a,
+        //  button {
+        //
+        //    &::before {
+        //      background: $cd-highlight-red;
+        //    }
+        //
+        //    &:hover {
+        //      background: $cd-mid-bg-color;
+        //    }
+        //
+        //    &:focus {
+        //      &::before {
+        //        background: $cd-highlight-red;
+        //      }
+        //    }
+        //  }
+        //}
 
-          > a {
-
-            &::before {
-              background: $cd-highlight-red;
-            }
-
-            &:hover {
-              background: $cd-mid-bg-color;
-            }
-
-            &:focus {
-              &::before {
-                background: $cd-highlight-red;
-              }
-            }
-          }
-        }
-
-        > a {
+        > a,
+        button {
           align-items: center;
           background: transparent;
           display: flex;
@@ -335,8 +349,8 @@
       }
 
       > li > ul {
-
-        a {
+        a,
+        button {
           &:hover {
             background: $cd-mid-bg-color;
           }
@@ -350,26 +364,47 @@
           border-left: 3px solid $cd-highlight-red;
         }
       }
-
-      > li > ul > li {
-        &.open {
-          background: $cd-white-bg-color;
-        }
-      }
-
-      > li > ul > li > ul {
-        padding-bottom: 0;
-
-        a {
-          &:hover,
-          &:focus {
-            background: $cd-mid-bg-color;
-          }
-        }
-      }
-
     }
-
   }
+}
 
+.no-js .cd-site-header__nav-holder {
+  float: left;
+}
+
+.no-js .cd-site-header__nav-holder .cd-nav[data-hidden='false'] {
+  background: $cd-white;
+  height: auto;
+  padding: 20px 0 36px;
+  position: relative;
+  right: 0;
+  left: 0;
+  top: auto;
+}
+
+.no-js .cd-site-header__nav-holder .cd-nav > .menu > li > .menu {
+  box-shadow: unset;
+  margin: 0;
+  max-width: unset;
+  min-width: unset;
+  padding: 0;
+  top: 0;
+  position: relative;
+}
+
+.no-js .cd-site-header__nav-holder .cd-nav > .menu > li.menu-item--expanded button {
+  display: none;
+}
+
+// Style all menu items the same, regardless of their level.
+.no-js .menu-item--expanded li {
+  @include desktop {
+    height: $cd-site-header-height;
+
+    a {
+      padding: 0 14px;
+      height: $cd-site-header-height;
+      align-items: center;
+    }
+  }
 }
