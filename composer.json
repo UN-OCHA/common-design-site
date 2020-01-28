@@ -93,7 +93,7 @@
         "drupal/core": "8.8.1",
         "drupal/paragraphs": "^1.10",
         "drush/drush": "^10.1",
-        "unocha/common_design": "^2.0.1"
+        "unocha/common_design": "^2.1.0"
     },
     "require-dev": {
         "drupal/coder": "^8.3"
