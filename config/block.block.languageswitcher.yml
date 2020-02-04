@@ -1,0 +1,20 @@
+uuid: 5eb25a05-f2b7-4ebb-83cd-bf863f96e8da
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - common_design
+id: languageswitcher
+theme: common_design
+region: header_top
+weight: -6
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: visible
+visibility: {  }
