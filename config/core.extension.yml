@@ -5,6 +5,8 @@ module:
   breakpoint: 0
   components: 0
   config: 0
+  devel: 0
+  devel_generate: 0
   dynamic_page_cache: 0
   entity_reference_revisions: 0
   field: 0
@@ -13,6 +15,7 @@ module:
   filter: 0
   image: 0
   inline_form_errors: 0
+  language: 0
   link: 0
   media: 0
   media_library: 0

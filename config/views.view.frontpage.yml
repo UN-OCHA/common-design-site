@@ -245,6 +245,7 @@ display:
       fields: {  }
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
     display_plugin: default
     display_title: Master
     id: default
