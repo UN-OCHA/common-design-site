@@ -92,6 +92,7 @@
         "drupal/components": "^1.1",
         "drupal/core": "8.8.1",
         "drupal/paragraphs": "^1.10",
+        "drupal/social_auth_hid": "^2.2",
         "drush/drush": "^10.1",
         "unocha/common_design": "^2.2.0"
     },
