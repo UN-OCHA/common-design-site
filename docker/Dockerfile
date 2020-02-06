@@ -1,4 +1,4 @@
-FROM unocha/unified-builder:7.3.14-202001-04 as builder
+FROM unocha/unified-builder:7.3.14-r0-202001-04 as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 COPY . /srv/www
