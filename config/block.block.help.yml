@@ -3,7 +3,7 @@ langcode: nl
 status: true
 dependencies:
   config:
-    - system.menu.help-menu
+    - system.menu.help
   module:
     - system
   theme:
@@ -13,9 +13,9 @@ theme: common_design
 region: header_top
 weight: -5
 provider: null
-plugin: 'system_menu_block:help-menu'
+plugin: 'system_menu_block:help'
 settings:
-  id: 'system_menu_block:help-menu'
+  id: 'system_menu_block:help'
   label: 'Help menu'
   provider: system
   label_display: visible

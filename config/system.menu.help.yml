@@ -2,7 +2,7 @@ uuid: c0906ee7-c9be-4d36-ba09-f52aa8a9989f
 langcode: und
 status: true
 dependencies: {  }
-id: help-menu
+id: help
 label: 'Help menu'
 description: ''
 locked: false
