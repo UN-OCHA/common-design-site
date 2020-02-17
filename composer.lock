@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "28a9c93eb5dacc75fcbaf45e42b13b4e",
+    "content-hash": "7540d233a2a70aad47a4c464e32dee9b",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5875,16 +5875,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "2.4.0",
+            "version": "v2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "6f9b6f0990809cbffa60088d8c7d7f61cd4b37e3"
+                "reference": "dce179176242370f00605c690361fbcb2e1b1f63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/6f9b6f0990809cbffa60088d8c7d7f61cd4b37e3",
-                "reference": "6f9b6f0990809cbffa60088d8c7d7f61cd4b37e3",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/dce179176242370f00605c690361fbcb2e1b1f63",
+                "reference": "dce179176242370f00605c690361fbcb2e1b1f63",
                 "shasum": ""
             },
             "require": {
@@ -5895,7 +5895,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-02-13T15:51:19+00:00"
+            "time": "2020-02-17T15:08:31+00:00"
         },
         {
             "name": "webflo/drupal-finder",
