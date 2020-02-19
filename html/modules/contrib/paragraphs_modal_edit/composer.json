@@ -1,0 +1,14 @@
+{
+  "name": "drupal/paragraphs_modal_edit",
+  "type": "drupal-module",
+  "description": "Functionality for the editing paragraphs in a Drupal modal/dialog",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/paragraphs_modal_edit",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/paragraphs_modal_edit",
+    "source": "http://cgit.drupalcode.org/paragraphs_modal_edit"
+  },
+  "require": { }
+}
