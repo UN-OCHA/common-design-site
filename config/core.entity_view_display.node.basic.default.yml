@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.node.basic.body
+    - field.field.node.basic.field_hero_component
+    - field.field.node.basic.field_image
+    - field.field.node.basic.field_image_component
     - node.type.basic
   module:
+    - entity_reference_revisions
     - text
     - user
 id: node.basic.default
@@ -20,10 +24,37 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  links:
-    weight: 100
-    settings: {  }
+  field_hero_component:
+    type: entity_reference_revisions_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
+  field_image:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_image_component:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

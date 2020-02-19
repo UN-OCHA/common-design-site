@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.basic.body
+    - field.field.node.basic.field_hero_component
+    - field.field.node.basic.field_image
+    - field.field.node.basic.field_image_component
     - node.type.basic
   module:
+    - media_library
+    - paragraphs
     - path
     - text
 id: node.basic.default
@@ -29,6 +34,37 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_hero_component:
+    type: entity_reference_paragraphs
+    weight: 124
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: media_library_widget
+    weight: 122
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_image_component:
+    type: entity_reference_paragraphs
+    weight: 123
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
