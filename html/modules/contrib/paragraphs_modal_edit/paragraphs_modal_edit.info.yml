@@ -1,0 +1,14 @@
+type: module
+name: Paragraphs Modal Edit
+package: paragraphs
+description: Functionality for the editing paragraphs in a Drupal modal/dialog
+core: 8.x
+core_version_requirement: ^8 || ^9
+dependencies:
+  - paragraphs:paragraphs
+  - paragraphs_edit:paragraphs_edit
+
+# Information added by Drupal.org packaging script on 2019-12-13
+version: '8.x-1.0-alpha2'
+project: 'paragraphs_modal_edit'
+datestamp: 1576243387
