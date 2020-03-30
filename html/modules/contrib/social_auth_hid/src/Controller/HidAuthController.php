@@ -9,13 +9,13 @@ use Drupal\social_auth\SocialAuthDataHandler;
 use Drupal\social_auth\User\UserAuthenticator;
 use Drupal\social_auth_hid\HidAuthManager;
 use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Routing\TrustedRedirectResponse;
 use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Returns responses for Social Auth Hid module routes.
  */
 class HidAuthController extends OAuth2ControllerBase {
+
   /**
    * HidAuthController constructor.
    *
@@ -23,7 +23,7 @@ class HidAuthController extends OAuth2ControllerBase {
    *   The messenger service.
    * @param \Drupal\social_api\Plugin\NetworkManager $network_manager
    *   Used to get an instance of social_auth_google network plugin.
-   * @param \Drupal\social_auth\UserAuthenticator $user_manager
+   * @param \Drupal\social_auth\UserAuthenticator $user_authenticator
    *   Manages user login/registration.
    * @param \Drupal\social_auth_hid\HidAuthManager $hid_manager
    *   Used to manage authentication methods.
@@ -32,13 +32,13 @@ class HidAuthController extends OAuth2ControllerBase {
    * @param \Drupal\social_auth\SocialAuthDataHandler $data_handler
    *   SocialAuthDataHandler object.
    */
-    public function __construct(MessengerInterface $messenger,
-      NetworkManager $network_manager,
-      UserAuthenticator $user_authenticator,
-      HidAuthManager $hid_manager,
-      RequestStack $request,
-			SocialAuthDataHandler $data_handler) {
-      parent::__construct('Social Auth Hid', 'social_auth_hid', $messenger, $network_manager, $user_authenticator, $hid_manager, $request, $data_handler);
+  public function __construct(MessengerInterface $messenger,
+    NetworkManager $network_manager,
+    UserAuthenticator $user_authenticator,
+    HidAuthManager $hid_manager,
+    RequestStack $request,
+    SocialAuthDataHandler $data_handler) {
+    parent::__construct('Social Auth Hid', 'social_auth_hid', $messenger, $network_manager, $user_authenticator, $hid_manager, $request, $data_handler);
   }
 
   /**

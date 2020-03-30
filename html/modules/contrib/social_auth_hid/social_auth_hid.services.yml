@@ -4,3 +4,9 @@ services:
     arguments:
       - '@config.factory'
       - '@logger.factory'
+  social_auth_hid.route_subscriber:
+    class: Drupal\social_auth_hid\Routing\RouteSubscriber
+    arguments:
+      - '@config.factory'
+    tags:
+      - { name: event_subscriber }

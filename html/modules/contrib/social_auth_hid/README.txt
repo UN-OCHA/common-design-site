@@ -12,8 +12,8 @@ CONTENTS OF THIS FILE
 INTRODUCTION
 ------------
 
-Social Auth Humanitarian ID is a Humanitarian ID authentication integration for Drupal. It is
-based on the Social Auth and Social API projects
+Social Auth Humanitarian ID is a Humanitarian ID authentication integration
+for Drupal. It is based on the Social Auth and Social API projects
 
 It adds to the site:
  * A new url: /user/login/hid.
@@ -63,10 +63,11 @@ to /user/login/hid, so theming and customizing the button or link
 is very flexible.
 
 When the user opens the /user/login/hid link, it automatically takes
-user to Humanitarian ID Accounts for authentication. Humanitarian ID then returns the user to
-Drupal site. If we have an existing Drupal user with the same email address
-provided by Humanitarian ID, that user is logged in. Otherwise a new Drupal user is
-created.
+user to Humanitarian ID Accounts for authentication. Humanitarian ID then
+returns the user to Drupal site.
+If we have an existing Drupal user with the same email address
+provided by Humanitarian ID, that user is logged in. Otherwise a new Drupal
+user is created.
 
 SUPPORT REQUESTS
 ----------------
@@ -88,3 +89,4 @@ MAINTAINERS
 
 Current maintainers:
  * Guillaume Viguier-Just (guillaumev) - https://www.drupal.org/u/guillaumev
+ * Peter Droogmans (attiks) - https://www.drupal.org/u/attiks

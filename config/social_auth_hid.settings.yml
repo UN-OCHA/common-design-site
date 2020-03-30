@@ -1,3 +1,7 @@
 base_url: 'https://auth.humanitarian.id'
 _core:
   default_config_hash: _t9faeey8ijkiUWjKuz8shcOTzmFLyWYpJQpwcaA3XY
+client_id: HID_CLIENT_ID_DO_NOT_COMMIT_TO_REPOSITORY
+client_secret: HID_CLIENT_ID_DO_NOT_COMMIT_TO_REPOSITORY
+auto_redirect: true
+disable_default: true

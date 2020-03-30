@@ -114,6 +114,17 @@ class HidAuthSettingsForm extends SocialAuthSettingsForm {
       '#default_value' => $config->get('base_url'),
     ];
 
+    $form['hid_settings']['advanced']['auto_redirect'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Auto redirect to HID'),
+      '#default_value' => $config->get('auto_redirect'),
+    ];
+
+    $form['hid_settings']['advanced']['disable_default'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Disable default user login and reset forms'),
+      '#default_value' => $config->get('disable_default'),
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -138,7 +149,12 @@ class HidAuthSettingsForm extends SocialAuthSettingsForm {
       ->set('client_id', trim($values['client_id']))
       ->set('client_secret', trim($values['client_secret']))
       ->set('base_url', rtrim($values['base_url'], '/'))
+      ->set('auto_redirect', $values['auto_redirect'])
+      ->set('disable_default', $values['disable_default'])
       ->save();
+
+    // Clear router cache.
+    \Drupal::service("router.builder")->rebuild();
 
     parent::submitForm($form, $form_state);
   }

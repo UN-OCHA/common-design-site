@@ -66,7 +66,7 @@ class HidAuthManager extends OAuth2Manager {
   /**
    * {@inheritdoc}
    */
-  public function requestEndPoint($method, $path, $domain = NULL, array $options = Array()) {
+  public function requestEndPoint($method, $path, $domain = NULL, array $options = []) {
     if (!$domain) {
       $domain = $this->settings->get('base_url');
     }
