@@ -11,3 +11,9 @@ social_auth_hid.settings:
     base_url:
       type: string
       label: 'HID base URL'
+    auto_redirect:
+      type: boolean
+      label: 'Auto redirect to HID'
+    disable_default:
+      type: boolean
+      label: 'Disable default user login and reset forms'
