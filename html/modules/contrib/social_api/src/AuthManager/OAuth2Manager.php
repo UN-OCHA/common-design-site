@@ -4,6 +4,7 @@ namespace Drupal\social_api\AuthManager;
 
 use Drupal\Core\Config\ImmutableConfig;
 use Drupal\Core\Logger\LoggerChannelFactoryInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 /**
  * Defines basic OAuth2Manager to be used by social auth and social post.
@@ -36,9 +37,23 @@ abstract class OAuth2Manager implements OAuth2ManagerInterface {
   /**
    * The logger factory.
    *
-   * @var \Drupal\Core\Logger\LoggerChannelFactory
+   * @var \Drupal\Core\Logger\LoggerChannelFactoryInterface
    */
   protected $loggerFactory;
+
+  /**
+   * The current request.
+   *
+   * @var \Symfony\Component\HttpFoundation\Request|null
+   */
+  protected $request;
+
+  /**
+   * The user returned by the provider.
+   *
+   * @var \League\OAuth2\Client\Provider\GenericResourceOwner|array|mixed
+   */
+  protected $user;
 
   /**
    * OAuth2Manager Constructor.
@@ -47,12 +62,16 @@ abstract class OAuth2Manager implements OAuth2ManagerInterface {
    *   The implementer settings.
    * @param \Drupal\Core\Logger\LoggerChannelFactoryInterface $logger_factory
    *   The logger factory.
+   * @param \Symfony\Component\HttpFoundation\Request $request
+   *   The current request.
    */
   public function __construct(ImmutableConfig $settings,
-                              LoggerChannelFactoryInterface $logger_factory) {
+                              LoggerChannelFactoryInterface $logger_factory,
+                              Request $request = NULL) {
 
     $this->settings = $settings;
     $this->loggerFactory = $logger_factory;
+    $this->request = $request;
   }
 
   /**
@@ -82,6 +101,7 @@ abstract class OAuth2Manager implements OAuth2ManagerInterface {
    */
   public function setAccessToken($access_token) {
     $this->accessToken = $access_token;
+    return $this;
   }
 
 }
