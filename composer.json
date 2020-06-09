@@ -90,7 +90,7 @@
         "drupal-composer/preserve-paths": "^0.1.5",
         "drupal/admin_denied": "^1.0",
         "drupal/components": "^1.1",
-        "drupal/core": "8.8.1",
+        "drupal/core": "^8.8.1",
         "drupal/paragraphs": "^1.10",
         "drupal/paragraphs_edit": "^2.0@alpha",
         "drupal/paragraphs_modal_edit": "^1.0@alpha",
@@ -99,7 +99,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "2.0-alpha6",
         "drush/drush": "^10.1",
-        "unocha/common_design": "^2.7.0"
+        "unocha/common_design": "^2.7.8"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
