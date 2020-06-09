@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * @file
+ * paragraphs_modal_edit.module
+ */
+
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+use Drupal\paragraphs\ParagraphInterface;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\Core\Ajax\RemoveCommand;
+use Drupal\Core\Ajax\ReplaceCommand;
 use Drupal\Core\Ajax\AjaxResponse;
 use Drupal\Core\Ajax\CloseModalDialogCommand;
 use Drupal\Core\Form\FormStateInterface;
@@ -7,7 +18,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Implements hook_form_alter().
  */
-function paragraphs_modal_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+function paragraphs_modal_edit_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   $request = Drupal::request();
   $is_ajax = $request->isXmlHttpRequest();
   if (!$is_ajax) {
@@ -18,7 +29,6 @@ function paragraphs_modal_edit_form_alter(&$form, \Drupal\Core\Form\FormStateInt
   if (strpos($form_id, 'paragraph_') === 0 && strpos($form_id, '_delete_form') === (strlen($form_id) - strlen('_delete_form'))) {
     $form['actions']['submit']['#ajax']['callback'] = 'paragraphs_modal_edit_paragraph_form_ajax_remove';
     $form['actions']['submit']['#ajax']['disable-refocus'] = TRUE;
-//    $form['actions']['cancel']['#ajax']['callback'] = 'paragraphs_modal_edit_paragraph_form_ajax_cancel';
   }
   // Check if this is a paragraph clone form.
   if (strpos($form_id, 'paragraph_') === 0 && strpos($form_id, '_clone_form') === (strlen($form_id) - strlen('_clone_form'))) {
@@ -36,7 +46,7 @@ function paragraphs_modal_edit_form_paragraph_form_alter(&$form, FormStateInterf
   $request = Drupal::request();
   $is_ajax = $request->isXmlHttpRequest();
 
-  // Check if this is loaded via ajax
+  // Check if this is loaded via ajax.
   if ($is_ajax && !empty($form['actions']['submit'])) {
     $form['actions']['submit']['#ajax']['callback'] = 'paragraphs_modal_edit_paragraph_form_ajax_update';
     $form['actions']['submit']['#ajax']['disable-refocus'] = TRUE;
@@ -69,7 +79,7 @@ function paragraphs_modal_edit_paragraph_form_ajax_update(&$form, FormStateInter
       $paragraphViewArr = Drupal::entityTypeManager()->getViewBuilder('paragraph')->view($paragraph);
       $renderedParagraph = Drupal::service('renderer')->render($paragraphViewArr);
 
-      $response->addCommand(new \Drupal\Core\Ajax\ReplaceCommand('[data-quickedit-entity-id="paragraph/' . $paragraph->id() . '"]', $renderedParagraph));
+      $response->addCommand(new ReplaceCommand('[data-quickedit-entity-id="paragraph/' . $paragraph->id() . '"]', $renderedParagraph));
     }
 
     return $response;
@@ -78,6 +88,9 @@ function paragraphs_modal_edit_paragraph_form_ajax_update(&$form, FormStateInter
   return $form;
 }
 
+/**
+ * Function form_ajax_remove()
+ */
 function paragraphs_modal_edit_paragraph_form_ajax_remove(&$form, FormStateInterface $form_state) {
   if (!$form_state->getErrors()) {
     $response = new AjaxResponse();
@@ -92,9 +105,8 @@ function paragraphs_modal_edit_paragraph_form_ajax_remove(&$form, FormStateInter
       $paragraphViewArr = Drupal::entityTypeManager()->getViewBuilder('paragraph')->view($paragraph);
       $renderedParagraph = Drupal::service('renderer')->render($paragraphViewArr);
 
-      $response->addCommand(new \Drupal\Core\Ajax\RemoveCommand('[data-quickedit-entity-id="paragraph/' . $paragraph->id() . '"]'));
+      $response->addCommand(new RemoveCommand('[data-quickedit-entity-id="paragraph/' . $paragraph->id() . '"]'));
     }
-
 
     return $response;
   }
@@ -102,6 +114,9 @@ function paragraphs_modal_edit_paragraph_form_ajax_remove(&$form, FormStateInter
   return $form;
 }
 
+/**
+ * Function form_ajax_cancel()
+ */
 function paragraphs_modal_edit_paragraph_form_ajax_cancel(&$form, FormStateInterface $form_state) {
   if (!$form_state->getErrors()) {
     $response = new AjaxResponse();
@@ -113,6 +128,9 @@ function paragraphs_modal_edit_paragraph_form_ajax_cancel(&$form, FormStateInter
   return $form;
 }
 
+/**
+ * Function contextual_links_view_alter()
+ */
 function paragraphs_modal_edit_contextual_links_view_alter(&$element, $items) {
   $a = 1;
 
@@ -130,15 +148,12 @@ function paragraphs_modal_edit_contextual_links_view_alter(&$element, $items) {
  * Implements hook_paragraph_update().
  *
  * Update the parent nodes last updated date.
- *
- * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
- *   The updated paragraph.
  */
-function paragraphs_modal_edit_paragraph_update(\Drupal\paragraphs\Entity\Paragraph $paragraph) {
+function paragraphs_modal_edit_paragraph_update(Paragraph $paragraph) {
   $routeName = Drupal::routeMatch()->getRouteName();
   if ($routeName == 'paragraphs_edit.edit_form') {
     $parent = $paragraph->getParentEntity();
-    if ($parent instanceof \Drupal\node\Entity\Node) {
+    if ($parent instanceof Node) {
       $parent->setChangedTime(time());
     }
   }
@@ -147,7 +162,7 @@ function paragraphs_modal_edit_paragraph_update(\Drupal\paragraphs\Entity\Paragr
 /**
  * Implements hook_ENTITY_TYPE_view_alter() for paragraph entities.
  */
-function paragraphs_modal_edit_paragraph_view_alter(array &$build, \Drupal\paragraphs\ParagraphInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display) {
+function paragraphs_modal_edit_paragraph_view_alter(array &$build, ParagraphInterface $entity, EntityViewDisplayInterface $display) {
   if (!Drupal::routeMatch()->getRouteName() == 'paragraphs_edit.edit_form') {
     return;
   }
