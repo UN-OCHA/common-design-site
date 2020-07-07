@@ -7,11 +7,17 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Language\LanguageInterface;
 use Drupal\paragraphs_edit\ParagraphFormHelperTrait;
 
+/**
+ * ParagraphEditForm class.
+ */
 class ParagraphEditForm extends ContentEntityForm {
   use ParagraphFormHelperTrait;
 
+  /**
+   * {@inheritdoc}
+   */
   protected function init(FormStateInterface $form_state) {
-    if ($this->entity ->isTranslatable()) {
+    if ($this->entity->isTranslatable()) {
       $langcode = \Drupal::languageManager()->getCurrentLanguage(LanguageInterface::TYPE_CONTENT)->getId();
       $form_state->set('langcode', $langcode);
 
@@ -46,7 +52,7 @@ class ParagraphEditForm extends ContentEntityForm {
     $form = parent::form($form, $form_state);
 
     $form['#title'] = $this->t('Edit @lineage', [
-      '@lineage' => $this->lineageInspector()->getLineageString($this->entity)
+      '@lineage' => $this->lineageInspector()->getLineageString($this->entity),
     ]);
 
     return $form;

@@ -11,6 +11,7 @@
         "source": "http://cgit.drupalcode.org/social_auth_hid"
     },
     "require": {
+        "drupal/social_auth": "^2.0",
         "un-ocha/oauth2-hid": "^1.0.2"
     },
     "authors": [
