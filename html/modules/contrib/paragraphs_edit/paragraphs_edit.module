@@ -9,14 +9,10 @@ use Drupal\paragraphs\ParagraphInterface;
 use Drupal\paragraphs_edit\Form\ParagraphCloneForm;
 use Drupal\paragraphs_edit\Form\ParagraphDeleteForm;
 use Drupal\paragraphs_edit\Form\ParagraphEditForm;
-use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
-use Drupal\Core\Render\Element;
 
 /**
  * Implements hook_entity_type_build().
- *
- * @param \Drupal\Core\Entity\EntityTypeInterface[] $entity_types
  */
 function paragraphs_edit_entity_type_build(array &$entity_types) {
   $entity_types['paragraph']->setFormClass('entity_edit', ParagraphEditForm::class);
@@ -30,8 +26,8 @@ function paragraphs_edit_entity_type_build(array &$entity_types) {
  * Implements hook_ENTITY_TYPE_view_alter() for paragraph entities.
  */
 function paragraphs_edit_paragraph_view_alter(array &$build, ParagraphInterface $entity, EntityViewDisplayInterface $display) {
-  // Skip adding contextual links if the Paragraph is in a QuickEdit form context
-  // to avoid causing conflicts with Quickedit JS
+  // Skip adding contextual links if the Paragraph is in a QuickEdit form
+  // context to avoid causing conflicts with Quickedit JS.
   if (\Drupal::routeMatch()->getRouteName() == 'quickedit.field_form') {
     return;
   }

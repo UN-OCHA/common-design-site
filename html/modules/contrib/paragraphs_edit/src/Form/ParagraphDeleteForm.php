@@ -17,7 +17,7 @@ class ParagraphDeleteForm extends ContentEntityDeleteForm {
    */
   public function getQuestion() {
     return $this->t('Are you sure you want to delete @lineage?', [
-      '@lineage' => $this->lineageInspector()->getLineageString($this->entity)
+      '@lineage' => $this->lineageInspector()->getLineageString($this->entity),
     ]);
   }
 
@@ -26,7 +26,7 @@ class ParagraphDeleteForm extends ContentEntityDeleteForm {
    */
   protected function getDeletionMessage() {
     return $this->t('@lineage has been deleted.', [
-      '@lineage' => $this->lineageInspector()->getLineageString($this->entity)
+      '@lineage' => $this->lineageInspector()->getLineageString($this->entity),
     ]);
   }
 

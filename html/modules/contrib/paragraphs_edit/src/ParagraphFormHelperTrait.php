@@ -7,8 +7,6 @@ use Drupal\Core\Entity\EntityInterface;
 
 /**
  * Provides a helper for paragraph forms.
- *
- * @property \Drupal\paragraphs\ParagraphInterface $entity
  */
 trait ParagraphFormHelperTrait {
 
@@ -22,6 +20,7 @@ trait ParagraphFormHelperTrait {
    * Returns the lineage inspector service.
    *
    * @return \Drupal\paragraphs_edit\ParagraphLineageInspector
+   *   The lineage inspector service data.
    */
   protected function lineageInspector() {
     if (!isset($this->lineageInspector)) {
@@ -34,6 +33,7 @@ trait ParagraphFormHelperTrait {
    * Returns the lineage revisioner service.
    *
    * @return \Drupal\paragraphs_edit\ParagraphLineageRevisioner|null
+   *   The lineage revisioner service data.
    */
   protected function lineageRevisioner() {
     if (!isset($this->lineageRevisioner)) {
@@ -52,4 +52,5 @@ trait ParagraphFormHelperTrait {
 
     return parent::buildForm($form, $form_state);
   }
+
 }

@@ -5,14 +5,19 @@ namespace Drupal\paragraphs_edit;
 use Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList;
 use Drupal\paragraphs\ParagraphInterface;
 
+/**
+ * ParagraphLineageInspector class.
+ */
 class ParagraphLineageInspector {
 
   /**
    * Gets the root parent of this paragraph.
    *
    * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   Paragraph data.
    *
    * @return \Drupal\Core\Entity\ContentEntityInterface|null
+   *   Root parent.
    */
   public function getRootParent(ParagraphInterface $paragraph) {
     $root_parent = $paragraph->getParentEntity();
@@ -26,8 +31,10 @@ class ParagraphLineageInspector {
    * Gets the field the paragraph is referenced from.
    *
    * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   Paragraph data.
    *
    * @return \Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList|null
+   *   Parent field.
    */
   public function getParentField(ParagraphInterface $paragraph) {
     $parent = $paragraph->getParentEntity();
@@ -43,9 +50,12 @@ class ParagraphLineageInspector {
    * Gets the field item the paragraph is referenced from.
    *
    * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   Paragraph data.
    * @param \Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList|null $parent_field
+   *   Parent field.
    *
    * @return \Drupal\entity_reference_revisions\Plugin\Field\FieldType\EntityReferenceRevisionsItem|null
+   *   Field item.
    */
   public function getParentFieldItem(ParagraphInterface $paragraph, EntityReferenceRevisionsFieldItemList $parent_field = NULL) {
     if (!$parent_field) {
@@ -59,9 +69,12 @@ class ParagraphLineageInspector {
    * Finds the field item the paragraph is referenced from.
    *
    * @param \Drupal\paragraphs\ParagraphInterface $paragraph
+   *   Paragraph data.
    * @param \Drupal\entity_reference_revisions\EntityReferenceRevisionsFieldItemList $field
+   *   Field item.
    *
    * @return \Drupal\entity_reference_revisions\Plugin\Field\FieldType\EntityReferenceRevisionsItem|null
+   *   Referenced field item.
    */
   protected function findParentFieldItem(ParagraphInterface $paragraph, EntityReferenceRevisionsFieldItemList $field) {
     $paragraph_id = $paragraph->id();
@@ -83,7 +96,7 @@ class ParagraphLineageInspector {
    * Builds a string representation of a paragraph's lineage.
    *
    * @param \Drupal\paragraphs\ParagraphInterface $paragraph
-   *   the paragraph whose lineage to return as a string.
+   *   The paragraph whose lineage to return as a string.
    *
    * @return string
    *   A string representation of the paragraph's lineage.
@@ -98,15 +111,14 @@ class ParagraphLineageInspector {
       }
 
       $parent_field = $this->getParentField($paragraph);
-      $parent_field_label  = $parent_field->getFieldDefinition()->getLabel();
+      $parent_field_label = $parent_field->getFieldDefinition()->getLabel();
       $parent_field_item = $this->getParentFieldItem($paragraph, $parent_field);
       $parent_field_delta = $parent_field_item->getName() + 1;
 
       $string = ' > ' . $parent_field_label . ' #' . $parent_field_delta . $string;
 
       $paragraph = $parent;
-    }
-    while ($parent instanceof ParagraphInterface);
+    } while ($parent instanceof ParagraphInterface);
 
     if ($parent) {
       return $parent->label() . $string;

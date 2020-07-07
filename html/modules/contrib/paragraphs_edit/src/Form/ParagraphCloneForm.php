@@ -7,13 +7,16 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\Component\Utility\Html;
 use Drupal\paragraphs_edit\ParagraphFormHelperTrait;
 
+/**
+ * ParagraphCloneForm class.
+ */
 class ParagraphCloneForm extends ContentEntityForm {
   use ParagraphFormHelperTrait;
 
   /**
    * The entity being cloned by this form.
    *
-   * @var \Drupal\paragraphs\ParagraphInterface $originalEntity
+   * @var \Drupal\paragraphs\ParagraphInterface
    */
   protected $originalEntity;
 
@@ -117,16 +120,22 @@ class ParagraphCloneForm extends ContentEntityForm {
     $form = parent::form($form, $form_state);
 
     $form['#title'] = $this->t('Clone @lineage', [
-      '@lineage' => $this->lineageInspector()->getLineageString($this->originalEntity)
+      '@lineage' => $this->lineageInspector()->getLineageString($this->originalEntity),
     ]);
 
     return $form;
   }
 
+  /**
+   * {@inheritdoc}
+   */
   public function paragraphEditChangeAjax($form) {
     return $form['paragraphs_edit'];
   }
 
+  /**
+   * {@inheritdoc}
+   */
   protected function getPotentialCloneDestinations($paragraph_type) {
     $types_with_paragraphs = $this->entityManager->getFieldMapByFieldType('entity_reference_revisions');
     $field_definitions_bundle = [];
@@ -141,7 +150,7 @@ class ParagraphCloneForm extends ContentEntityForm {
           /** @var \Drupal\field\FieldConfigInterface $field_definition */
           $field_definition = $field_definitions_bundle[$entity_type_id][$bundle][$field];
 
-          // check if field accepts paragraphs of this bundle
+          // Check if field accepts paragraphs of this bundle.
           $target_bundles = $field_definition->getSetting('handler_settings')['target_bundles'];
           if (
             !empty($target_bundles) &&
@@ -201,9 +210,9 @@ class ParagraphCloneForm extends ContentEntityForm {
       ->getStorage($this->entity->getEntityTypeId())
       ->loadUnchanged($this->entity->id());
 
-    drupal_set_message($this->t('Cloned @source_lineage to %destination_lineage', [
+    $this->messenger()->addMessage($this->t('Cloned @source_lineage to %destination_lineage', [
       '@source_lineage' => $this->lineageInspector()->getLineageString($this->originalEntity),
-      '%destination_lineage' => $this->lineageInspector()->getLineageString($this->entity)
+      '%destination_lineage' => $this->lineageInspector()->getLineageString($this->entity),
     ]));
 
     $request = $this->getRequest();
