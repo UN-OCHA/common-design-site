@@ -1263,16 +1263,16 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3"
+                "reference": "13e3381b25847283a91948d04640543941309727"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
-                "reference": "35a4a70cd94e09e2259dfae7488afc6b474ecbd3",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/13e3381b25847283a91948d04640543941309727",
+                "reference": "13e3381b25847283a91948d04640543941309727",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "redis",
                 "xcache"
             ],
-            "time": "2020-05-27T16:24:54+00:00"
+            "time": "2020-07-07T18:54:01+00:00"
         },
         {
             "name": "doctrine/collections",
@@ -6453,16 +6453,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.8.0",
+            "version": "v2.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "a9f15b9892140d336bf570b404d166f9e32b3666"
+                "reference": "48cb59cda351f063a12cefb8ecc834a3dc7aade1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/a9f15b9892140d336bf570b404d166f9e32b3666",
-                "reference": "a9f15b9892140d336bf570b404d166f9e32b3666",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/48cb59cda351f063a12cefb8ecc834a3dc7aade1",
+                "reference": "48cb59cda351f063a12cefb8ecc834a3dc7aade1",
                 "shasum": ""
             },
             "require": {
@@ -6473,7 +6473,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-07-07T12:20:44+00:00"
+            "time": "2020-07-15T12:42:28+00:00"
         },
         {
             "name": "webflo/drupal-finder",
