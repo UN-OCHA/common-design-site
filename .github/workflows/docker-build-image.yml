@@ -15,7 +15,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
     - name: Determine environment type
-      docker://unocha/actions:determine-environment-v3
+      uses: docker://unocha/actions:determine-environment-v3
     - name: Build docker image
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
