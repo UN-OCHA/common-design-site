@@ -17,3 +17,12 @@ social_auth_hid.settings:
     disable_default:
       type: boolean
       label: 'Disable default user login and reset forms'
+    disable_password_fields:
+      type: boolean
+      label: 'Hide password fields on user edit page'
+    disable_email_field:
+      type: boolean
+      label: 'Disable email field on user edit page'
+    disable_user_field:
+      type: boolean
+      label: 'Disable name field on user edit page'

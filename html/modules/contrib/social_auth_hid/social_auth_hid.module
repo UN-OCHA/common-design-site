@@ -25,3 +25,42 @@ function social_auth_hid_help($route_name, RouteMatchInterface $route_match) {
 
   return $output;
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter() for 'user_form'.
+ *
+ * Hide password fields.
+ *
+ * @see Drupal\user\AccountForm::form()
+ */
+function social_auth_hid_form_user_form_alter(&$form, $form_state, $form_id) {
+  $config = \Drupal::config('social_auth_hid.settings');
+
+  if ($config->get('disable_password_fields')) {
+    if (isset($form['account']['pass'])) {
+      $form['account']['pass']['#access'] = FALSE;
+    }
+
+    if (isset($form['account']['current_pass'])) {
+      $form['account']['current_pass']['#access'] = FALSE;
+    }
+  }
+
+  if ($config->get('disable_email_field')) {
+    if (isset($form['account']['mail'])) {
+      $form['account']['mail']['#type'] = 'item';
+      $form['account']['mail']['#markup'] = $form['account']['mail']['#default_value'];
+      $form['account']['mail']['#description'] = '';
+      $form['account']['mail']['#required'] = FALSE;
+    }
+  }
+
+  if ($config->get('disable_user_field')) {
+    if (isset($form['account']['name'])) {
+      $form['account']['name']['#type'] = 'item';
+      $form['account']['name']['#markup'] = $form['account']['name']['#default_value'];
+      $form['account']['name']['#description'] = '';
+      $form['account']['name']['#required'] = FALSE;
+    }
+  }
+}
