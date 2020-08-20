@@ -1,3 +1,6 @@
 base_url: 'https://auth.humanitarian.id'
 auto_redirect: false
 disable_default: false
+disable_password_fields: false
+disable_email_field: false
+disable_user_field: false

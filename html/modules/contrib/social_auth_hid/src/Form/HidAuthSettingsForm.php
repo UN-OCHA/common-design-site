@@ -126,6 +126,24 @@ class HidAuthSettingsForm extends SocialAuthSettingsForm {
       '#default_value' => $config->get('disable_default'),
     ];
 
+    $form['hid_settings']['advanced']['disable_password_fields'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Hide password fields on user edit page'),
+      '#default_value' => $config->get('disable_password_fields'),
+    ];
+
+    $form['hid_settings']['advanced']['disable_email_field'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Disable email field on user edit page'),
+      '#default_value' => $config->get('disable_email_field'),
+    ];
+
+    $form['hid_settings']['advanced']['disable_user_field'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Disable name field on user edit page'),
+      '#default_value' => $config->get('disable_user_field'),
+    ];
+
     return parent::buildForm($form, $form_state);
   }
 
@@ -151,6 +169,9 @@ class HidAuthSettingsForm extends SocialAuthSettingsForm {
       ->set('base_url', rtrim($values['base_url'], '/'))
       ->set('auto_redirect', $values['auto_redirect'])
       ->set('disable_default', $values['disable_default'])
+      ->set('disable_password_fields', $values['disable_password_fields'])
+      ->set('disable_email_field', $values['disable_email_field'])
+      ->set('disable_user_field', $values['disable_user_field'])
       ->save();
 
     // Clear router cache.

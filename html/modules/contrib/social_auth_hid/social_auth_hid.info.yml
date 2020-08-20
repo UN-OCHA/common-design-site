@@ -7,7 +7,7 @@ configure: social_auth_hid.settings_form
 dependencies:
   - social_auth:social_auth (>= 8.x-2.0-rc2)
 
-# Information added by Drupal.org packaging script on 2020-07-13
-version: '8.x-2.4'
+# Information added by Drupal.org packaging script on 2020-08-12
+version: '8.x-2.5'
 project: 'social_auth_hid'
-datestamp: 1594625536
+datestamp: 1597223052
