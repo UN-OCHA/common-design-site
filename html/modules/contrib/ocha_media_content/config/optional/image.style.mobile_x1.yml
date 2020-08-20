@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: mobile_x1
+label: 'mobile x1'
+effects:
+  e7a80767-8c58-482c-905a-ef16090fce8b:
+    uuid: e7a80767-8c58-482c-905a-ef16090fce8b
+    id: image_scale
+    weight: 1
+    data:
+      width: 576
+      height: null
+      upscale: false

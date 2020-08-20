@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: desktop_x2
+label: 'desktop x2'
+effects:
+  5b872e7d-16b4-462a-a340-a458f20a5d8d:
+    uuid: 5b872e7d-16b4-462a-a340-a458f20a5d8d
+    id: image_scale
+    weight: 1
+    data:
+      width: 2048
+      height: null
+      upscale: false

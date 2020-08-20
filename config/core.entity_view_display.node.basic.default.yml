@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_image_component
+    - field.field.node.basic.field_media_content
     - node.type.basic
   module:
     - entity_reference_revisions
@@ -50,6 +51,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
+  field_media_content:
+    weight: 5
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
     region: content
   links:
     weight: 4

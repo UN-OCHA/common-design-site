@@ -1,0 +1,4 @@
+services:
+  paragraph_view_mode.storage_manager:
+    class: Drupal\paragraph_view_mode\StorageManager
+    arguments: ['@entity_type.manager']

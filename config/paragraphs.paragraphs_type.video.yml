@@ -1,0 +1,12 @@
+uuid: a4e332be-183c-4be1-84ad-817b6d026394
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: z-wqpVxtMOAgwL9q6b0MWZzgqRBj8UR7qeymfJ4CC8Q
+id: video
+label: Video
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
