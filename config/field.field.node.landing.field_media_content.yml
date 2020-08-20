@@ -1,0 +1,41 @@
+uuid: 0b8dac95-73e1-4e87-914c-c55108686178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_content
+    - node.type.landing
+  module:
+    - entity_reference_revisions
+id: node.landing.field_media_content
+field_name: field_media_content
+entity_type: node
+bundle: landing
+label: 'Media content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles: null
+    target_bundles_drag_drop:
+      hero:
+        weight: 7
+        enabled: false
+      image:
+        weight: 8
+        enabled: false
+      text_and_image:
+        weight: 9
+        enabled: false
+      video:
+        weight: 10
+        enabled: false
+      views:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

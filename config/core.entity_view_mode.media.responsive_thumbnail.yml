@@ -1,0 +1,12 @@
+uuid: bd2f891a-4d06-4804-9f44-07ca3d3b7e03
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: MvL089zZGHjVEbj_DK6VczAe8X5zDOcylHkN-b2a2Uk
+id: media.responsive_thumbnail
+label: 'Responsive thumbnail'
+targetEntityType: media
+cache: true

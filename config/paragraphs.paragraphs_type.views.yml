@@ -1,0 +1,10 @@
+uuid: bbbfb3fe-1273-4661-9199-95f2f4b2439d
+langcode: en
+status: true
+dependencies: {  }
+id: views
+label: Views
+icon_uuid: null
+icon_default: null
+description: 'A paragraph type to display Views'
+behavior_plugins: {  }

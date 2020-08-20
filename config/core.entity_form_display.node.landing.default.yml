@@ -4,8 +4,11 @@ status: true
 dependencies:
   config:
     - field.field.node.landing.body
+    - field.field.node.landing.field_media_content
+    - field.field.node.landing.layout_builder__layout
     - node.type.landing
   module:
+    - paragraphs
     - path
     - text
 id: node.landing.default
@@ -29,6 +32,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_media_content:
+    type: entity_reference_paragraphs
+    weight: 122
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
   langcode:
     type: language_select
     weight: 2
@@ -81,4 +96,5 @@ content:
       match_limit: 10
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true

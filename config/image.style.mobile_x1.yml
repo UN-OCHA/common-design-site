@@ -1,0 +1,17 @@
+uuid: b8059e71-d48f-4fba-9860-18947c58b6da
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6FQmxsaqlJxJhUgSM25cStwbyLAw8TQplQ8XTdwqtt0
+name: mobile_x1
+label: 'mobile x1'
+effects:
+  e7a80767-8c58-482c-905a-ef16090fce8b:
+    uuid: e7a80767-8c58-482c-905a-ef16090fce8b
+    id: image_scale
+    weight: 1
+    data:
+      width: 576
+      height: null
+      upscale: false

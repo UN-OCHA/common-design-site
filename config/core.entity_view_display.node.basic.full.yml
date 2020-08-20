@@ -1,8 +1,9 @@
-uuid: 77b9a69d-6b10-4f5b-ab98-0e63424e6d65
+uuid: 0066d35e-26a9-49c6-a834-d6291bb835b1
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.basic.body
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
@@ -11,24 +12,29 @@ dependencies:
     - node.type.basic
   module:
     - entity_reference_revisions
+    - layout_builder
     - text
     - user
-id: node.basic.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.basic.full
 targetEntityType: node
 bundle: basic
-mode: default
+mode: full
 content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_hero_component:
     type: entity_reference_revisions_entity_view
-    weight: 3
-    label: above
+    weight: 0
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -36,8 +42,8 @@ content:
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings:
       view_mode: default
       link: false
@@ -45,26 +51,22 @@ content:
     region: content
   field_image_component:
     type: entity_reference_revisions_entity_view
-    weight: 2
-    label: above
+    weight: 3
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_media_content:
-    weight: 5
-    label: above
+    weight: 4
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
     region: content
-  links:
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   langcode: true
+  links: true
