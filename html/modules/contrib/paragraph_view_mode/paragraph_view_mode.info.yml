@@ -1,0 +1,13 @@
+name: 'Paragraph View Mode'
+description: 'Create paragraph view mode field on given paragraph type'
+type: module
+core: 8.x
+core_version_requirement: ^8 || ^9
+package: Paragraphs
+dependencies:
+  - paragraphs:paragraphs
+
+# Information added by Drupal.org packaging script on 2020-08-19
+version: '8.x-1.6'
+project: 'paragraph_view_mode'
+datestamp: 1597841638
