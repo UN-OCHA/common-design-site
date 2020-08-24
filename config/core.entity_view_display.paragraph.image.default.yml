@@ -1,4 +1,3 @@
-uuid: ced88a16-e7fc-4b6c-acb4-5b6501154236
 langcode: en
 status: true
 dependencies:
@@ -9,6 +8,14 @@ id: paragraph.image.default
 targetEntityType: paragraph
 bundle: image
 mode: default
-content: {  }
-hidden:
-  field_media_content_image: true
+content:
+  field_media_content_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: responsive_image
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

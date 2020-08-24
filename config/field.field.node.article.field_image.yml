@@ -1,18 +1,19 @@
+uuid: 2654f411-fccc-4667-ba90-99dafc5eb5e0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_media_content_image
+    - field.storage.node.field_image
     - media.type.image
-    - paragraphs.paragraphs_type.image
-id: paragraph.image.field_media_content_image
-field_name: field_media_content_image
-entity_type: paragraph
-bundle: image
+    - node.type.article
+id: node.article.field_image
+field_name: field_image
+entity_type: node
+bundle: article
 label: Image
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -23,5 +24,5 @@ settings:
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: image
 field_type: entity_reference

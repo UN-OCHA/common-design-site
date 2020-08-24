@@ -1,9 +1,6 @@
-uuid: 117f6211-4766-4339-a47e-ced5e2f6f591
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: '-_LjWHvAMWf7v99pfHqXl4KfTFk1-MGV1mdlzPNwORs'
 name: xlarge_thumbnail_x2
 label: 'xlarge thumbnail x2'
 effects:

@@ -1,4 +1,3 @@
-uuid: 3d09eafa-d07f-4929-9728-db706f79b7e9
 langcode: en
 status: true
 dependencies:
@@ -7,8 +6,6 @@ dependencies:
     - paragraphs.paragraphs_type.text_and_image
   module:
     - text
-_core:
-  default_config_hash: JLrXjKUjgiwUNmDC4AmeXkIcW4KwvRpX19bjjnJRjgs
 id: paragraph.text_and_image.field_media_content_text
 field_name: field_media_content_text
 entity_type: paragraph

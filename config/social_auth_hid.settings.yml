@@ -5,6 +5,6 @@ client_id: HID_CLIENT_ID_DO_NOT_COMMIT_TO_REPOSITORY
 client_secret: HID_CLIENT_ID_DO_NOT_COMMIT_TO_REPOSITORY
 auto_redirect: true
 disable_default: true
-disable_password_fields: 1
-disable_email_field: 1
-disable_user_field: 1
+disable_password_fields: true
+disable_email_field: true
+disable_user_field: true

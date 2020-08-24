@@ -1,7 +1,9 @@
-uuid: e4071cb1-efbe-4012-a4a1-7a4ba3cb148b
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.responsive_image
+    - core.entity_view_mode.media.responsive_thumbnail
   module:
     - editor
     - image
@@ -28,18 +30,22 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption data-image-style> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <img src alt data-entity-type data-entity-uuid data-align data-caption data-image-style> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <p>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
     id: media_embed
     provider: media
     status: true
-    weight: -44
+    weight: -41
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      allowed_media_types:
+        image: image
+        video: video
+      allowed_view_modes:
+        responsive_image: responsive_image
+        responsive_thumbnail: responsive_thumbnail
   editor_file_reference:
     id: editor_file_reference
     provider: editor
@@ -63,24 +69,24 @@ filters:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -43
+    weight: -40
     settings: {  }
   filter_html_image_secure:
     id: filter_html_image_secure
     provider: filter
-    status: false
-    weight: -40
+    status: true
+    weight: -42
     settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter
-    status: false
-    weight: -42
+    status: true
+    weight: -44
     settings: {  }
   filter_image_style:
     id: filter_image_style
     provider: image
     status: true
-    weight: -41
+    weight: -43
     settings:
       allowed_styles: {  }
