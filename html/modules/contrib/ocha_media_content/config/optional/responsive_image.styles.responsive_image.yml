@@ -16,44 +16,44 @@ id: responsive_image
 label: 'Responsive image'
 image_style_mappings:
   -
-    breakpoint_id: whd.lg
+    breakpoint_id: common_design.lg
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: xlarge_x1
   -
-    breakpoint_id: whd.lg
+    breakpoint_id: common_design.lg
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: xlarge_x
   -
-    breakpoint_id: whd.md
+    breakpoint_id: common_design.md
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: desktop_x1
   -
-    breakpoint_id: whd.md
+    breakpoint_id: common_design.md
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: desktop_x2
   -
-    breakpoint_id: whd.sm
+    breakpoint_id: common_design.sm
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: tablet_x1
   -
-    breakpoint_id: whd.sm
+    breakpoint_id: common_design.sm
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: tablet_x2
   -
-    breakpoint_id: whd.xs
+    breakpoint_id: common_design.xs
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: mobile_x1
   -
-    breakpoint_id: whd.xs
+    breakpoint_id: common_design.xs
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: mobile_x2
-breakpoint_group: whd
+breakpoint_group: common_design
 fallback_image_style: mobile_x1
