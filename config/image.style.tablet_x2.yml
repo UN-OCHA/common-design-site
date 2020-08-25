@@ -2,8 +2,6 @@ uuid: 15ef8203-d125-4f09-8176-e7f3f27ed16f
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: IhuJH_fk1rFVbmr6X90roLg9a2Sg1O-EAa034Yd9k5Y
 name: tablet_x2
 label: 'tablet x2'
 effects:

@@ -5,8 +5,6 @@ dependencies:
   module:
     - paragraphs
     - text
-_core:
-  default_config_hash: rcTlob0Jb1OGnrb9QRheXIGZRXj3Rgn9HwBg4qA8QaI
 id: paragraph.field_media_content_text
 field_name: field_media_content_text
 entity_type: paragraph

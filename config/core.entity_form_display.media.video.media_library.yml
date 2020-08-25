@@ -6,8 +6,6 @@ dependencies:
     - core.entity_form_mode.media.media_library
     - field.field.media.video.field_media_oembed_video
     - media.type.video
-_core:
-  default_config_hash: vIe9-IapRW011uccLfD05--AJ841uhTe_3NC3NsNz4k
 id: media.video.media_library
 targetEntityType: media
 bundle: video

@@ -10,8 +10,6 @@ dependencies:
   module:
     - options
     - text
-_core:
-  default_config_hash: 4tr2iQ97saycIA0t6M-TYBqIU8OUkQ1YvmJ2uqhUWUA
 id: paragraph.text_and_image.default
 targetEntityType: paragraph
 bundle: text_and_image
@@ -27,12 +25,12 @@ content:
     type: entity_reference_entity_view
     region: content
   field_media_content_image_align:
+    type: list_key
     weight: 1
+    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
-    region: content
   field_media_content_text:
     weight: 2
     label: hidden

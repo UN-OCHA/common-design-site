@@ -10,8 +10,6 @@ dependencies:
   module:
     - media_library
     - text
-_core:
-  default_config_hash: 4a4ldMZPxO09l8wBDHxCgtWW26U0SCxUvjJWddrHRog
 id: paragraph.text_and_image.default
 targetEntityType: paragraph
 bundle: text_and_image
@@ -25,11 +23,11 @@ content:
     type: media_library_widget
     region: content
   field_media_content_image_align:
+    type: options_select
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_media_content_text:
     weight: 2
     settings:

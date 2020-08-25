@@ -2,8 +2,6 @@ uuid: fc41c2f2-7005-446d-a58c-3f21805a2715
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: zqIAbdpZwkZDStUsLLBVYZYw9pYndI_pJBhe_3CX9Es
 name: mobile_thumbnail_x2
 label: 'mobile thumbnail x2'
 effects:

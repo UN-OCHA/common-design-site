@@ -27,12 +27,22 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Blockquote
+        -
+          name: Align
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
         -
           name: Media
           items:
             - DrupalMediaLibrary
             - DrupalImage
-            - Blockquote
+        -
+          name: Format
+          items:
+            - Format
         -
           name: Tools
           items:

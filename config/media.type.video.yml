@@ -2,8 +2,6 @@ uuid: 4a4e1018-e532-40d4-b054-d3b3c7793884
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Klvgz4x2dDisRvzTg7G4GUEmIMYyEA696wEK7fNiryo
 id: video
 label: Video
 description: ''

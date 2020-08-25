@@ -14,8 +14,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: 0-jwDW53Qx6N8ROYN8uU0FepstXzQ6bZRqfjouSofGQ
 id: media.image.responsive_image
 targetEntityType: media
 bundle: image

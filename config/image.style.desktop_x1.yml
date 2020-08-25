@@ -2,8 +2,6 @@ uuid: 314c0b52-b672-4def-a1a6-428c3187e5a9
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: h7JLcCGPcfmlW45EoO3TCP65vGjLAdNr_cQY7FNeOHM
 name: desktop_x1
 label: 'desktop x1'
 effects:

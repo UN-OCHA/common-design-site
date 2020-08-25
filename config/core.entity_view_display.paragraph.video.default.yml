@@ -5,8 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.video.field_media_content_video
     - paragraphs.paragraphs_type.video
-_core:
-  default_config_hash: LjoMgzhPgdMgge4i7N7Y_L2SNeEh8tgnfZmhazviEEo
 id: paragraph.video.default
 targetEntityType: paragraph
 bundle: video

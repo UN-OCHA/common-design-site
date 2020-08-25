@@ -2,8 +2,6 @@ uuid: 042bc70f-6afc-4fd5-a6ed-666a26a8ff6d
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: twH6CYBN-oUcdL7rpEBke8nFd5Gb9tuvJXWxrjOLcfo
 name: xlarge_x
 label: 'xlarge x2'
 effects:
