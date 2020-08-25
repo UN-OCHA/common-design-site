@@ -1,3 +1,4 @@
+uuid: 86108d33-2994-4822-a7ad-430ed13f2f2b
 langcode: en
 status: true
 dependencies:
@@ -22,6 +23,7 @@ content:
     region: content
 hidden:
   created: true
+  langcode: true
   name: true
   thumbnail: true
   uid: true

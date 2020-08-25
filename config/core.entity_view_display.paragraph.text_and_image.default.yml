@@ -1,11 +1,14 @@
+uuid: 0b868cb5-8d15-48a4-9883-00209adfadf2
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.paragraph.text_and_image.field_media_content_image
+    - field.field.paragraph.text_and_image.field_media_content_image_align
     - field.field.paragraph.text_and_image.field_media_content_text
     - paragraphs.paragraphs_type.text_and_image
   module:
+    - options
     - text
 id: paragraph.text_and_image.default
 targetEntityType: paragraph
@@ -21,8 +24,15 @@ content:
     third_party_settings: {  }
     type: entity_reference_entity_view
     region: content
-  field_media_content_text:
+  field_media_content_image_align:
+    type: list_key
     weight: 1
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_media_content_text:
+    weight: 2
     label: hidden
     settings: {  }
     third_party_settings: {  }

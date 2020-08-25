@@ -1,3 +1,4 @@
+uuid: 7ccd9044-f218-4256-a628-3e658059d271
 langcode: en
 status: true
 dependencies:
@@ -25,5 +26,6 @@ content:
 hidden:
   created: true
   field_media_oembed_video: true
+  langcode: true
   name: true
   uid: true
