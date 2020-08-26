@@ -26,33 +26,31 @@ settings:
           items:
             - BulletedList
             - NumberedList
+            - Blockquote
         -
-          name: Media
-          items:
-            - DrupalMediaLibrary
-        -
-          name: Tools
-          items:
-            - Source
-        -
-          name: Alignment
+          name: Align
           items:
             - JustifyLeft
             - JustifyCenter
             - JustifyRight
-            - Blockquote
+        -
+          name: Media
+          items:
+            - DrupalMediaLibrary
+            - DrupalImage
+        -
+          name: Format
+          items:
+            - Format
+        -
+          name: Tools
+          items:
+            - Source
   plugins:
-    language:
-      language_list: un
     stylescombo:
       styles: ''
-    video_embed:
-      defaults:
-        children:
-          autoplay: false
-          responsive: true
-          width: '854'
-          height: '480'
+    language:
+      language_list: un
 image_upload:
   status: false
   scheme: public
