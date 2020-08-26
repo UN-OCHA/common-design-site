@@ -1,9 +1,6 @@
-uuid: 43750bca-a5fd-4a0b-b974-21e91b95f1af
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 26W3q1_IovtqXha1ppl8Q1FLHbXF519gsqKZSV_x3qQ
 name: tablet_thumbnail_x1
 label: 'tablet thumbnail x1'
 effects:

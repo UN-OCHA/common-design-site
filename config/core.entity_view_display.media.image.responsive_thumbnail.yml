@@ -1,4 +1,3 @@
-uuid: d0f7ee5d-89ce-49b9-9301-201d8f8bd553
 langcode: en
 status: true
 dependencies:
@@ -14,8 +13,6 @@ third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-_core:
-  default_config_hash: l90lvjwQN_YfxCAyQ92G36r0Q6iCp_hwwM4_Dzt2zEs
 id: media.image.responsive_thumbnail
 targetEntityType: media
 bundle: image
@@ -32,7 +29,6 @@ content:
     region: content
 hidden:
   created: true
-  langcode: true
   name: true
   thumbnail: true
   uid: true

@@ -1,9 +1,6 @@
-uuid: 9d6ac8c6-c42a-464c-9675-edf91dde4b26
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: MEEGbzraOtDRIUzyP5BhzxPcvm7btOldImUTDQz1x38
 id: text_and_image
 label: 'Text and Image'
 icon_uuid: null

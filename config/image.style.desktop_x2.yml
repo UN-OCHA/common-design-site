@@ -1,9 +1,6 @@
-uuid: d5e48a8d-25e9-43cc-8b22-3e83e851be71
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: USIwZb1Qkfh6-rA3n4Xip5sOO9lcrBthoNa-87rr-lg
 name: desktop_x2
 label: 'desktop x2'
 effects:

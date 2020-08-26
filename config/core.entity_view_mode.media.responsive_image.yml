@@ -1,11 +1,8 @@
-uuid: edc2ea91-e1c8-4b0f-b5e1-50cbde4a7d7c
 langcode: en
 status: true
 dependencies:
   module:
     - media
-_core:
-  default_config_hash: 5HXQZMuhMl0011tlmJ2WqmliEZ8n4wVKefNM4FPKJNM
 id: media.responsive_image
 label: 'Responsive image'
 targetEntityType: media
