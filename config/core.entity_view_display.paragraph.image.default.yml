@@ -19,5 +19,4 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-hidden:
-  field_image: true
+hidden: {  }

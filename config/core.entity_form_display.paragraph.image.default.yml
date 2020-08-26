@@ -21,5 +21,4 @@ content:
     region: content
 hidden:
   created: true
-  field_image: true
   status: true
