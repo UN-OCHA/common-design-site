@@ -28,4 +28,5 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-hidden: {  }
+hidden:
+  field_media_content_image_align: true
