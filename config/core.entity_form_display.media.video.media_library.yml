@@ -1,3 +1,4 @@
+uuid: d6208391-92d9-488d-9b9b-4afed62f3ceb
 langcode: en
 status: true
 dependencies:
@@ -10,6 +11,13 @@ targetEntityType: media
 bundle: video
 mode: media_library
 content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     settings:

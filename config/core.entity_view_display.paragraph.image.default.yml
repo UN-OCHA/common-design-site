@@ -1,3 +1,4 @@
+uuid: ced88a16-e7fc-4b6c-acb4-5b6501154236
 langcode: en
 status: true
 dependencies:
@@ -18,4 +19,5 @@ content:
       link: false
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_image: true
