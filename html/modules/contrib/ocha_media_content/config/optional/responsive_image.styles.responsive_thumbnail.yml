@@ -14,80 +14,44 @@ id: responsive_thumbnail
 label: 'Responsive thumbnail'
 image_style_mappings:
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.lg
-=======
-    breakpoint_id: common_design.lg
->>>>>>> develop
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: xlarge_thumbnail_x1
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.lg
-=======
-    breakpoint_id: common_design.lg
->>>>>>> develop
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: xlarge_thumbnail_x2
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.md
-=======
-    breakpoint_id: common_design.md
->>>>>>> develop
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: desktop_thumbnail_x1
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.md
-=======
-    breakpoint_id: common_design.md
->>>>>>> develop
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: desktop_thumbnail_x2
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.sm
-=======
-    breakpoint_id: common_design.sm
->>>>>>> develop
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: tablet_thumbnail_x1
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.sm
-=======
-    breakpoint_id: common_design.sm
->>>>>>> develop
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: tablet_thumbnail_x2
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.xs
-=======
-    breakpoint_id: common_design.xs
->>>>>>> develop
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x1
   -
-<<<<<<< HEAD
     breakpoint_id: ocha_media_content.xs
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x2
 breakpoint_group: ocha_media_content
-=======
-    breakpoint_id: common_design.xs
-    multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: mobile_thumbnail_x2
-breakpoint_group: common_design
->>>>>>> develop
 fallback_image_style: mobile_thumbnail_x1
