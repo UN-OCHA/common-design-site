@@ -6608,12 +6608,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_media_content.git",
-                "reference": "dc3280e898ffc392e89f2092c1821379bce6f5d3"
+                "reference": "ab5e34f6757b3d952b85fa6eb53bbe8f51ce71f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_media_content/zipball/dc3280e898ffc392e89f2092c1821379bce6f5d3",
-                "reference": "dc3280e898ffc392e89f2092c1821379bce6f5d3",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_media_content/zipball/ab5e34f6757b3d952b85fa6eb53bbe8f51ce71f4",
+                "reference": "ab5e34f6757b3d952b85fa6eb53bbe8f51ce71f4",
                 "shasum": ""
             },
             "require": {
@@ -6629,7 +6629,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-08-24T16:33:39+00:00"
+            "time": "2020-08-26T15:10:24+00:00"
         },
         {
             "name": "webflo/drupal-finder",
