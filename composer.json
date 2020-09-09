@@ -98,7 +98,7 @@
         "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/social_auth_hid": "^2.2",
         "drupal/twig_tweak": "^2.1",
-        "drupal/viewsreference": "2.0-alpha6",
+        "drupal/viewsreference": "2.0-alpha7",
         "drush/drush": "^10.1",
         "unocha/common_design": "^2.8.3",
         "unocha/ocha_media_content": "dev-master"
