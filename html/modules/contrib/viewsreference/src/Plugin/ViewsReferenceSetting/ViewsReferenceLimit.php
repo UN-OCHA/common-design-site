@@ -23,7 +23,7 @@ class ViewsReferenceLimit extends PluginBase implements ViewsReferenceSettingInt
   /**
    * {@inheritdoc}
    */
-  public function alterFormField(&$form_field) {
+  public function alterFormField(array &$form_field) {
     $form_field['#title'] = $this->t('Items per page');
     $form_field['#type'] = 'number';
     $form_field['#weight'] = 25;

@@ -23,7 +23,7 @@ class ViewsReferenceTitle extends PluginBase implements ViewsReferenceSettingInt
   /**
    * {@inheritdoc}
    */
-  public function alterFormField(&$form_field) {
+  public function alterFormField(array &$form_field) {
     $form_field['#type'] = 'checkbox';
     $form_field['#weight'] = 20;
   }

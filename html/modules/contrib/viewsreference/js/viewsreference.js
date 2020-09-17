@@ -39,8 +39,8 @@
 
   Drupal.behaviors.displayMessage = {
     attach: function (context, settings) {
-      $( document ).ajaxComplete(function( event, request, settings ) {
-        $('.field--type-viewsreference select.viewsreference-display-id', context).each( function(){
+      $(document).ajaxComplete(function (event, request, settings) {
+        $('.field--type-viewsreference select.viewsreference-display-id', context).each(function () {
           $('.viewsreference-display-error', context).remove();
           var $parent = $(this).parent().hide();
           if ($(this).find('option').length <= 1) {

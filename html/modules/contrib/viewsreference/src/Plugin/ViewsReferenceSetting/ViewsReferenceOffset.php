@@ -23,7 +23,7 @@ class ViewsReferenceOffset extends PluginBase implements ViewsReferenceSettingIn
   /**
    * {@inheritdoc}
    */
-  public function alterFormField(&$form_field) {
+  public function alterFormField(array &$form_field) {
     $form_field['#title'] = $this->t('Offset results');
     $form_field['#type'] = 'number';
     $form_field['#weight'] = 30;

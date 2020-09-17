@@ -60,7 +60,7 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
         $allowed[] = $type;
       }
     }
-    $summary[] = t('Allowed plugins: @view', ['@view' => implode(', ', $allowed)]);
+    $summary[] = $this->t('Allowed plugins: @view', ['@view' => implode(', ', $allowed)]);
     return $summary;
   }
 
@@ -72,7 +72,7 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
     foreach ($items as $delta => $item) {
       $view_name = $item->getValue()['target_id'];
       $display_id = $item->getValue()['display_id'];
-      $data = unserialize($item->getValue()['data']);
+      $data = unserialize($item->getValue()['data'], ['allowed_classes' => FALSE]);
       $view = Views::getView($view_name);
       // Add an extra check because the view could have been deleted.
       if (!is_object($view)) {
@@ -80,6 +80,7 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
       }
 
       $view->setDisplay($display_id);
+      $enabled_settings = array_filter($this->getFieldSetting('enabled_settings') ?? []);
 
       // Add properties to the view so our hook_views_pre_build() implementation
       // can alter the view. This is pretty hacky, but we need this to fix ajax
@@ -87,7 +88,7 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
       // view was part of a viewsreference field or not.
       $view->element['#viewsreference'] = [
         'data' => $data,
-        'enabled_settings' => array_filter($this->getFieldSetting('enabled_settings')),
+        'enabled_settings' => $enabled_settings,
       ];
 
       $view->preExecute();
@@ -98,6 +99,12 @@ class ViewsReferenceFieldFormatter extends FormatterBase {
           // Add a custom template if the title is available.
           $title = $view->getTitle();
           if (!empty($title)) {
+            // If the title contains tokens, we need to render the view to
+            // populate the rowTokens.
+            if (strpos($title, '{{') !== FALSE) {
+              $view->render();
+              $title = $view->getTitle();
+            }
             $elements[$delta]['title'] = [
               '#theme' => 'viewsreference__view_title',
               '#title' => $title,

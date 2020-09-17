@@ -23,7 +23,7 @@ class ViewsReferenceArgument extends PluginBase implements ViewsReferenceSetting
   /**
    * {@inheritdoc}
    */
-  public function alterFormField(&$form_field) {
+  public function alterFormField(array &$form_field) {
     $form_field['#weight'] = 40;
   }
 

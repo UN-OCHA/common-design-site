@@ -5,10 +5,8 @@ namespace Drupal\viewsreference\Plugin\Field\FieldType;
 use Drupal\views\Views;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Field\FieldStorageDefinitionInterface;
-use Drupal\Core\Field\PreconfiguredFieldUiOptionsInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
-use Drupal\Core\TypedData\OptionsProviderInterface;
 use Drupal\Core\Field\Plugin\Field\FieldType\EntityReferenceItem;
 use Drupal\Core\TypedData\DataDefinition;
 
@@ -119,7 +117,7 @@ class ViewsReferenceItem extends EntityReferenceItem {
 
     $form['preselect_views'] = [
       '#type' => 'checkboxes',
-      '#title' => t('Preselect View Options'),
+      '#title' => $this->t('Preselect View Options'),
       '#options' => $view_list,
       '#default_value' => $preselect_views,
       '#weight' => 2,
@@ -133,7 +131,7 @@ class ViewsReferenceItem extends EntityReferenceItem {
     }
     $form['enabled_settings'] = [
       '#type' => 'checkboxes',
-      '#title' => t('Enable extra settings'),
+      '#title' => $this->t('Enable extra settings'),
       '#options' => $enabled_settings_list,
       '#default_value' => $enabled_settings,
       '#weight' => 3,

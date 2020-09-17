@@ -16,7 +16,7 @@ interface ViewsReferenceSettingInterface extends PluginInspectionInterface {
    * @param array $form_field
    *   The form field array.
    */
-  public function alterFormField(&$form_field);
+  public function alterFormField(array &$form_field);
 
   /**
    * Alter the view object.

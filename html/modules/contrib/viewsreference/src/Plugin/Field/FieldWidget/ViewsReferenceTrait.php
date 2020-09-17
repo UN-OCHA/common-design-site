@@ -88,25 +88,23 @@ trait ViewsReferenceTrait {
       ],
     ];
 
-    $default_value = isset($field_value['display_id']) ? $field_value['display_id'] : '';
+    $display_id = $field_value['display_id'] ?? NULL;
+    $view_name = $field_value['target_id'] ?? NULL;
     $options = [];
-    if (!empty($field_value['target_id'])) {
+    if ($view_name) {
       // Extract the view id from the text.
-      $full_view_name = $field_value['target_id'];
-      preg_match('#\((.*?)\)#', $full_view_name, $match);
+      preg_match('#\((.*?)\)#', $view_name, $match);
       if (!empty($match)) {
-        $options = $this->getViewDisplays($match[1]);
+        $view_name = $match[1];
       }
-      else {
-        $options = $this->getViewDisplays($field_value['target_id']);
-      }
+      $options = $this->getViewDisplays($view_name);
     }
 
     $element['display_id'] = [
       '#title' => $this->t('Display'),
       '#type' => 'select',
       '#options' => $options,
-      '#default_value' => $default_value,
+      '#default_value' => $display_id,
       '#empty_option' => '- Select -',
       '#empty_value' => '',
       '#weight' => 10,
@@ -127,7 +125,7 @@ trait ViewsReferenceTrait {
 
     $field_data = [];
     if (isset($field_value['data'])) {
-      $field_data = unserialize($field_value['data']);
+      $field_data = unserialize($field_value['data'], ['allowed_classes' => FALSE]);
     }
 
     $element['options'] = [
@@ -143,17 +141,20 @@ trait ViewsReferenceTrait {
 
     $viewsreference_plugin_manager = \Drupal::service('plugin.manager.viewsreference.setting');
     $plugin_definitions = $viewsreference_plugin_manager->getDefinitions();
-    $enabled_settings = array_filter($this->getFieldSetting('enabled_settings'));
+    $enabled_settings = array_filter($this->getFieldSetting('enabled_settings') ?? []);
     foreach ($enabled_settings as $enabled_setting) {
       if (!empty($plugin_definitions[$enabled_setting])) {
         $plugin_definition = $plugin_definitions[$enabled_setting];
         /** @var \Drupal\viewsreference\Plugin\ViewsReferenceSettingInterface $plugin_instance */
-        $plugin_instance = $viewsreference_plugin_manager->createInstance($plugin_definition['id']);
+        $plugin_instance = $viewsreference_plugin_manager->createInstance($plugin_definition['id'], [
+          'view_name' => $view_name,
+          'display_id' => $display_id,
+        ]);
 
         $element['options'][$plugin_definition['id']] = [
           '#title' => $plugin_definition['label'],
           '#type' => 'textfield',
-          '#default_value' => isset($field_data[$plugin_definition['id']]) ? $field_data[$plugin_definition['id']] : $plugin_definition['default_value'],
+          '#default_value' => $field_data[$plugin_definition['id']] ?? $plugin_definition['default_value'],
           '#states' => [
             'visible' => [
               ':input[name="' . $target_id_name_string . '"]' => $view_selected_js_state,
@@ -306,9 +307,9 @@ trait ViewsReferenceTrait {
    */
   protected function getViewDisplays($view_id) {
     $options = [];
-    $view_plugins = array_diff($this->getFieldSetting('plugin_types'), array('0'));
+    $view_plugins = array_diff($this->getFieldSetting('plugin_types'), ['0']);
     /** @var \Drupal\views\Entity\View $view */
-    if ($view = \Drupal::service('entity.manager')->getStorage('view')->load($view_id)) {
+    if ($view = \Drupal::service('entity_type.manager')->getStorage('view')->load($view_id)) {
       if ($displays = $view->get('display')) {
         foreach ($displays as $display) {
           if (in_array($display['display_plugin'], $view_plugins, TRUE)) {
