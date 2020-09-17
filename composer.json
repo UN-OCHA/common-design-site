@@ -90,7 +90,7 @@
         "drupal-composer/preserve-paths": "^0.1.5",
         "drupal/admin_denied": "^1.0",
         "drupal/components": "^1.1",
-        "drupal/core": "^8.8.1",
+        "drupal/core": "^8.9.6",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.10",
         "drupal/paragraphs_edit": "^2.0@alpha",
@@ -98,7 +98,7 @@
         "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/social_auth_hid": "^2.2",
         "drupal/twig_tweak": "^2.1",
-        "drupal/viewsreference": "2.0-alpha7",
+        "drupal/viewsreference": "^2.0-beta2",
         "drush/drush": "^10.1",
         "unocha/common_design": "^2.8.3",
         "unocha/ocha_media_content": "dev-master"
