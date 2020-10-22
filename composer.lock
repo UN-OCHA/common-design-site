@@ -228,16 +228,6 @@
                 "zend",
                 "zikula"
             ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-04-07T06:57:05+00:00"
         },
         {
@@ -1366,20 +1356,6 @@
                 "redis",
                 "xcache"
             ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcache",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-07-07T18:54:01+00:00"
         },
         {
@@ -1527,20 +1503,6 @@
                 "common",
                 "doctrine",
                 "php"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Fcommon",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-06-05T16:46:05+00:00"
         },
@@ -1710,20 +1672,6 @@
                 "uppercase",
                 "words"
             ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finflector",
-                    "type": "tidelift"
-                }
-            ],
             "time": "2020-05-29T07:19:59+00:00"
         },
         {
@@ -1785,20 +1733,6 @@
                 "lexer",
                 "parser",
                 "php"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Flexer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-05-25T17:44:05+00:00"
         },
@@ -2020,6 +1954,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
+            "abandoned": "drupal/core-composer-scaffold",
             "time": "2019-03-30T10:41:38+00:00"
         },
         {
@@ -2095,6 +2030,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.0",
                     "datestamp": "1506603544",
@@ -2139,6 +2077,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.1",
                     "datestamp": "1556870881",
@@ -2424,6 +2365,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.8",
                     "datestamp": "1583961846",
@@ -2720,6 +2664,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-1.0-alpha2",
                     "datestamp": "1541184180",
@@ -2833,6 +2780,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-2.0-rc2",
                     "datestamp": "1576820588",
@@ -3008,7 +2958,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-2.0-beta2",
-                    "datestamp": "1597241500",
+                    "datestamp": "1597243219",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -7314,6 +7264,9 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
                     "version": "8.x-2.1",
                     "datestamp": "1556799496",
@@ -7358,6 +7311,18 @@
                 {
                     "name": "See contributors",
                     "homepage": "https://www.drupal.org/node/3236/committers"
+                },
+                {
+                    "name": "pcambra",
+                    "homepage": "https://www.drupal.org/user/122101"
+                },
+                {
+                    "name": "salvis",
+                    "homepage": "https://www.drupal.org/user/82964"
+                },
+                {
+                    "name": "willzyx",
+                    "homepage": "https://www.drupal.org/user/1043862"
                 }
             ],
             "description": "Various blocks, pages, and functions for developers.",
