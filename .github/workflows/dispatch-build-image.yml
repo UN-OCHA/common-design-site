@@ -1,0 +1,44 @@
+name: Build docker image
+
+on:
+  repository_dispatch:
+    types: [dispatch_push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Docker login
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+    - name: Checkout code
+      uses: actions/checkout@v2
+      with:
+        ref: 'feature/cd-226-design-system'
+    - name: Determine environment type
+      uses: docker://unocha/actions:determine-environment-v3
+    - name: Build docker image
+      run: |
+        export DOCKER_TAG="${GITHUB_REF#refs/*/}"
+        export DOCKER_TAG=${DOCKER_TAG//[^[:alnum:].-]/-}
+        docker build \
+            --build-arg BRANCH_ENVIRONMENT=${BRANCH_ENVIRONMENT} \
+            --build-arg VCS_REF=`git rev-parse --short HEAD` \
+            --build-arg VCS_URL=`git config --get remote.origin.url | sed 's#git@github.com:#https://github.com/#'` \
+            --build-arg BUILD_DATE=`date -u +"%Y-%m-%dT%H:%M:%SZ"` \
+            --build-arg GITHUB_ACTOR=${GITHUB_ACTOR} \
+            --build-arg GITHUB_REPOSITORY=${GITHUB_REPOSITORY} \
+            --build-arg GITHUB_SHA=${GITHUB_SHA} \
+            --build-arg GITHUB_REF=${GITHUB_REF} \
+         . --file docker/Dockerfile --tag unocha/common-design-site:${DOCKER_TAG}
+        docker push unocha/common-design-site:${DOCKER_TAG}
+    - name: Flowdock Notify
+      uses: docker://unocha/actions:flowdock-notify-v3
+      env:
+        FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
+        FLOWDOCK_ICON: 'package'
+        FLOWDOCK_MESSAGE: 'Built a new `unocha/common-design-site` image from ${{ github.ref }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/common-design-site/tags).'
+        FLOWDOCK_TAGS: 'build,docker,${{ github.actor }}'
