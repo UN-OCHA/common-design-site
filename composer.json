@@ -21,6 +21,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -107,7 +111,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0-beta2",
         "drush/drush": "^10.1",
-        "unocha/common_design": "^2.8.4",
+        "unocha/common_design": "dev-cd-226-design-system",
         "unocha/ocha_media_content": "dev-master"
     },
     "require-dev": {
