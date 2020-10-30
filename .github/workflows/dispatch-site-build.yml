@@ -1,4 +1,4 @@
-name: Build docker image
+name: Build docker image on theme push
 
 on:
   repository_dispatch:
