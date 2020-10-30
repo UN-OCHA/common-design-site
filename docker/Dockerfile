@@ -1,6 +1,7 @@
 FROM unocha/unified-builder:7.3.20-r0-202007-01 as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
+ENV  COMPOSER_MEMORY_LIMIT=-1
 COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --quiet --no-dev --prefer-dist && \
