@@ -17,6 +17,7 @@ env:
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
      - DB=sqlite
+     - COMPOSER_MEMORY_LIMIT=-1
 
 before_script:
   # Composer.
