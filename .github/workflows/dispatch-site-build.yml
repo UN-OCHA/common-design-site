@@ -20,9 +20,9 @@ jobs:
     - name: Determine environment type
       uses: docker://unocha/actions:determine-environment-v3
     - name: Build docker image
+      env:
+        DOCKER_TAG: feature-cd-226-design-system
       run: |
-        export DOCKER_TAG="${GITHUB_REF#refs/*/}"
-        export DOCKER_TAG=${DOCKER_TAG//[^[:alnum:].-]/-}
         docker build \
             --build-arg BRANCH_ENVIRONMENT=${BRANCH_ENVIRONMENT} \
             --build-arg VCS_REF=`git rev-parse --short HEAD` \
@@ -39,5 +39,5 @@ jobs:
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
-        FLOWDOCK_MESSAGE: 'Built a new `unocha/common-design-site` image from ${{ github.ref }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/common-design-site/tags).'
+        FLOWDOCK_MESSAGE: 'Built a new `unocha/common-design-site` image from refs/heads/feature/cd-226-design-system and pushed to [DockerHub](https://hub.docker.com/r/unocha/common-design-site/tags).'
         FLOWDOCK_TAGS: 'build,docker,${{ github.actor }}'

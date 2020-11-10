@@ -17,18 +17,22 @@ env:
      - PHPCS_VERSION='2.9.*@dev'
      - CODER_VERSION='dev-8.x-2.x'
      - DB=sqlite
+     - COMPOSER_MEMORY_LIMIT=-1
 
 before_script:
   # Composer.
   - sed -i '1i export PATH="$HOME/.composer/vendor/bin:$PATH"' $HOME/.bashrc
   - source $HOME/.bashrc
-  - composer self-update
+  - composer self-update --1
 
   # Ensure the PHP environment is ready.
   - phpenv rehash
 
   # Composerify.
   - composer install
+
+  # Need to work out updates that work with composer v2, since the lock file is outdated.
+  - composer update
 
   # Nodify.
   - npm i
