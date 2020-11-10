@@ -4,7 +4,7 @@ ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 ENV  COMPOSER_MEMORY_LIMIT=-1
 COPY . /srv/www
 WORKDIR /srv/www
-RUN composer install --quiet --no-dev --prefer-dist && \
+RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default && \
     composer run gulp
 
