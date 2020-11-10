@@ -22,7 +22,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v1
     - name: Determine environment type
-      uses: docker://unocha/actions:determine-environment-v3
+      uses: docker://unocha/actions:determine-environment-main
     - name: Build docker image
       run: |
         export DOCKER_TAG="${GITHUB_REF#refs/*/}"
@@ -39,7 +39,7 @@ jobs:
          . --file docker/Dockerfile --tag unocha/common-design-site:${DOCKER_TAG}
         docker push unocha/common-design-site:${DOCKER_TAG}
     - name: Flowdock Notify
-      uses: docker://unocha/actions:flowdock-notify-v3
+      uses: docker://unocha/actions:flowdock-notify-main
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
