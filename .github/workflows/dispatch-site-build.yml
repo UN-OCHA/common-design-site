@@ -21,7 +21,7 @@ jobs:
       uses: docker://unocha/actions:determine-environment-main
     - name: Build docker image
       env:
-        DOCKER_TAG: 'feature-${{ github.event.client_payload.message.branch }}'
+        DOCKER_TAG: '${{ github.event.client_payload.message.branch }}'
       run: |
         export DOCKER_TAG="${DOCKER_TAG#refs/*/}"
         export DOCKER_TAG=${DOCKER_TAG//[^[:alnum:].-]/-}
