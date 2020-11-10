@@ -16,12 +16,12 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        ref: 'feature/cd-226-design-system'
+        ref: 'feature/${{ github.event.client_payload.message.branch }}'
     - name: Determine environment type
       uses: docker://unocha/actions:determine-environment-main
     - name: Build docker image
       env:
-        DOCKER_TAG: feature-cd-226-design-system
+        DOCKER_TAG: 'feature-${{ github.event.client_payload.message.branch }}'
       run: |
         docker build \
             --build-arg BRANCH_ENVIRONMENT=${BRANCH_ENVIRONMENT} \
@@ -39,5 +39,5 @@ jobs:
       env:
         FLOWDOCK_TOKEN: ${{ secrets.FLOWDOCK_TOKEN }}
         FLOWDOCK_ICON: 'package'
-        FLOWDOCK_MESSAGE: 'Built a new `unocha/common-design-site` image from refs/heads/feature/cd-226-design-system and pushed to [DockerHub](https://hub.docker.com/r/unocha/common-design-site/tags).'
+        FLOWDOCK_MESSAGE: 'Built a new `unocha/common-design-site` image from refs/heads/feature/${{ github.event.client_payload.message.branch }} and pushed to [DockerHub](https://hub.docker.com/r/unocha/common-design-site/tags).'
         FLOWDOCK_TAGS: 'build,docker,${{ github.actor }}'
