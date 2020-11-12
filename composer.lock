@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "04f234be2349876f8870b1140cd783fb",
+    "content-hash": "6ad5561fadaff5b4f0ef07e65a747ab5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -6880,16 +6880,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v2.8.6",
+            "version": "v2.8.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "162cd48b1641da70f34aed408f6d6b9f28a0fb37"
+                "reference": "b33e40a1f8fc4bc824fb2eca4804f17261fad538"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/162cd48b1641da70f34aed408f6d6b9f28a0fb37",
-                "reference": "162cd48b1641da70f34aed408f6d6b9f28a0fb37",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/b33e40a1f8fc4bc824fb2eca4804f17261fad538",
+                "reference": "b33e40a1f8fc4bc824fb2eca4804f17261fad538",
                 "shasum": ""
             },
             "require": {
@@ -6900,7 +6900,7 @@
             "license": [
                 "GPL-2.0-only"
             ],
-            "time": "2020-11-12T09:35:59+00:00"
+            "time": "2020-11-12T11:31:57+00:00"
         },
         {
             "name": "unocha/ocha_media_content",
