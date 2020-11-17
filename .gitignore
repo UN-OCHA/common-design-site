@@ -2,7 +2,7 @@
 /drush/contrib/
 /vendor/
 /html/core/
-#/html/modules/contrib/
+/html/modules/contrib/
 /html/themes/contrib/
 /html/profiles/contrib/
 /html/libraries/
