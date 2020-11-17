@@ -1,13 +1,13 @@
 site_name: 'Common Design Demo'
 short_name: 'Common Design Demo'
 description: 'Drupal website demo of OCHA Common Design'
-start_url: /
+start_url: /home
 lang: en
 theme_color: '#026cb6'
 background_color: '#ffffff'
 display: fullscreen
 default_image: '0'
-urls_to_cache: ''
+urls_to_cache: "/home\r\n/demo"
 urls_to_exclude: "admin/.*\r\nuser/.*"
 offline_page: /offline
 cache_version: '1'
