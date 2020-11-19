@@ -1994,23 +1994,23 @@
         },
         {
             "name": "drupal-composer/preserve-paths",
-            "version": "0.1.5",
+            "version": "0.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal-composer/preserve-paths.git",
-                "reference": "7f99622800504c058e5230b63d3cd25809fa23ba"
+                "reference": "2f86a503f1f7838f5f7f399a17edd4d16eb95034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal-composer/preserve-paths/zipball/7f99622800504c058e5230b63d3cd25809fa23ba",
-                "reference": "7f99622800504c058e5230b63d3cd25809fa23ba",
+                "url": "https://api.github.com/repos/drupal-composer/preserve-paths/zipball/2f86a503f1f7838f5f7f399a17edd4d16eb95034",
+                "reference": "2f86a503f1f7838f5f7f399a17edd4d16eb95034",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0"
+                "composer-plugin-api": "^1.0 || ^2.0"
             },
             "require-dev": {
-                "composer/composer": "1.*",
+                "composer/composer": "^2.0",
                 "derhasi/tempdirectory": "0.1.*",
                 "escapestudios/symfony2-coding-standard": "2.*",
                 "phpunit/phpunit": "4.*",
@@ -2027,7 +2027,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
@@ -2044,7 +2044,7 @@
                 "installer",
                 "nested package"
             ],
-            "time": "2017-07-20T14:32:18+00:00"
+            "time": "2020-11-14T20:28:03+00:00"
         },
         {
             "name": "drupal/admin_denied",
@@ -2681,33 +2681,30 @@
         },
         {
             "name": "drupal/paragraphs_viewmode",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/paragraphs_viewmode.git",
-                "reference": "8.x-1.0-alpha2"
+                "reference": "8.x-1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/paragraphs_viewmode-8.x-1.0-alpha2.zip",
-                "reference": "8.x-1.0-alpha2",
-                "shasum": "ebbe064201dd208608149039ea61621aac441f68"
+                "url": "https://ftp.drupal.org/files/projects/paragraphs_viewmode-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "46b95d74c4bf33665d04e7ac01e58f158772294f"
             },
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8.8 || ^9",
                 "drupal/paragraphs": "^1.2"
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.x": "1.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-1.0-alpha2",
-                    "datestamp": "1541184180",
+                    "version": "8.x-1.0",
+                    "datestamp": "1605320322",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -2716,6 +2713,10 @@
                 "GPL-2.0+"
             ],
             "authors": [
+                {
+                    "name": "VladimirAus",
+                    "homepage": "https://www.drupal.org/user/673120"
+                },
                 {
                     "name": "mikelutz",
                     "homepage": "https://www.drupal.org/user/2972409"
@@ -3290,16 +3291,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.23",
+            "version": "2.1.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "5fa792ad1853ae2bc60528dd3e5cbf4542d3c1df"
+                "reference": "ca90a3291eee1538cd48ff25163240695bd95448"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/5fa792ad1853ae2bc60528dd3e5cbf4542d3c1df",
-                "reference": "5fa792ad1853ae2bc60528dd3e5cbf4542d3c1df",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ca90a3291eee1538cd48ff25163240695bd95448",
+                "reference": "ca90a3291eee1538cd48ff25163240695bd95448",
                 "shasum": ""
             },
             "require": {
@@ -3344,7 +3345,13 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-10-31T20:37:35+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/egulias",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-11-14T15:56:27+00:00"
         },
         {
             "name": "grasmash/expander",
