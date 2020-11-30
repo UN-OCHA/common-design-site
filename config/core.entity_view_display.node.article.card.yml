@@ -1,37 +1,42 @@
-uuid: 7b1b5b94-343c-4ab6-8f6e-0247b6c6dced
+uuid: 4af8550c-97a1-4fc5-81b8-c78f55f3e82e
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.card
     - field.field.node.article.body
     - field.field.node.article.field_image
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
-id: node.article.teaser
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.article.card
 targetEntityType: node
 bundle: article
-mode: teaser
+mode: card
 content:
   body:
     label: hidden
     type: text_trimmed
     weight: 1
     settings:
-      trim_length: 600
+      trim_length: 120
     third_party_settings: {  }
     region: content
   field_image:
-    type: entity_reference_entity_view
     weight: 0
-    region: content
     label: hidden
     settings:
-      view_mode: responsive_thumbnail
+      view_mode: responsive_image
       link: false
     third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
 hidden:
   langcode: true
   links: true

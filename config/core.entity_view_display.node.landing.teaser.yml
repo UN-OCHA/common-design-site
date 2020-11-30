@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.landing.body
     - field.field.node.landing.field_media_content
+    - field.field.node.landing.field_view
     - field.field.node.landing.layout_builder__layout
     - node.type.landing
   module:
@@ -31,5 +32,6 @@ content:
     third_party_settings: {  }
 hidden:
   field_media_content: true
+  field_view: true
   langcode: true
   layout_builder__layout: true
