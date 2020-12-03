@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - media
-id: media.responsive_thumbnail
-label: 'Responsive thumbnail'
-targetEntityType: media
-cache: true
