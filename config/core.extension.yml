@@ -32,6 +32,8 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pwa: 0
+  pwa_extras: 0
   responsive_image: 0
   search: 0
   social_api: 0

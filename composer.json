@@ -102,11 +102,13 @@
         "drupal/admin_denied": "^1.0",
         "drupal/components": "^1.1",
         "drupal/core": "^8.9.6",
+        "drupal/devel": "^2.1",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.10",
         "drupal/paragraphs_edit": "^2.0@alpha",
         "drupal/paragraphs_modal_edit": "^1.0@alpha",
         "drupal/paragraphs_viewmode": "^1.0@alpha",
+        "drupal/pwa": "^1.4",
         "drupal/social_auth_hid": "^2.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0-beta2",
@@ -115,7 +117,6 @@
         "unocha/ocha_media_content": "dev-master"
     },
     "require-dev": {
-        "drupal/coder": "^8.3",
-        "drupal/devel": "^2.1"
+        "drupal/coder": "^8.3"
     }
 }

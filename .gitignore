@@ -2,7 +2,7 @@
 /drush/contrib/
 /vendor/
 /html/core/
-#/html/modules/contrib/
+/html/modules/contrib/
 /html/themes/contrib/
 /html/profiles/contrib/
 /html/libraries/
@@ -10,6 +10,7 @@
 # Ignore sensitive information
 /html/sites/*/settings.php
 /html/sites/*/settings.local.php
+/html/sites/development.services.yml
 
 # Ignore Drupal's file directory
 /html/sites/*/files/
