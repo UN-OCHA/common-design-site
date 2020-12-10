@@ -216,7 +216,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: 'Styled list block'
     position: 2
     display_options:
       display_extenders: {  }
@@ -228,7 +228,24 @@ display:
       defaults:
         pager: false
         title: false
+        style: false
+        row: false
       title: 'Styled list'
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: list
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
