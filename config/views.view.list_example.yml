@@ -7,6 +7,8 @@ dependencies:
     - core.entity_view_mode.node.list
     - core.entity_view_mode.node.teaser
     - node.type.article
+    - node.type.basic
+    - node.type.landing
   module:
     - node
     - user

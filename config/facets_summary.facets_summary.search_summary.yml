@@ -1,0 +1,50 @@
+uuid: ecb2b225-66f8-4c91-b4f0-14dbb90244f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.content
+    - views.view.search
+  module:
+    - search_api
+id: search_summary
+name: 'Search summary'
+facets: {  }
+facet_source_id: 'search_api:views_page__search__search'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  reset_facets_pretty_path:
+    processor_id: reset_facets_pretty_path
+    weights:
+      build: '30'
+    settings:
+      link_text: Reset
+      clear_string: 1
+  reset_string_ocha:
+    processor_id: reset_string_ocha
+    weights:
+      build: '30'
+    settings: {  }
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }
+  show_string_ocha:
+    processor_id: show_string_ocha
+    weights:
+      build: '20'
+    settings:
+      label: 'Current text search'
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '10'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text

@@ -1,29 +1,36 @@
-uuid: 0ffcffcd-9fbf-4f38-bca2-914f344e3b41
+uuid: f2edb4ea-8076-4aec-8c96-211ff3511a12
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.search_index
     - field.field.node.article.body
     - field.field.node.article.field_image
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
-id: node.article.default
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.article.search_index
 targetEntityType: node
 bundle: article
-mode: default
+mode: search_index
 content:
   body:
     label: hidden
-    type: text_default
+    type: text_summary_or_trimmed
     weight: 1
-    settings: {  }
+    settings:
+      trim_length: 600
     third_party_settings: {  }
     region: content
   field_image:
     weight: 0
-    label: above
+    label: hidden
     settings:
       view_mode: responsive_image
       link: false
