@@ -12,7 +12,7 @@ dependencies:
 id: sidebarfirst
 theme: common_design
 region: sidebar_first
-weight: -9
+weight: -10
 provider: null
 plugin: 'block_content:6fdcaaf9-8d98-4379-8320-6debf05de797'
 settings:

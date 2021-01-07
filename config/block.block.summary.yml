@@ -11,8 +11,8 @@ dependencies:
     - common_design
 id: summary
 theme: common_design
-region: sidebar_first
-weight: -6
+region: facets
+weight: -9
 provider: null
 plugin: 'facets_summary_block:summary'
 settings:

@@ -11,8 +11,8 @@ dependencies:
     - common_design
 id: searchsummary
 theme: common_design
-region: sidebar_first
-weight: -8
+region: facets
+weight: -7
 provider: null
 plugin: 'facets_summary_block:search_summary'
 settings:

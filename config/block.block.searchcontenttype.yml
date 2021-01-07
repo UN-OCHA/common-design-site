@@ -11,8 +11,8 @@ dependencies:
     - common_design
 id: searchcontenttype
 theme: common_design
-region: sidebar_first
-weight: -7
+region: facets
+weight: -6
 provider: null
 plugin: 'facet_block:search_content_type'
 settings:
