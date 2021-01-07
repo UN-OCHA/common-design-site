@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.article.field_image
     - node.type.article
   module:
+    - media_library
     - path
     - text
 id: node.article.default
@@ -33,12 +34,9 @@ content:
   field_image:
     weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   langcode:
     type: language_select

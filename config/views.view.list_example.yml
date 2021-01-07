@@ -204,6 +204,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -230,6 +231,7 @@ display:
         title: false
         style: false
         row: false
+        css_class: true
       title: 'Styled list'
       style:
         type: html_list
@@ -239,7 +241,7 @@ display:
           uses_fields: false
           type: ul
           wrapper_class: ''
-          class: ''
+          class: cd-styled-list
       row:
         type: 'entity:node'
         options:
