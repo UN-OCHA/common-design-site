@@ -38,7 +38,7 @@ backend_config:
     host: solr
     port: 8983
     path: /
-    core: search_api_solr_8.x-2.0
+    core: cd_search_api
     timeout: 5
     index_timeout: 5
     optimize_timeout: 10
