@@ -19,7 +19,7 @@ settings:
   id: 'facets_summary_block:search_summary'
   label: 'Search summary'
   provider: facets_summary
-  label_display: visible
+  label_display: '0'
 visibility:
   request_path:
     id: request_path
