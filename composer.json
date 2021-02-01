@@ -69,7 +69,6 @@
             "html/themes/custom",
             "html/sites/default"
         ],
-        "patches-file": "composer.patches.json",
         "composer-exit-on-patch-failure": true
     },
     "scripts": {
