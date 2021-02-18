@@ -9,7 +9,7 @@ dependencies:
 id: languageswitcher
 theme: common_design
 region: header_top
-weight: -4
+weight: -8
 provider: null
 plugin: 'language_block:language_interface'
 settings:
