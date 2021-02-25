@@ -1,6 +1,6 @@
 uuid: 15850055-cc4d-482e-aced-305f7cdb812d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.list
@@ -40,3 +40,4 @@ content:
 hidden:
   langcode: true
   links: true
+  search_api_excerpt: true
