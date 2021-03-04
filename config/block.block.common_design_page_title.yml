@@ -8,7 +8,7 @@ _core:
   default_config_hash: 8yptDf6WrXxeyevUz4nP5vfr7BtxQqCBMninhV2IJ1g
 id: common_design_page_title
 theme: common_design
-region: page_title
+region: content
 weight: -9
 provider: null
 plugin: page_title_block
