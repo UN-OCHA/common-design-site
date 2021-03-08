@@ -26,6 +26,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/node/1\r\n/node/3"
+    pages: "/node/1\r\n/node/3\r\n/teaser-list"
     negate: false
     context_mapping: {  }
