@@ -109,7 +109,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
-        "unocha/common_design": "^2.8.9",
+        "unocha/common_design": "2.8.9",
         "unocha/ocha_media_content": "dev-master"
     },
     "require-dev": {
