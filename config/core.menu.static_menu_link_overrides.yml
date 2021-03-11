@@ -1,3 +1,9 @@
-definitions: {  }
+definitions:
+  user__page:
+    weight: -50
+    parent: 'menu_link_content:5e76c351-9ccb-4e2f-8a8f-6e395a9fff28'
+    menu_name: account
+    enabled: true
+    expanded: false
 _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM

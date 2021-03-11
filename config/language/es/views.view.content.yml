@@ -1,0 +1,65 @@
+label: Content
+description: 'Find and manage content.'
+display:
+  default:
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+      pager:
+        options:
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+      fields:
+        title:
+          label: Title
+        type:
+          label: 'Content type'
+        name:
+          label: Author
+        status:
+          label: Status
+          settings:
+            format_custom_true: Publicado
+            format_custom_false: Unpublished
+        changed:
+          label: Changed
+        operations:
+          label: Operations
+      filters:
+        title:
+          expose:
+            label: Title
+        type:
+          expose:
+            label: 'Content type'
+        status:
+          expose:
+            label: Status
+          group_info:
+            label: 'Estado de publicación'
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: Unpublished
+        langcode:
+          expose:
+            label: Language
+      title: Content
+      empty:
+        area_text_custom:
+          content: 'No content available.'
+    display_title: Master
+  page_1:
+    display_options:
+      menu:
+        title: Content
+      tab_options:
+        title: Content
+        description: 'Encuentre y gestione el contenido'
