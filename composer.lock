@@ -2288,8 +2288,7 @@
                     }
                 },
                 "patches_applied": {
-                    "https://www.drupal.org/project/drupal/issues/2061377?page=1#comment-13441615": "https://www.drupal.org/files/issues/2020-01-28/2061377-362.patch",
-                    "https://www.drupal.org/project/drupal/issues/2938129": "https://www.drupal.org/files/issues/2019-01-18/2938129-pagetitle-11.patch"
+                    "https://www.drupal.org/project/drupal/issues/2061377?page=1#comment-13441615": "https://www.drupal.org/files/issues/2020-01-28/2061377-362.patch"
                 }
             },
             "autoload": {
