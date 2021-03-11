@@ -39,7 +39,6 @@ display:
         area_text_custom:
           content: 'No hay bloques personalizados disponibles.'
   page_1:
-    display_title: Page
     display_options:
       menu:
         title: 'Librería de bloques personalizada'

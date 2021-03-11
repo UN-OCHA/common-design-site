@@ -20,8 +20,6 @@ display:
             first: '« First'
             last: 'Last »'
       fields:
-        media_bulk_form:
-          action_title: Action
         thumbnail__target_id:
           label: Thumbnail
         name:

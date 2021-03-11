@@ -57,7 +57,6 @@ display:
       title: People
       use_more_text: more
   page_1:
-    display_title: Page
     display_options:
       menu:
         title: List
