@@ -21,6 +21,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -100,16 +104,21 @@
         "drupal/core": "^8.9.6",
         "drupal/devel": "^2.1",
         "drupal/facets": "^1.6",
+        "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
-        "drupal/paragraphs_viewmode": "^1.0-alpha2",
+        "drupal/paragraphs_edit": "^2.0@alpha",
+        "drupal/paragraphs_modal_edit": "^1.0@alpha",
+        "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
         "drupal/search_api_solr": "^4.1",
+        "drupal/select_a11y": "^1.0",
         "drupal/social_auth_hid": "^2.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
-        "unocha/common_design": "2.8.9",
+        "unocha/common_design": "^3.0.0",
+        "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
     "require-dev": {

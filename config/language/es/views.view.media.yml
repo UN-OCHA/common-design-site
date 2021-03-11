@@ -1,0 +1,70 @@
+label: Media
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+      pager:
+        options:
+          expose:
+            items_per_page_label: 'Items per page'
+            items_per_page_options_all_label: '- All -'
+            offset_label: Offset
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+      fields:
+        media_bulk_form:
+          action_title: Action
+        thumbnail__target_id:
+          label: Thumbnail
+        name:
+          label: 'Media name'
+        bundle:
+          label: 'Media type'
+        uid:
+          label: Author
+        status:
+          label: Status
+          settings:
+            format_custom_true: Publicado
+            format_custom_false: Unpublished
+        changed:
+          label: Changed
+        operations:
+          label: Operations
+      filters:
+        name:
+          expose:
+            label: 'Media name'
+        bundle:
+          expose:
+            label: 'Media type'
+        status:
+          expose:
+            label: 'True'
+          group_info:
+            label: 'Estado de publicación'
+            group_items:
+              1:
+                title: Publicado
+              2:
+                title: Unpublished
+        langcode:
+          expose:
+            label: Language
+      title: Media
+      empty:
+        area_text_custom:
+          content: 'No [view:title] available.'
+  media_page_list:
+    display_title: Media
+    display_options:
+      menu:
+        title: Media
