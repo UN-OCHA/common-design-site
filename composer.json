@@ -79,7 +79,7 @@
     "scripts": {
         "git-hooks": "git config core.hooksPath git-hooks",
         "sass-prepare": "cd html/themes/contrib/common_design && npm install",
-        "sass-build": "cd html/themes/contrib/common_design && sass:build",
+        "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:compile",
         "sass-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
         "sass": [
             "@sass-prepare",
