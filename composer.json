@@ -78,13 +78,13 @@
     },
     "scripts": {
         "git-hooks": "git config core.hooksPath git-hooks",
-        "gulp-prepare": "cd html/themes/contrib/common_design && npm install",
-        "gulp-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/gulp build",
-        "gulp-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
-        "gulp": [
-            "@gulp-prepare",
-            "@gulp-build",
-            "@gulp-cleanup"
+        "sass-prepare": "cd html/themes/contrib/common_design && npm install",
+        "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:build",
+        "sass-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "sass": [
+            "@sass-prepare",
+            "@sass-build",
+            "@sass-cleanup"
         ],
         "post-install-cmd": [
           "@git-hooks"
@@ -117,7 +117,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
-        "unocha/common_design": "dev-main",
+        "unocha/common_design": "dev-cd-269-replace-gulp",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
