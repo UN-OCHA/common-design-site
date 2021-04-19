@@ -100,7 +100,7 @@
         "drupal-composer/drupal-scaffold": "^2.6",
         "drupal-composer/preserve-paths": "^0.1.5",
         "drupal/admin_denied": "^1.0",
-        "drupal/components": "^1.1",
+        "drupal/components": "^2.2",
         "drupal/core": "^8.9.6",
         "drupal/devel": "^2.1",
         "drupal/facets": "^1.6",
