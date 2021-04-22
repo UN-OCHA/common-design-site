@@ -1,0 +1,11 @@
+uuid: c2292b6b-fa4b-48ef-90ca-c514f7b31f64
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image
+target_entity_type_id: media
+target_bundle: image
+default_langcode: site_default
+language_alterable: false

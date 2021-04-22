@@ -1,13 +1,14 @@
-FROM unocha/unified-builder:7.2.18-r0-201905-11 as builder
+FROM unocha/unified-builder:7.3.20-r0-202007-01 as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
+ENV  COMPOSER_MEMORY_LIMIT=-1
 COPY . /srv/www
 WORKDIR /srv/www
-RUN composer install --quiet --no-dev --prefer-dist && \
+RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default && \
-    composer run gulp
+    composer run sass
 
-FROM unocha/php7-k8s:7.3.9-r0-201911-01-NR
+FROM unocha/php7-k8s:7.3-NR-develop
 
 ARG VCS_REF
 ARG VCS_URL

@@ -1,0 +1,28 @@
+uuid: af2e598a-15d7-4f76-b531-af8029b2f205
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.search_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - common_design
+id: searchsummary
+theme: common_design
+region: facets
+weight: 0
+provider: null
+plugin: 'facets_summary_block:search_summary'
+settings:
+  id: 'facets_summary_block:search_summary'
+  label: 'Search summary'
+  provider: facets_summary
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

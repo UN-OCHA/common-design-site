@@ -1,0 +1,29 @@
+uuid: 95f24eb0-a802-411c-b28d-3b042553581c
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type
+  module:
+    - facets
+    - system
+  theme:
+    - common_design
+id: contenttype
+theme: common_design
+region: facets
+weight: -8
+provider: null
+plugin: 'facet_block:content_type'
+settings:
+  id: 'facet_block:content_type'
+  label: 'Content type'
+  provider: facets
+  label_display: visible
+  block_id: contenttype
+visibility:
+  request_path:
+    id: request_path
+    pages: /facets
+    negate: false
+    context_mapping: {  }

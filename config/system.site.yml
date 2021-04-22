@@ -1,11 +1,11 @@
 uuid: b9a23d19-b821-4a18-beaf-542829ad87fc
-name: 'Drush Site-Install'
+name: 'Common Design Demo'
 mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node/5
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

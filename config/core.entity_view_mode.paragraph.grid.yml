@@ -1,0 +1,10 @@
+uuid: 9e4606c3-8b27-46e9-94c4-a5124640a3e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.grid
+label: Grid
+targetEntityType: paragraph
+cache: true
