@@ -1,4 +1,4 @@
-dist: bionic
+dist: trusty
 language: php
 cache:
   - composer
@@ -8,9 +8,6 @@ cache:
 
 php:
   - 7.3
-
-services:
-  - mysql
 
 env:
   global:
