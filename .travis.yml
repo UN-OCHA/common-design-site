@@ -77,7 +77,7 @@ script:
   - ../vendor/bin/drush cr
 
   # Run e2e tests.
-  - npm run e2e
+  - composer run e2e
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
