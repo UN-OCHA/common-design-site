@@ -6,7 +6,8 @@ COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default && \
-    composer run sass
+    composer run sass && \
+    composer run e2e
 
 FROM unocha/php7-k8s:7.3-NR-develop
 
