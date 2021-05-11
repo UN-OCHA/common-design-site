@@ -80,10 +80,16 @@
         "git-hooks": "git config core.hooksPath git-hooks",
         "sass-prepare": "cd html/themes/contrib/common_design && npm install",
         "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:build",
+        "e2e-test": "cd html/themes/contrib/common_design && npm run e2e -- -t '^(?!.*Subtheme).*$'",
         "sass-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
         "sass": [
             "@sass-prepare",
             "@sass-build",
+            "@sass-cleanup"
+        ],
+        "e2e": [
+            "@sass-prepare",
+            "@e2e-test",
             "@sass-cleanup"
         ],
         "post-install-cmd": [

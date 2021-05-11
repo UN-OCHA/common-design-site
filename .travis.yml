@@ -3,8 +3,9 @@ language: php
 cache:
   - composer
 
-# addons:
-#   chrome: stable
+addons:
+  hosts:
+    - localhost
 
 php:
   - 7.3
@@ -21,6 +22,7 @@ env:
      - CODER_VERSION='dev-8.x-2.x'
      - DB=sqlite
      - COMPOSER_MEMORY_LIMIT=-1
+     - NODE_ENV=travis
 
 before_script:
   # Composer.
@@ -57,6 +59,9 @@ script:
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 
+  # Theme build.
+  - composer run sass
+
   # Install Drupal and import config.
   - cd ${TRAVIS_BUILD_DIR}/html
   - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
@@ -67,6 +72,10 @@ script:
   - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
   - ../vendor/bin/drush php-eval 'node_access_rebuild();'
   - ../vendor/bin/drush cr
+
+  # Run e2e tests.
+  - cd $TRAVIS_BUILD_DIR
+  - composer run e2e
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
