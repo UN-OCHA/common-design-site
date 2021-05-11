@@ -23,6 +23,7 @@ env:
      - CODER_VERSION='dev-8.x-2.x'
      - DB=sqlite
      - COMPOSER_MEMORY_LIMIT=-1
+     - NODE_ENV=travis
 
 before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
