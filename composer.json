@@ -123,7 +123,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
-        "unocha/common_design": "dev-main",
+        "unocha/common_design": "dev-ops-7440-e2e-debug-3",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
