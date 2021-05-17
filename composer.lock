@@ -7868,12 +7868,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "40d829263b59118e3133fba8eb4383c7226d5c0d"
+                "reference": "04f09ea5bacb4e14520a7bdc247144c79357214c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/40d829263b59118e3133fba8eb4383c7226d5c0d",
-                "reference": "40d829263b59118e3133fba8eb4383c7226d5c0d",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/04f09ea5bacb4e14520a7bdc247144c79357214c",
+                "reference": "04f09ea5bacb4e14520a7bdc247144c79357214c",
                 "shasum": ""
             },
             "require": {
@@ -7888,7 +7888,7 @@
                 "source": "https://github.com/UN-OCHA/common_design/tree/ops-7440-e2e-debug-3",
                 "issues": "https://github.com/UN-OCHA/common_design/issues"
             },
-            "time": "2021-05-17T08:25:51+00:00"
+            "time": "2021-05-17T08:51:18+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
