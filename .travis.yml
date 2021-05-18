@@ -66,6 +66,7 @@ script:
   - cd ${TRAVIS_BUILD_DIR}/html
   - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
   - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
+  - ../vendor/bin/drush -y sqlc < ${TRAVIS_BUILD_DIR}/html/themes/contrib/common_design/_tests/sample.sql
   - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
 
   # Run a simple drush based web server.
