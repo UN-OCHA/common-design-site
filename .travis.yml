@@ -74,8 +74,8 @@ script:
   - ../vendor/bin/drush cr
 
   # Run e2e tests.
-  - cd $TRAVIS_BUILD_DIR
-  - composer run e2e
+#  - cd $TRAVIS_BUILD_DIR
+#  - composer run e2e
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
