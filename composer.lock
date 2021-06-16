@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7041503f67f3a17c227dd30fb6258ed",
+    "content-hash": "98bf7a24bed3b3c8ee3dd5e72c566328",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7864,16 +7864,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v4.0.5",
+            "version": "dev-ops-7440-sample-db",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "d15c29cce2459a817446e9f37c73feab27a7e8d8"
+                "reference": "9038bc772a1ad544313d7515c0f61004c47e2d9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/d15c29cce2459a817446e9f37c73feab27a7e8d8",
-                "reference": "d15c29cce2459a817446e9f37c73feab27a7e8d8",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/9038bc772a1ad544313d7515c0f61004c47e2d9c",
+                "reference": "9038bc772a1ad544313d7515c0f61004c47e2d9c",
                 "shasum": ""
             },
             "require": {
@@ -7885,10 +7885,10 @@
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
             "support": {
-                "source": "https://github.com/UN-OCHA/common_design/tree/v4.0.5",
+                "source": "https://github.com/UN-OCHA/common_design/tree/ops-7440-sample-db",
                 "issues": "https://github.com/UN-OCHA/common_design/issues"
             },
-            "time": "2021-05-11T12:00:48+00:00"
+            "time": "2021-06-16T10:44:24+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -8234,6 +8234,7 @@
         "drupal/paragraphs_edit": 15,
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
+        "unocha/common_design": 20,
         "unocha/ocha_media_content": 20
     },
     "prefer-stable": true,
