@@ -1,5 +1,5 @@
 site_name: 'Common Design Demo'
-short_name: 'Common Design Demo'
+short_name: CD
 description: 'Drupal website demo of OCHA Common Design'
 start_url: /home
 lang: en
@@ -11,7 +11,7 @@ urls_to_cache: "/home\r\n/demo"
 urls_to_exclude: "admin/.*\r\nuser/.*"
 offline_page: /offline
 cache_version: '1'
-cross_origin: true
+cross_origin: false
 skip_waiting: false
 _core:
   default_config_hash: cP1TZQyv1WdET3iepl2QoyOPK7VeO0xHm0lU_FU1Wmc
