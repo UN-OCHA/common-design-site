@@ -78,19 +78,17 @@
     },
     "scripts": {
         "git-hooks": "git config core.hooksPath git-hooks",
-        "sass-prepare": "cd html/themes/contrib/common_design && npm install",
+        "npm-prepare": "cd html/themes/contrib/common_design && npm install",
         "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:build",
-        "e2e-test": "cd html/themes/contrib/common_design && npm run e2e -- -t '^(?!.*Subtheme).*$'",
-        "sass-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "e2e-test": "cd html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
+        "npm-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
         "sass": [
-            "@sass-prepare",
-            "@sass-build",
-            "@sass-cleanup"
+            "@npm-prepare",
+            "@sass-build"
         ],
         "e2e": [
-            "@sass-prepare",
             "@e2e-test",
-            "@sass-cleanup"
+            "@npm-cleanup"
         ],
         "post-install-cmd": [
           "@git-hooks"
@@ -123,7 +121,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
-        "unocha/common_design": "^4.0.0",
+        "unocha/common_design": "^4.0.6",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
