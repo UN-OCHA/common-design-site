@@ -16,7 +16,7 @@ As an admin, visit `/admin/config/regional/translate`
 
 When using the translation interface, you must load a page containing the string to be translated in the NON-original language at least once. So for instance if there's a new paragraph type to be translated, the process would be:
 
-1. As admin, add the new paragraph type to an English node. This is because for the GHO website, you cannot add new paragraphs to translations of pages. It must first be in the original.
+1. As admin, add the new paragraph type to an English node. This is because you cannot add new paragraphs to translations of pages. It must first be in the original.
 2. As admin, navigate to the translation of the node, or create a new one. Save the node.
 3. View the new translated node.
 4. Now you can proceed to the translation admin UI (see URL path above).
