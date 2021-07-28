@@ -112,7 +112,7 @@
         "drupal/components": "^2.4",
         "drupal/core": "^8.9.6",
         "drupal/core-composer-scaffold": "^8.9",
-        "drupal/devel": "^2.1",
+        "drupal/devel": "^4.1.1",
         "drupal/facets": "^1.8",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
