@@ -33,6 +33,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "7.4"
+        },
         "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
