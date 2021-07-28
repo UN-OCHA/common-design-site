@@ -1,0 +1,11 @@
+uuid: b9b735ba-93ce-451d-a7f2-805f08f273cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.views
+id: paragraph.views
+target_entity_type_id: paragraph
+target_bundle: views
+default_langcode: site_default
+language_alterable: false
