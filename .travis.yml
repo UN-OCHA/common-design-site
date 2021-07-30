@@ -13,6 +13,10 @@ php:
 services:
   - mysql
 
+env:
+  global:
+    - NODE_ENV=travis
+
 before_script:
   # Composer.
   - sed -i '1i export PATH="$HOME/.composer/vendor/bin:$PATH"' $HOME/.bashrc
