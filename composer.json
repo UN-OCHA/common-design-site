@@ -21,10 +21,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -33,6 +29,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "7.4"
+        },
         "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
@@ -58,6 +57,9 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            },
+            "locations": {
+                "web-root": "html/"
             }
         },
         "merge-plugin": {
@@ -98,15 +100,15 @@
         ]
     },
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
         "composer/installers": "^1.7",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.6",
-        "drupal-composer/preserve-paths": "^0.1.5",
+        "cweagans/composer-patches": "^1.7",
+        "drupal-composer/preserve-paths": "^0.1.6",
         "drupal/admin_denied": "^1.0",
         "drupal/components": "^2.4",
         "drupal/core": "^8.9.6",
-        "drupal/devel": "^2.1",
+        "drupal/core-composer-scaffold": "^8.9",
+        "drupal/devel": "^4.1.1",
         "drupal/facets": "^1.8",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
@@ -121,6 +123,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
+        "oomphinc/composer-installers-extender": "^2.0",
         "unocha/common_design": "^4.0.6",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"

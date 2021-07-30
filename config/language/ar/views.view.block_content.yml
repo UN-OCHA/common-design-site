@@ -1,16 +1,6 @@
 display:
   default:
-    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Apply
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-      pager:
-        options:
-          expose:
-            items_per_page_options_all_label: '- All -'
       fields:
         info:
           label: 'وصف الصندوق'
@@ -18,8 +8,6 @@ display:
           label: 'نوع الصندوق'
         changed:
           label: Changed
-        operations:
-          label: Operations
       filters:
         info:
           expose:

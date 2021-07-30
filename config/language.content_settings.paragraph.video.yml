@@ -1,0 +1,11 @@
+uuid: 6be84e5f-04d0-4b1b-aae4-95535c75bf47
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.video
+id: paragraph.video
+target_entity_type_id: paragraph
+target_bundle: video
+default_langcode: site_default
+language_alterable: false
