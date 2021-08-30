@@ -1,5 +1,8 @@
 {
     "patches": {
+        "drupal/core": {
+          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377?page=1#mr48-note25709": "https://git.drupalcode.org/project/drupal/-/merge_requests/48.diff"
+        },
         "drupal/pwa": {
             "Manifest doesn't have a maskable icon error https://www.drupal.org/project/pwa/issues/3165433#comment-13801302": "https://www.drupal.org/files/issues/2020-08-26/pwa_icon_purpose-3165433-9.patch"
         }
