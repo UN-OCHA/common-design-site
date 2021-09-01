@@ -106,6 +106,7 @@
         "drupal-composer/preserve-paths": "^0.1.6",
         "drupal/admin_denied": "^1.1",
         "drupal/components": "^2.4",
+        "drupal/config_split": "^1.7",
         "drupal/core": "^9.0.0",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
