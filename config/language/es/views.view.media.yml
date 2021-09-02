@@ -5,6 +5,7 @@ display:
         bundle:
           label: 'Media type'
         status:
+          label: Estado
           settings:
             format_custom_true: Publicado
         changed:

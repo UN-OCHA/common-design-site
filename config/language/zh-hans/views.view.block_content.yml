@@ -2,7 +2,7 @@ label: 自定义区块库
 description: 发现和管理自定义区块。
 display:
   default:
-    display_title: 主
+    display_title: 默认
     display_options:
       exposed_form:
         options:
