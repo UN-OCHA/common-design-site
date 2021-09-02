@@ -5,14 +5,11 @@ display:
         status:
           label: الحالة
           settings:
-            format_custom_true: 'تم النشر'
-        changed:
-          label: Changed
+            format_custom_true: نشط
       filters:
         status:
-          expose:
-            label: الحالة
           group_info:
+            label: الحالة
             group_items:
               1:
-                title: 'تم النشر'
+                title: نشط

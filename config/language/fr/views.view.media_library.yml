@@ -1,0 +1,27 @@
+display:
+  default:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nom
+  page:
+    display_options:
+      fields:
+        delete_media:
+          text: Supprimer
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nom
+  widget_table:
+    display_options:
+      fields:
+        name:
+          label: Nom
+      filters:
+        name:
+          expose:
+            label: Nom

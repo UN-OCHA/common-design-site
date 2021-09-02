@@ -58,7 +58,7 @@ display:
       empty:
         area_text_custom:
           content: 没有可用的内容。
-    display_title: 主
+    display_title: 默认
   page_1:
     display_options:
       menu:

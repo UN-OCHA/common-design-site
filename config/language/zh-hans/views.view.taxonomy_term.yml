@@ -1,5 +1,5 @@
-label: 术语表
-description: 所有内容，按字母排序。
+label: 分类术语
+description: 属于某个分类词汇的内容。
 display:
   default:
     display_title: 默认
@@ -20,17 +20,12 @@ display:
           tags:
             previous: ‹‹
             next: ››
-      fields:
-        title:
-          label: 标题
-        name:
-          label: 作者
-        changed:
-          label: 最近更新
-  attachment_1:
-    display_title: 附件
+      arguments:
+        tid:
+          exception:
+            title: 全部
+          title: '{{ arguments.tid }}'
+  feed_1:
+    display_title: 种子
   page_1:
     display_title: 页面
-    display_options:
-      menu:
-        title: 术语表
