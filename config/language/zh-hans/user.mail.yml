@@ -1,5 +1,4 @@
 cancel_confirm:
-  body: "[user:display-name],\r\n\r\n[site:name] 收到了取消账户的请求。\r\n\r\n如果您想取消在 [site:url-brief] 的账户，请点击此链接或将其复制粘贴到浏览器中：\r\n\r\n[user:cancel-url]\r\n\r\n注意：取消账户操作无法撤销。\r\n\r\n以上链接将在一天后过期，如果届时仍未确认，则不会进行任何操作。\r\n\r\n--  [site:name] 团队"
   subject: '[site:name] 上 [user:display-name] 帐户取消请求。'
 password_reset:
   body: "[user:display-name],\r\n\r\n重置在[site:name]上的本帐号密码的请求已提交。\r\n\r\n您现在可以通过点击或复制以下地址以登录：\r\n\r\n[user:one-time-login-url]\r\n\r\n这个链接仅能使用一次并会引导您前往重置密码的页面。这个链接将在24小时后过期且如果您不使用的话到期它将会无效。\r\n\r\n--  [site:name] 团队"

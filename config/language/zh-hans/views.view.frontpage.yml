@@ -26,7 +26,7 @@ display:
             next: '下一个 ›'
             first: '« 首页'
             last: '末页 »'
-    display_title: 主
+    display_title: 默认
   feed_1:
     display_title: 种子
   page_1:

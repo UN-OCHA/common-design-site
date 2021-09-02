@@ -1,0 +1,12 @@
+display:
+  default:
+    display_options:
+      fields:
+        filename:
+          label: الاسم
+        status:
+          label: الحالة
+      filters:
+        status:
+          expose:
+            label: الحالة
