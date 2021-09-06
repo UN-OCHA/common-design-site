@@ -1,0 +1,16 @@
+uuid: b2df1eda-e818-4e70-9ace-141140d525c8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: user_pages
+label: 'User pages'
+weight: -9
+theme: common_design
+admin_theme: common_design
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*/edit'
+    negate: false
