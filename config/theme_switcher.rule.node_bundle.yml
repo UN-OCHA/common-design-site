@@ -1,0 +1,21 @@
+uuid: 91eae3c8-3fa6-4e0e-a225-c68a04811c8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_bundle
+label: 'Node bundle'
+weight: -8
+theme: common_design
+admin_theme: common_design
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+      basic: basic
+      landing: landing
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
