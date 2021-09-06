@@ -8,11 +8,31 @@ display:
             group_items:
               1:
                 title: 'تم النشر'
+        name:
+          expose:
+            label: الاسم
       empty:
         area_text_custom:
           content: 'No [view:title] available.'
+  page:
+    display_options:
+      fields:
+        delete_media:
+          text: حذف
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: الاسم
   widget_table:
     display_options:
       fields:
+        name:
+          label: الاسم
         changed:
           label: Changed
+      filters:
+        name:
+          expose:
+            label: الاسم

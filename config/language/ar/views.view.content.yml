@@ -3,12 +3,15 @@ display:
     display_options:
       fields:
         status:
+          label: الحالة
           settings:
             format_custom_true: 'تم النشر'
         changed:
           label: Changed
       filters:
         status:
+          expose:
+            label: الحالة
           group_info:
             group_items:
               1:
