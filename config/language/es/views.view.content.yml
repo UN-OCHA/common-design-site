@@ -3,12 +3,15 @@ display:
     display_options:
       fields:
         status:
+          label: Estado
           settings:
             format_custom_true: Publicado
         changed:
           label: Changed
       filters:
         status:
+          expose:
+            label: Estado
           group_info:
             label: 'Estado de publicación'
             group_items:

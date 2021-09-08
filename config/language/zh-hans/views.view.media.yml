@@ -1,7 +1,7 @@
 label: 媒体
 display:
   default:
-    display_title: 主
+    display_title: 默认
     display_options:
       exposed_form:
         options:

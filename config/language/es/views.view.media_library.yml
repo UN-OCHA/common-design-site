@@ -9,11 +9,31 @@ display:
             group_items:
               1:
                 title: Publicado
+        name:
+          expose:
+            label: Nombre
       empty:
         area_text_custom:
           content: 'No [view:title] available.'
+  page:
+    display_options:
+      fields:
+        delete_media:
+          text: Eliminar
+  widget:
+    display_options:
+      filters:
+        name:
+          expose:
+            label: Nombre
   widget_table:
     display_options:
       fields:
+        name:
+          label: Nombre
         changed:
           label: Changed
+      filters:
+        name:
+          expose:
+            label: Nombre
