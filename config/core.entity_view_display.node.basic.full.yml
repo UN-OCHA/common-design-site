@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
-    - field.field.node.basic.field_taxonomy
     - node.type.basic
   module:
     - entity_reference_revisions
