@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58bcf2e145204edf5c606970e8b7ceaf",
+    "content-hash": "3a32ef366310c82378ba327a968b8bd0",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8146,32 +8146,31 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v4.1.1",
+            "version": "dev-cd-304-forms",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "6630e0b7e231ade2195cd21f630a62dcfcae831c"
+                "reference": "486641f288179e885c12162e5e533ee8127cafe5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/6630e0b7e231ade2195cd21f630a62dcfcae831c",
-                "reference": "6630e0b7e231ade2195cd21f630a62dcfcae831c",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/486641f288179e885c12162e5e533ee8127cafe5",
+                "reference": "486641f288179e885c12162e5e533ee8127cafe5",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.2"
             },
             "type": "drupal-theme",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
             "support": {
-                "issues": "https://github.com/UN-OCHA/common_design/issues",
-                "source": "https://github.com/UN-OCHA/common_design/tree/v4.1.1"
+                "source": "https://github.com/UN-OCHA/common_design/tree/cd-304-forms",
+                "issues": "https://github.com/UN-OCHA/common_design/issues"
             },
-            "time": "2021-07-23T10:34:36+00:00"
+            "time": "2021-08-19T15:50:57+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -9179,6 +9178,7 @@
         "drupal/paragraphs_edit": 15,
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
+        "unocha/common_design": 20,
         "unocha/ocha_media_content": 20
     },
     "prefer-stable": true,

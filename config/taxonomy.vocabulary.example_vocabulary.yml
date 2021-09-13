@@ -1,8 +1,0 @@
-uuid: f224fee9-1055-4c69-9900-e75a58aba685
-langcode: en
-status: true
-dependencies: {  }
-name: 'Example Vocabulary'
-vid: example_vocabulary
-description: ''
-weight: 0

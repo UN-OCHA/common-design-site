@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
-    - field.field.node.basic.field_taxonomy
     - node.type.basic
   module:
     - text
@@ -38,7 +37,6 @@ content:
 hidden:
   field_hero_component: true
   field_media_content: true
-  field_taxonomy: true
   langcode: true
   links: true
   search_api_excerpt: true
