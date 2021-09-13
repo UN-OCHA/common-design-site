@@ -91085,8 +91085,7 @@ text_files:
     zwollen
     zwolse
     zwom
-  protwords: |
-
+  protwords: ''
   accents: |
     # À => A
     "\u00C0" => "A"

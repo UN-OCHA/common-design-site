@@ -8,3 +8,4 @@ display:
         status:
           expose:
             label: État
+    display_title: Master

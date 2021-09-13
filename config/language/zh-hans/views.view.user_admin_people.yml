@@ -40,8 +40,6 @@ display:
           label: 上次访问
         operations:
           label: 操作
-        mail:
-          separator: ', '
       filters:
         combine:
           expose:
