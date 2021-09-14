@@ -17,6 +17,7 @@ display:
             group_items:
               1:
                 title: Publicado
+    display_title: Master
   page_1:
     display_options:
       tab_options:

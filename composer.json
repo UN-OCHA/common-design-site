@@ -120,6 +120,7 @@
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
         "drupal/search_api_solr": "^4.1",
+        "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^1.0",
         "drupal/social_auth_hid": "^2.6",
         "drupal/theme_switcher": "^1.2",

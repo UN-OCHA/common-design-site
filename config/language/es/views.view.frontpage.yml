@@ -4,3 +4,4 @@ display:
       empty:
         area_text_custom:
           content: 'Aún no se ha creado ningún contenido de página de inicio. <br>Siga la<a target="_blank" href="https://www.drupal.org/es/docs/user_guide/es/index.html">Guía del usuario</a> para comenzar a construir su sitio.'
+    display_title: Master
