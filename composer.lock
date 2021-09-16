@@ -8237,16 +8237,16 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
-                "reference": "cfe1fb380ba57b26db395796f2ce3b6bed728ba4"
+                "reference": "4c407cabaf1220af4aa74dd990172114989ab1c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/cfe1fb380ba57b26db395796f2ce3b6bed728ba4",
-                "reference": "cfe1fb380ba57b26db395796f2ce3b6bed728ba4",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/4c407cabaf1220af4aa74dd990172114989ab1c8",
+                "reference": "4c407cabaf1220af4aa74dd990172114989ab1c8",
                 "shasum": ""
             },
             "require": {
@@ -8254,7 +8254,7 @@
             },
             "require-dev": {
                 "drupal/coder": "^8.3",
-                "sebastian/phpcpd": "^4.1"
+                "sebastian/phpcpd": "^6.0"
             },
             "type": "drupal-module",
             "notification-url": "https://packagist.org/downloads/",
@@ -8263,9 +8263,9 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_integrations/issues",
-                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/1.0.3"
+                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/1.0.4"
             },
-            "time": "2020-09-07T13:02:14+00:00"
+            "time": "2021-09-03T07:45:25+00:00"
         },
         {
             "name": "unocha/ocha_media_content",
