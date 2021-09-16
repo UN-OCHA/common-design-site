@@ -1,6 +1,7 @@
 label: 'Biblioteca de medios'
 display:
   default:
+    display_title: Master
     display_options:
       filters:
         status:
