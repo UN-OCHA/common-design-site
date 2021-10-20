@@ -106,7 +106,6 @@
         "drupal-composer/preserve-paths": "^0.1.6",
         "drupal/admin_denied": "^1.1",
         "drupal/components": "^2.4",
-        "drupal/config_split": "^1.7",
         "drupal/core-composer-scaffold": "^9",
         "drupal/core-project-message": "^9",
         "drupal/core-recommended": "^9",
@@ -133,6 +132,10 @@
     },
     "require-dev": {
         "drupal/coder": "^8.3",
-        "drupal/devel": "^4.1.1"
+        "drupal/config_filter": "^2.2",
+        "drupal/config_split": "^2.0.0-beta4",
+        "drupal/devel": "^4.1",
+        "drupal/stage_file_proxy": "^1.1",
+        "kint-php/kint": "^3.3"
     }
 }

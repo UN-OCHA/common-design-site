@@ -1,0 +1,20 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filtro
+      fields:
+        nothing:
+          admin_label: Icono
+        type:
+          label: 'Media type'
+        name:
+          label: Usuario
+        link:
+          label: Operaciones
+      filters:
+        type:
+          expose:
+            label: 'Media type'
