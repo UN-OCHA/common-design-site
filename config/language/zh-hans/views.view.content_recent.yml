@@ -11,6 +11,9 @@ display:
           exposed_sorts_label: 排序依据
           sort_asc_label: 升序
           sort_desc_label: 降序
+      fields:
+        changed:
+          separator: ', '
       title: 最新内容
       empty:
         area_text_custom:

@@ -11,6 +11,8 @@ display:
           label: 'Tipo de bloque'
         changed:
           label: Changed
+        operations:
+          label: Operaciones
       filters:
         info:
           expose:

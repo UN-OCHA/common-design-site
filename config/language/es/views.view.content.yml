@@ -1,14 +1,24 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filtro
       fields:
+        type:
+          label: 'Tipo de contenido'
         status:
           label: Estado
           settings:
             format_custom_true: Publicado
         changed:
           label: Changed
+        operations:
+          label: Operaciones
       filters:
+        type:
+          expose:
+            label: 'Tipo de contenido'
         status:
           expose:
             label: Estado

@@ -2,11 +2,20 @@ display:
   default:
     display_title: Master
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
       fields:
+        name:
+          label: 'Nom d''utilisateur'
         status:
           label: État
           settings:
             format_custom_true: Actif
+        roles_target_id:
+          label: Rôles
+        operations:
+          label: Actions
       filters:
         status:
           group_info:
@@ -14,3 +23,7 @@ display:
             group_items:
               1:
                 title: Actif
+  page_1:
+    display_options:
+      menu:
+        title: Lister
