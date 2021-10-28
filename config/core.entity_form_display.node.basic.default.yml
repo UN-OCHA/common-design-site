@@ -4,12 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.basic.body
+    - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_date
+    - field.field.node.basic.field_example_date_range
+    - field.field.node.basic.field_example_radio_button
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
     - field.field.node.basic.field_taxonomy
     - node.type.basic
   module:
+    - datetime
     - media_library
     - paragraphs
     - path
@@ -35,6 +40,31 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_example_boolean:
+    weight: 27
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_example_date:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_example_date_range:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_example_radio_button:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_hero_component:
     type: entity_reference_paragraphs
     weight: 1

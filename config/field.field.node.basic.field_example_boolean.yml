@@ -1,0 +1,23 @@
+uuid: c6288c29-713e-42af-b123-65047c5a5fbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_boolean
+    - node.type.basic
+id: node.basic.field_example_boolean
+field_name: field_example_boolean
+entity_type: node
+bundle: basic
+label: 'Example boolean'
+description: 'This is the boolean example help text'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

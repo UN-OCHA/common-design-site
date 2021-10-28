@@ -1,0 +1,27 @@
+uuid: 52bd9400-3d82-4d7c-a94d-7097ddc86679
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_example_radio_button
+field_name: field_example_radio_button
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 0
+      label: 'Option one'
+    -
+      value: !!float 1
+      label: 'Option two'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

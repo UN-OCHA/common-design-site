@@ -9,6 +9,8 @@ module:
   config: 0
   config_split: 0
   contextual: 0
+  datetime: 0
+  datetime_range: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0

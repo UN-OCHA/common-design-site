@@ -5,6 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic.body
+    - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_date
+    - field.field.node.basic.field_example_date_range
+    - field.field.node.basic.field_example_radio_button
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
@@ -36,6 +40,10 @@ content:
       link: false
     third_party_settings: {  }
 hidden:
+  field_example_boolean: true
+  field_example_date: true
+  field_example_date_range: true
+  field_example_radio_button: true
   field_hero_component: true
   field_media_content: true
   field_taxonomy: true
