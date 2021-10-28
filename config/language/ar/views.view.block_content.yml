@@ -9,6 +9,8 @@ display:
           label: 'نوع الصندوق'
         changed:
           label: Changed
+        operations:
+          label: عمليات
       filters:
         info:
           expose:

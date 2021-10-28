@@ -1,10 +1,20 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: Filtrer
       fields:
+        type:
+          label: 'Type de contenu'
         status:
           label: État
+        operations:
+          label: Actions
       filters:
+        type:
+          expose:
+            label: 'Type de contenu'
         status:
           expose:
             label: État

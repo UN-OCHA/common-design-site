@@ -1,0 +1,20 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
+      fields:
+        nothing:
+          admin_label: أيقونة
+        type:
+          label: 'Media type'
+        name:
+          label: المستخدم
+        link:
+          label: عمليات
+      filters:
+        type:
+          expose:
+            label: 'Media type'

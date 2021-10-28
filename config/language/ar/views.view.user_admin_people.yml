@@ -2,11 +2,20 @@ display:
   default:
     display_title: Master
     display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
       fields:
+        name:
+          label: 'اسم المستخدم'
         status:
           label: الحالة
           settings:
             format_custom_true: نشط
+        roles_target_id:
+          label: الأدوار
+        operations:
+          label: عمليات
       filters:
         status:
           group_info:
@@ -14,3 +23,7 @@ display:
             group_items:
               1:
                 title: نشط
+  page_1:
+    display_options:
+      menu:
+        title: لائحة

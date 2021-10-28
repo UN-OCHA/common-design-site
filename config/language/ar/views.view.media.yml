@@ -2,7 +2,12 @@ display:
   default:
     display_title: Master
     display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
       fields:
+        media_bulk_form:
+          action_title: إجراء
         bundle:
           label: 'Media type'
         status:
@@ -11,6 +16,8 @@ display:
             format_custom_true: 'تم النشر'
         changed:
           label: Changed
+        operations:
+          label: عمليات
       filters:
         bundle:
           expose:

@@ -2,6 +2,9 @@ display:
   default:
     display_title: Master
     display_options:
+      fields:
+        media_bulk_form:
+          action_title: إجراء
       filters:
         status:
           group_info:
@@ -18,6 +21,10 @@ display:
   page:
     display_options:
       fields:
+        media_bulk_form:
+          action_title: إجراء
+        edit_media:
+          text: تحرير
         delete_media:
           text: حذف
   widget:
