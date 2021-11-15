@@ -12,5 +12,5 @@ admin_theme: common_design
 visibility:
   request_path:
     id: request_path
-    pages: '/taxonomy/term/*/edit'
+    pages: '/taxonomy/term/*/*'
     negate: false
