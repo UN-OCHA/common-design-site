@@ -8,6 +8,11 @@ dependencies:
     - field.field.node.basic.field_example_boolean
     - field.field.node.basic.field_example_date
     - field.field.node.basic.field_example_date_range
+    - field.field.node.basic.field_example_file
+    - field.field.node.basic.field_example_files
+    - field.field.node.basic.field_example_image
+    - field.field.node.basic.field_example_images
+    - field.field.node.basic.field_example_link
     - field.field.node.basic.field_example_radio_button
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
@@ -44,27 +49,9 @@ content:
       link: ''
     third_party_settings: {  }
     region: content
-  field_image:
-    type: entity_reference_entity_view
-    weight: 2
-    label: hidden
-    settings:
-      view_mode: default
-      link: false
-    third_party_settings: {  }
-    region: content
-  field_media_content:
-    weight: 4
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    type: entity_reference_revisions_entity_view
-    region: content
   field_taxonomy:
     type: entity_reference_label
-    weight: 3
+    weight: 2
     region: content
     label: above
     settings:
@@ -74,7 +61,14 @@ hidden:
   field_example_boolean: true
   field_example_date: true
   field_example_date_range: true
+  field_example_file: true
+  field_example_files: true
+  field_example_image: true
+  field_example_images: true
+  field_example_link: true
   field_example_radio_button: true
+  field_image: true
+  field_media_content: true
   langcode: true
   links: true
   search_api_excerpt: true

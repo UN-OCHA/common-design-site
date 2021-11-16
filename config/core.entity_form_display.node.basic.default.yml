@@ -7,14 +7,23 @@ dependencies:
     - field.field.node.basic.field_example_boolean
     - field.field.node.basic.field_example_date
     - field.field.node.basic.field_example_date_range
+    - field.field.node.basic.field_example_file
+    - field.field.node.basic.field_example_files
+    - field.field.node.basic.field_example_image
+    - field.field.node.basic.field_example_images
+    - field.field.node.basic.field_example_link
     - field.field.node.basic.field_example_radio_button
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
     - field.field.node.basic.field_taxonomy
+    - image.style.thumbnail
     - node.type.basic
   module:
     - datetime
+    - file
+    - image
+    - link
     - media_library
     - paragraphs
     - path
@@ -36,31 +45,69 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 7
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
   field_example_boolean:
-    weight: 27
+    weight: 6
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_example_date:
-    weight: 30
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_example_date_range:
-    weight: 29
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
+  field_example_file:
+    weight: 11
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_example_files:
+    weight: 12
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_example_image:
+    weight: 13
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_example_images:
+    weight: 14
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_example_link:
+    weight: 10
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_example_radio_button:
-    weight: 28
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -104,21 +151,21 @@ content:
     type: paragraphs
     region: content
   field_taxonomy:
-    weight: 26
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   langcode:
     type: language_select
-    weight: 5
+    weight: 20
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 10
+    weight: 21
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -126,21 +173,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 8
+    weight: 17
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 19
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 18
     region: content
     third_party_settings: {  }
   title:
@@ -153,7 +200,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 6
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60

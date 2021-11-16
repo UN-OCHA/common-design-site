@@ -1,0 +1,8 @@
+uuid: 1fd0e181-9642-4ba3-a131-77d7afe294c5
+langcode: en
+status: true
+dependencies: {  }
+id: unocha_long_date
+label: 'UNOCHA long date'
+locked: false
+pattern: 'j F Y'
