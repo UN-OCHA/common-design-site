@@ -6,9 +6,9 @@ display:
         options:
           submit_button: Filtrer
       fields:
-        media_bulk_form:
-          action_title: Action
-        status:
-          label: État
-        operations:
+        nothing:
+          admin_label: Icône
+        name:
+          label: Utilisateur
+        link:
           label: Actions

@@ -1,14 +1,24 @@
 display:
   default:
     display_options:
+      exposed_form:
+        options:
+          submit_button: انتقاء
       fields:
+        type:
+          label: 'نوع المحتوى'
         status:
           label: الحالة
           settings:
             format_custom_true: 'تم النشر'
         changed:
           label: Changed
+        operations:
+          label: عمليات
       filters:
+        type:
+          expose:
+            label: 'نوع المحتوى'
         status:
           expose:
             label: الحالة
