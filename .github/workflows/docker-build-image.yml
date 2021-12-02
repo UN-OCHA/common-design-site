@@ -6,7 +6,7 @@ on:
       - develop
       - 'cd-*'
       - 'feature/**'
-      - master
+      - main
   release:
     types: [published]
 
