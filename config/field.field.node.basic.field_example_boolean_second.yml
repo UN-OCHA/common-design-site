@@ -1,0 +1,23 @@
+uuid: 623b4fa6-27f5-4e9f-ac26-0c4fb0c9a62c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_boolean_second
+    - node.type.basic
+id: node.basic.field_example_boolean_second
+field_name: field_example_boolean_second
+entity_type: node
+bundle: basic
+label: 'Another example boolean'
+description: 'This is the example boolean help text'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

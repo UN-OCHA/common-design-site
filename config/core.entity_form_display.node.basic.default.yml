@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.basic.body
     - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_boolean_second
+    - field.field.node.basic.field_example_checkboxes
     - field.field.node.basic.field_example_date
     - field.field.node.basic.field_example_date_range
     - field.field.node.basic.field_example_file
@@ -45,7 +47,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 16
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -56,34 +58,47 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
+  field_example_boolean_second:
+    weight: 7
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_example_checkboxes:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
   field_example_date:
-    weight: 9
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_example_date_range:
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_example_file:
-    weight: 11
+    weight: 13
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_example_files:
-    weight: 12
+    weight: 14
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
     region: content
   field_example_image:
-    weight: 13
+    weight: 15
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -91,7 +106,7 @@ content:
     type: image_image
     region: content
   field_example_images:
-    weight: 14
+    weight: 16
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -99,7 +114,7 @@ content:
     type: image_image
     region: content
   field_example_link:
-    weight: 10
+    weight: 12
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -107,7 +122,7 @@ content:
     type: link_default
     region: content
   field_example_radio_button:
-    weight: 7
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_buttons
@@ -158,14 +173,14 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 20
+    weight: 22
     region: content
     settings:
       include_locked: true
     third_party_settings: {  }
   path:
     type: path
-    weight: 21
+    weight: 23
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -173,21 +188,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 19
     region: content
     third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 19
+    weight: 21
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 18
+    weight: 20
     region: content
     third_party_settings: {  }
   title:
@@ -200,7 +215,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 15
+    weight: 17
     settings:
       match_operator: CONTAINS
       size: 60

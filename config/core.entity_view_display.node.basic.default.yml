@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.basic.body
     - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_boolean_second
+    - field.field.node.basic.field_example_checkboxes
     - field.field.node.basic.field_example_date
     - field.field.node.basic.field_example_date_range
     - field.field.node.basic.field_example_file
@@ -49,6 +51,23 @@ content:
       format_custom_true: ''
     third_party_settings: {  }
     type: boolean
+    region: content
+  field_example_boolean_second:
+    weight: 17
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_example_checkboxes:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_example_date:
     weight: 10
