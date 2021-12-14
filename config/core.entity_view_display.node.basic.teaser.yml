@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.basic.body
     - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_boolean_second
+    - field.field.node.basic.field_example_checkboxes
     - field.field.node.basic.field_example_date
     - field.field.node.basic.field_example_date_range
     - field.field.node.basic.field_example_file
@@ -46,6 +48,8 @@ content:
     third_party_settings: {  }
 hidden:
   field_example_boolean: true
+  field_example_boolean_second: true
+  field_example_checkboxes: true
   field_example_date: true
   field_example_date_range: true
   field_example_file: true
