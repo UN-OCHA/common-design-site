@@ -1,29 +1,3 @@
-label: Frontpage
-description: 'All content promoted to the front page.'
 display:
   default:
-    display_options:
-      empty:
-        area_text_custom:
-          content: 'Aucun contenu de page d''accueil n''a été créé pour l''instant. Suivre le <a href="https://www.drupal.org/fr/docs/user_guide/fr/index.html">Guide utilisateur</a> pour démarrer la construction de votre site.'
-        title:
-          title: 'Welcome to [site:name]'
-      exposed_form:
-        options:
-          submit_button: Apply
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Items per page'
-            items_per_page_options_all_label: '- All -'
-            offset_label: Offset
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-            first: '« First'
-            last: 'Last »'
     display_title: Master
-  feed_1:
-    display_title: Feed

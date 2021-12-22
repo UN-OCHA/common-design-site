@@ -1,52 +1,32 @@
-label: Media
 display:
   default:
     display_title: Master
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-      pager:
-        options:
-          expose:
-            items_per_page_options_all_label: '- All -'
+          submit_button: انتقاء
       fields:
-        thumbnail__target_id:
-          label: Thumbnail
+        media_bulk_form:
+          action_title: إجراء
         bundle:
           label: 'Media type'
-        uid:
-          label: Author
         status:
-          label: Status
+          label: الحالة
           settings:
             format_custom_true: 'تم النشر'
         changed:
           label: Changed
         operations:
-          label: Operations
+          label: عمليات
       filters:
         bundle:
           expose:
             label: 'Media type'
         status:
-          expose:
-            label: 'True'
           group_info:
             group_items:
               1:
                 title: 'تم النشر'
-        langcode:
-          expose:
-            label: Language
-      title: Media
       empty:
         area_text_custom:
           content: 'No [view:title] available.'
-  media_page_list:
-    display_title: Media
-    display_options:
-      menu:
-        title: Media

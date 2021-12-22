@@ -7,9 +7,8 @@ module:
   ckeditor: 0
   components: 0
   config: 0
+  config_split: 0
   contextual: 0
-  devel: 0
-  devel_generate: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
@@ -43,17 +42,19 @@ module:
   search_api: 0
   search_api_solr: 0
   search_api_solr_admin: 0
+  seckit: 0
   select_a11y: 0
   social_api: 0
   social_auth: 0
   social_auth_hid: 0
   syslog: 0
   system: 0
+  taxonomy: 0
   text: 0
+  theme_switcher: 0
   toolbar: 0
   update: 0
   user: 0
-  views_ui: 0
   viewsreference: 0
   menu_link_content: 1
   views: 10

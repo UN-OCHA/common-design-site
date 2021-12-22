@@ -1,6 +1,6 @@
 {
     "name": "un-ocha/common-design-site",
-    "description": "Common Design demo site - Drupal 8",
+    "description": "Common Design demo site - Drupal 9",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -21,10 +21,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -33,6 +29,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "platform": {
+            "php": "8.0"
+        },
         "bin-dir": "vendor/bin/",
         "sort-packages": true
     },
@@ -58,6 +57,9 @@
             "initial": {
                 ".editorconfig": "../.editorconfig",
                 ".gitattributes": "../.gitattributes"
+            },
+            "locations": {
+                "web-root": "html/"
             }
         },
         "merge-plugin": {
@@ -77,7 +79,7 @@
         "composer-exit-on-patch-failure": true
     },
     "scripts": {
-        "git-hooks": "git config core.hooksPath git-hooks",
+        "git-hooks": "git config core.hooksPath git-hooks || true",
         "npm-prepare": "cd html/themes/contrib/common_design && npm install",
         "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:build",
         "e2e-test": "cd html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
@@ -98,15 +100,16 @@
         ]
     },
     "require": {
-        "php": ">=7.2",
+        "php": ">=8.0",
         "composer/installers": "^1.7",
-        "cweagans/composer-patches": "^1.6",
-        "drupal-composer/drupal-scaffold": "^2.6",
-        "drupal-composer/preserve-paths": "^0.1.5",
-        "drupal/admin_denied": "^1.0",
+        "cweagans/composer-patches": "^1.7",
+        "drupal-composer/preserve-paths": "^0.1.6",
+        "drupal/admin_denied": "^1.1",
         "drupal/components": "^2.4",
-        "drupal/core": "^8.9.6",
-        "drupal/devel": "^2.1",
+        "drupal/config_split": "^2.0.0-beta4",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-project-message": "^9",
+        "drupal/core-recommended": "^9",
         "drupal/facets": "^1.8",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
@@ -116,16 +119,23 @@
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
         "drupal/search_api_solr": "^4.1",
+        "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^1.0",
-        "drupal/social_auth_hid": "^2.2",
+        "drupal/social_auth_hid": "^2.6",
+        "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
+        "oomphinc/composer-installers-extender": "^2.0",
         "unocha/common_design": "^4.0.6",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
     "require-dev": {
-        "drupal/coder": "^8.3"
+        "drupal/coder": "^8.3",
+        "drupal/config_filter": "^2.2",
+        "drupal/devel": "^4.1",
+        "drupal/stage_file_proxy": "^1.1",
+        "kint-php/kint": "^3.3"
     }
 }

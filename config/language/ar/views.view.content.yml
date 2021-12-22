@@ -1,53 +1,29 @@
-label: Content
-description: 'Find and manage content.'
 display:
   default:
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          submit_button: انتقاء
       fields:
-        title:
-          label: Title
         type:
-          label: 'Content type'
-        name:
-          label: Author
+          label: 'نوع المحتوى'
         status:
-          label: Status
+          label: الحالة
           settings:
             format_custom_true: 'تم النشر'
         changed:
           label: Changed
         operations:
-          label: Operations
+          label: عمليات
       filters:
-        title:
-          expose:
-            label: Title
         type:
           expose:
-            label: 'Content type'
+            label: 'نوع المحتوى'
         status:
           expose:
-            label: Status
+            label: الحالة
           group_info:
             group_items:
               1:
                 title: 'تم النشر'
-        langcode:
-          expose:
-            label: Language
-      title: Content
-      empty:
-        area_text_custom:
-          content: 'No content available.'
     display_title: Master
-  page_1:
-    display_options:
-      menu:
-        title: Content
-      tab_options:
-        title: Content
