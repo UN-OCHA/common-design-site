@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f56e4fba8fc6ddcafba7c985b7f52f50",
+    "content-hash": "0626dd2300c44b1d97dcd6f91ee7d772",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8144,21 +8144,22 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v4.1.1",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "6630e0b7e231ade2195cd21f630a62dcfcae831c"
+                "reference": "40602a4256ccd4198f30011b5c9e6b068a177826"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/6630e0b7e231ade2195cd21f630a62dcfcae831c",
-                "reference": "6630e0b7e231ade2195cd21f630a62dcfcae831c",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/40602a4256ccd4198f30011b5c9e6b068a177826",
+                "reference": "40602a4256ccd4198f30011b5c9e6b068a177826",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.2"
             },
+            "default-branch": true,
             "type": "drupal-theme",
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -8167,9 +8168,9 @@
             "description": "OCHA Common Design base theme for Drupal 8",
             "support": {
                 "issues": "https://github.com/UN-OCHA/common_design/issues",
-                "source": "https://github.com/UN-OCHA/common_design/tree/v4.1.1"
+                "source": "https://github.com/UN-OCHA/common_design/tree/main"
             },
-            "time": "2021-07-23T10:34:36+00:00"
+            "time": "2021-12-22T19:24:41+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -9397,6 +9398,7 @@
         "drupal/paragraphs_edit": 15,
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
+        "unocha/common_design": 20,
         "unocha/ocha_media_content": 20
     },
     "prefer-stable": true,
