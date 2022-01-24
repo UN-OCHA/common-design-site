@@ -33,7 +33,15 @@
             "php": "8.0"
         },
         "bin-dir": "vendor/bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal-composer/preserve-paths": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/console-extend-plugin": true,
+            "symfony/flex": true
+        }
     },
     "extra": {
         "enable-patching": true,
@@ -79,7 +87,7 @@
         "composer-exit-on-patch-failure": true
     },
     "scripts": {
-        "git-hooks": "git config core.hooksPath git-hooks",
+        "git-hooks": "git config core.hooksPath git-hooks || true",
         "npm-prepare": "cd html/themes/contrib/common_design && npm install",
         "sass-build": "cd html/themes/contrib/common_design && ./node_modules/.bin/sass sass:build",
         "e2e-test": "cd html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
@@ -127,7 +135,7 @@
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
-        "unocha/common_design": "^4.0.6",
+        "unocha/common_design": "dev-main",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-master"
     },
