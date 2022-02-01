@@ -133,7 +133,7 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "unocha/common_design": "dev-cd-304-forms",
         "unocha/ocha_integrations": "^1.0",
-        "unocha/ocha_media_content": "dev-master"
+        "unocha/ocha_media_content": "dev-main"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
