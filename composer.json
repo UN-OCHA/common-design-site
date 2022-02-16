@@ -33,7 +33,17 @@
             "php": "8.0"
         },
         "bin-dir": "vendor/bin/",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal-composer/preserve-paths": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "drupal/console-extend-plugin": true,
+            "oomphinc/composer-installers-extender": true,
+            "symfony/flex": true
+        }
     },
     "extra": {
         "enable-patching": true,
@@ -107,9 +117,9 @@
         "drupal/admin_denied": "^1.1",
         "drupal/components": "^2.4",
         "drupal/config_split": "^2.0.0-beta4",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
         "drupal/facets": "^1.8",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
