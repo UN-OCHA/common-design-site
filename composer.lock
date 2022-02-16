@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0626dd2300c44b1d97dcd6f91ee7d772",
+    "content-hash": "7a97e7387269f9f97d837ca63af46752",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8206,7 +8206,7 @@
         },
         {
             "name": "unocha/ocha_media_content",
-            "version": "dev-master",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_media_content.git",
@@ -8234,7 +8234,7 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_media_content/issues",
-                "source": "https://github.com/UN-OCHA/ocha_media_content/tree/master"
+                "source": "https://github.com/UN-OCHA/ocha_media_content/tree/main"
             },
             "time": "2020-08-26T15:10:24+00:00"
         },
