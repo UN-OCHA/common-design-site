@@ -1,14 +1,19 @@
-dist: bionic
+dist: focal
 language: php
 cache:
   - composer
 
-addons:
-  hosts:
-    - localhost
-
 php:
   - 8.0
+
+# Make sure we have a recent version of docker-compose and chrome.
+addons:
+  apt:
+    packages:
+      - docker-compose
+  chrome: stable
+  hosts:
+    - localhost
 
 services:
   - mysql
@@ -37,9 +42,10 @@ before_script:
 
   # Set up database access.
   - mysql -e "CREATE DATABASE drupal;"
-  - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
+  - mysql -e "CREATE USER drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
+  - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1;"
 
-  # Whereever you go, there you are.
+  # Wherever you go, there you are.
   - cd $TRAVIS_BUILD_DIR
 
 script:
@@ -48,7 +54,6 @@ script:
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
 
   # PHPCS.
-  - ./vendor/bin/phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 

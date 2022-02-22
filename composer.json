@@ -37,13 +37,21 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal-composer/preserve-paths": true,
             "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
             "drupal/console-extend-plugin": true,
+            "oomphinc/composer-installers-extender": true,
             "symfony/flex": true
         }
     },
     "extra": {
+        "drush": {
+          "services": {
+            "drush.services.yml": "^10"
+          }
+        },
         "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"
@@ -115,9 +123,9 @@
         "drupal/admin_denied": "^1.1",
         "drupal/components": "^2.4",
         "drupal/config_split": "^2.0.0-beta4",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-project-message": "^9",
-        "drupal/core-recommended": "^9",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-project-message": "^9.3",
+        "drupal/core-recommended": "^9.3",
         "drupal/facets": "^1.8",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
@@ -135,9 +143,10 @@
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
+        "slevomat/coding-standard": "^7.0",
         "unocha/common_design": "dev-main",
         "unocha/ocha_integrations": "^1.0",
-        "unocha/ocha_media_content": "dev-master"
+        "unocha/ocha_media_content": "dev-main"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
