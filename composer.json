@@ -140,6 +140,7 @@
         "drupal/social_auth_hid": "^2.6",
         "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
+        "drupal/user_expire": "^1.0",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
