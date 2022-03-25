@@ -12,5 +12,5 @@ admin_theme: common_design
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*/edit'
     negate: false
+    pages: '/user/*/edit'

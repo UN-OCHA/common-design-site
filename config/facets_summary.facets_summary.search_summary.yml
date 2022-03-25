@@ -9,7 +9,6 @@ dependencies:
     - search_api
 id: search_summary
 name: 'Search summary'
-facets: {  }
 facet_source_id: 'search_api:views_page__search__search'
 processor_configs:
   hide_when_not_rendered:
@@ -48,3 +47,4 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets: {  }
