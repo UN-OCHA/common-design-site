@@ -12,24 +12,24 @@ id: hero
 label: Hero
 image_style_mappings:
   -
-    breakpoint_id: common_design.md
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: hero
+    breakpoint_id: common_design.md
+    multiplier: 1x
   -
+    image_mapping_type: image_style
+    image_mapping: hero
     breakpoint_id: common_design.md
     multiplier: 2x
-    image_mapping_type: image_style
-    image_mapping: hero
   -
-    breakpoint_id: common_design.sm
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: medium
-  -
     breakpoint_id: common_design.sm
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: large
+    breakpoint_id: common_design.sm
+    multiplier: 2x
 breakpoint_group: common_design
 fallback_image_style: hero

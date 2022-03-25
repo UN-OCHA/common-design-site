@@ -15,44 +15,44 @@ id: responsive_thumbnail
 label: 'Responsive thumbnail'
 image_style_mappings:
   -
-    breakpoint_id: ocha_media_content.lg
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: xlarge_thumbnail_x1
-  -
     breakpoint_id: ocha_media_content.lg
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: xlarge_thumbnail_x2
+    breakpoint_id: ocha_media_content.lg
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.md
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: desktop_thumbnail_x1
-  -
     breakpoint_id: ocha_media_content.md
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: desktop_thumbnail_x2
+    breakpoint_id: ocha_media_content.md
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.sm
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: tablet_thumbnail_x1
-  -
     breakpoint_id: ocha_media_content.sm
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: tablet_thumbnail_x2
+    breakpoint_id: ocha_media_content.sm
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.xs
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x1
-  -
     breakpoint_id: ocha_media_content.xs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x2
+    breakpoint_id: ocha_media_content.xs
+    multiplier: 2x
 breakpoint_group: ocha_media_content
 fallback_image_style: mobile_thumbnail_x1

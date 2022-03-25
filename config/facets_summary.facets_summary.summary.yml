@@ -9,13 +9,6 @@ dependencies:
     - search_api
 id: summary
 name: Summary
-facets:
-  content_type:
-    checked: true
-    label: 'Content type'
-    separator: ', '
-    weight: 0
-    show_count: false
 facet_source_id: 'search_api:views_page__facets__page_1'
 processor_configs:
   hide_when_not_rendered:
@@ -54,3 +47,10 @@ processor_configs:
       text:
         value: 'No results found.'
         format: plain_text
+facets:
+  content_type:
+    checked: true
+    label: 'Content type'
+    separator: ', '
+    show_count: false
+    weight: 0

@@ -18,14 +18,14 @@ plugin: 'block_content:18c1989f-2352-41f1-bced-0a421903e0e8'
 settings:
   id: 'block_content:18c1989f-2352-41f1-bced-0a421903e0e8'
   label: 'Sidebar second'
-  provider: block_content
   label_display: visible
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: "/node/2\r\n/node/3"
     negate: false
     context_mapping: {  }
+    pages: "/node/2\r\n/node/3"
