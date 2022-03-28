@@ -2,11 +2,11 @@ uuid: adb3d143-282a-47ce-9904-d4ccf4fcf935
 langcode: en
 status: true
 dependencies:
+  module:
+    - media
   enforced:
     module:
       - media_library
-  module:
-    - media
 id: media.media_library
 label: 'Media library'
 targetEntityType: media

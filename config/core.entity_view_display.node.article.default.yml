@@ -15,20 +15,20 @@ bundle: article
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_image:
-    weight: 0
+    type: entity_reference_entity_view
     label: above
     settings:
       view_mode: responsive_image
       link: false
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    weight: 0
     region: content
 hidden:
   langcode: true
