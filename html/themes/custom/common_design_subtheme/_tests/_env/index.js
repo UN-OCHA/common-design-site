@@ -4,7 +4,7 @@
 //
 const environments = {
   'local': {
-    baseUrl: 'http://cds.docksal',
+    baseUrl: 'https://commondesign.test',
     testTimeout: 10000,
   },
   'travis': {
