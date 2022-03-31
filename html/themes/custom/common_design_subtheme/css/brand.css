@@ -5,9 +5,10 @@
    * Set these variables and the entire CD Header/Footer plus all Components in
    * the design system will re-color themselves to your brand.
    */
-  --brand-primary: #753302;
-  --brand-primary-light: #915727;
-  --brand-primary-dark: #642302;
-  --brand-highlight: #765cc1;
-  --brand-grey: #f1ece6;
+  --brand-primary: #462472;
+  --brand-primary-light: #6937AC;
+  --brand-primary-dark: #23133A;
+  --brand-highlight: #7FB92F;
+  --brand-grey: #F1ECF9;
+  --brand-logo-width: 186px;
 }
