@@ -7,8 +7,8 @@ global-styling:
   css:
     theme:
       css/brand.css: {}
-#   dependencies:
-#     - common_design_subtheme/custom-teaser
+  dependencies:
+    - common_design_subtheme/cds-color-picker
 
 ###
 # Define Drupal libraries for your custom components.
@@ -18,7 +18,9 @@ global-styling:
 # completely independent and style the custom content of your website, such as
 # a custom Paragraph type.
 #
-# custom-teaser:
-#   css:
-#     theme:
-#       components/custom-teaser/custom-teaser.css: {}
+cds-color-picker:
+  css:
+    component:
+      components/cds-color-picker/cds-color-picker--component.css: {}
+  js:
+    components/cds-color-picker/cds-color-picker.js: {}
