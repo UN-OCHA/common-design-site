@@ -12,10 +12,10 @@ admin_theme: common_design
 visibility:
   node_type:
     id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       article: article
       basic: basic
       landing: landing
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'

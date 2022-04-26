@@ -14,28 +14,28 @@ dependencies:
     - viewsreference
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.landing.default
 targetEntityType: node
 bundle: landing
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_view:
-    weight: 1
+    type: viewsreference_formatter
     label: hidden
     settings:
       plugin_types:
         - block
     third_party_settings: {  }
-    type: viewsreference_formatter
+    weight: 1
     region: content
 hidden:
   field_media_content: true

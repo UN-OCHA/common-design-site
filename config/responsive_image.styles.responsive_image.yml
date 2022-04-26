@@ -15,44 +15,44 @@ id: responsive_image
 label: 'Responsive image'
 image_style_mappings:
   -
-    breakpoint_id: ocha_media_content.lg
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: xlarge_x1
-  -
     breakpoint_id: ocha_media_content.lg
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: xlarge_x
+    breakpoint_id: ocha_media_content.lg
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.md
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: desktop_x1
-  -
     breakpoint_id: ocha_media_content.md
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: desktop_x2
+    breakpoint_id: ocha_media_content.md
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.sm
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: tablet_x1
-  -
     breakpoint_id: ocha_media_content.sm
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: tablet_x2
+    breakpoint_id: ocha_media_content.sm
+    multiplier: 2x
   -
-    breakpoint_id: ocha_media_content.xs
-    multiplier: 1x
     image_mapping_type: image_style
     image_mapping: mobile_x1
-  -
     breakpoint_id: ocha_media_content.xs
-    multiplier: 2x
+    multiplier: 1x
+  -
     image_mapping_type: image_style
     image_mapping: mobile_x2
+    breakpoint_id: ocha_media_content.xs
+    multiplier: 2x
 breakpoint_group: ocha_media_content
 fallback_image_style: mobile_x1
