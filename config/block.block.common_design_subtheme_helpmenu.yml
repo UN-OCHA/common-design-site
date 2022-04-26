@@ -1,0 +1,25 @@
+uuid: 159bcbba-303e-45c8-8170-476bbf359067
+langcode: nl
+status: true
+dependencies:
+  config:
+    - system.menu.help
+  module:
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_helpmenu
+theme: common_design_subtheme
+region: header_top
+weight: -9
+provider: null
+plugin: 'system_menu_block:help'
+settings:
+  id: 'system_menu_block:help'
+  label: 'Help menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

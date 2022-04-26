@@ -1,0 +1,25 @@
+uuid: 546ce512-c4bd-4d5c-9b0f-08131b3e3ead
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - common_design_subtheme
+_core:
+  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
+id: common_design_subtheme_branding
+theme: common_design_subtheme
+region: header_logo
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
