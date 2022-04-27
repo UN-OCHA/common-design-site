@@ -1,0 +1,31 @@
+uuid: 95f6bcab-256c-4215-92f1-d7a6333d841f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6fdcaaf9-8d98-4379-8320-6debf05de797'
+  module:
+    - block_content
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_sidebarfirst
+theme: common_design_subtheme
+region: sidebar_first
+weight: -10
+provider: null
+plugin: 'block_content:6fdcaaf9-8d98-4379-8320-6debf05de797'
+settings:
+  id: 'block_content:6fdcaaf9-8d98-4379-8320-6debf05de797'
+  label: 'Sidebar first'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/node/1\r\n/node/3\r\n/teaser-list"

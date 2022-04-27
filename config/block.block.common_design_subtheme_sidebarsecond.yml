@@ -1,0 +1,31 @@
+uuid: 041fc67d-4357-4899-8440-2118f2c4d076
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:18c1989f-2352-41f1-bced-0a421903e0e8'
+  module:
+    - block_content
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_sidebarsecond
+theme: common_design_subtheme
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:18c1989f-2352-41f1-bced-0a421903e0e8'
+settings:
+  id: 'block_content:18c1989f-2352-41f1-bced-0a421903e0e8'
+  label: 'Sidebar second'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: "/node/2\r\n/node/3"

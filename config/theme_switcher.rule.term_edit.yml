@@ -7,8 +7,8 @@ dependencies:
 id: term_edit
 label: 'Term edit'
 weight: -10
-theme: common_design
-admin_theme: common_design
+theme: common_design_subtheme
+admin_theme: common_design_subtheme
 visibility:
   request_path:
     id: request_path
