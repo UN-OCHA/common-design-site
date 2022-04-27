@@ -137,7 +137,7 @@
         "drupal/search_api_solr": "^4.1",
         "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^1.0",
-        "drupal/social_auth_hid": "^2.6",
+        "drupal/social_auth_hid": "^3.1",
         "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/user_expire": "^1.0",
@@ -145,7 +145,7 @@
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "slevomat/coding-standard": "^7.0",
-        "unocha/common_design": "dev-main",
+        "unocha/common_design": "^7",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-main"
     },

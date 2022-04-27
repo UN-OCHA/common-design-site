@@ -1,0 +1,20 @@
+uuid: 6532c4a3-de06-43dc-9a4e-781c39a9616d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_poweredbydrupal
+theme: common_design_subtheme
+region: footer_soft
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -41,12 +41,12 @@ filters:
     weight: -41
     settings:
       default_view_mode: default
-      allowed_media_types:
-        image: image
-        video: video
       allowed_view_modes:
         responsive_image: responsive_image
         responsive_thumbnail: responsive_thumbnail
+      allowed_media_types:
+        image: image
+        video: video
   editor_file_reference:
     id: editor_file_reference
     provider: editor

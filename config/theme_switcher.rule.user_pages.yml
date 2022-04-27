@@ -7,10 +7,10 @@ dependencies:
 id: user_pages
 label: 'User pages'
 weight: -9
-theme: common_design
-admin_theme: common_design
+theme: common_design_subtheme
+admin_theme: common_design_subtheme
 visibility:
   request_path:
     id: request_path
-    pages: '/user/*/edit'
     negate: false
+    pages: '/user/*/edit'

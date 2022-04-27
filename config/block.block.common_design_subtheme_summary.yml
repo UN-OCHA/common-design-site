@@ -1,0 +1,28 @@
+uuid: 4071aa2b-a20d-4d2a-bd99-7d18b676132f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_summary
+theme: common_design_subtheme
+region: facets
+weight: 0
+provider: null
+plugin: 'facets_summary_block:summary'
+settings:
+  id: 'facets_summary_block:summary'
+  label: Summary
+  label_display: '0'
+  provider: facets_summary
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    context_mapping: {  }
+    pages: /facets
