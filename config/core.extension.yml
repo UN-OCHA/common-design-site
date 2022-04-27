@@ -57,6 +57,7 @@ module:
   toolbar: 0
   update: 0
   user: 0
+  user_expire: 0
   viewsreference: 0
   menu_link_content: 1
   views: 10
