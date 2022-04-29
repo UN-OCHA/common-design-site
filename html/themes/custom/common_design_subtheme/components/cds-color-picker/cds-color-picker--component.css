@@ -6,7 +6,7 @@
   top: 8rem;
   left: 2rem;
   z-index: 10;
-  width: 480px;
+  width: 420px;
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: 4px;
@@ -21,5 +21,6 @@
 
 .cds-color-picker__palettes {
   display: flex;
+  flex-flow: row wrap;
   gap: 1rem;
 }
