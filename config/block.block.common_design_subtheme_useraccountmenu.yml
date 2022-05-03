@@ -1,0 +1,25 @@
+uuid: 638c71eb-0e7b-48c1-8837-781d1e79d538
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - common_design_subtheme
+id: common_design_subtheme_useraccountmenu
+theme: common_design_subtheme
+region: header_top
+weight: -10
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User account menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

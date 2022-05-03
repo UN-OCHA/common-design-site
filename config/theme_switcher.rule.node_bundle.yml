@@ -7,15 +7,15 @@ dependencies:
 id: node_bundle
 label: 'Node bundle'
 weight: -8
-theme: common_design
-admin_theme: common_design
+theme: common_design_subtheme
+admin_theme: common_design_subtheme
 visibility:
   node_type:
     id: node_type
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
     bundles:
       article: article
       basic: basic
       landing: landing
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'

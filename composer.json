@@ -21,10 +21,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -41,6 +37,7 @@
         "allow-plugins": {
             "composer/installers": true,
             "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "drupal-composer/preserve-paths": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
@@ -50,6 +47,11 @@
         }
     },
     "extra": {
+        "drush": {
+          "services": {
+            "drush.services.yml": "^10"
+          }
+        },
         "enable-patching": true,
         "patchLevel": {
             "drupal/core": "-p2"
@@ -135,13 +137,15 @@
         "drupal/search_api_solr": "^4.1",
         "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^1.0",
-        "drupal/social_auth_hid": "^2.6",
+        "drupal/social_auth_hid": "^3.1",
         "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
+        "drupal/user_expire": "^1.0",
         "drupal/viewsreference": "^2.0.0",
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
-        "unocha/common_design": "dev-cd-304-forms",
+        "slevomat/coding-standard": "^7.0",
+        "unocha/common_design": "^7",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-main"
     },
