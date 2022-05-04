@@ -1,0 +1,33 @@
+uuid: 65dd3c3a-2919-4aa8-946a-5c3859641f0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_example_checkboxes
+field_name: field_example_checkboxes
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: option1
+      label: 'Option One'
+    -
+      value: option2
+      label: 'Option Two'
+    -
+      value: option3
+      label: 'Option Three'
+    -
+      value: option4
+      label: 'Option Four'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

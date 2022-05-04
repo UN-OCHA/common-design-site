@@ -1,0 +1,23 @@
+uuid: cd4e008e-1cf4-45e2-bd2c-fbff593c7b9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_radio_button
+    - node.type.basic
+  module:
+    - options
+id: node.basic.field_example_radio_button
+field_name: field_example_radio_button
+entity_type: node
+bundle: basic
+label: 'Example radio button'
+description: 'This is the example radio button help text'
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_float

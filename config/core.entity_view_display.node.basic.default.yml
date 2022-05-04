@@ -4,13 +4,30 @@ status: true
 dependencies:
   config:
     - field.field.node.basic.body
+    - field.field.node.basic.field_example_boolean
+    - field.field.node.basic.field_example_boolean_second
+    - field.field.node.basic.field_example_checkboxes
+    - field.field.node.basic.field_example_date
+    - field.field.node.basic.field_example_date_range
+    - field.field.node.basic.field_example_file
+    - field.field.node.basic.field_example_files
+    - field.field.node.basic.field_example_image
+    - field.field.node.basic.field_example_images
+    - field.field.node.basic.field_example_link
+    - field.field.node.basic.field_example_radio_button
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
     - field.field.node.basic.field_taxonomy
+    - image.style.desktop_thumbnail_x1
     - node.type.basic
   module:
+    - datetime
     - entity_reference_revisions
+    - file
+    - image
+    - link
+    - options
     - text
     - user
 id: node.basic.default
@@ -24,6 +41,104 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_example_boolean:
+    weight: 7
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_example_boolean_second:
+    weight: 17
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_example_checkboxes:
+    weight: 16
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_example_date:
+    weight: 10
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: unocha_long_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_example_date_range:
+    weight: 9
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: unocha_short_date
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_example_file:
+    weight: 12
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_example_files:
+    weight: 13
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_example_image:
+    weight: 14
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_example_images:
+    weight: 15
+    label: above
+    settings:
+      image_style: desktop_thumbnail_x1
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_example_link:
+    weight: 11
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_example_radio_button:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
     region: content
   field_hero_component:
     type: entity_reference_revisions_entity_view
