@@ -10,7 +10,7 @@
   }
 
   // Find all the colors defined in markup
-  var palettes = document.querySelectorAll('.cdscp-palette');
+  var palettes = document.querySelectorAll('.palette');
 
   // Process each color palette.
   palettes.forEach((p) => {
