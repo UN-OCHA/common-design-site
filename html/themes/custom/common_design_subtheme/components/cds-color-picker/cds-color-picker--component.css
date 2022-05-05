@@ -4,10 +4,10 @@
 .cds-color-picker {
   position: fixed;
   top: 8rem;
-  left: 2rem;
+  left: 1rem;
   z-index: 10;
-  width: 420px;
-  padding: 2rem;
+  width: auto;
+  padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 4px;
   box-shadow: 2px 2px 5px #0005;
@@ -21,6 +21,10 @@
 
 .cds-color-picker__palettes {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   gap: 1rem;
+}
+
+.palette {
+  flex: 0 0 100%;
 }
