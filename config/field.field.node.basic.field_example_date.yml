@@ -1,0 +1,24 @@
+uuid: 7fcc2745-9547-4951-abf6-1caf98f40b33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_date
+    - node.type.basic
+  module:
+    - datetime
+id: node.basic.field_example_date
+field_name: field_example_date
+entity_type: node
+bundle: basic
+label: 'Example date'
+description: 'This is the date help text'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

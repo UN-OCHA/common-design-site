@@ -1,0 +1,8 @@
+uuid: 6bc07755-3080-4441-a8c0-19c07a1fbf42
+langcode: en
+status: true
+dependencies: {  }
+id: unocha_short_date
+label: 'UNOCHA short date'
+locked: false
+pattern: d.m.y

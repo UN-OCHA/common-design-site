@@ -1,0 +1,27 @@
+uuid: e1d4f37f-ad29-49a6-bd7f-47d25937aae7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_example_files
+    - node.type.basic
+  module:
+    - file
+id: node.basic.field_example_files
+field_name: field_example_files
+entity_type: node
+bundle: basic
+label: 'Example files'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file
