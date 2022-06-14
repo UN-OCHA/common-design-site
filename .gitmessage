@@ -1,0 +1,9 @@
+# <conventional-commit-type>(optional scope): <description>
+# https://www.conventionalcommits.org/en/v1.0.0
+
+# Leave a blank line
+
+# [optional body]
+
+# Add Jira ticket IDs
+Refs:
