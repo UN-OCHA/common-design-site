@@ -39,6 +39,8 @@ report-only:
       base: self
     script-src-elem:
       base: self
+      sources:
+        - '''sha256-/rGLbsC3KREsVOihkt0j7wGku9aMLV2tcrug1R+VUY0='''
     style-src:
       base: self
     style-src-attr:
