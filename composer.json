@@ -130,6 +130,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-project-message": "^9.3",
         "drupal/core-recommended": "^9.3",
+        "drupal/csp": "^1.16",
         "drupal/facets": "^2.0",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
