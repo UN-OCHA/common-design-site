@@ -3,8 +3,8 @@ const config = {
   browserContext: 'incognito',
   launch: {
     slowMo: 10,
-    headless: true,
-    ignoreHTTPSErrors: true,
+    headless: TRUE,
+    ignoreHTTPSErrors: TRUE,
   },
   testTimeout: 10000,
 };
@@ -14,7 +14,7 @@ const DEBUG_MODE = process.argv.includes('--debug');
 
 // When debugging we want to see the browser do its work.
 if (DEBUG_MODE) {
-  config.launch.headless = false;
+  config.launch.headless = FALSE;
   config.testTimeout = 10000;
   config.launch.slowMo = 100;
 }
