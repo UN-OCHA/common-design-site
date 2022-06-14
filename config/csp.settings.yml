@@ -35,6 +35,7 @@ report-only:
         - www.google-analytics.com
         - cdn.jsdelivr.net
         - js-agent.newrelic.com
+        - '''sha256-_rGLbsC3KREsVOihkt0j7wGku9aMLV2tcrug1R-VUY0='''
     script-src-attr:
       base: self
     script-src-elem:
