@@ -2,14 +2,14 @@ display:
   default:
     display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: انتقاء
       fields:
         filename:
           label: الاسم
         status:
           label: الحالة
+      exposed_form:
+        options:
+          submit_button: انتقاء
       filters:
         status:
           expose:

@@ -2,11 +2,11 @@ display:
   default:
     display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtrer
       fields:
         status:
           label: État
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer

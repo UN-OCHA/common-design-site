@@ -4,6 +4,7 @@ display:
   default:
     display_title: Master
     display_options:
+      title: 'Librería de bloques personalizada'
       fields:
         info:
           label: 'Descripción del bloque'
@@ -13,6 +14,9 @@ display:
           label: Changed
         operations:
           label: Operaciones
+      empty:
+        area_text_custom:
+          content: 'No hay bloques personalizados disponibles.'
       filters:
         info:
           expose:
@@ -20,10 +24,6 @@ display:
         type:
           expose:
             label: 'Tipo de bloque'
-      title: 'Librería de bloques personalizada'
-      empty:
-        area_text_custom:
-          content: 'No hay bloques personalizados disponibles.'
   page_1:
     display_options:
       menu:

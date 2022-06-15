@@ -1,9 +1,7 @@
 display:
   default:
+    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtrer
       fields:
         type:
           label: 'Type de contenu'
@@ -11,6 +9,9 @@ display:
           label: État
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
       filters:
         type:
           expose:
@@ -18,4 +19,3 @@ display:
         status:
           expose:
             label: État
-    display_title: Master
