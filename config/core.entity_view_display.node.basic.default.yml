@@ -43,86 +43,86 @@ content:
     weight: 0
     region: content
   field_example_boolean:
-    weight: 7
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 7
     region: content
   field_example_boolean_second:
-    weight: 17
+    type: boolean
     label: above
     settings:
       format: default
       format_custom_false: ''
       format_custom_true: ''
     third_party_settings: {  }
-    type: boolean
+    weight: 17
     region: content
   field_example_checkboxes:
-    weight: 16
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 16
     region: content
   field_example_date:
-    weight: 10
+    type: datetime_default
     label: above
     settings:
       timezone_override: ''
       format_type: unocha_long_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 10
     region: content
   field_example_date_range:
-    weight: 9
+    type: datetime_default
     label: above
     settings:
       timezone_override: ''
       format_type: unocha_short_date
     third_party_settings: {  }
-    type: datetime_default
+    weight: 9
     region: content
   field_example_file:
-    weight: 12
+    type: file_default
     label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    weight: 12
     region: content
   field_example_files:
-    weight: 13
+    type: file_default
     label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    weight: 13
     region: content
   field_example_image:
-    weight: 14
+    type: image
     label: above
     settings:
-      image_style: medium
       image_link: ''
+      image_style: medium
     third_party_settings: {  }
-    type: image
+    weight: 14
     region: content
   field_example_images:
-    weight: 15
+    type: image
     label: above
     settings:
-      image_style: desktop_thumbnail_x1
       image_link: ''
+      image_style: desktop_thumbnail_x1
     third_party_settings: {  }
-    type: image
+    weight: 15
     region: content
   field_example_link:
-    weight: 11
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -131,14 +131,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 11
     region: content
   field_example_radio_button:
-    weight: 8
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 8
     region: content
   field_hero_component:
     type: entity_reference_revisions_entity_view

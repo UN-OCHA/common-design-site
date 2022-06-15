@@ -2,9 +2,6 @@ display:
   default:
     display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: انتقاء
       fields:
         media_bulk_form:
           action_title: إجراء
@@ -18,6 +15,12 @@ display:
           label: Changed
         operations:
           label: عمليات
+      exposed_form:
+        options:
+          submit_button: انتقاء
+      empty:
+        area_text_custom:
+          content: 'No [view:title] available.'
       filters:
         bundle:
           expose:
@@ -27,6 +30,3 @@ display:
             group_items:
               1:
                 title: 'تم النشر'
-      empty:
-        area_text_custom:
-          content: 'No [view:title] available.'

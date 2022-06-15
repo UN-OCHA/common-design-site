@@ -1,9 +1,7 @@
 display:
   default:
+    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: انتقاء
       fields:
         type:
           label: 'نوع المحتوى'
@@ -15,6 +13,9 @@ display:
           label: Changed
         operations:
           label: عمليات
+      exposed_form:
+        options:
+          submit_button: انتقاء
       filters:
         type:
           expose:
@@ -26,4 +27,3 @@ display:
             group_items:
               1:
                 title: 'تم النشر'
-    display_title: Master

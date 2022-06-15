@@ -2,9 +2,6 @@ display:
   default:
     display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtrer
       fields:
         name:
           label: 'Nom d''utilisateur'
@@ -14,8 +11,13 @@ display:
             format_custom_true: Actif
         roles_target_id:
           label: Rôles
+        access:
+          label: 'Last access'
         operations:
           label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
       filters:
         status:
           group_info:
