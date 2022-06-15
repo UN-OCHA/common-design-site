@@ -28,37 +28,37 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 id: node.basic.full
 targetEntityType: node
 bundle: basic
 mode: full
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_hero_component:
     type: entity_reference_revisions_entity_view
-    weight: 0
     label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    weight: 0
     region: content
   field_taxonomy:
     type: entity_reference_label
-    weight: 2
-    region: content
     label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
+    region: content
 hidden:
   field_example_boolean: true
   field_example_boolean_second: true

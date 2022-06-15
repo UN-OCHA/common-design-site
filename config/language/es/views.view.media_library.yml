@@ -6,6 +6,9 @@ display:
       fields:
         media_bulk_form:
           action_title: Acción
+      empty:
+        area_text_custom:
+          content: 'No [view:title] available.'
       filters:
         status:
           group_info:
@@ -16,9 +19,6 @@ display:
         name:
           expose:
             label: Nombre
-      empty:
-        area_text_custom:
-          content: 'No [view:title] available.'
   page:
     display_options:
       fields:

@@ -1,9 +1,7 @@
 display:
   default:
+    display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtro
       fields:
         type:
           label: 'Tipo de contenido'
@@ -15,6 +13,9 @@ display:
           label: Changed
         operations:
           label: Operaciones
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         type:
           expose:
@@ -27,7 +28,6 @@ display:
             group_items:
               1:
                 title: Publicado
-    display_title: Master
   page_1:
     display_options:
       tab_options:

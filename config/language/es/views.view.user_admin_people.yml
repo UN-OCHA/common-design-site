@@ -2,9 +2,6 @@ display:
   default:
     display_title: Master
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filtro
       fields:
         name:
           label: 'Nombre de usuario'
@@ -12,8 +9,13 @@ display:
           label: Estado
           settings:
             format_custom_true: Activo
+        access:
+          label: 'Last access'
         operations:
           label: Operaciones
+      exposed_form:
+        options:
+          submit_button: Filtro
       filters:
         status:
           group_info:

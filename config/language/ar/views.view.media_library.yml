@@ -5,6 +5,9 @@ display:
       fields:
         media_bulk_form:
           action_title: إجراء
+      empty:
+        area_text_custom:
+          content: 'No [view:title] available.'
       filters:
         status:
           group_info:
@@ -15,9 +18,6 @@ display:
         name:
           expose:
             label: الاسم
-      empty:
-        area_text_custom:
-          content: 'No [view:title] available.'
   page:
     display_options:
       fields:
