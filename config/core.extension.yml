@@ -33,6 +33,7 @@ module:
   media: 0
   media_library: 0
   menu_ui: 0
+  mysql: 0
   node: 0
   ocha_integrations: 0
   ocha_media_content: 0
