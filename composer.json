@@ -140,7 +140,6 @@
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
         "drupal/search_api_solr": "^4.1",
-        "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^1.0",
         "drupal/social_auth_hid": "^3.1",
         "drupal/theme_switcher": "^1.2",
@@ -152,8 +151,7 @@
         "slevomat/coding-standard": "^7.0",
         "unocha/common_design": "^7",
         "unocha/ocha_integrations": "^1.0",
-        "unocha/ocha_media_content": "dev-main",
-        "unocha/ocha_security": "^1.0"
+        "unocha/ocha_media_content": "dev-main"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
