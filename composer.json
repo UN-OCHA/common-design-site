@@ -145,7 +145,7 @@
         "drush/drush": "^10.1",
         "oomphinc/composer-installers-extender": "^2.0",
         "slevomat/coding-standard": "^7.0",
-        "unocha/common_design": "^7",
+        "unocha/common_design": "^7.2",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-main"
     },
