@@ -12,6 +12,7 @@ report-only:
         - gov-bam.nr-data.net
         - fonts.gstatic.com
         - fonts.googleapis.com
+        - '*.placeholder.com'
         - via.placeholder.com
     font-src:
       base: self
@@ -22,6 +23,8 @@ report-only:
       base: self
       sources:
         - 'data:'
+        - '*.placeholder.com'
+        - www.gstatic.com
         - via.placeholder.com
     object-src:
       base: none
@@ -45,10 +48,16 @@ report-only:
         - unsafe-inline
     style-src:
       base: self
+      flags:
+        - unsafe-inline
     style-src-attr:
       base: self
+      flags:
+        - unsafe-inline
     style-src-elem:
       base: self
+      flags:
+        - unsafe-inline
     frame-ancestors:
       base: self
   reporting:
