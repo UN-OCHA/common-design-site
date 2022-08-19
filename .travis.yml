@@ -62,7 +62,7 @@ script:
   - sleep 10
 
   # Install the dev dependencies.
-  - docker exec -it -w /srv/www "${SITEID}-site" composer install
+  - docker exec -it -w /srv/www "${SITEID}-site" sh -c "composer selfupdate && composer install"
 
   # Check coding standards.
   - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom
@@ -84,6 +84,7 @@ script:
   - docker exec -it "${SITEID}-site" drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
   - docker exec -it "${SITEID}-site" drush sqlc < zcat ${TRAVIS_BUILD_DIR}/tests/sample_data/sample.sql.gz
   - docker exec -it "${SITEID}-site" drush -y cim
+  - docker exec -it "${SITEID}-site" drush -y cim --partial --source=${TRAVIS_BUILD_DIR}/tests/config
   - docker exec -it "${SITEID}-site" drush php-eval 'node_access_rebuild();'
   - docker exec -it "${SITEID}-site" drush cr
 
