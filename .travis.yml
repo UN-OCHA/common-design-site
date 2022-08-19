@@ -29,7 +29,7 @@ before_script:
 
   # Install the AWS CLI and login to the ECR. Credentials are secrets set via the UI.
   - if ! [ -x "$(command -v aws)" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ; unzip awscliv2.zip ; sudo ./aws/install ; fi
-  -  docker login --username AWS --password-stdin public.ecr.aws/unocha -p $(aws ecr-public get-login-password --region eu-west-3)
+  - aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin public.ecr.aws/unocha
 
   # Check the docker images we want actually exists.
   - grep 'unocha/unified-builder:' docker/Dockerfile | awk '{print $2}' | xargs docker pull
