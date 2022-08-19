@@ -1,86 +1,96 @@
+env:
+  - PHP_VERSION=8.0
+  - SITEID=common-design
+  - NODE_ENV=travis
+
 dist: focal
 language: php
 cache:
-  - composer
+  directories:
+  - $HOME/.composer
+  - $HOME/.npm
 
 php:
-  - 8.0
+  - $PHP_VERSION
 
 # Make sure we have a recent version of docker-compose and chrome.
 addons:
   apt:
     packages:
       - docker-compose
-  chrome: stable
-  hosts:
-    - localhost
 
 services:
-  - mysql
-
-env:
-  global:
-    - NODE_ENV=travis
+  - docker
 
 before_script:
-  # Composer.
-  - sed -i '1i export PATH="$HOME/.composer/vendor/bin:$PATH"' $HOME/.bashrc
-  - source $HOME/.bashrc
-  - composer self-update
+  # Install the AWS CLI and login to the ECR. Credentials are secrets set via the UI.
+  - if ! [ -x "$(command -v aws)" ]; then curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" ; unzip awscliv2.zip ; sudo ./aws/install ; fi
+  - aws ecr-public get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin public.ecr.aws/unocha
+
+  # Check the docker images we want actually exists.
+  - grep 'unocha/unified-builder:' docker/Dockerfile | awk '{print $2}' | xargs docker pull
+  - grep 'unocha/php-k8s:' docker/Dockerfile | awk '{print $2}' | xargs docker pull
+
+  # Get docker information.
+  - docker version
+  - docker-compose version
 
   # Ensure the PHP environment is ready.
   - phpenv rehash
 
-  # Composerify.
-  - composer install
-
-  # Need to work out updates that work with composer v2, since the lock file is outdated.
-  - composer update
-
-  # Nodify.
-  - npm i
-
-  # Set up database access.
-  - mysql -e "CREATE DATABASE drupal;"
-  - mysql -e "CREATE USER drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
-  - mysql -e "GRANT ALL ON drupal.* to drupal@127.0.0.1;"
-
-  # Wherever you go, there you are.
-  - cd $TRAVIS_BUILD_DIR
-
 script:
-  # PHP Lint.
+  - set -e
+  # PHP linting
   - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
+  - set +e
 
-  # PHPCS.
-  - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
-  - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
+  # Build local image.
+  - make
+
+  # Create the site and support containers.
+  - docker-compose -f tests/docker-compose.yml up -d
+
+  # Dump some information about the created containers.
+  - docker ps -a
+
+  # Wait a bit for containers to be ready.
+  - sleep 10
+
+  # Install the dev dependencies.
+  - docker exec -it -w /srv/www "${SITEID}-site" composer install
+
+  # Check coding standards.
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
+
+  # Nodify.
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" npm i
 
   # Theme build.
-  - composer run sass
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" composer run sass
 
-  # Install Drupal and import config.
-  - cd ${TRAVIS_BUILD_DIR}/html
-  - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal
-  - ../vendor/bin/drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
-  - zcat ${TRAVIS_BUILD_DIR}/html/sites/default/sample_data/sample.sql.gz | ../vendor/bin/drush -y sqlc
-  - ../vendor/bin/drush -y cim --source=${TRAVIS_BUILD_DIR}/config
+  # Run unit tests.
+  - docker exec -it -u root -w /srv/www "${SITEID}-site" mkdir -p /srv/www/html/sites/default/files/browser_output
+  - docker exec -it -u root -w /srv/www -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output "${SITEID}-site" ./vendor/bin/phpunit --testsuite Unit --debug
 
-  # Run a simple drush based web server.
-  - ../vendor/bin/drush rs 127.0.0.1:8080 >/dev/null 2>&1 &
-  - ../vendor/bin/drush php-eval 'node_access_rebuild();'
-  - ../vendor/bin/drush cr
+  # Install the site with existing config.
+  - docker exec -it "${SITEID}-site" drush -y si --existing-config minimal install_configure_form.enable_update_status_emails=NULL
+  - docker exec -it "${SITEID}-site" drush -y en dblog
+  - docker exec -it "${SITEID}-site" drush -y cset system.site uuid $(grep uuid ${TRAVIS_BUILD_DIR}/config/system.site.yml | awk '{print $2}')
+  - docker exec -it "${SITEID}-site" drush sqlc < zcat ${TRAVIS_BUILD_DIR}/tests/sample_data/sample.sql.gz
+  - docker exec -it "${SITEID}-site" drush -y cim
+  - docker exec -it "${SITEID}-site" drush php-eval 'node_access_rebuild();'
+  - docker exec -it "${SITEID}-site" drush cr
 
   # Run e2e tests.
-  - cd $TRAVIS_BUILD_DIR
-  - composer run e2e
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" composer run e2e
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
-  - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
 after_failure:
   - echo "The tests failed. Please check the output above for problems."
+  - docker exec -it "${SITEID}-site" drush watchdog:show --count=50 --extended

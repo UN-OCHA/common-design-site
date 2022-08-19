@@ -1,0 +1,70 @@
+version: "2.2"
+
+networks:
+  default:
+
+volumes:
+  site-public:
+    name: ${SITEID}-site-public
+  site-private:
+    name: ${SITEID}-site-private
+
+services:
+  solr:
+    image: solr:8.10.1-slim
+    hostname: ${SITEID}-solr
+    container_name: ${SITEID}-solr
+    volumes:
+      - "./solr:/solr-config:ro"
+    command:
+      - solr-precreate
+      - search_api_solr_8.x-3.0
+      - /solr-config
+    environment:
+      - SOLR_CORE=search_api_solr_8.x-3.0
+      - CORE=search_api_solr_8.x-3.0
+    networks:
+      - default
+
+  mysql:
+    image: unocha/alpine-mysql:10.5.12-r0-202109-01
+    hostname: ${SITEID}-mysql
+    container_name: ${SITEID}-mysql
+    environment:
+      - MYSQL_DB=${SITEID}
+      - MYSQL_USER=${SITEID}
+      - MYSQL_PASS=${SITEID}
+    networks:
+      - default
+
+  drupal:
+    image: public.ecr.aws/unocha/${SITEID}-site:local
+    hostname: ${SITEID}-site
+    container_name: ${SITEID}-site
+    volumes:
+      - "./settings:/srv/www/shared/settings:ro"
+      # Mount volumes for the private and public files.
+      - "site-public:/srv/www/html/sites/default/files:rw"
+      - "site-private:/srv/www/html/sites/default/private:rw"
+      # Mount the folders needed for the tests.
+      - "../drop_folders:/srv/www/drop_folders:ro"
+      - "../tests:/srv/www/tests:ro"
+      - "../phpcs.xml:/srv/www/phpcs.xml:ro"
+    environment:
+      - TERM=xterm
+      - ENVIRONMENT=dev
+      - NGINX_SERVERNAME=${SITEID}-site,localhost,127.0.0.1
+      - NGINX_OVERRIDE_PROTOCOL=HTTP,${SITEID}-site,localhost,127.0.0.1
+      - NGINX_LIMIT_HUMANS=128r/s
+      - NGINX_BURST_HUMANS=128
+      - DRUSH_OPTIONS_URI=http://${SITEID}-site
+      - DRUPAL_DB_DATABASE=${SITEID}
+      - DRUPAL_DB_USERNAME=${SITEID}
+      - DRUPAL_DB_PASSWORD=${SITEID}
+      - DRUPAL_DB_HOST=mysql
+      - DRUPAL_DB_DRIVER=mysql
+    networks:
+      - default
+    depends_on:
+      - mysql
+      - solr
