@@ -1,4 +1,4 @@
-FROM public.ecr.aws/unocha/unified-builder:${TAG:-8.0-stable} as builder
+FROM public.ecr.aws/unocha/unified-builder:8.0-stable as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
 ENV  COMPOSER_MEMORY_LIMIT=-1
@@ -8,7 +8,7 @@ RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default && \
     composer run sass
 
-FROM public.ecr.aws/unocha/php-k8s:${TAG:-8.0-NR-stable}
+FROM public.ecr.aws/unocha/php-k8s:8.0-stable
 
 ARG VCS_REF
 ARG VCS_URL
