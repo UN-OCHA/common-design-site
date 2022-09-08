@@ -45,7 +45,6 @@ before_script:
 script:
   - set -e
   # PHP linting
-  - test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
   - set +e
 
@@ -67,7 +66,6 @@ script:
   - docker exec -it -w /srv/www "${SITEID}-site" sh -c "composer selfupdate && composer install"
 
   # Check coding standards.
-  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom
   - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
 
   # Nodify.
