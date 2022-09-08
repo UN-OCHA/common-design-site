@@ -53,7 +53,7 @@ script:
   - make
 
   # Create the site and support containers.
-  - docker-compose -f tests/docker-compose.yml up -d
+  - SITEID=common-design docker-compose -f tests/docker-compose.yml up -d
 
   # Dump some information about the created containers.
   - docker ps -a
