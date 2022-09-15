@@ -3,7 +3,7 @@
     "pwmetrics": "./node_modules/pwmetrics/bin/cli.js --config=package.json"
   },
   "dependencies": {
-    "pwmetrics": "^4.2.1"
+    "pwmetrics": "^4.2.3"
   },
   "pwmetrics": {
     "url": "http://127.0.0.1:8080/",
