@@ -1,8 +1,8 @@
 env:
   - PHP_VERSION=8.0
-  - SITEID=common-design
-  - global:
-    - NODE_ENV=travis
+    - SITEID=common-design
+  # - global:
+  #   - NODE_ENV=travis
 
 dist: focal
 language: php
@@ -53,10 +53,8 @@ script:
   # Build local image.
   - make
 
-  # I expected SiteID would be set in line 3 of this file, but it's not.
-  - export SITEID=common-design
   # Create the site and support containers.
-  - docker-compose -f tests/docker-compose.yml up -d
+  - docker-compose -f ./tests/docker-compose.yml up -d
 
   # Dump some information about the created containers.
   - docker ps -a
@@ -65,7 +63,7 @@ script:
   - sleep 10
 
   # Install the dev dependencies.
-  - docker exec -it -w /srv/www "${SITEID}-site" sh -c "composer selfupdate && composer install"
+  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" sh -c "composer install"
 
   # Check coding standards.
   - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
