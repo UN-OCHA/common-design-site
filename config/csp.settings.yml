@@ -7,6 +7,8 @@ report-only:
       base: self
       sources:
         - www.google-analytics.com
+        - analytics.google.com
+        - '*.analytics.google.com'
         - cdn.jsdelivr.net
         - '*.newrelic.com'
         - gov-bam.nr-data.net
@@ -46,10 +48,20 @@ report-only:
       base: self
       flags:
         - unsafe-inline
+      sources:
+        - fonts.googleapis.com
+        - www.gstatic.com
+        - gov-bam.nr-data.net
+        - www.google.com
+        - www.google-analytics.com
+        - cdn.jsdelivr.net
+        - js-agent.newrelic.com
     style-src:
       base: self
       flags:
         - unsafe-inline
+      sources:
+        - fonts.googleapis.com
     style-src-attr:
       base: self
       flags:
