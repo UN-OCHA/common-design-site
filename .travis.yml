@@ -64,6 +64,9 @@ script:
   # Install the dev dependencies.
   - docker exec -it -u root -w /srv/www "${SITEID}-site" sh -c "composer install"
 
+  # Check directories are in place.
+  - docker exec -it "${SITEID}-site" ls -l /srv/www
+
   # Check coding standards.
   - docker exec -it -u root -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
 
@@ -79,9 +82,11 @@ script:
   # - docker exec -it -u root -w /srv/www -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output "${SITEID}-site" ./vendor/bin/phpunit --testsuite Unit --debug
 
   # Install the site with existing config.
-  - docker exec -it "${SITEID}-site" drush -y -vvv si --existing-config minimal
+  - docker exec -it "${SITEID}-site" drush -y si --existing-config minimal
   - docker exec -it "${SITEID}-site" drush -y en dblog
   - docker exec -it -w /srv/www "${SITEID}-site" drush -y cset system.site uuid $(grep uuid ./config/system.site.yml | awk '{print $2}')
+  # Check directories are still in place.
+  - docker exec -it "${SITEID}-site" ls -l /srv/www
   - docker exec -it "${SITEID}-site" drush sqlc < zcat /srv/www/tests/sample_data/sample.sql.gz
   - docker exec -it "${SITEID}-site" drush -y cim --source=/srv/www/config
   - docker exec -it "${SITEID}-site" drush -y cim --partial --source=/srv/www/tests/config
