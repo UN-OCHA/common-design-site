@@ -42,10 +42,7 @@
   </php>
   <testsuites>
     <testsuite name="Unit">
-      <directory>./html/modules/custom/*/tests/src/Unit</directory>
-    </testsuite>
-    <testsuite name="Existing">
-      <directory>./html/modules/custom/*/tests/src/ExistingSite</directory>
+      <directory>./html/modules/contrib/*/tests/src/Unit</directory>
     </testsuite>
   </testsuites>
   <coverage includeUncoveredFiles="false"
@@ -54,18 +51,9 @@
             ignoreDeprecatedCodeUnits="true"
             disableCodeCoverageIgnore="true">
     <include>
-      <directory suffix=".php">./html/modules/custom</directory>
-      <directory suffix=".module">./html/modules/custom</directory>
+      <directory suffix=".php">./html/modules/contrib</directory>
+      <directory suffix=".module">./html/modules/contrib</directory>
     </include>
-    <exclude>
-      <directory suffix="Interface.php">./html/modules/custom</directory>
-      <directory suffix="Constraint.php">./html/modules/custom</directory>
-      <directory>./html/modules/custom/*/src/Tests</directory>
-      <directory>./html/modules/custom/*/tests</directory>
-      <directory>./html/modules/custom/*/*/src/Tests</directory>
-      <directory>./html/modules/custom/*/*/tests</directory>
-      <directory>./html/modules/custom/*/src/Exception</directory>
-    </exclude>
     <report>
       <html outputDirectory="coverage/html" lowUpperBound="50" highLowerBound="90"/>
       <text outputFile="coverage/coverage.txt" showUncoveredFiles="false"/>
