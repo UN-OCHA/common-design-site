@@ -1,5 +1,7 @@
 bin
 buildlog.txt
 html/themes/custom/common_design_subtheme/node_modules
+tests
+vendor
 Makefile
 README.md
