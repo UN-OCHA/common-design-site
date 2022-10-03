@@ -1,18 +1,16 @@
-env:
-  - PHP_VERSION=8.0
-    - SITEID=common-design
-  # - global:
-  #   - NODE_ENV=travis
-
 dist: focal
+os: linux
 language: php
 cache:
   directories:
   - $HOME/.composer
   - $HOME/.npm
 
+env:
+    - SITEID=common-design
+
 php:
-  - $PHP_VERSION
+  - 8.0
 
 # Make sure we have a recent version of docker-compose.
 addons:
@@ -63,10 +61,10 @@ script:
   - sleep 10
 
   # Install the dev dependencies.
-  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" sh -c "composer install"
+  - docker exec -it -u root -w /srv/www "${SITEID}-site" sh -c "composer install"
 
   # Check coding standards.
-  - docker exec -it -u appuser -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
+  - docker exec -it -u root -w /srv/www "${SITEID}-site" ./vendor/bin/phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
 
   # Comment out tests until the rest is working.
   # # Nodify.
@@ -88,6 +86,13 @@ script:
   - docker exec -it "${SITEID}-site" drush -y cim --partial --source=./tests/config
   - docker exec -it "${SITEID}-site" drush php-eval 'node_access_rebuild();'
   - docker exec -it "${SITEID}-site" drush cr
+
+  # Ensure the file directories are writable.
+  - docker exec -it "${SITEID}-site" chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
+
+  # Run unit tests.
+  - docker exec -it -u root -w /srv/www "${SITEID}-site" mkdir -p /srv/www/html/sites/default/files/browser_output
+  - docker exec -it -u root -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 "${SITEID}-site" ./vendor/bin/phpunit --debug
 
   # # Run e2e tests.
   # - docker exec -it -u appuser -w /srv/www "${SITEID}-site" composer run e2e

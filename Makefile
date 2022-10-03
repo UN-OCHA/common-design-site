@@ -3,7 +3,7 @@ DOCKER=docker
 DOCKER_BUILDKIT=0
 
 # The main build recipe.
-build:	clean
+build:  clean
 	DOCKER_BUILDKIT=$(DOCKER_BUILDKIT) $(DOCKER) build \
 				--build-arg BRANCH_ENVIRONMENT=$(NODE_ENV) \
 				--build-arg VCS_REF=`git rev-parse --short HEAD` \
