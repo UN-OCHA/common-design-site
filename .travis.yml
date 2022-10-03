@@ -61,10 +61,13 @@ script:
   # Wait a bit for containers to be ready.
   - sleep 10
 
+  # Check directories are in place before composer install.
+  - docker exec -it "${SITEID}-site" ls -l /srv/www
+
   # Install the dev dependencies.
   - docker exec -it -u root -w /srv/www "${SITEID}-site" sh -c "composer install"
 
-  # Check directories are in place.
+  # Check directories are in place after install.
   - docker exec -it "${SITEID}-site" ls -l /srv/www
 
   # Check coding standards.
