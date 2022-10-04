@@ -74,16 +74,13 @@ script:
   # # Theme build.
   # - docker exec -it -u appuser -w /srv/www "${SITEID}-site" composer run sass
 
-  # # Run unit tests.
-  # - docker exec -it -u root -w /srv/www "${SITEID}-site" mkdir -p /srv/www/html/sites/default/files/browser_output
-  # - docker exec -it -u root -w /srv/www -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output "${SITEID}-site" ./vendor/bin/phpunit --testsuite Unit --debug
-
   # Install the site with existing config.
   - docker exec -it "${SITEID}-site" drush -y si --existing-config minimal
   - docker exec -it "${SITEID}-site" drush -y en dblog
   - docker exec -it -w /srv/www "${SITEID}-site" drush -y cset system.site uuid $(grep uuid ./config/system.site.yml | awk '{print $2}')
   # TODO: Check why the gzipped file isn't found.
   - docker exec -it "${SITEID}-site" ls -l /srv/www/tests/sample_data
+  - docker exec -it -w /srv/www "${SITEID}-site" ls -l ./tests/sample_data
   - docker exec -it "${SITEID}-site" drush sqlc < zcat /srv/www/tests/sample_data/sample.sql.gz
   - docker exec -it "${SITEID}-site" drush -y cim --source=/srv/www/config
   - docker exec -it "${SITEID}-site" drush -y cim --partial --source=/srv/www/tests/config
@@ -93,12 +90,8 @@ script:
   # Ensure the file directories are writable.
   - docker exec -it "${SITEID}-site" chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
 
-  # Run unit tests.
-  - docker exec -it -u root -w /srv/www "${SITEID}-site" mkdir -p /srv/www/html/sites/default/files/browser_output
-  - docker exec -it -u root -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 "${SITEID}-site" /srv/www/vendor/bin/phpunit --debug
-
-  # # Run e2e tests.
-  # - docker exec -it -u appuser -w /srv/www "${SITEID}-site" composer run e2e
+  # Run e2e tests.
+  - docker exec -it -u root -w /srv/www "${SITEID}-site" composer run e2e
 
 after_success:
   - cd $TRAVIS_BUILD_DIR
