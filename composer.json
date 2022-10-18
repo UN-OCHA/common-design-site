@@ -24,7 +24,7 @@
         },
         {
             "type": "vcs",
-            "url": "git@github.com:UN-OCHA/common_design.git"
+            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
