@@ -37,9 +37,6 @@ before_script:
   # Composerify.
   - composer install
 
-  # Need to work out updates that work with composer v2, since the lock file is outdated.
-  - composer update
-
   # Nodify.
   - npm i
 
