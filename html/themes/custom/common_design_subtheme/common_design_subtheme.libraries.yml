@@ -10,6 +10,11 @@ global-styling:
 #   dependencies:
 #     - common_design_subtheme/custom-teaser
 
+google-cse:
+  css:
+    theme:
+      components/google-cse/google-cse.css: {}
+
 ###
 # Define Drupal libraries for your custom components.
 #
