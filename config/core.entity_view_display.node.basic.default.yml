@@ -18,7 +18,6 @@ dependencies:
     - field.field.node.basic.field_hero_component
     - field.field.node.basic.field_image
     - field.field.node.basic.field_media_content
-    - field.field.node.basic.field_paragraphs
     - field.field.node.basic.field_taxonomy
     - image.style.desktop_thumbnail_x1
     - node.type.basic
@@ -110,8 +109,6 @@ content:
     settings:
       image_link: ''
       image_style: medium
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 14
     region: content
@@ -121,8 +118,6 @@ content:
     settings:
       image_link: ''
       image_style: desktop_thumbnail_x1
-      image_loading:
-        attribute: lazy
     third_party_settings: {  }
     weight: 15
     region: content
@@ -171,15 +166,6 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 5
-    region: content
-  field_paragraphs:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 18
     region: content
   field_taxonomy:
     type: entity_reference_label

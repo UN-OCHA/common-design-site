@@ -13,4 +13,3 @@ permissions:
   - 'access pwa'
   - 'search content'
   - 'view media'
-  - 'view paragraph content search results'
