@@ -1,0 +1,8 @@
+name: OCHA Search
+description: Creates a search page using GCSE.
+package: OCHA
+
+type: module
+core_version_requirement: ^9 || ^10
+
+configure: ocha_search.admin_settings

@@ -6,13 +6,112 @@
  * we can override them.
  */
 
+/**
+ * Overrides of decisions that can be made in the UI.
+ *
+ * These to make sure site admins don't make 'non-cd' changes.
+ */
+.gcs-control-cse,
+.gsc-control-cse .gsc-table-result {
+  font-family: var(--cd-font-roboto) !important;
+}
+
+input.gsc-input,
+.gsc-input-box,
+.gsc-input-box-hover,
+.gsc-input-box-focus {
+  border-color: var(--cd-blue-grey) !important;
+}
+
+.gsc-search-button-v2,
+.gsc-search-button-v2:hover,
+.gsc-search-button-v2:focus {
+  border-color: var(--cd-ocha-blue) !important;
+  background-color: var(--cd-ocha-blue) !important;
+  background-image:none !important;
+  filter:none !important;
+}
+
+.gsc-search-button-v2 svg {
+  fill: var(--cd-white) !important;
+}
+
+.gsc-tabHeader.gsc-tabhActive,
+.gsc-refinementHeader.gsc-refinementhActive,
+.gsc-tabHeader.gsc-tabhInactive,
+.gsc-refinementHeader.gsc-refinementhInactive {
+  color: var(--cd-grey--dark) !important;
+  border-color: var(--cd-grey--dark) !important;
+  background-color: var(--cd-white) !important;
+}
+
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult,
+.gsc-webResult.gsc-result:hover {
+  border-color: var(--cd-white) !important;
+  background-color: var(--cd-white) !important;
+}
+
+.gsc-completion-snippet,
+.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
+.gs-fileFormatType {
+  color: var(--cd-grey--dark) !important;
+}
+
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b,
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b,
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b,
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b,
+.gsc-cursor-page,
+a.gsc-trailing-more-results:link,
+.gs-webResult div.gs-visibleUrl,
+.gs-webResult div.gs-visibleUrl-short,
+.gsc-completion-title {
+  color: var(--cd-blue--dark) !important;
+}
+
+.gs-webResult div.gs-visibleUrl-long {
+  display:block !important;
+}
+
+.gs-webResult div.gs-visibleUrl-short,
+.gs-webResult div.gs-visibleUrl-breadcrumb {
+  display:none !important;
+}
+
+.gsc-cursor-box {
+  border-color: var(--cd-white) !important;
+}
+
+.gsc-results .gsc-cursor-box .gsc-cursor-page,
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+  border-color: var(--cd-grey--dark) !important;
+  background-color: var(--cd-white) !important;
+  color: var(--cd-grey--dark) !important;
+}
+
+/**
+ * Other overrides for styling consistency.
+ */
 .gsc-adBlock {
   display: none !important;
 }
 
 /* Hides the 'All' tab as we're only using refinements. */
 .gsc-refinementBlock > div:first-child {
-  display: none;
+  display: none !important;
 }
 
 .gcsc-more-maybe-branding-root {

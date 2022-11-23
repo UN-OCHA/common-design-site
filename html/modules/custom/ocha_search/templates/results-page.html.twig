@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display search results page.
+ *
+ * Available variables:
+ * - gcse_id: ID of Google Custom Search Engine.
+ * - search_text: Custom explanatory text for the search page.
+ * - default_refinement: Name of gcse refinement for the current site.
+ */
+#}
+
+{{ attach_library('common_design_subtheme/google-cse') }}
+<div class="gcse-results-page">
+  <script async defer src="https://cse.google.com/cse.js?cx={{ gcse_id }}"></script>
+  <div class="gcse-searchbox-only" data-resultsUrl="{{ url('<current>') }}"></div>
+
+  {% if search_text %}
+  <div class="gcse-search-custom-text">{{ search_text }}</div>
+  {% endif %}
+
+  <div class="gcse-searchresults-only" data-defaultToRefinement="{{ default_refinement }}"></div>
+  </div>
+</div>
