@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Annotations start="0" num="7" total="7">
+  <Annotation about="*.unocha.org/*" timestamp="0x0005ec9359e8109b" href="Cg4qLnVub2NoYS5vcmcvKhCboaDPtZL7Ag">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.unocha.org/*"/>
+  </Annotation>
+  <Annotation about="*.interagencystandingcommittee.org/*" timestamp="0x0005ec9359d760d6" href="CiQqLmludGVyYWdlbmN5c3RhbmRpbmdjb21taXR0ZWUub3JnLyoQ1sHdzrWS-wI">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.interagencystandingcommittee.org/*"/>
+  </Annotation>
+  <Annotation about="*.reliefweb.int/*" timestamp="0x0005ec9359c37cd7" href="ChEqLnJlbGllZndlYi5pbnQvKhDX-Y3OtZL7Ag">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.reliefweb.int/*"/>
+  </Annotation>
+  <Annotation about="*.hum-insight.info/*" timestamp="0x0005ec9359b224d1" href="ChQqLmh1bS1pbnNpZ2h0LmluZm8vKhDRycjNtZL7Ag">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.hum-insight.info/*"/>
+  </Annotation>
+  <Annotation about="*.humdata.org/*" timestamp="0x0005ec93599b914e" href="Cg8qLmh1bWRhdGEub3JnLyoQzqLuzLWS-wI">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.humdata.org/*"/>
+  </Annotation>
+  <Annotation about="*.worldhumanitarianday.org/*" timestamp="0x0005ec935989573e" href="ChwqLndvcmxkaHVtYW5pdGFyaWFuZGF5Lm9yZy8qEL6upcy1kvsC">
+    <Label name="_include_"/>
+    <Label name="all_ocha_sites"/>
+    <AdditionalData attribute="original_url" value="*.worldhumanitarianday.org/*"/>
+  </Annotation>
+</Annotations>
