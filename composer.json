@@ -152,7 +152,7 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/config_filter": "^2.2",
-        "drupal/devel": "^4.1",
+        "drupal/devel": "^5.0.2",
         "drupal/stage_file_proxy": "^1.1",
         "kint-php/kint": "^3.3"
     }
