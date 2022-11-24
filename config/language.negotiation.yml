@@ -11,10 +11,12 @@ url:
     es: es
     ar: ar
     zh-hans: zh-hans
+    ru: ru
   domains:
     en: ''
     fr: ''
     es: ''
     ar: ''
     zh-hans: ''
+    ru: ''
 selected_langcode: site_default
