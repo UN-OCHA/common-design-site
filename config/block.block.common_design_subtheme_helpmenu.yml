@@ -11,7 +11,7 @@ dependencies:
 id: common_design_subtheme_helpmenu
 theme: common_design_subtheme
 region: header_top
-weight: -9
+weight: -8
 provider: null
 plugin: 'system_menu_block:help'
 settings:
