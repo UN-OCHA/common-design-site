@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: rYBdsPcNV3sh8Jmd5MuBQ46XZuRjXglXYlGgFZU0jzU
+type: config_object
+label: 'Ocha Search settings'
+mapping:
+  results_page_path:
+    type: text
+    label: 'Results page path'
+  search_text:
+    type: text
+    label: 'Search page text'
+  default_refinement:
+    type: text
+    label: 'Default Refinement'
+  gcse_id:
+    type: text
+    label: 'GCSE ID'
+results_page_path: results
+default_refinement: 'Common Design'
+search_text: ''
+gcse_id: 27811f764468c44a4
