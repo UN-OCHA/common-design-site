@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Template overrides, preprocess, and alter hooks for the Common Design theme.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function common_design_subtheme_preprocess_page(&$variables) {
+  // Get results page path - default to 'results'.
+  $variables['results_page_path'] = \Drupal::config('ocha_search.settings')->get('results_page_path') ?? 'results';
+}
