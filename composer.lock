@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47a93c3aa9de16479edfa4fe51935927",
+    "content-hash": "babdc3c5940cc1c8230b2e62f2732004",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8400,13 +8400,14 @@
                 "composer/installers": "^1.2"
             },
             "type": "drupal-theme",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "description": "OCHA Common Design base theme for Drupal 8",
             "support": {
-                "source": "https://github.com/UN-OCHA/common_design/tree/v7.3.0",
-                "issues": "https://github.com/UN-OCHA/common_design/issues"
+                "issues": "https://github.com/UN-OCHA/common_design/issues",
+                "source": "https://github.com/UN-OCHA/common_design/tree/v7.3.0"
             },
             "time": "2022-11-16T10:44:02+00:00"
         },
