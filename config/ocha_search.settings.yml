@@ -3,19 +3,23 @@ _core:
 type: config_object
 label: 'Ocha Search settings'
 mapping:
-  results_page_path:
+  site_results_page_path:
     type: text
-    label: 'Results page path'
+    label: 'Site results page path'
+  ocha_wide_results_page_path:
+    type: text
+    label: 'Site results page path'
   search_text:
     type: text
     label: 'Search page text'
-  default_refinement:
+  site_gcse_id:
     type: text
-    label: 'Default Refinement'
-  gcse_id:
+    label: 'Site GCSE ID'
+  ocha_wide_gcse_id:
     type: text
-    label: 'GCSE ID'
-results_page_path: results
-default_refinement: 'Common Design'
+    label: 'Ocha-wide GCSE ID'
+site_results_page_path: results
+ocha_wide_results_page_path: ocha-wide-results
 search_text: ''
-gcse_id: 27811f764468c44a4
+site_gcse_id: 3549abdca48f743ac
+ocha_wide_gcse_id: 92f65997481234c49
