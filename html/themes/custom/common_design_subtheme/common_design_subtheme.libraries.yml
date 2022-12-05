@@ -10,11 +10,6 @@ global-styling:
 #   dependencies:
 #     - common_design_subtheme/custom-teaser
 
-cd-tabs:
-  css:
-    theme:
-      components/cd-tabs/cd-tabs.css: {}
-
 google-cse:
   css:
     theme:
