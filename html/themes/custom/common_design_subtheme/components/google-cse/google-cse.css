@@ -168,3 +168,8 @@ form.gsc-search-box {
   max-width: 1140px;
   margin: 0 auto;
 }
+
+/* Horizontal spacing between the thumbnail and entry */
+.gs-image-box {
+  margin-inline-end: 0.5rem !important;
+}
