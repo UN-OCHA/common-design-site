@@ -7,8 +7,8 @@ global-styling:
   css:
     theme:
       css/brand.css: {}
-#   dependencies:
-#     - common_design_subtheme/custom-teaser
+  dependencies:
+    - common_design_subtheme/custom-teaser
 
 ###
 # Define Drupal libraries for your custom components.
@@ -18,7 +18,7 @@ global-styling:
 # completely independent and style the custom content of your website, such as
 # a custom Paragraph type.
 #
-# custom-teaser:
-#   css:
-#     theme:
-#       components/custom-teaser/custom-teaser.css: {}
+cd-language-switcher:
+  css:
+    theme:
+      components/cd-language-switcher/cd-language-switcher.css: {}
