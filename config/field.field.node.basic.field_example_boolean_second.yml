@@ -12,7 +12,7 @@ bundle: basic
 label: 'Another example boolean'
 description: 'This is the example boolean help text'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: 0
