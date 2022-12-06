@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display search results page.
+ *
+ * Available variables:
+ * - gcse_id: ID of Google Custom Search Engine.
+ * - toggle_link_path: relative url of the other search page.
+ * - toggle_link_text: text for link to the other search page.
+ * - search_text: Custom explanatory text for the search page.
+ */
+#}
+
+{{ attach_library('common_design_subtheme/google-cse') }}
+{{ attach_library('common_design/cd-tabs') }}
+
+<div class="gcse-results-page">
+  <script async defer src="https://cse.google.com/cse.js?cx={{ gcse_id }}"></script>
+  <ul class="tabs ocha-search-toggle">
+    <li><a href="{{ toggle_link_path }}">{{ toggle_link_text }}</a></li>
+  </ul>
+
+  <div class="gcse-searchbox-only" data-resultsUrl="{{ url('<current>') }}"></div>
+
+  {% if search_text %}
+  <div class="gcse-search-custom-text">{{ search_text }}</div>
+  {% endif %}
+
+  <div class="gcse-searchresults-only"></div>
+</div>

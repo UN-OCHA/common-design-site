@@ -110,9 +110,9 @@ a.gsc-trailing-more-results:link,
 }
 
 /* Hides the 'All' tab as we're only using refinements. */
-.gsc-refinementBlock > div:first-child {
+/* .gsc-refinementBlock > div:first-child {
   display: none !important;
-}
+} */
 
 .gcsc-more-maybe-branding-root {
   display: none !important;
@@ -167,4 +167,9 @@ form.gsc-search-box {
 .gsc-wrapper {
   max-width: 1140px;
   margin: 0 auto;
+}
+
+/* Horizontal spacing between the thumbnail and entry */
+.gs-image-box {
+  margin-inline-end: 0.5rem !important;
 }
