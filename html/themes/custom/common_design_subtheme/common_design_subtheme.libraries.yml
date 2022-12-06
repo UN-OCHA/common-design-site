@@ -7,8 +7,8 @@ global-styling:
   css:
     theme:
       css/brand.css: {}
-  dependencies:
-    - common_design_subtheme/cd-language-switcher
+  # dependencies:
+  #   - common_design_subtheme/cd-language-switcher
 
 ###
 # Define Drupal libraries for your custom components.

@@ -1,48 +1,47 @@
-@media (max-width: 1023px) {
-  .js .cd-language-switcher__dropdown {
-    z-index: 201;
+@media (min-width: 768px) {
+
+  /* Language Switcher list. */
+  .cd-language-switcher__dropdown {
+    display: flex;
+    flex-wrap: wrap;
+    /* Unset the dropdown styles */
+    position: relative;
+    left: unset;
+    right: unset;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Pipe separator. */
+  .cd-language-switcher__dropdown li a::before {
     position: absolute;
-    right: 0;
+    top: 50%;
+    left: -1px;
+    width: 1px;
+    height: calc(var(--cd-global-header-height) / 3);
+    content: "";
+    transform: translateY(-50%);
+    background: var(--brand-grey);
+  }
+
+  [dir="rtl"] .cd-language-switcher__dropdown li a::before {
+    right: -1px;
     left: auto;
-    display: block;
-    min-width: 125px;
-    padding: 12px;
-    color: var(--cd-white);
-    background-color: var(--brand-primary);
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
   }
 
-  .js .cd-language-switcher__dropdown a::before {
-    content: none;
-  }
-
-  /* No horizontal separation when Language Switcher displays in a dropdown. */
-  .js .cd-global-header__language-switcher+.cd-global-header__user-menu {
-    margin-inline-start: 0;
-  }
-
-  .js[dir="rtl"] .cd-language-switcher__dropdown {
-    right: auto;
-    left: 0;
-  }
-}
-
-@media (min-width: 576px) {
-  .cd-language-switcher {
-    --dropdown: true;
-  }
-
-  .cd-language-switcher.cd-dropdown {
-    display: none;
+  /* No pipe on first child. */
+  .cd-language-switcher__dropdown li:first-child a::before {
+    background: transparent;
   }
 }
 
 @media (min-width: 768px) {
   .cd-language-switcher {
-    --dropdown: true;
+    --dropdown: false;
   }
 
   .cd-language-switcher.cd-dropdown {
-    display: none;
+    display: block;
   }
 }
