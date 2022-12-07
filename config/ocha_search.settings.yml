@@ -25,5 +25,3 @@ site_results_page_path: results
 ocha_wide_results_page_path: ocha-wide-results
 site_gcse_id: 3549abdca48f743ac
 ocha_wide_gcse_id: 92f65997481234c49
-search_site_text: 'This is for results from CD site only'
-search_ocha_text: 'This is for searching across OCHA sites.'
