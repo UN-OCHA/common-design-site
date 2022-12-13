@@ -47,8 +47,7 @@ module:
   responsive_image: 0
   search: 0
   search_api: 0
-  search_api_solr: 0
-  search_api_solr_admin: 0
+  search_api_db: 0
   select_a11y: 0
   social_api: 0
   social_auth: 0
@@ -64,6 +63,7 @@ module:
   user_expire: 0
   viewsreference: 0
   menu_link_content: 1
+  xmlsitemap: 1
   views: 10
   paragraphs: 11
   minimal: 1000
