@@ -28,9 +28,17 @@
 
 {{ title_prefix }}
 {% if label %}
+<<<<<<< HEAD
 	<h2{{title_attributes.addClass('visually-hidden')}}>{{ label }}</h2>
 {% endif %}
 {{ title_suffix }}
 {% block content %}
 	{{ content }}
+=======
+  <h2{{ title_attributes.addClass('visually-hidden') }}>{{ label }}</h2>
+{% endif %}
+{{ title_suffix }}
+{% block content %}
+  {{ content }}
+>>>>>>> 1125351924bbbd6051a051b64595704b9d3bfa91
 {% endblock %}
