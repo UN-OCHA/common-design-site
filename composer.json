@@ -146,6 +146,7 @@
         "drupal/twig_tweak": "^2.1",
         "drupal/user_expire": "^1.0",
         "drupal/viewsreference": "^2.0.0",
+        "drupal/xmlsitemap": "^1.4",
         "drush/drush": "^11.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "slevomat/coding-standard": "^7.0",
