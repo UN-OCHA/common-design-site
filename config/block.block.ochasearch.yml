@@ -1,21 +1,20 @@
-uuid: 6b8bbd35-a12a-4654-9d4d-0cd0594166c7
+uuid: bf497b99-8a1c-4605-865c-490f0e5fbdf2
 langcode: en
 status: true
 dependencies:
   module:
-    - search
+    - ocha_search
   theme:
     - common_design_subtheme
-id: common_design_subtheme_searchform
+id: ochasearch
 theme: common_design_subtheme
 region: header_search
 weight: 0
 provider: null
-plugin: search_form_block
+plugin: ocha_search_block
 settings:
-  id: search_form_block
-  label: 'Search form'
+  id: ocha_search_block
+  label: 'OCHA Search'
   label_display: visible
-  provider: search
-  page_id: ''
+  provider: ocha_search
 visibility: {  }
