@@ -135,7 +135,6 @@
         "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
-        "drupal/search_api_solr": "^4.1",
         "drupal/select_a11y": "^1.0",
         "drupal/social_auth_hid": "^3.1",
         "drupal/theme_switcher": "^1.2",
