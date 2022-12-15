@@ -19,6 +19,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/ocha_search.git"
+        },
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
@@ -139,25 +143,26 @@
         "drupal/paragraphs_viewmode": "^1.0@alpha",
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
-        "drupal/search_api_solr": "^4.1",
         "drupal/select_a11y": "^1.0",
         "drupal/social_auth_hid": "^3.1",
         "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/user_expire": "^1.0",
         "drupal/viewsreference": "^2.0.0",
-        "drush/drush": "^10.1",
+        "drupal/xmlsitemap": "^1.4",
+        "drush/drush": "^11.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "slevomat/coding-standard": "^7.0",
         "unocha/common_design": "dev-header-actions",
         "unocha/ocha_integrations": "^1.0",
-        "unocha/ocha_media_content": "dev-main"
+        "unocha/ocha_media_content": "dev-main",
+        "unocha/ocha_search": "^1.0"
     },
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/config_filter": "^2.2",
         "drupal/devel": "^5.0.2",
-        "drupal/stage_file_proxy": "^1.1",
+        "drupal/stage_file_proxy": "^2.0",
         "kint-php/kint": "^3.3"
     }
 }

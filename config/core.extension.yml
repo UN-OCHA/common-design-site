@@ -37,6 +37,7 @@ module:
   node: 0
   ocha_integrations: 0
   ocha_media_content: 0
+  ocha_search: 0
   options: 0
   page_cache: 0
   path: 0
@@ -46,8 +47,7 @@ module:
   responsive_image: 0
   search: 0
   search_api: 0
-  search_api_solr: 0
-  search_api_solr_admin: 0
+  search_api_db: 0
   select_a11y: 0
   social_api: 0
   social_auth: 0
@@ -64,6 +64,7 @@ module:
   viewsreference: 0
   menu_link_content: 1
   content_translation: 10
+  xmlsitemap: 1
   views: 10
   paragraphs: 11
   minimal: 1000

@@ -31,11 +31,11 @@ before_script:
   # Ensure the PHP environment is ready.
   - phpenv rehash
 
+  # You *will* use HTTPS.
+  - composer config --global github-protocols https
+  
   # Composerify.
   - composer install
-
-  # Need to work out updates that work with composer v2, since the lock file is outdated.
-  - composer update
 
   # Nodify.
   - npm i
