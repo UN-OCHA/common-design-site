@@ -1,5 +1,4 @@
-@media (min-width: 768px) {
-
+@media (min-width: 800px) {
   /* Language Switcher list. */
   .cd-language-switcher__dropdown {
     /* Unset the dropdown styles */
@@ -53,8 +52,7 @@
  * If overriding this to use a smaller breakpoint,
  * all breakpoints in between also need to be defined.
  */
-
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .cd-language-switcher {
     --dropdown: false;
   }
