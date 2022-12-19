@@ -1,3 +1,11 @@
+/**
+ * CD Language Switcher sub-theme override.
+ *
+ * - Breakpoint when the Language Switcher becomes a dropdown.
+ * - If overriding this to use a smaller breakpoint, all breakpoints in between
+ *   also need to be defined.
+ */
+
 @media (min-width: 800px) {
   /* Language Switcher list. */
   .cd-language-switcher__dropdown {
@@ -13,24 +21,23 @@
   }
 
   /**
-   * If there are menus in the Global Header
-   * and the Language Switcher is displayed in full,
-   * separate blocks with pipes and margins.
+   * If there are menus in the Global Header and the Language Switcher is
+   * displayed in full, separate blocks with pipes and margins.
    */
   .cd-global-header__language-switcher + .cd-global-header__user-menu {
-    /* Margin value matches the padding of the other buttons in the Global Header
+    /**
+     * Margin value matches the padding of other buttons in the Global Header
      * and takes into account the right padding from the last Language Item.
      */
     margin-inline-start: 1rem;
   }
-}
 
-/**
- * Breakpoint when the Language Switcher becomes a dropdown.
- * If overriding this to use a smaller breakpoint,
- * all breakpoints in between also need to be defined.
- */
-@media (min-width: 800px) {
+  /**
+   * Expand the Language Switcher from a dropdown to a list.
+   *
+   * If overriding this to use a smaller breakpoint, all breakpoints in between
+   * also need to be defined.
+   */
   .cd-language-switcher {
     --dropdown: false;
   }
