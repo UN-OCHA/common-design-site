@@ -14,7 +14,7 @@ bundle: basic
 label: 'Example radio button'
 description: 'This is the example radio button help text'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     value: '0'

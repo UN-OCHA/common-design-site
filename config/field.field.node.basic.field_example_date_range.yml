@@ -14,7 +14,7 @@ bundle: basic
 label: 'Example date range'
 description: 'This is the date range help text'
 required: false
-translatable: false
+translatable: true
 default_value:
   -
     default_date_type: now

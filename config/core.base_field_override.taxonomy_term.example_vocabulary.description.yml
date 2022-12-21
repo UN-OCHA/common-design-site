@@ -1,0 +1,20 @@
+uuid: 6f9f4b29-51ee-49f4-a524-be6d906aca53
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.example_vocabulary
+  module:
+    - text
+id: taxonomy_term.example_vocabulary.description
+field_name: description
+entity_type: taxonomy_term
+bundle: example_vocabulary
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -9,8 +9,6 @@ display:
           label: Estado
           settings:
             format_custom_true: Activo
-        access:
-          label: 'Last access'
         operations:
           label: Operaciones
       exposed_form:

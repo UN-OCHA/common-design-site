@@ -109,6 +109,8 @@ content:
     settings:
       image_link: ''
       image_style: medium
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 14
     region: content
@@ -118,6 +120,8 @@ content:
     settings:
       image_link: ''
       image_style: desktop_thumbnail_x1
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
     weight: 15
     region: content
