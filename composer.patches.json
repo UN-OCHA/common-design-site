@@ -1,7 +1,7 @@
 {
     "patches": {
         "drupal/core": {
-          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377#comment-14348633": "https://www.drupal.org/files/issues/2022-06-16/2061377-filter-image-style-417.patch",
+          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377": "https://www.drupal.org/files/issues/2022-12-16/2061377-434-9.5.x.patch",
           "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
         },
         "drupal/csp": {
