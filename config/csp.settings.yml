@@ -11,7 +11,7 @@ report-only:
         - fonts.googleapis.com
         - cdn.jsdelivr.net
         - gov-bam.nr-data.net
-        - '*.analytics.google.com'
+        - analytics.google.com
         - '*.newrelic.com'
         - '*.placeholder.com'
     font-src:
