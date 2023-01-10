@@ -6,12 +6,14 @@ report-only:
     connect-src:
       base: self
       sources:
-        - www.google-analytics.com
         - fonts.gstatic.com
         - fonts.googleapis.com
+        - 'https://*.google-analytics.com'
+        - 'https://analytics.google.com'
+        - 'https://*.analytics.google.com'
+        - 'https://*.googletagmanager.com'
         - cdn.jsdelivr.net
         - gov-bam.nr-data.net
-        - analytics.google.com
         - '*.newrelic.com'
         - '*.placeholder.com'
     font-src:
@@ -24,6 +26,8 @@ report-only:
       sources:
         - 'data:'
         - '*.placeholder.com'
+        - 'https://*.google-analytics.com'
+        - 'https://*.googletagmanager.com'
         - www.gstatic.com
         - via.placeholder.com
     object-src:
@@ -39,6 +43,7 @@ report-only:
         - cdn.jsdelivr.net
         - js-agent.newrelic.com
         - gov-bam.nr-data.net
+        - 'https://*.googletagmanager.com'
         - '*.google-analytics.com'
     script-src-attr:
       base: self
@@ -53,6 +58,7 @@ report-only:
         - cdn.jsdelivr.net
         - js-agent.newrelic.com
         - gov-bam.nr-data.net
+        - 'https://*.googletagmanager.com'
         - '*.google-analytics.com'
     style-src:
       base: self
@@ -68,6 +74,8 @@ report-only:
       base: self
       flags:
         - unsafe-inline
+      sources:
+        - fonts.googleapis.com
     frame-ancestors:
       base: self
   reporting:
