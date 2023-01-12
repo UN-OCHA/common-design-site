@@ -25,6 +25,10 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/UN-OCHA/common_design.git"
         }
     ],
     "conflict": {
@@ -149,7 +153,7 @@
         "drush/drush": "^11.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "slevomat/coding-standard": "^7.0",
-        "unocha/common_design": "^7",
+        "unocha/common_design": "dev-develop",
         "unocha/ocha_integrations": "^1.0",
         "unocha/ocha_media_content": "dev-main",
         "unocha/ocha_search": "^1.0"
