@@ -3,7 +3,7 @@ _core:
 definitions:
   user__page:
     menu_name: account
-    parent: 'menu_link_content:5e76c351-9ccb-4e2f-8a8f-6e395a9fff28'
-    weight: -50
-    expanded: false
+    parent: ''
+    weight: -10
+    expanded: true
     enabled: true
