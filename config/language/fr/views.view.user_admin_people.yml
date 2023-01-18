@@ -11,8 +11,6 @@ display:
             format_custom_true: Actif
         roles_target_id:
           label: Rôles
-        access:
-          label: 'Last access'
         operations:
           label: Actions
       exposed_form:

@@ -1,7 +1,7 @@
 {
     "patches": {
         "drupal/core": {
-          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377#comment-14348633": "https://www.drupal.org/files/issues/2022-06-16/2061377-filter-image-style-417.patch",
+          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377": "https://www.drupal.org/files/issues/2022-12-16/2061377-434-9.5.x.patch",
           "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
         },
         "drupal/csp": {
@@ -9,9 +9,6 @@
         },
         "drupal/pwa": {
             "Manifest doesn't have a maskable icon error https://www.drupal.org/project/pwa/issues/3165433#comment-13801302": "https://www.drupal.org/files/issues/2020-08-26/pwa_icon_purpose-3165433-9.patch"
-        },
-        "drupal/search_api_solr": {
-          "Undefined array key specific_languages in Drupal search api": "https://www.drupal.org/files/issues/2022-10-24/search_api_solr-empty-specific-languages-3314711-21.patch"
         },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "https://git.drupalcode.org/project/user_expire/-/merge_requests/5.diff",

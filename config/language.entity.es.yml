@@ -1,9 +1,9 @@
 uuid: 4692d6ec-1a11-42e2-9020-b78c2f0935ad
-langcode: en
+langcode: es
 status: true
 dependencies: {  }
 id: es
-label: Spanish
+label: Español
 direction: ltr
-weight: 2
+weight: -5
 locked: false
