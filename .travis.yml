@@ -33,7 +33,7 @@ before_script:
 
   # You *will* use HTTPS.
   - composer config --global github-protocols https
-  
+
   # Composerify.
   - composer install
 
@@ -56,9 +56,6 @@ script:
   # PHPCS.
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
-
-  # Theme build.
-  - composer run sass
 
   # Install Drupal and import config.
   - cd ${TRAVIS_BUILD_DIR}/html
