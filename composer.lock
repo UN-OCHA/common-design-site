@@ -4636,16 +4636,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.15.3",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "61800f71a5526081d1b5633766aa88341f1ade76"
+                "reference": "57090cfccbfaa639e703c007486d605a6e80f56d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/61800f71a5526081d1b5633766aa88341f1ade76",
-                "reference": "61800f71a5526081d1b5633766aa88341f1ade76",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/57090cfccbfaa639e703c007486d605a6e80f56d",
+                "reference": "57090cfccbfaa639e703c007486d605a6e80f56d",
                 "shasum": ""
             },
             "require": {
@@ -4675,9 +4675,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.15.3"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.16.0"
             },
-            "time": "2022-12-20T20:56:55+00:00"
+            "time": "2023-01-29T14:41:23+00:00"
         },
         {
             "name": "psr/cache",
@@ -4936,16 +4936,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.11.11",
+            "version": "v0.11.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "ba67f2d26278ec9266a5cfe0acba33a8ca1277ae"
+                "reference": "52cb7c47d403c31c0adc9bf7710fc355f93c20f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/ba67f2d26278ec9266a5cfe0acba33a8ca1277ae",
-                "reference": "ba67f2d26278ec9266a5cfe0acba33a8ca1277ae",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/52cb7c47d403c31c0adc9bf7710fc355f93c20f7",
+                "reference": "52cb7c47d403c31c0adc9bf7710fc355f93c20f7",
                 "shasum": ""
             },
             "require": {
@@ -5006,9 +5006,9 @@
             ],
             "support": {
                 "issues": "https://github.com/bobthecow/psysh/issues",
-                "source": "https://github.com/bobthecow/psysh/tree/v0.11.11"
+                "source": "https://github.com/bobthecow/psysh/tree/v0.11.12"
             },
-            "time": "2023-01-23T16:14:59+00:00"
+            "time": "2023-01-29T21:24:40+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -8163,12 +8163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "b2ff91eab95c968f64d038bae0aefa87c7e6e235"
+                "reference": "7a02598f148baf3c65f484382a161bdfc3238cb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/b2ff91eab95c968f64d038bae0aefa87c7e6e235",
-                "reference": "b2ff91eab95c968f64d038bae0aefa87c7e6e235",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/7a02598f148baf3c65f484382a161bdfc3238cb6",
+                "reference": "7a02598f148baf3c65f484382a161bdfc3238cb6",
                 "shasum": ""
             },
             "require": {
@@ -8183,7 +8183,7 @@
                 "source": "https://github.com/UN-OCHA/common_design/tree/cd-392-nosass",
                 "issues": "https://github.com/UN-OCHA/common_design/issues"
             },
-            "time": "2023-01-26T13:42:19+00:00"
+            "time": "2023-01-27T12:56:52+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -8247,7 +8247,7 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_media_content/issues",
-                "source": "https://github.com/UN-OCHA/ocha_media_content/tree/master"
+                "source": "https://github.com/UN-OCHA/ocha_media_content/tree/main"
             },
             "time": "2020-08-26T15:10:24+00:00"
         },
