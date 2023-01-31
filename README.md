@@ -1,4 +1,4 @@
-# Common Design Demo | [![Build Status](https://travis-ci.com/UN-OCHA/common-design-site.svg?branch=master)](https://travis-ci.com/UN-OCHA/common-design-site)
+# Common Design Demo [![Build Status](https://travis-ci.com/UN-OCHA/common-design-site.svg?branch=master)](https://travis-ci.com/UN-OCHA/common-design-site)
 
 This is the Common Design Drupal 8 site. The code for this project is managed with composer.
 
