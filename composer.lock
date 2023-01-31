@@ -8163,12 +8163,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "7a02598f148baf3c65f484382a161bdfc3238cb6"
+                "reference": "f85cd50a618cbdf5e632ba2ee850c48320504383"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/7a02598f148baf3c65f484382a161bdfc3238cb6",
-                "reference": "7a02598f148baf3c65f484382a161bdfc3238cb6",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/f85cd50a618cbdf5e632ba2ee850c48320504383",
+                "reference": "f85cd50a618cbdf5e632ba2ee850c48320504383",
                 "shasum": ""
             },
             "require": {
@@ -8183,7 +8183,7 @@
                 "source": "https://github.com/UN-OCHA/common_design/tree/cd-392-nosass",
                 "issues": "https://github.com/UN-OCHA/common_design/issues"
             },
-            "time": "2023-01-27T12:56:52+00:00"
+            "time": "2023-01-31T09:38:45+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -9068,5 +9068,5 @@
     "platform-overrides": {
         "php": "8.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
