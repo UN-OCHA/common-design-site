@@ -1,7 +1,12 @@
 uuid: 125995d2-4d71-48fc-84ec-0e1caa0d0b21
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - environment_indicator
+    - media
+    - search
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -10,5 +15,6 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access environment indicator'
   - 'search content'
   - 'view media'
