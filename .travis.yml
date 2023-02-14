@@ -37,9 +37,6 @@ before_script:
   # Composerify.
   - composer install
 
-  # Nodify.
-  - npm i
-
   # Set up database access.
   - mysql -e "CREATE DATABASE drupal;"
   - mysql -e "CREATE USER drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
@@ -77,8 +74,6 @@ script:
   - composer run e2e
 
 after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
