@@ -37,9 +37,6 @@ before_script:
   # Composerify.
   - composer install
 
-  # Nodify.
-  - npm i
-
   # Set up database access.
   - mysql -e "CREATE DATABASE drupal;"
   - mysql -e "CREATE USER drupal@127.0.0.1 IDENTIFIED BY 'drupal';"
@@ -56,9 +53,6 @@ script:
   # PHPCS.
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
-
-  # Theme build.
-  - composer run sass
 
   # Install Drupal and import config.
   - cd ${TRAVIS_BUILD_DIR}/html
