@@ -1,7 +1,6 @@
 FROM public.ecr.aws/unocha/unified-builder:${TAG:-8.0-stable} as builder
 ARG  BRANCH_ENVIRONMENT
 ENV  NODE_ENV=$BRANCH_ENVIRONMENT
-ENV  COMPOSER_MEMORY_LIMIT=-1
 COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --no-dev --prefer-dist && \
@@ -33,6 +32,7 @@ COPY --from=builder /srv/www/config /srv/www/config/
 COPY --from=builder /srv/www/html /srv/www/html/
 COPY --from=builder /srv/www/vendor /srv/www/vendor/
 COPY --from=builder /srv/www/composer.json /srv/www/composer.json
-COPY --from=builder /srv/www/composer.patches.json /srv/www/composer.patches.json
 COPY --from=builder /srv/www/composer.lock /srv/www/composer.lock
+COPY --from=builder /srv/www/composer.patches.json /srv/www/composer.patches.json
+COPY --from=builder /srv/www/PATCHES /srv/www/PATCHES
 COPY --from=builder /srv/www/docker/fastcgi_drupal.conf /etc/nginx/apps/drupal/fastcgi_drupal.conf

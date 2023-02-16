@@ -71,8 +71,6 @@ script:
   - composer run e2e
 
 after_success:
-  - cd $TRAVIS_BUILD_DIR
-  - npm run pwmetrics -- http://127.0.0.1:8080
   - killall -9 php
   - echo "The tests completed without errors."
 
