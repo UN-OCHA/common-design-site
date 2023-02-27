@@ -5,15 +5,11 @@
 # dependencies to this library.
 global-styling:
   css:
-    theme:
+    base:
       css/brand.css: {}
   dependencies:
     - common_design_subtheme/cd-language-switcher
-
-google-cse:
-  css:
-    theme:
-      components/google-cse/google-cse.css: {}
+    - common_design_subtheme/cds-paragraphs
 
 ###
 # Define Drupal libraries for your custom components.
@@ -27,3 +23,13 @@ cd-language-switcher:
   css:
     theme:
       components/cd-language-switcher/cd-language-switcher.css: {}
+
+cds-paragraphs:
+  css:
+    component:
+      components/cds-paragraphs/cds-paragraphs.css: {}
+
+google-cse:
+  css:
+    theme:
+      components/google-cse/google-cse.css: {}
