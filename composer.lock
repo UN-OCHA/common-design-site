@@ -2219,10 +2219,6 @@
                     "name": "Mariusz Andrzejewski (sayco)",
                     "homepage": "https://www.drupal.org/u/sayco",
                     "role": "Maintainer"
-                },
-                {
-                    "name": "volodymyr.umanets",
-                    "homepage": "https://www.drupal.org/user/3565617"
                 }
             ],
             "description": "This tiny module is meant to easily reuse the same paragraph types with different view mode (display mode).",
@@ -2516,6 +2512,10 @@
                 {
                     "name": "Ambient.Impact",
                     "homepage": "https://www.drupal.org/user/1131532"
+                },
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
                 },
                 {
                     "name": "ChristophWeber",
@@ -8804,8 +8804,14 @@
             "version": "8.3.17",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/coder.git",
+                "url": "https://github.com/pfrenssen/coder.git",
                 "reference": "1c4662337418ab88c9ddf40348f0638e35d49182"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pfrenssen/coder/zipball/1c4662337418ab88c9ddf40348f0638e35d49182",
+                "reference": "1c4662337418ab88c9ddf40348f0638e35d49182",
+                "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1 || ^1.0.0",
