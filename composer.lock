@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7792033fedbc793e7091d4f3e75c4775",
+    "content-hash": "b7eb1e3ce840d4f0f232530613031880",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -8420,12 +8420,13 @@
                 "sebastian/phpcpd": "^6.0"
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-only"
             ],
             "support": {
-                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.7",
-                "issues": "https://github.com/UN-OCHA/ocha_search/issues"
+                "issues": "https://github.com/UN-OCHA/ocha_search/issues",
+                "source": "https://github.com/UN-OCHA/ocha_search/tree/v1.0.7"
             },
             "time": "2023-02-09T14:22:52+00:00"
         },
