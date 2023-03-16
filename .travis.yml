@@ -54,9 +54,6 @@ script:
   - test ! -d ./html/modules/custom || ./vendor/bin/phpcs -p --report=full ./html/modules/custom
   - test ! -d ./html/themes/custom || ./vendor/bin/phpcs -p --report=full ./html/themes/custom
 
-  # Theme build.
-  - composer run sass
-
   # Install Drupal and import config.
   - cd ${TRAVIS_BUILD_DIR}/html
   - ../vendor/bin/drush -y si --db-url=mysql://drupal:drupal@127.0.0.1/drupal minimal

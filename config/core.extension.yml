@@ -10,7 +10,6 @@ module:
   components: 0
   config: 0
   config_split: 0
-  content_translation: 10
   contextual: 0
   csp: 0
   datetime: 0
@@ -18,12 +17,14 @@ module:
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0
+  environment_indicator: 0
   facets: 0
   facets_summary: 0
   field: 0
   field_ui: 0
   file: 0
   filter: 0
+  google_tag: 0
   image: 0
   inline_form_errors: 0
   language: 0
@@ -65,6 +66,7 @@ module:
   viewsreference: 0
   menu_link_content: 1
   xmlsitemap: 1
+  content_translation: 10
   views: 10
   paragraphs: 11
   minimal: 1000

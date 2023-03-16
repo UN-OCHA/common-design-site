@@ -1,7 +1,16 @@
 uuid: 58efa27f-3dd9-4410-b083-62b2a81e9166
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - block
+    - config
+    - file
+    - filter
+    - node
+    - path
+    - system
+    - toolbar
 id: admin_user
 label: 'Admin user'
 weight: 2
