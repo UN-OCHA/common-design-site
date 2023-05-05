@@ -8323,16 +8323,16 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v8.0.2",
+            "version": "v8.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "2874981cc8587efbf1d419f8e6c4683867e1929c"
+                "reference": "2ea1deae46e659a313d9eebb2a838368f332b18f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/2874981cc8587efbf1d419f8e6c4683867e1929c",
-                "reference": "2874981cc8587efbf1d419f8e6c4683867e1929c",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/2ea1deae46e659a313d9eebb2a838368f332b18f",
+                "reference": "2ea1deae46e659a313d9eebb2a838368f332b18f",
                 "shasum": ""
             },
             "require": {
@@ -8347,9 +8347,9 @@
             "description": "OCHA Common Design base theme for Drupal 9+",
             "support": {
                 "issues": "https://github.com/UN-OCHA/common_design/issues",
-                "source": "https://github.com/UN-OCHA/common_design/tree/v8.0.2"
+                "source": "https://github.com/UN-OCHA/common_design/tree/v8.1.0"
             },
-            "time": "2023-04-12T20:35:54+00:00"
+            "time": "2023-05-04T09:44:30+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
