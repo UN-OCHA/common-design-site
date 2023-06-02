@@ -4,8 +4,9 @@ site_name: 'Common Design Demo'
 short_name: CD
 description: 'Drupal website demo of OCHA Common Design'
 start_url: /home
+scope: ''
 lang: en
-theme_color: '#026cb6'
+theme_color: '#1f69b3'
 background_color: '#ffffff'
 display: fullscreen
 default_image: '0'
