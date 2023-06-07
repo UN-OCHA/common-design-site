@@ -2,8 +2,14 @@ _core:
   default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
 definitions:
   user__page:
+    weight: -50
     menu_name: account
     parent: ''
-    weight: -10
     expanded: true
+    enabled: true
+  user__logout:
+    weight: -48
+    menu_name: account
+    parent: ''
+    expanded: false
     enabled: true
