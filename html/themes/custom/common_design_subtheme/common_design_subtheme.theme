@@ -9,7 +9,7 @@
  * Implements hook_pwa_manifest_alter().
  */
 function common_design_subtheme_pwa_manifest_alter(&$manifestData) {
-  // Set short name
+  // Set short name.
   $manifestData['short_name'] = 'CD Demo';
 
   // Set our custom icons.
