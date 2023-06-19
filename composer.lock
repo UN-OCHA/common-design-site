@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2305aa6e6a0d6683e0046dc442cff71",
+    "content-hash": "8b99fb7b76a78a896a9691803ecd98c2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2613,17 +2613,17 @@
         },
         {
             "name": "drupal/social_api",
-            "version": "3.1.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_api.git",
-                "reference": "3.1.0"
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_api-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "ceb8b35f718657a8f3d67d2e9a8384d4b35687ea"
+                "url": "https://ftp.drupal.org/files/projects/social_api-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "247b847590d863213162c29366c356380a29dfde"
             },
             "require": {
                 "drupal/core": "^9.1 || ^10",
@@ -2637,8 +2637,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1660188487",
+                    "version": "4.0.0",
+                    "datestamp": "1683137132",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2690,30 +2690,31 @@
         },
         {
             "name": "drupal/social_auth",
-            "version": "3.1.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/social_auth.git",
-                "reference": "3.1.0"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth-3.1.0.zip",
-                "reference": "3.1.0",
-                "shasum": "9225e99d2a482ca82bb7faeefd2eb92867bf0f1a"
+                "url": "https://ftp.drupal.org/files/projects/social_auth-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "b5c4af42a03e68d8d98673c2e378106c2bad6f88"
             },
             "require": {
                 "drupal/core": "^9.3 || ^10",
-                "drupal/social_api": "^3"
+                "drupal/social_api": "^4"
             },
             "require-dev": {
-                "drupal/coder": "^8.3"
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "^9.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.1.0",
-                    "datestamp": "1660225275",
+                    "version": "4.0.1",
+                    "datestamp": "1684270339",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2755,34 +2756,38 @@
                 "Drupal"
             ],
             "support": {
-                "source": "http://cgit.drupalcode.org/social_auth",
+                "source": "https://git.drupalcode.org/project/social_auth",
                 "issues": "https://www.drupal.org/project/issues/social_auth"
             }
         },
         {
-            "name": "drupal/social_auth_hid",
-            "version": "3.2.0",
+            "name": "drupal/social_auth_microsoft",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
-                "url": "https://git.drupalcode.org/project/social_auth_hid.git",
-                "reference": "8.x-3.2"
+                "url": "https://git.drupalcode.org/project/social_auth_microsoft.git",
+                "reference": "4.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/social_auth_hid-8.x-3.2.zip",
-                "reference": "8.x-3.2",
-                "shasum": "6506fb35d8cc4a9abad88217c32af8ff12ad4b11"
+                "url": "https://ftp.drupal.org/files/projects/social_auth_microsoft-4.0.0.zip",
+                "reference": "4.0.0",
+                "shasum": "5d33eecaa57011c1e23e1d14fba6457f5d74d50d"
             },
             "require": {
                 "drupal/core": "^9 || ^10",
-                "drupal/social_auth": "^3.0",
-                "un-ocha/oauth2-hid": "^1.0.2"
+                "drupal/social_auth": "^4.0",
+                "stevenmaguire/oauth2-microsoft": "^2.0"
+            },
+            "require-dev": {
+                "drupal/coder": "^8.3",
+                "phpcompatibility/php-compatibility": "10.x-dev"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-3.2",
-                    "datestamp": "1653898962",
+                    "version": "4.0.0",
+                    "datestamp": "1683135656",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2791,27 +2796,37 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0+"
+                "GPL-2.0-or-later"
             ],
             "authors": [
                 {
-                    "name": "Guillaume Viguier-Just (guillaumev)",
-                    "homepage": "https://www.drupal.org/user/105002",
-                    "email": "guillaume@gvj-web.com"
+                    "name": "Getulio Valentin Sánchez (gvso)",
+                    "homepage": "https://www.drupal.org/user/3101285",
+                    "email": "valentin2507@gmail.com"
                 },
                 {
-                    "name": "guillaumev",
-                    "homepage": "https://www.drupal.org/user/849890"
+                    "name": "Himanshu Dixit (himanshu-dixit)",
+                    "homepage": "https://www.drupal.org/user/3513954",
+                    "email": "hudixt@gmail.com"
+                },
+                {
+                    "name": "Christopher C. Wells (wells)",
+                    "homepage": "https://www.drupal.org/user/3509455",
+                    "email": "drupal.org@chris-wells.net"
+                },
+                {
+                    "name": "wells",
+                    "homepage": "https://www.drupal.org/user/2452278"
                 }
             ],
-            "description": "Social Auth integration for Humanitarian ID.",
-            "homepage": "https://www.drupal.org/project/social_auth_hid",
+            "description": "Social Auth integration for Microsoft.",
+            "homepage": "https://www.drupal.org/project/social_auth_microsoft",
             "keywords": [
                 "Drupal"
             ],
             "support": {
-                "source": "http://cgit.drupalcode.org/social_auth_hid",
-                "issues": "https://www.drupal.org/project/issues/social_auth_hid"
+                "source": "https://git.drupalcode.org/project/social_auth_microsoft",
+                "issues": "https://www.drupal.org/project/issues/social_auth_microsoft"
             }
         },
         {
@@ -5324,6 +5339,60 @@
                 "source": "https://github.com/stackphp/builder/tree/v1.0.6"
             },
             "time": "2020-01-30T12:17:27+00:00"
+        },
+        {
+            "name": "stevenmaguire/oauth2-microsoft",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevenmaguire/oauth2-microsoft.git",
+                "reference": "f24f79d8c47224d24a1240270ca3b0a4c1521ed4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevenmaguire/oauth2-microsoft/zipball/f24f79d8c47224d24a1240270ca3b0a4c1521ed4",
+                "reference": "f24f79d8c47224d24a1240270ca3b0a4c1521ed4",
+                "shasum": ""
+            },
+            "require": {
+                "league/oauth2-client": "^2.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Stevenmaguire\\OAuth2\\Client\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Steven Maguire",
+                    "email": "stevenmaguire@gmail.com",
+                    "homepage": "https://github.com/stevenmaguire"
+                }
+            ],
+            "description": "Microsoft OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
+            "keywords": [
+                "authorisation",
+                "authorization",
+                "client",
+                "microsoft",
+                "oauth",
+                "oauth2"
+            ],
+            "support": {
+                "issues": "https://github.com/stevenmaguire/oauth2-microsoft/issues",
+                "source": "https://github.com/stevenmaguire/oauth2-microsoft/tree/master"
+            },
+            "time": "2017-06-07T13:42:47+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -8199,64 +8268,6 @@
             "time": "2021-09-20T19:19:13+00:00"
         },
         {
-            "name": "un-ocha/oauth2-hid",
-            "version": "v1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/UN-OCHA/oauth2-hid.git",
-                "reference": "8589bd00d692d6e1977644537e0f30069084a2c0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/oauth2-hid/zipball/8589bd00d692d6e1977644537e0f30069084a2c0",
-                "reference": "8589bd00d692d6e1977644537e0f30069084a2c0",
-                "shasum": ""
-            },
-            "require": {
-                "league/oauth2-client": "^2.0"
-            },
-            "require-dev": {
-                "mockery/mockery": "~0.9",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "League\\OAuth2\\Client\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Guillaume Viguier-Just",
-                    "email": "guillaume@gvj-web.com"
-                }
-            ],
-            "description": "Humanitarian ID OAuth 2.0 Client Provider for The PHP League OAuth2-Client",
-            "keywords": [
-                "authorisation",
-                "authorization",
-                "client",
-                "humanitarian id",
-                "oauth",
-                "oauth2"
-            ],
-            "support": {
-                "issues": "https://github.com/UN-OCHA/oauth2-hid/issues",
-                "source": "https://github.com/UN-OCHA/oauth2-hid/tree/v1.0.2"
-            },
-            "time": "2019-10-01T10:01:54+00:00"
-        },
-        {
             "name": "unocha/common_design",
             "version": "v8.2.0",
             "source": {
@@ -9179,5 +9190,5 @@
     "platform-overrides": {
         "php": "8.0"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
