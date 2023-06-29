@@ -19,6 +19,11 @@ global-styling:
 # completely independent and style the custom content of your website, such as
 # a custom Paragraph type.
 #
+cds-header:
+  css:
+    theme:
+      components/cd/cd-header/cd-logo.css: {}
+
 cd-language-switcher:
   css:
     theme:
