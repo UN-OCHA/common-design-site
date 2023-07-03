@@ -46,7 +46,7 @@ input.gsc-input,
 }
 
 .gsc-completion-snippet,
-.gs-webResult:not(.gs-no-results-result):not(.gs-error-result) .gs-snippet,
+.gs-webResult:not(.gs-no-results-result, .gs-error-result) .gs-snippet,
 .gs-fileFormatType {
   color: var(--cd-grey--dark) !important;
 }
@@ -81,7 +81,7 @@ a.gsc-trailing-more-results:link,
 
 .gsc-results .gsc-cursor-box .gsc-cursor-page,
 .gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+  color: var(--cd-grey--dark) !important;
   border-color: var(--cd-grey--dark) !important;
   background-color: var(--cd-white) !important;
-  color: var(--cd-grey--dark) !important;
 }
