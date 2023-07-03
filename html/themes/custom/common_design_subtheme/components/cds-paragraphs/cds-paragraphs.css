@@ -55,17 +55,17 @@
     order: 2;
   }
 
+  .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-image,
+  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-image {
+    order: 1;
+  }
+
   @media (min-width: 768px) {
 
     .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-text,
     .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-text {
       flex: 1 0 300px;
     }
-  }
-
-  .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-image,
-  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-image {
-    order: 1;
   }
 
   @media (min-width: 768px) {
