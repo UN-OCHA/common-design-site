@@ -132,7 +132,6 @@
         "drupal/pwa": "^1.4",
         "drupal/search_api": "^1.18",
         "drupal/select_a11y": "^1.0",
-        "drupal/social_auth_microsoft": "^4.0",
         "drupal/theme_switcher": "^1.2",
         "drupal/twig_tweak": "^2.1",
         "drupal/user_expire": "^1.0",
