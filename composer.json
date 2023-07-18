@@ -122,6 +122,7 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
         "drupal/google_tag": "^1.6",
+        "drupal/openid_connect_windows_aad": "^1.4",
         "drupal/paragraph_view_mode": "^1.6",
         "drupal/paragraphs": "^1.12",
         "drupal/paragraphs_edit": "^2.0@alpha",
