@@ -38,6 +38,8 @@ libraries:
 # @see common_design_subtheme.libraries.yml
 #
 libraries-extend:
+  common_design/cd-header:
+    - common_design_subtheme/cds-header
   ocha_search/google-cse:
     - common_design_subtheme/google-cse
 

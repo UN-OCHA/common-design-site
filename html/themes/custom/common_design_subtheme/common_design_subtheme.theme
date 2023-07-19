@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Customizations to the CD Demo sub-theme.
+ */
+
+/**
+ * Implements hook_pwa_manifest_alter().
+ */
+function common_design_subtheme_pwa_manifest_alter(&$manifestData) {
+  // Set short name.
+  $manifestData['short_name'] = 'CD Demo';
+
+  // Set our custom icons.
+  $theme = \Drupal::theme()->getActiveTheme();
+  $manifestData['icons'] = [
+    [
+      'src' => '/' . $theme->getPath() . '/img/android-chrome-512x512.png',
+      'sizes' => '512x512',
+      'type' => 'image/png',
+    ],
+    [
+      'src' => '/' . $theme->getPath() . '/img/android-chrome-192x192.png',
+      'sizes' => '192x192',
+      'type' => 'image/png',
+    ],
+  ];
+}
