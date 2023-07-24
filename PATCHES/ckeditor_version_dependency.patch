@@ -1,3 +1,32 @@
+diff --git a/README.md b/README.md
+index 16bcf61..abf0e46 100644
+--- a/README.md
++++ b/README.md
+@@ -2,7 +2,7 @@ # Common OCHA Media Content for Drupal.
+ 
+ ## Core Modules
+   - breakpoint
+-  - ckeditor
++  - ckeditor5
+   - media
+   - media_library
+   - responsive_image
+diff --git a/config/optional/editor.editor.full_html.yml b/config/optional/editor.editor.full_html.yml
+index f59d2b1..64a4d3c 100644
+--- a/config/optional/editor.editor.full_html.yml
++++ b/config/optional/editor.editor.full_html.yml
+@@ -4,9 +4,9 @@ dependencies:
+   config:
+     - filter.format.full_html
+   module:
+-    - ckeditor
++    - ckeditor5
+ format: full_html
+-editor: ckeditor
++editor: ckeditor5
+ settings:
+   toolbar:
+     rows:
 diff --git a/ocha_media_content.info.yml b/ocha_media_content.info.yml
 index f45db52..61bfb98 100644
 --- a/ocha_media_content.info.yml
