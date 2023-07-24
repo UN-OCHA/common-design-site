@@ -1,5 +1,5 @@
 diff --git a/ocha_media_content.info.yml b/ocha_media_content.info.yml
-index 4c278c8..2597320 100644
+index f45db52..61bfb98 100644
 --- a/ocha_media_content.info.yml
 +++ b/ocha_media_content.info.yml
 @@ -8,7 +8,7 @@ core_version_requirement: ^8 || ^9
@@ -9,14 +9,14 @@ index 4c278c8..2597320 100644
 -  - ckeditor
 +  - ckeditor5
    - editor
-   - fitvids
    - media
-@@ -20,7 +20,7 @@ install:
+   - media_library
+@@ -19,7 +19,7 @@ install:
  # Note that any dependencies of the modules listed here will be installed automatically.
  dependencies:
    - breakpoint
 -  - ckeditor
 +  - ckeditor5
-   - fitvids
    - media
    - media_library
+   - responsive_image
