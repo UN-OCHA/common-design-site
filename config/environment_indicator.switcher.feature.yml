@@ -6,6 +6,6 @@ machine: feature
 description: null
 name: Feature
 weight: '6'
-url: 'https://feature.commondesign-unocha-org.ahconu.org'
+url: ''
 fg_color: '#ffffff'
-bg_color: '#db7b18'
+bg_color: '#b23c72'
