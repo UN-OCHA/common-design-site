@@ -7,7 +7,7 @@ COPY . /srv/www
 WORKDIR /srv/www
 
 RUN rm -rf ./vendor && \
-    composer install --no-dev --no-interaction --prefer-dist && \
+    composer install --no-dev --no-interaction --prefer-dist
 
 RUN cp -a docker/settings.php docker/services.yml html/sites/default
 
