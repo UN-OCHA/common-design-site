@@ -1,9 +1,19 @@
+# Build the code.
 FROM public.ecr.aws/unocha/php-k8s:8.0-stable as builder
-COPY . /srv/www
-WORKDIR /srv/www
-RUN composer install --no-dev --prefer-dist && \
-    cp -a docker/settings.php docker/services.yml html/sites/default
 
+# Copy only the files necessary to build the code (see .dockerignore in root).
+COPY . /srv/www
+
+WORKDIR /srv/www
+
+RUN rm -rf ./vendor && \
+    composer install --no-dev --no-interaction --prefer-dist && \
+
+RUN cp -a docker/settings.php docker/services.yml html/sites/default
+
+################################################################################
+
+# Generate the image.
 FROM public.ecr.aws/unocha/php-k8s:8.0-stable
 
 ARG VCS_REF
@@ -14,14 +24,15 @@ ARG GITHUB_REPOSITORY
 ARG GITHUB_SHA
 ARG GITHUB_REF
 
-ENV  NGINX_SERVERNAME=commondesign.demo.ahconu.org
-ENV  PHP_ENVIRONMENT=production
-ENV  PHP_MEMORY_LIMIT=256M
-ENV  PHP_MAX_CHILDREN=16
-ENV  GIT_BLAME=$GITHUB_ACTOR
-ENV  GIT_REPO=$GITHUB_REPOSITORY
-ENV  GIT_SHA=$GITHUB_SHA
-ENV  GIT_REF=$GITHUB_REF
+ENV  NGINX_SERVERNAME=commondesign.demo.ahconu.org \
+     PHP_ENVIRONMENT=production \
+     PHP_MEMORY_LIMIT=256M \
+     PHP_MAX_CHILDREN=16 \
+     GIT_BLAME=$GITHUB_ACTOR \
+     GIT_REPO=$GITHUB_REPOSITORY \
+     GIT_SHA=$GITHUB_SHA \
+     GIT_REF=$GITHUB_REF
+
 LABEL info.humanitarianresponse.build.date=$BUILD_DATE \
       info.humanitarianresponse.build.vcs-url=$VCS_URL \
       info.humanitarianresponse.build.vcs-ref=$VCS_REF
