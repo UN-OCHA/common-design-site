@@ -19,6 +19,11 @@ describe('OCHAServicesDropdown', () => {
     await expect(relatedPlatformsLength).toBeLessThanOrEqual(relatedPlatformsLimit);
   });
 
+  it('should NOT contain links with default text in the Related Platforms section', async() => {
+    const relatedPlatformsText = await page.$eval('.cd-ocha-dropdown__section:first-child .cd-ocha-dropdown__link a', (el) => el.innerHTML);
+    await expect(relatedPlatformsText).not.toMatch('Customizable');
+  });
+
   it('should contain eight links in the Other OCHA Services section', async() => {
     const otherOchaServicesLimit = 8;
     await page.waitForSelector('.cd-ocha-dropdown__section:not(:first-child)');
@@ -31,7 +36,7 @@ describe('OCHAServicesDropdown', () => {
       'Financial Tracking Service',
       'Humanitarian Data Exchange',
       'Humanitarian ID',
-      'Humanitarian Response',
+      'ReliefWeb Response',
       'Inter-Agency Standing Committee',
       'OCHA website',
       'ReliefWeb',
@@ -41,7 +46,7 @@ describe('OCHAServicesDropdown', () => {
       'https://fts.unocha.org/',
       'https://data.humdata.org/',
       'https://auth.humanitarian.id/',
-      'https://humanitarianresponse.info/',
+      'https://response.reliefweb.int/',
       'https://interagencystandingcommittee.org/',
       'https://unocha.org/',
       'https://reliefweb.int/',
@@ -57,12 +62,5 @@ describe('OCHAServicesDropdown', () => {
     const seeAllButtonHref = await page.$eval('.cd-ocha-dropdown__see-all', (el) => el.href);
     const expectedUrl = 'https://www.unocha.org/ocha-digital-services';
     await expect(seeAllButtonHref).toEqual(expectedUrl);
-  });
-});
-
-describe('Subtheme: OCHAServicesDropdown', () => {
-  it('should contain no links in the Related Platforms section which have default text', async() => {
-    const relatedPlatformsText = await page.$eval('.cd-ocha-dropdown__section:first-child .cd-ocha-dropdown__link a', (el) => el.innerHTML);
-    await expect(relatedPlatformsText).not.toMatch('Customizable');
   });
 });
