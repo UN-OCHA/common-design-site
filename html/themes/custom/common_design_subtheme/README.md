@@ -92,7 +92,7 @@ Core and CD base-theme libraries [can be extended with small customizations][lib
 
 ### Extending the theme
 
-Override theme preprocess functions by copying from `common_design.theme` and editing as needed. hen copying, the **function name will always need to be modified** from `common_design_` to `common_design_subtheme_`.
+Override theme preprocess functions by copying from `common_design.theme` and editing as needed. When copying, the **function name will always need to be modified** from `common_design_` to `common_design_subtheme_`.
 
 Refer to [common_design README][cd-readme] for
 general details about base-theme and instructions for compilation. There should be no need to use Sass in the sub-theme anymore.
