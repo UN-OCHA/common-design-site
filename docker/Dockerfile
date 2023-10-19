@@ -1,10 +1,10 @@
-FROM public.ecr.aws/unocha/php-k8s:8.0-stable as builder
+FROM public.ecr.aws/unocha/php-k8s:8.2-stable as builder
 COPY . /srv/www
 WORKDIR /srv/www
 RUN composer install --no-dev --prefer-dist && \
     cp -a docker/settings.php docker/services.yml html/sites/default
 
-FROM public.ecr.aws/unocha/php-k8s:8.0-stable
+FROM public.ecr.aws/unocha/php-k8s:8.2-stable
 
 ARG VCS_REF
 ARG VCS_URL
