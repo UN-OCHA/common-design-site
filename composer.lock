@@ -8240,7 +8240,7 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
@@ -8266,7 +8266,7 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_integrations/issues",
-                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v2.0.0"
+                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v2.0.1"
             },
             "time": "2023-09-19T10:03:27+00:00"
         },
