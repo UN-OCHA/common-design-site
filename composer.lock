@@ -8240,16 +8240,16 @@
         },
         {
             "name": "unocha/ocha_integrations",
-            "version": "v2.0.1",
+            "version": "v2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/ocha_integrations.git",
-                "reference": "0b2f86306b628b18f1b72ce26dcdec9e575c29f2"
+                "reference": "b5ac139886fde4509546636bd3b8f81d5df5917c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/0b2f86306b628b18f1b72ce26dcdec9e575c29f2",
-                "reference": "0b2f86306b628b18f1b72ce26dcdec9e575c29f2",
+                "url": "https://api.github.com/repos/UN-OCHA/ocha_integrations/zipball/b5ac139886fde4509546636bd3b8f81d5df5917c",
+                "reference": "b5ac139886fde4509546636bd3b8f81d5df5917c",
                 "shasum": ""
             },
             "require": {
@@ -8266,9 +8266,9 @@
             ],
             "support": {
                 "issues": "https://github.com/UN-OCHA/ocha_integrations/issues",
-                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v2.0.1"
+                "source": "https://github.com/UN-OCHA/ocha_integrations/tree/v2.0.2"
             },
-            "time": "2023-09-19T10:03:27+00:00"
+            "time": "2023-10-23T15:50:08+00:00"
         },
         {
             "name": "unocha/ocha_media_content",
