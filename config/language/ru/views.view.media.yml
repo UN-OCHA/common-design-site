@@ -6,12 +6,7 @@ display:
         bundle:
           label: Type
         status:
-          label: État
-        operations:
-          label: Actions
-      exposed_form:
-        options:
-          submit_button: Filtrer
+          label: Status
       filters:
         bundle:
           expose:

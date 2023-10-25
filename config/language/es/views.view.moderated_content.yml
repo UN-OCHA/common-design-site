@@ -1,0 +1,18 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        type:
+          label: 'Tipo de contenido'
+        changed:
+          label: Changed
+        operations:
+          label: Operaciones
+      exposed_form:
+        options:
+          submit_button: Filtro
+      filters:
+        type:
+          expose:
+            label: 'Tipo de contenido'

@@ -3,19 +3,14 @@ display:
     display_title: Master
     display_options:
       fields:
-        filename:
-          label: Nom
         status:
-          label: État
-      exposed_form:
-        options:
-          submit_button: Filtrer
+          label: Status
       filters:
         status:
           expose:
-            label: État
+            label: Status
   page_2:
     display_options:
       fields:
         entity_label:
-          label: Entité
+          label: Сущность

@@ -3,16 +3,14 @@ display:
     display_title: Master
     display_options:
       fields:
-        bundle:
-          label: Type
-        status:
-          label: État
+        type:
+          label: 'Type de contenu'
         operations:
           label: Actions
       exposed_form:
         options:
           submit_button: Filtrer
       filters:
-        bundle:
+        type:
           expose:
-            label: Type
+            label: 'Type de contenu'
