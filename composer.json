@@ -42,8 +42,7 @@
             "drupal/core-project-message": true,
             "drupal/console-extend-plugin": true,
             "oomphinc/composer-installers-extender": true,
-            "symfony/flex": true,
-            "drupal-composer/preserve-paths": true
+            "symfony/flex": true
         }
     },
     "extra": {
