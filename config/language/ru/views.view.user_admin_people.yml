@@ -1,0 +1,11 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        status:
+          label: Status
+      filters:
+        status:
+          group_info:
+            label: Status

@@ -14,3 +14,8 @@ display:
         status:
           expose:
             label: État
+  page_2:
+    display_options:
+      fields:
+        entity_label:
+          label: Entité

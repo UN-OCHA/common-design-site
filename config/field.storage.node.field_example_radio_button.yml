@@ -12,10 +12,10 @@ type: list_float
 settings:
   allowed_values:
     -
-      value: !!float 0
+      value: 0.0
       label: 'Option one'
     -
-      value: !!float 1
+      value: 1.0
       label: 'Option two'
   allowed_values_function: ''
 module: options
