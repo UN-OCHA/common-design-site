@@ -1,9 +1,5 @@
 {
     "patches": {
-        "drupal/core": {
-          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377": "https://www.drupal.org/files/issues/2022-12-16/2061377-434-9.5.x.patch",
-          "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
-        },
         "drupal/csp": {
             "Simplify log format": "PATCHES/csp-log-format.patch"
         },
@@ -13,9 +9,6 @@
         },
         "drupal/username_enumeration_prevention": {
             "Avoid leaking the path via Drupal.settings json": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch"
-        },
-        "unocha/ocha_media_content": {
-            "Change version of ckeditor dependency": "PATCHES/ckeditor_version_dependency.patch"
         }
     }
 }

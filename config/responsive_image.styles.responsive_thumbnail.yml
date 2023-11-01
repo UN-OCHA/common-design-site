@@ -41,14 +41,14 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: tablet_thumbnail_x2
-    breakpoint_id: ocha_media_content.sm
-    multiplier: 2x
-  -
-    image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x1
     breakpoint_id: ocha_media_content.xs
     multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: tablet_thumbnail_x2
+    breakpoint_id: ocha_media_content.sm
+    multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: mobile_thumbnail_x2

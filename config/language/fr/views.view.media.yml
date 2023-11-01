@@ -3,6 +3,8 @@ display:
     display_title: Master
     display_options:
       fields:
+        bundle:
+          label: Type
         status:
           label: État
         operations:
@@ -10,3 +12,7 @@ display:
       exposed_form:
         options:
           submit_button: Filtrer
+      filters:
+        bundle:
+          expose:
+            label: Type

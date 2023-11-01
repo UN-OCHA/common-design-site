@@ -1,0 +1,16 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        type:
+          label: 'Type de contenu'
+        operations:
+          label: Actions
+      exposed_form:
+        options:
+          submit_button: Filtrer
+      filters:
+        type:
+          expose:
+            label: 'Type de contenu'
