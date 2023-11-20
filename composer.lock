@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6d73eb4e2bfabb53439016ce7f5ed49",
+    "content-hash": "169199132291426d99023780dc144bd7",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2429,35 +2429,36 @@
         },
         {
             "name": "drupal/pwa",
-            "version": "2.0.0-rc2",
+            "version": "2.1.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/pwa.git",
-                "reference": "2.0.0-rc2"
+                "reference": "2.1.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pwa-2.0.0-rc2.zip",
-                "reference": "2.0.0-rc2",
-                "shasum": "96906ba6f8d7000099156c5823bd6c4640760f42"
+                "url": "https://ftp.drupal.org/files/projects/pwa-2.1.0-beta2.zip",
+                "reference": "2.1.0-beta2",
+                "shasum": "7dad25f7507a32feece966f25e6b73cd1c246c56"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10"
+                "drupal/core": "^9.3 || ^10",
+                "php": "^8"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-rc2",
-                    "datestamp": "1684225645",
+                    "version": "2.1.0-beta2",
+                    "datestamp": "1695646230",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2489,10 +2490,76 @@
                     "homepage": "https://www.drupal.org/user/411999"
                 }
             ],
-            "description": "Make the website installable on mobile.",
+            "description": "Provides progressive web app integration for your Drupal site.",
             "homepage": "https://www.drupal.org/project/pwa",
+            "keywords": [
+                "Drupal",
+                "Handheld",
+                "Mobile",
+                "PWA",
+                "Progressive Web App"
+            ],
             "support": {
-                "source": "https://git.drupalcode.org/project/pwa"
+                "source": "https://git.drupalcode.org/project/pwa",
+                "issues": "https://www.drupal.org/project/issues/pwa"
+            }
+        },
+        {
+            "name": "drupal/samples",
+            "version": "1.0.0-beta3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/samples.git",
+                "reference": "1.0.0-beta3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/samples-1.0.0-beta3.zip",
+                "reference": "1.0.0-beta3",
+                "shasum": "c86136661817dcf52ac105f6157ce4ed6bd3e23a"
+            },
+            "require": {
+                "drupal/core": "^9 || ^10"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+                "drupal/coder": "^8.3"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta3",
+                    "datestamp": "1696235111",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "phpcs": [
+                    "vendor/bin/phpcs --standard=\"Drupal,DrupalPractice\" -n --extensions=\"php,module,inc,install,test\" src tests samples.*"
+                ]
+            },
+            "license": [
+                "GPLv2"
+            ],
+            "authors": [
+                {
+                    "name": "Gabriel Sullice",
+                    "homepage": "https://www.drupal.org/user/2287430",
+                    "email": "gabriel@sullice.com"
+                },
+                {
+                    "name": "zrpnr",
+                    "homepage": "https://www.drupal.org/user/1448368"
+                }
+            ],
+            "description": "Create restricted content in production for demonstration and development purposes.",
+            "homepage": "https://www.drupal.org/project/samples",
+            "support": {
+                "source": "https://git.drupalcode.org/project/samples"
             }
         },
         {
@@ -9635,6 +9702,8 @@
         "drupal/paragraphs_edit": 15,
         "drupal/paragraphs_modal_edit": 15,
         "drupal/paragraphs_viewmode": 15,
+        "drupal/pwa": 10,
+        "drupal/samples": 10,
         "unocha/ocha_media_content": 20
     },
     "prefer-stable": true,

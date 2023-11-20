@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - media
+    - pwa
+    - samples
     - search
     - system
 _core:
@@ -14,6 +16,7 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
+  - 'access content samples'
   - 'access pwa'
   - 'search content'
   - 'view media'
