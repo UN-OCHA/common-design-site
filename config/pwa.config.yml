@@ -1,21 +1,25 @@
 _core:
   default_config_hash: cP1TZQyv1WdET3iepl2QoyOPK7VeO0xHm0lU_FU1Wmc
+name: 'Common Design Demo'
 short_name: CD
 description: 'Drupal website demo of OCHA Common Design'
 start_url: /home
-scope: ''
+scope: /
 lang: en
+dir: auto
+orientation: portrait
+categories: {  }
 theme_color: '#1f69b3'
 background_color: '#ffffff'
 display: fullscreen
 cross_origin: false
-site_name: 'Common Design Demo'
-default_image: '0'
-urls_to_cache: "/home\r\n/demo"
-urls_to_exclude: "admin/.*\r\nuser/.*"
-offline_page: /offline
-cache_version: '1'
-skip_waiting: false
-image: /sites/default/files/pwa/android-chrome-512x512.png
-image_small: /sites/default/files/pwa/android-chrome-512x512.pngcopy.png
-image_very_small: /sites/default/files/pwa/android-chrome-512x512.pngcopy2.png
+image_fid: 4
+image_small_fid: 11
+image_very_small_fid: 12
+manifest_path_mode: all_except_listed
+manifest_paths: |-
+  /admin
+  /admin/*
+  /batch
+  /node/add*
+  /node/*/*

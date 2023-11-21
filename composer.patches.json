@@ -3,6 +3,9 @@
         "drupal/csp": {
             "Simplify log format": "PATCHES/csp-log-format.patch"
         },
+        "drupal/pwa": {
+            "Upgrading from 8.x-1.6 to 2.1.0-beta2 removes the labels from pwa_extras admin configuration": "PATCHES/fix-config-form-labels-3395058-01.patch"
+        },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
             "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"

@@ -48,6 +48,7 @@ module:
   path_alias: 0
   pwa: 0
   pwa_extras: 0
+  pwa_service_worker: 0
   responsive_image: 0
   samples: 0
   search: 0
