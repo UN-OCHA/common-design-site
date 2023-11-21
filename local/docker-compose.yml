@@ -56,8 +56,8 @@ services:
       - "../composer.lock:/srv/www/composer.lock:rw"
       - "../PATCHES:/srv/www/PATCHES:rw"
       # # Mount contrib modules and themes.
-      # - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
-      # - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
+      - "../html/modules/contrib:/srv/www/html/modules/contrib:rw"
+      - "../html/themes/contrib:/srv/www/html/themes/contrib:rw"
     environment:
       TERM: xterm
       ENVIRONMENT: local
