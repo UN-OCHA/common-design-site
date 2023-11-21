@@ -146,7 +146,7 @@ jobs:
           threshold_alert: 0
           threshold_warning: 50
           threshold_metric: "lines"
-            comment_footer: false
+          comment_footer: false
 
       - name: DB Logs
         id: dblog
