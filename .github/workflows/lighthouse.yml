@@ -119,22 +119,7 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: cafuego/command-output@main
         with:
-          run: docker ps -a
-
-      - name: Run tests
-        id: tests
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
-            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
-            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/sites/default/files/browser_output
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files/browser_output
-            docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
-        env:
-          fail-fast: true
+          run: ls -al
 
       - name: Install demo content
         id: content
@@ -161,22 +146,25 @@ jobs:
           threshold_alert: 0
           threshold_warning: 50
           threshold_metric: "lines"
-          comment_footer: false
+            comment_footer: false
 
       - name: DB Logs
         id: dblog
         if: failure()
         uses: cafuego/command-output@main
-
-      - name: Find Comment
-        uses: peter-evans/find-comment@v2
-        if: ${{ !env.ACT }}
-        id: fc
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          issue-number: ${{ github.event.pull_request.number }}
-          comment-author: 'github-actions[bot]'
-          body-includes: Build output
+          run: |
+            docker compose -f tests/docker-compose.yml exec -T drupal drush watchdog:show
+
+            - name: Find Comment
+            uses: peter-evans/find-comment@v2
+            if: ${{ !env.ACT }}
+            id: fc
+            with:
+              token: ${{ secrets.GITHUB_TOKEN }}
+              issue-number: ${{ github.event.pull_request.number }}
+              comment-author: 'github-actions[bot]'
+              body-includes: Build output
 
       - name: Create or update comment
         uses: peter-evans/create-or-update-comment@v2
