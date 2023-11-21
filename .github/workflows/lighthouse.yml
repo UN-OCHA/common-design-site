@@ -112,6 +112,21 @@ jobs:
         env:
           fail-fast: true
 
+      - name: Install Subtheme
+        id: subtheme
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -w /srv/www -T drupal /usr/bin/composer run sub-theme
+      - name: PHPCS
+        id: phpcs
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -u appuser -w /srv/www -T drupal phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom ./html/themes/custom
+        env:
+          fail-fast: true
+
       - name: Install Environment
         id: install
         uses: cafuego/command-output@main
@@ -203,60 +218,6 @@ jobs:
 
             *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
           edit-mode: replace
-
-      - name: Slack Success Notification
-        id: slack_success
-        if: ${{ !env.ACT && success() }}
-        uses: slackapi/slack-github-action@v1.23.0
-        with:
-          channel-id: '${{ vars.SLACK_CHANNEL }}'
-          payload: |
-            {
-              "text": "Tests passed for a pull request on ${{ github.repository }}",
-              "attachments": [
-                {
-                  "color": "#00FF00",
-                  "blocks": [
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "Pull request by @${{ github.triggering_actor }} to merge _${{ github.head_ref }}_ into _${{ github.base_ref }}_ on <${{ github.repositoryUrl }}|${{ github.repository }}> passed tests (<${{ github.event.pull_request.html_url }}|Review>)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-
-      - name: Slack Failure Notification
-        id: slack_failure
-        if: ${{ !env.ACT && failure() }}
-        uses: slackapi/slack-github-action@v1.23.0
-        with:
-          channel-id: '${{ vars.SLACK_CHANNEL }}'
-          payload: |
-            {
-              "text": "Tests failed for a pull request on ${{ github.repository }}",
-              "attachments": [
-                {
-                  "color": "#FF0000",
-                  "blocks": [
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "Pull request by @${{ github.triggering_actor }} to merge _${{ github.head_ref }}_ into _${{ github.base_ref }}_ on <${{ github.repositoryUrl }}|${{ github.repository }}> failed tests (<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|Review>)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}e
 
       - name: Debug Stack
         if: contains(github.event.pull_request.labels.*.name, 'performance')
