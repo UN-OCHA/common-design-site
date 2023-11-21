@@ -1,0 +1,30 @@
+diff --git a/modules/pwa_extras/src/Form/PwaExtrasSettingsForm.php b/modules/pwa_extras/src/Form/PwaExtrasSettingsForm.php
+index d06861f..0f65370 100644
+--- a/modules/pwa_extras/src/Form/PwaExtrasSettingsForm.php
++++ b/modules/pwa_extras/src/Form/PwaExtrasSettingsForm.php
+@@ -36,7 +36,7 @@ class PwaExtrasSettingsForm extends ConfigFormBase {
+       "#title" => $this->t('Touch Icons'),
+       // @todo Everything inside "#options" is escaped via Html::escape(), hence
+       // these links are not rendered. Find a better way to render them:
+-      "#options" => pwa_extras_apple_touch_icons(),
++      "#options" =>  str_replace('<', '&lt;', pwa_extras_apple_touch_icons()),
+       '#default_value' => $config->get('touch_icons'),
+     ];
+
+@@ -60,7 +60,7 @@ class PwaExtrasSettingsForm extends ConfigFormBase {
+       "#title" => $this->t('Meta Tags'),
+       // @todo Everything inside "#options" is escaped via Html::escape(), hence
+       // these links are not rendered. Find a better way to render them:
+-      "#options" => pwa_extras_apple_meta_tags($site_name, $color_select),
++      "#options" => str_replace('<', '&lt;', pwa_extras_apple_meta_tags($site_name, $color_select)),
+       '#default_value' => $config->get('meta_tags'),
+     ];
+
+@@ -85,7 +85,7 @@ class PwaExtrasSettingsForm extends ConfigFormBase {
+       "#title" => $this->t('Add to homescreen icons'),
+       // @todo Everything inside "#options" is escaped via Html::escape(), hence
+       // these links are not rendered. Find a better way to render them:
+-      "#options" => pwa_extras_apple_home_screen_icons(),
++      "#options" => str_replace('<', '&lt;', pwa_extras_apple_home_screen_icons()),
+       '#default_value' => $config->get('home_screen_icons'),
+     ];
