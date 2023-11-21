@@ -5,6 +5,7 @@ on:
 
 jobs:
   setup:
+    if: ${{ github.event.label.name == 'performance' }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
