@@ -271,17 +271,7 @@ jobs:
               ]
             }
         env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-
-      - name: Clean up
-        id: docker-clean-up
-        if: ${{ env.ACT }}
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml down
-        env:
-          fail-fast: true
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}e
 
       - name: Debug Stack
         if: contains(github.event.pull_request.labels.*.name, 'performance')
@@ -299,33 +289,6 @@ jobs:
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
-
-      - name: Slack Failure Notification
-        id: slack_failure
-        if: ${{ !env.ACT && failure() }}
-        uses: slackapi/slack-github-action@v1.23.0
-        with:
-          channel-id: '${{ vars.SLACK_CHANNEL }}'
-          payload: |
-            {
-              "text": "Tests failed for a pull request on ${{ github.repository }}",
-              "attachments": [
-                {
-                  "color": "#FF0000",
-                  "blocks": [
-                    {
-                      "type": "section",
-                      "text": {
-                        "type": "mrkdwn",
-                        "text": "Pull request by @${{ github.triggering_actor }} to merge _${{ github.head_ref }}_ into _${{ github.base_ref }}_ on <${{ github.repositoryUrl }}|${{ github.repository }}> failed tests (<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|Review>)"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       - name: Clean up
         id: docker-clean-up
