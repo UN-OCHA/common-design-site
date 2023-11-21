@@ -115,12 +115,6 @@ jobs:
         env:
           fail-fast: true
 
-      - name: Debug Stack
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: cafuego/command-output@main
-        with:
-          run: ls -al
-
       - name: Install demo content
         id: content
         uses: cafuego/command-output@main
