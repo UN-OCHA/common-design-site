@@ -111,7 +111,7 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml exec -w /srv/www -T drupal composer run sub-theme
+            docker compose -f tests/docker-compose.yml exec -w /srv/www -T drupal /usr/bin/composer run sub-theme
 
       - name: PHPCS
         id: phpcs
