@@ -153,7 +153,7 @@ jobs:
         id: content
         uses: cafuego/command-output@main
         with:
-          run: curl -v http://127.0.0.1:8080
+          run: curl -v http://127.0.0.1:8080/demo
         env:
           fail-fast: true
 
@@ -227,11 +227,12 @@ jobs:
       - name: Audit URLs using Lighthouse
         # Run Lighthouse if the PR has the label "performance"
         if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: treosh/lighthouse-ci-action@v9
+        uses: treosh/lighthouse-ci-action@10.1.0
         with:
           urls: |
             http://127.0.0.1:8080/demo
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
+          configPath: ./lighthouserc.json
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
 
