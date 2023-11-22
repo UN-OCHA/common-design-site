@@ -42,8 +42,8 @@ services:
     environment:
       - TERM=xterm
       - ENVIRONMENT=dev
-      - NGINX_SERVERNAME=common-design-test-site,localhost,127.0.0.1
-      - NGINX_OVERRIDE_PROTOCOL=HTTP,common-design-test-site,localhost,127.0.0.1
+      - NGINX_SERVERNAME=common-design-test-site,localhost,127.0.0.1,127.0.0.1:8080
+      - NGINX_OVERRIDE_PROTOCOL=HTTP,common-design-test-site,localhost,127.0.0.1,127.0.0.1:8080
       - DRUSH_OPTIONS_URI=http://common-design-test-site
       - DRUPAL_DB_DATABASE=common-design
       - DRUPAL_DB_USERNAME=common-design
