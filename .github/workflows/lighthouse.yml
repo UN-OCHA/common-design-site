@@ -153,7 +153,9 @@ jobs:
         id: content
         uses: cafuego/command-output@main
         with:
-          run: curl -v http://127.0.0.1:8080/demo
+          run: |
+            docker-compose -f tests/docker-compose.yml exec -T drupal drush -y en unocha_demo_content
+            curl -v http://127.0.0.1:8080/demo
         env:
           fail-fast: true
 
@@ -229,8 +231,6 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: treosh/lighthouse-ci-action@10.1.0
         with:
-          urls: |
-            http://127.0.0.1:8080/demo
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
           configPath: .github/workflows/lighthouserc.js
           uploadArtifacts: true # save results as an action artifacts
