@@ -220,21 +220,24 @@ jobs:
             *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
           edit-mode: replace
 
-      - name: Debug Stack
+      - name: Debug Server
         if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: cafuego/command-output@main
         with:
-          run: docker ps -a
+          run: |
+            docker ps -a
+            docker compose -f tests/docker-compose.yml exec -T drupal drush rs 127.0.0.1:8080
+            curl -v http://127.0.0.1:8080/demo
+        env:
+          fail-fast: true
 
       - name: Audit URLs using Lighthouse
         # Run Lighthouse if the PR has the label "performance"
         if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: treosh/lighthouse-ci-action@10.1.0
         with:
-          run: |
-            curl -v http://127.0.0.1:8080/demo
           urls: |
-            https://web.brand.unocha.org
+            http://127.0.0.1:8080/demo
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
           configPath: .github/workflows/lighthouserc.js
           uploadArtifacts: true # save results as an action artifacts
