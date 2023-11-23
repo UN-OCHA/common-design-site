@@ -231,6 +231,8 @@ jobs:
         if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: treosh/lighthouse-ci-action@10.1.0
         with:
+          run: |
+            curl -v http://127.0.0.1:8080/demo
           urls: |
             https://web.brand.unocha.org
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
