@@ -226,10 +226,6 @@ jobs:
         with:
           run: |
             docker ps -a
-            docker compose -f tests/docker-compose.yml exec -T drupal drush rs 127.0.0.1:8080
-            curl -v http://127.0.0.1:8080/demo
-        env:
-          fail-fast: true
 
       - name: Audit URLs using Lighthouse
         # Run Lighthouse if the PR has the label "performance"
