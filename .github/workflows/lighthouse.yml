@@ -232,8 +232,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@10.1.0
         with:
           urls: |
-            http://localhost/
             http://127.0.0.1:8080
+            https://web.brand.unocha.org/
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
           configPath: .github/workflows/lighthouserc.js
           uploadArtifacts: true # save results as an action artifacts
