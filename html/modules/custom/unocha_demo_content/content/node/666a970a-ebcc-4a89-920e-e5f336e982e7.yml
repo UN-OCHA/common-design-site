@@ -1,0 +1,70 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 666a970a-ebcc-4a89-920e-e5f336e982e7
+  bundle: basic
+  default_langcode: zh-hans
+  depends:
+    86b55c06-221e-4d01-ba0b-e0b1f31a5287: user
+default:
+  revision_uid:
+    -
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+  status:
+    -
+      value: false
+  uid:
+    -
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+  title:
+    -
+      value: 'Chinese Example 联合国概览'
+  created:
+    -
+      value: 1626446865
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: zh-hans
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  body:
+    -
+      value: "<p>世界各国齐聚一堂、讨论共同问题、寻找共同解决方案的场所</p>\r\n\r\n<p>联合国是一个国际性组织，成立于1945年，现有193个<a href=\"https://www.un.org/zh/about-us/member-states\">会员国</a>。<a href=\"https://www.un.org/zh/our-work\">联合国及其工作</a>以<a href=\"https://www.un.org/zh/about-us/un-charter\">《联合国宪章》</a>所载的目标和原则为指导。</p>\r\n\r\n<p>多年来，联合国不断发展，与瞬息万变的世界保持同步。</p>\r\n\r\n<p>但是，自始至终，联合国都是世界各国可以汇聚一堂、讨论共同问题、寻找造福全人类的共同解决方案的唯一场所。</p>\r\n"
+      format: full_html
+      summary: ''
+  field_hero_component:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: bda4b52c-ac91-418b-ac7b-d00ca67d787c
+          bundle: hero
+          default_langcode: zh-hans
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1626446913
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true

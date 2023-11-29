@@ -1,0 +1,29 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 0a274056-2407-4212-901d-abf3e7e11bf2
+  default_langcode: en
+  depends:
+    86b55c06-221e-4d01-ba0b-e0b1f31a5287: user
+default:
+  uid:
+    -
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+  filename:
+    -
+      value: 5O0B5390-1_1-300x200.jpg
+  uri:
+    -
+      value: 'public://2021-08/5O0B5390-1_1-300x200.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 14797
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1630336055

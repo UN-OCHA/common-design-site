@@ -1,0 +1,36 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: f4a8e5a6-883e-43e5-ad06-b7b58a5dada2
+  bundle: image
+  default_langcode: en
+  depends:
+    86b55c06-221e-4d01-ba0b-e0b1f31a5287: user
+    cf698752-0070-4d6d-b460-ce4b6775dd7c: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+  name:
+    -
+      value: Squares
+  created:
+    -
+      value: 1598339367
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+  field_media_image:
+    -
+      entity: cf698752-0070-4d6d-b460-ce4b6775dd7c
+      alt: alt
+      title: ''
+      width: 225
+      height: 225

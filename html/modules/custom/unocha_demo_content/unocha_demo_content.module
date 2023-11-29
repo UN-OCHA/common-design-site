@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Installs demo content.
+ */
+
+/**
+ * Implements hook_modules_installed().
+ */
+function unocha_demo_content_modules_installed($modules) {
+  if (!in_array('unocha_demo_content', $modules)) {
+    return;
+  }
+
+  /** @var \Drupal\node\Entity\Node $node */
+  $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+    'uuid' => 'f46def63-23ca-47ec-9c73-2ac42be21a84',
+  ]);
+  $node = reset($nodes);
+
+  \Drupal::config('system.site')->set('front', 'node/' . $node->id());
+}

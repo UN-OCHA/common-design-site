@@ -122,6 +122,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/csp": "^1.16",
+        "drupal/default_content": "^2.0@alpha",
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
         "drupal/google_tag": "^1.6",
