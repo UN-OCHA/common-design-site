@@ -19,5 +19,7 @@ function unocha_demo_content_modules_installed($modules) {
   ]);
   $node = reset($nodes);
 
-  \Drupal::config('system.site')->set('front', 'node/' . $node->id());
+  $config = \Drupal::service('config.factory')->getEditable('system.site');
+  $config->set('front', 'node/' . $node->id());
+  $config->save();
 }

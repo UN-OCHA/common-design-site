@@ -5,7 +5,6 @@ core_version_requirement: ^9 || ^10
 package: 'UNOCHA'
 dependencies:
   - default_content:default_content
-  - group:group
 default_content:
   node:
     - 0cb87926-14f0-4c4f-9fc8-aadfec215a6a
