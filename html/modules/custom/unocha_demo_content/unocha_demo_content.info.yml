@@ -1,0 +1,59 @@
+name: 'UNOCHA demo content'
+description: Imports the content for performance testing.
+type: module
+core_version_requirement: ^9 || ^10
+package: 'UNOCHA'
+dependencies:
+  - default_content:default_content
+  - group:group
+default_content:
+  node:
+    - 0cb87926-14f0-4c4f-9fc8-aadfec215a6a
+    - 123f54fb-b5f7-4bbc-9fe8-33fabefd3558
+    - 1a76580e-59a6-48b6-9a6e-6d056c0a5785
+    - 25042374-89ca-4a87-8156-53e98b4981f2
+    - 25507d0b-4a38-4365-9674-6e296b14d157
+    - 26fb8b97-d6a2-4d56-9579-fecbd89b8ce3
+    - 52af11dd-4355-44e8-9fb0-5c7d455c80d5
+    - 537659db-f3cf-48ae-9d7d-d18030b2f976
+    - 61e5e655-7e08-4311-b28d-912c1399a84a
+    - 6247967b-fd3e-47c7-b05a-6adce56356f7
+    - 62b40226-d72e-49cf-86af-8b3c33186e7a
+    - 62c4af11-91b3-4ad4-8b98-7f1e8f7452b4
+    - 666a970a-ebcc-4a89-920e-e5f336e982e7
+    - 8469682d-306f-4478-850e-cb2e00e4d4e7
+    - 964e9c49-b28a-4538-88c6-76ed9135f3bb
+    - 9748c2cd-eb3f-478e-9bbc-b6ad92e75df5
+    - 9be6b0c4-e409-46c5-b57e-b77e3680e921
+    - 9ee8560c-ecaf-4fe0-b500-e1b3ddb22196
+    - a2440b58-fe56-4467-acdc-3b0bf9deb8e4
+    - a9ff7079-2a44-4e14-9c9b-09676a9da938
+    - aa4ad1c7-4aab-4ec7-bf6a-185fb6c06add
+    - b5475614-999e-4d38-bf92-462ff7da80b4
+    - b80d78e4-9a7a-4145-b9cd-3584c2bb4dc8
+    - bfb80883-00e0-4fd4-adc4-1254426724cf
+    - c6f724a3-fe34-497f-b7fc-25c92240d8ff
+    - c973b4b3-3900-439b-bdae-6e7ae315323d
+    - d376a78b-778b-40cf-a5df-7deef7938a97
+    - d7dfe9e6-2077-4dd4-8273-762eb1681233
+    - d7e2f1c8-12c1-4b26-be38-73fc8dff6509
+    - d951be30-ccdc-40c5-a583-4007a2a949b9
+    - e05b73a6-2b64-45f9-b742-7d2b2f9ad5bc
+    - e79fa321-a315-4976-823d-3bedf4471eb7
+    - f42b2963-c6d8-4b49-af34-914bf7aa12a6
+    - f46def63-23ca-47ec-9c73-2ac42be21a84
+    - f500b878-8865-4923-b691-fb84411f745f
+    - f9fce6a7-6b55-4a50-bc0e-3e384739fa6e
+    - fdd873e1-6dc9-4a3c-bb03-b7e98e8367b6
+  media:
+    - 2063a37a-2f66-4469-9a47-d38ad9a914b6
+    - 5d58d253-475e-43be-b734-f2031bdbb0bb
+    - c1c03b0f-b16a-4739-a895-b67d316173fa
+    - f4a8e5a6-883e-43e5-ad06-b7b58a5dada2
+  file:
+    - 0a274056-2407-4212-901d-abf3e7e11bf2.yml
+    - 663e1c0f-c29e-4c78-bcd8-81d0c232487a.yml
+    - 837640f9-ae8d-4a3c-b318-bc4fbf54ae2a.yml
+    - cf698752-0070-4d6d-b460-ce4b6775dd7c.yml
+    - d078dd3b-0499-4e7f-b326-b2441b762cee.yml
+    - d2e55d5d-de2d-4fac-a1f7-116585975b54.yml
