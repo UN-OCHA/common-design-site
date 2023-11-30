@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 674c54f6-7a64-4d9e-9471-4caabfae9a78
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'User action one'
+  menu_name:
+    -
+      value: account
+  link:
+    -
+      uri: 'internal:/demo'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -50
+  expanded:
+    -
+      value: true
+  parent:
+    -
+      value: user.page
+  revision_translation_affected:
+    -
+      value: true
