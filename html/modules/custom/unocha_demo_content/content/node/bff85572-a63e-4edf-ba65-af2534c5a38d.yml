@@ -4,16 +4,18 @@ _meta:
   uuid: bff85572-a63e-4edf-ba65-af2534c5a38d
   bundle: basic
   default_langcode: en
+  depends:
+    86b55c06-221e-4d01-ba0b-e0b1f31a5287: user
 default:
   revision_uid:
     -
-      target_id: 1
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
   status:
     -
       value: true
   uid:
     -
-      target_id: 1
+      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
   title:
     -
       value: 'Component library demo'
