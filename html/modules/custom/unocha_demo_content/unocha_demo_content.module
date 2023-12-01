@@ -19,7 +19,15 @@ function unocha_demo_content_modules_installed($modules) {
   ]);
   $node = reset($nodes);
 
-  $config = \Drupal::service('config.factory')->getEditable('system.site');
-  $config->set('front', 'node/' . $node->id());
-  $config->save();
+  if ($node) {
+    $config = \Drupal::service('config.factory')->getEditable('system.site');
+    $config->set('front', 'node/' . $node->id());
+    $config->save();
+
+    \Drupal::logger('unocha_demo_content')->info('Homepage set to node/' . $node->id());
+  }
+  else {
+    \Drupal::logger('unocha_demo_content')->error('Unable to set homepage');
+  }
+
 }
