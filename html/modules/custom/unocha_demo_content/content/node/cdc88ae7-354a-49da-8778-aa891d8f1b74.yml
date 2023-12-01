@@ -4,18 +4,16 @@ _meta:
   uuid: cdc88ae7-354a-49da-8778-aa891d8f1b74
   bundle: landing
   default_langcode: en
-  depends:
-    86b55c06-221e-4d01-ba0b-e0b1f31a5287: user
 default:
   revision_uid:
     -
-      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+      target_id: 1
   status:
     -
       value: true
   uid:
     -
-      entity: 86b55c06-221e-4d01-ba0b-e0b1f31a5287
+      target_id: 1
   title:
     -
       value: 'Common Design demo site'
