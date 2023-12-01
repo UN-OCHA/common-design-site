@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 837640f9-ae8d-4a3c-b318-bc4fbf54ae2a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: generateImage_HphIgp.jpg
+  uri:
+    -
+      value: 'public://2020-06/generateImage_HphIgp.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 5406
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1592836677
