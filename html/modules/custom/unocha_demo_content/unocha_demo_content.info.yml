@@ -8,6 +8,7 @@ dependencies:
 default_content:
   node:
     - cdc88ae7-354a-49da-8778-aa891d8f1b74
+    - bff85572-a63e-4edf-ba65-af2534c5a38d
     - 9748c2cd-eb3f-478e-9bbc-b6ad92e75df5
     - 9be6b0c4-e409-46c5-b57e-b77e3680e921
     - f500b878-8865-4923-b691-fb84411f745f
@@ -48,6 +49,7 @@ default_content:
     - 74aeb6d2-2f43-4cc6-8bca-6b18bd5eaaeb
     - 41069f64-467d-49e9-9850-86ec640fc928
     - 24f7e87d-1672-45e0-a2f0-09348b0cc0cd
+    - 311d75e4-c8e6-46fe-a6ea-46c8958f5be8
   block_content:
     - 6fdcaaf9-8d98-4379-8320-6debf05de797
     - 18c1989f-2352-41f1-bced-0a421903e0e8

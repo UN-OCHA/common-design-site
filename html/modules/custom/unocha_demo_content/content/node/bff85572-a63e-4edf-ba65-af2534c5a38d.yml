@@ -1,0 +1,89 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bff85572-a63e-4edf-ba65-af2534c5a38d
+  bundle: basic
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Component library demo'
+  created:
+    -
+      value: 1701427937
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /demo
+      langcode: en
+  samples_status:
+    -
+      value: false
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  body:
+    -
+      value: '<p>This page is controlled by a template override which includes the twig components. It is for display purposes only.</p>'
+      format: full_html
+      summary: ''
+  field_example_boolean:
+    -
+      value: false
+  field_example_boolean_second:
+    -
+      value: false
+  field_example_checkboxes:
+    -
+      value: option1
+  field_example_date:
+    -
+      value: '2023-12-01'
+  field_example_date_range:
+    -
+      value: '2023-12-01T10:52:17'
+  field_example_radio_button:
+    -
+      value: 0.0
+  field_hero_component:
+    -
+      entity:
+        _meta:
+          version: '1.0'
+          entity_type: paragraph
+          uuid: e4e938fc-6114-4b01-9ad6-ad22e82f375d
+          bundle: hero
+          default_langcode: en
+        default:
+          status:
+            -
+              value: true
+          created:
+            -
+              value: 1701427984
+          behavior_settings:
+            -
+              value: {  }
+          revision_translation_affected:
+            -
+              value: true
