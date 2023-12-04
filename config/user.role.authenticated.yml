@@ -18,6 +18,5 @@ permissions:
   - 'access content'
   - 'access content samples'
   - 'access environment indicator'
-  - 'access pwa'
   - 'search content'
   - 'view media'
