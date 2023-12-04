@@ -1,0 +1,48 @@
+display:
+  default:
+    display_title: 主
+    display_options:
+      exposed_form:
+        options:
+          submit_button: 应用
+          reset_button_label: 重置
+          exposed_sorts_label: 排序依据
+          sort_asc_label: 升序
+          sort_desc_label: 降序
+      pager:
+        options:
+          expose:
+            items_per_page_label: 每页条目数
+            items_per_page_options_all_label: '- 全部 -'
+            offset_label: 偏移量
+          tags:
+            previous: '‹ 上一页'
+            next: '下一页 ›'
+            first: '« 第一页'
+            last: '末页 »'
+      fields:
+        sensor_status:
+          label: 状态
+        sensor_message:
+          label: 状态消息
+        timestamp:
+          label: 时间戳
+      title: 日志
+      arguments:
+        sensor_name:
+          exception:
+            title: 全部
+  detail_page_log:
+    display_options:
+      fields:
+        timestamp:
+          label: 时间戳
+        sensor_status:
+          label: 状态
+        sensor_message:
+          label: 状态消息
+  page_1:
+    display_title: 页面
+    display_options:
+      menu:
+        title: 日志

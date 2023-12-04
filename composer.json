@@ -144,6 +144,7 @@
         "unocha/common_design": "^9.2",
         "unocha/ocha_integrations": "^2",
         "unocha/ocha_media_content": "dev-main",
+        "unocha/ocha_monitoring": "^1.0",
         "unocha/ocha_search": "^1.0"
     },
     "require-dev": {
