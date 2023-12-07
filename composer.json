@@ -94,6 +94,7 @@
         "git-hooks": "git config core.hooksPath git-hooks || true",
         "npm-prepare": "cd html/themes/contrib/common_design && npm install",
         "npm-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "sub-theme": "test -d html/themes/custom/common_design_subtheme || (cp -r html/themes/contrib/common_design/common_design_subtheme html/themes/custom/ && mv html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml.example html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml)",
         "e2e-test": "cd html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
         "e2e": [
             "@npm-prepare",
@@ -102,6 +103,9 @@
         ],
         "post-install-cmd": [
           "@git-hooks"
+        ],
+        "post-create-project-cmd": [
+          "@sub-theme"
         ],
         "post-update-cmd": [
           "@git-hooks"
@@ -118,6 +122,7 @@
         "drupal/core-project-message": "^10.1",
         "drupal/core-recommended": "^10.1",
         "drupal/csp": "^1.16",
+        "drupal/default_content": "^2.0@alpha",
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
         "drupal/google_tag": "^1.6",

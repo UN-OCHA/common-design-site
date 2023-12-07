@@ -28,4 +28,4 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/node/1\r\n/node/3\r\n/node/38\r\n/teaser-list"
+    pages: "/layouts/sidebar-first\r\n/layouts/sidebar-first-wide\r\n/layouts/sidebar-both\r\n/teaser-list"
