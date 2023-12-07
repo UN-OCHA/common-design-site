@@ -1,12 +1,16 @@
-name: Lighthouse CI
-on:
-  pull_request:
-    types: [labeled]
+name: Run tests
+
+on: [pull_request]
 
 jobs:
-  setup:
-    if: ${{ github.event.label.name == 'performance' }}
+  tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      checks: write
+      pull-requests: write
+      actions: read
+      statuses: write
 
     steps:
       - name: Checkout Code
@@ -60,7 +64,8 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
+            # Uncomment this if we have custom modules.
+            # test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
             test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|theme\)$' -print0 | xargs -0 -n 1 -P 4 php -l
         env:
           fail-fast: true
@@ -106,19 +111,12 @@ jobs:
         env:
           fail-fast: true
 
-      - name: Install Subtheme
-        id: subtheme
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml exec -w /srv/www -T drupal /usr/bin/composer run sub-theme
-
       - name: PHPCS
         id: phpcs
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml exec -u appuser -w /srv/www -T drupal phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom ./html/themes/custom
+            docker compose -f tests/docker-compose.yml exec -u appuser -w /srv/www -T drupal phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
         env:
           fail-fast: true
 
@@ -127,62 +125,11 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml exec -T drupal drush -y si --existing-config minimal install_configure_form.enable_update_status_emails=NULL
-        env:
-          fail-fast: true
-
-      - name: Debug vendor
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: cafuego/command-output@main
-        with:
-          run: ls -al
-
-      - name: Run tests
-        id: tests
-        uses: cafuego/command-output@main
-        with:
-          run: |
+            # This isn't very useful as we're not actually running tests.
+            docker compose -f tests/docker-compose.yml exec -T drupal drush -y si --existing-config
             docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
-            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
         env:
           fail-fast: true
-
-      - name: Install demo content
-        id: content
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker-compose -f tests/docker-compose.yml exec -T drupal drush -y en unocha_demo_content
-            curl -v http://127.0.0.1:8080/demo
-        env:
-          fail-fast: true
-
-      - name: Copy Coveralls
-        id: copy_coveralls
-        if: success()
-        run: docker cp "$(docker compose -f tests/docker-compose.yml ps -q drupal)":/srv/www/html/build/logs/clover.xml . || echo "skip=true" >> "$GITHUB_OUTPUT"
-
-      - name: Monitor coverage
-        id: coveralls
-        if: ${{ steps.copy_coveralls.outputs.skip != 'true' }}
-        uses: slavcodev/coverage-monitor-action@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          coverage_path: "clover.xml"
-          threshold_alert: 0
-          threshold_warning: 50
-          threshold_metric: "lines"
-          comment_footer: false
-
-      - name: DB Logs
-        id: dblog
-        if: failure()
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml exec -T drupal drush watchdog:show
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
@@ -220,26 +167,59 @@ jobs:
             *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
           edit-mode: replace
 
-      - name: Debug Server
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: cafuego/command-output@main
+      - name: Slack Success Notification
+        id: slack_success
+        if: ${{ !env.ACT && success() }}
+        uses: slackapi/slack-github-action@v1.23.0
         with:
-          run: |
-            docker ps -a
+          channel-id: '${{ vars.SLACK_CHANNEL }}'
+          payload: |
+            {
+              "text": "Tests passed for a pull request on ${{ github.repository }}",
+              "attachments": [
+                {
+                  "color": "#00FF00",
+                  "blocks": [
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "Pull request by @${{ github.triggering_actor }} to merge _${{ github.head_ref }}_ into _${{ github.base_ref }}_ on <${{ github.repositoryUrl }}|${{ github.repository }}> passed tests (<${{ github.event.pull_request.html_url }}|Review>)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
-      - name: Audit URLs using Lighthouse
-        # Run Lighthouse if the PR has the label "performance"
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: treosh/lighthouse-ci-action@10.1.0
+      - name: Slack Failure Notification
+        id: slack_failure
+        if: ${{ !env.ACT && failure() }}
+        uses: slackapi/slack-github-action@v1.23.0
         with:
-          urls: |
-            http://127.0.0.1:8080/
-            http://127.0.0.1:8080/demo
-          runs: 3
-          budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
-          configPath: .github/workflows/lighthouserc.js
-          uploadArtifacts: true # save results as an action artifacts
-          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+          channel-id: '${{ vars.SLACK_CHANNEL }}'
+          payload: |
+            {
+              "text": "Tests failed for a pull request on ${{ github.repository }}",
+              "attachments": [
+                {
+                  "color": "#FF0000",
+                  "blocks": [
+                    {
+                      "type": "section",
+                      "text": {
+                        "type": "mrkdwn",
+                        "text": "Pull request by @${{ github.triggering_actor }} to merge _${{ github.head_ref }}_ into _${{ github.base_ref }}_ on <${{ github.repositoryUrl }}|${{ github.repository }}> failed tests (<https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}|Review>)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
       - name: Clean up
         id: docker-clean-up
