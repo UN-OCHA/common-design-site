@@ -5,7 +5,6 @@ on:
 
 jobs:
   setup:
-    if: ${{ github.event.label.name == 'performance' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -131,12 +130,6 @@ jobs:
         env:
           fail-fast: true
 
-      - name: Debug vendor
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: cafuego/command-output@main
-        with:
-          run: ls -al
-
       - name: Run tests
         id: tests
         uses: cafuego/command-output@main
@@ -150,6 +143,8 @@ jobs:
           fail-fast: true
 
       - name: Install demo content
+        # Run Lighthouse if the PR has the label "performance"
+        if: contains(github.event.pull_request.labels.*.name, 'performance')
         id: content
         uses: cafuego/command-output@main
         with:
@@ -221,7 +216,6 @@ jobs:
           edit-mode: replace
 
       - name: Debug Server
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
         uses: cafuego/command-output@main
         with:
           run: |
