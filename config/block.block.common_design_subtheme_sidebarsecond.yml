@@ -28,4 +28,4 @@ visibility:
     id: request_path
     negate: false
     context_mapping: {  }
-    pages: "/node/2\r\n/node/3\r\n/node/39"
+    pages: "/layouts/sidebar-second\r\n/layouts/sidebar-second-wide\r\n/layouts/sidebar-both"
