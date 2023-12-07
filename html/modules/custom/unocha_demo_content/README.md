@@ -10,4 +10,8 @@ To get the uuid you can use
 drush sqlq "select * from node"
 drush sqlq "select * from media"
 drush sqlq "select * from file_managed"
+drush sqlq "select * from taxonomy_term_data"
+drush sqlq "select * from block_content"
+drush sqlq "select * from menu_link_content"
 ```
+ See https://www.drupal.org/docs/contributed-modules/default-content-for-d8/defining-default-content

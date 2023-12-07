@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: bff85572-a63e-4edf-ba65-af2534c5a38d
+  uuid: 964e9c49-b28a-4538-88c6-76ed9135f3bb
   bundle: basic
   default_langcode: en
 default:
@@ -16,10 +16,10 @@ default:
       target_id: 1
   title:
     -
-      value: 'Component library demo'
+      value: 'SVG icon library'
   created:
     -
-      value: 1701427937
+      value: 1605547126
   promote:
     -
       value: true
@@ -31,11 +31,8 @@ default:
       value: true
   path:
     -
-      alias: /demo
+      alias: /svg-icon-library
       langcode: en
-  samples_status:
-    -
-      value: false
   content_translation_source:
     -
       value: und
@@ -44,34 +41,16 @@ default:
       value: false
   body:
     -
-      value: '<p>This page is controlled by a template override which includes the twig components. It is for display purposes only.</p>'
+      value: "<p>The OCHA Humanitarian Icons are available on <a href=\"https://brand.unocha.org/d/xEPytAUjC3sH/icons\">brand.unocha.org</a>, or for web use as a sprite in the <a href=\"https://github.com/UN-OCHA/common_design/tree/main/img/icons\">base theme repo</a>.</p>\r\n\r\n<p><a href=\"https://docs.google.com/document/d/1YeOxufmZLbaxFzs0tz37sRirtR0FtPinMQr3FJBmFM8/edit\">Guidelines for their use</a></p>\r\n"
       format: full_html
       summary: ''
-  field_example_boolean:
-    -
-      value: false
-  field_example_boolean_second:
-    -
-      value: false
-  field_example_checkboxes:
-    -
-      value: option1
-  field_example_date:
-    -
-      value: '2023-12-01'
-  field_example_date_range:
-    -
-      value: '2023-12-01T10:52:17'
-  field_example_radio_button:
-    -
-      value: 0.0
   field_hero_component:
     -
       entity:
         _meta:
           version: '1.0'
           entity_type: paragraph
-          uuid: e4e938fc-6114-4b01-9ad6-ad22e82f375d
+          uuid: f1c2d9d1-dafa-4ccd-94da-0f163a114ed1
           bundle: hero
           default_langcode: en
         default:
@@ -80,7 +59,7 @@ default:
               value: true
           created:
             -
-              value: 1701427984
+              value: 1605547167
           behavior_settings:
             -
               value: {  }
