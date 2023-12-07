@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 51ea7dd1-edcc-4a3d-ad33-dd59bde3e54b
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    74aeb6d2-2f43-4cc6-8bca-6b18bd5eaaeb: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Card List'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/card-list'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:74aeb6d2-2f43-4cc6-8bca-6b18bd5eaaeb'
+  revision_translation_affected:
+    -
+      value: true
