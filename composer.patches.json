@@ -3,8 +3,11 @@
         "drupal/csp": {
             "Simplify log format": "PATCHES/csp-log-format.patch"
         },
-        "drupal/pwa": {
-            "Upgrading from 8.x-1.6 to 2.1.0-beta2 removes the labels from pwa_extras admin configuration": "PATCHES/fix-config-form-labels-3395058-01.patch"
+        "drupal/default_content" : {
+            "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch"
+        },
+        "drupal/facets": {
+            "PHP82": "https://git.drupalcode.org/project/facets/-/merge_requests/129.diff"
         },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",

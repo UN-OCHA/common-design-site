@@ -37,18 +37,17 @@ module:
   media: 0
   media_library: 0
   menu_ui: 0
+  monitoring: 0
   mysql: 0
   node: 0
   ocha_integrations: 0
   ocha_media_content: 0
+  ocha_monitoring: 0
   ocha_search: 0
   options: 0
   page_cache: 0
   path: 0
   path_alias: 0
-  pwa: 0
-  pwa_extras: 0
-  pwa_service_worker: 0
   responsive_image: 0
   samples: 0
   search: 0
