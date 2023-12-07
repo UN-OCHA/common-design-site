@@ -233,7 +233,9 @@ jobs:
         uses: treosh/lighthouse-ci-action@10.1.0
         with:
           urls: |
+            http://127.0.0.1:8080/
             http://127.0.0.1:8080/demo
+          runs: 3
           budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
           configPath: .github/workflows/lighthouserc.js
           uploadArtifacts: true # save results as an action artifacts
