@@ -1,4 +1,4 @@
-name: Lighthouse CI
+name: Run tests
 on:
   pull_request:
     types: [labeled]
