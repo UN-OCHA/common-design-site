@@ -155,6 +155,7 @@
     "require-dev": {
         "drupal/coder": "^8.3",
         "drupal/config_filter": "^2.2",
+        "drupal/dev_mode": "^2.6",
         "drupal/devel": "^5.0.2",
         "drupal/stage_file_proxy": "^2.0",
         "drupal/upgrade_status": "^4.0",
