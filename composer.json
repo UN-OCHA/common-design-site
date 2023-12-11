@@ -109,6 +109,9 @@
         ],
         "post-update-cmd": [
           "@git-hooks"
+        ],
+        "pre-pool-create": [
+            "scripts\\composer\\DrupalLenientRequirement::changeVersionConstraint"
         ]
     },
     "require": {
