@@ -162,6 +162,8 @@
         "drupal/devel": "^5.0.2",
         "drupal/stage_file_proxy": "^2.0",
         "drupal/upgrade_status": "^4.0",
-        "kint-php/kint": "^3.3"
+        "kint-php/kint": "^3.3",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9.5"
     }
 }
