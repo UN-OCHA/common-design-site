@@ -1,5 +1,5 @@
 name: 'UNOCHA demo content'
-description: Imports the content for performance testing.
+description: Manages demo content.
 type: module
 core_version_requirement: ^9 || ^10
 package: 'UNOCHA'
