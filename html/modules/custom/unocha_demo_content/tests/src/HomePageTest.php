@@ -20,4 +20,3 @@ class HomePageTest extends ExistingSiteBase {
   }
 
 }
-
