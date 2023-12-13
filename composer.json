@@ -211,11 +211,6 @@
             ]
         }
     },
-    "autoload": {
-        "classmap": [
-            "scripts/composer/DrupalLenientRequirement.php"
-        ]
-    },
     "scripts": {
         "changelog": "conventional-changelog",
         "release": "conventional-changelog",
@@ -240,9 +235,6 @@
         ],
         "post-update-cmd": [
           "@git-hooks"
-        ],
-        "pre-pool-create": [
-            "scripts\\composer\\DrupalLenientRequirement::changeVersionConstraint"
         ]
     }
 }

@@ -1,0 +1,202 @@
+{
+    "name": "un-ocha/common-design-site",
+    "description": "Common Design demo site - Drupal 9",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Lisa Corcoran",
+            "role": "Lead Engineer"
+        },
+        {
+            "name": "Peter Lieverdink",
+            "role": "Ops Engineer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "platform": {
+            "php": "8.2"
+        },
+        "bin-dir": "vendor/bin/",
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true,
+            "orakili/composer-drupal-info-file-patch-helper": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "drush": {
+          "services": {
+            "drush.services.yml": "^10"
+          }
+        },
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "html/core": [
+                "type:drupal-core"
+            ],
+            "html/libraries/ckeditor/plugins/{$name}": [
+                "vendor:ckeditor-plugin"
+            ],
+            "html/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "html/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "html/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "html/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "drupal-scaffold": {
+            "file-mapping": {
+                "[web-root]/sites/default/services.yml": {
+                    "mode": "replace",
+                    "path": "html/core/assets/scaffold/files/default.services.yml",
+                    "overwrite": false
+                },
+                "[web-root]/sites/default/settings.php": {
+                    "mode": "replace",
+                    "path": "html/core/assets/scaffold/files/default.settings.php",
+                    "overwrite": false
+                }
+            },
+            "locations": {
+                "web-root": "html/"
+            }
+        },
+        "merge-plugin": {
+            "include": [
+                "html/core/composer.json"
+            ],
+            "recurse": true,
+            "replace": false,
+            "merge-extra": false
+        },
+        "patches-file": "composer.patches.json",
+        "composer-exit-on-patch-failure": true
+    },
+    "scripts": {
+        "git-hooks": "git config core.hooksPath git-hooks || true",
+        "npm-prepare": "cd html/themes/contrib/common_design && npm install",
+        "npm-cleanup": "cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "sub-theme": "test -d html/themes/custom/common_design_subtheme || (cp -r html/themes/contrib/common_design/common_design_subtheme html/themes/custom/ && mv html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml.example html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml)",
+        "e2e-test": "cd html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
+        "e2e": [
+            "@npm-prepare",
+            "@e2e-test",
+            "@npm-cleanup"
+        ],
+        "post-install-cmd": [
+          "@git-hooks"
+        ],
+        "post-create-project-cmd": [
+          "@sub-theme"
+        ],
+        "post-update-cmd": [
+          "@git-hooks"
+        ]
+    },
+    "require": {
+        "php": ">=8.2",
+        "composer/installers": "^1.12",
+        "cweagans/composer-patches": "^1.7",
+        "drupal/admin_denied": "^2",
+        "drupal/allowed_formats": "^3.0",
+        "drupal/components": "^3",
+        "drupal/config_filter": "^2.4",
+        "drupal/config_split": "^2.0.0-beta4",
+        "drupal/core-composer-scaffold": "^10.1",
+        "drupal/core-project-message": "^10.1",
+        "drupal/core-recommended": "^10.1",
+        "drupal/csp": "^1.17",
+        "drupal/default_content": "^2.0@alpha",
+        "drupal/environment_indicator": "^4.0",
+        "drupal/facets": "^2.0",
+        "drupal/google_tag": "^1.6",
+        "drupal/gtm_barebones": "^1.0",
+        "drupal/paragraphs": "^1.12",
+        "drupal/paragraphs_edit": "^3",
+        "drupal/paragraphs_modal_edit": "^1.0@alpha",
+        "drupal/paragraphs_viewmode": "^1.0@alpha",
+        "drupal/samples": "^1.0@beta",
+        "drupal/search_api": "^1.18",
+        "drupal/select_a11y": "^2",
+        "drupal/social_auth_hid": "^4",
+        "drupal/stable": "^2.0",
+        "drupal/stage_file_proxy": "^2.1",
+        "drupal/theme_switcher": "^2",
+        "drupal/twig_tweak": "^3",
+        "drupal/user_expire": "^1.1",
+        "drupal/username_enumeration_prevention": "^1.3",
+        "drupal/viewsreference": "^2.0.0",
+        "drupal/xmlsitemap": "^1.4",
+        "drush/drush": "^11.3",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "unocha/common_design": "^9.2",
+        "unocha/ocha_integrations": "^2",
+        "unocha/ocha_media_content": "dev-main",
+        "unocha/ocha_monitoring": "^1.0",
+        "unocha/ocha_search": "^1.0"
+    },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "drupal/config_inspector": "^2.1",
+        "drupal/dev_mode": "^2.3",
+        "drupal/devel": "^5.0",
+        "drupal/devel_php": "^1.3",
+        "kint-php/kint": "^5.0",
+        "marcocesarato/php-conventional-changelog": "^1.16",
+        "mglaman/drupal-check": "^1.4",
+        "palantirnet/drupal-rector": "^0.13",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "phpmd/phpmd": "^2.9",
+        "phpspec/prophecy-phpunit": "^2",
+        "phpunit/php-code-coverage": "^9.2",
+        "phpunit/phpunit": "^9.5",
+        "weitzman/drupal-test-traits": "^2"
+    }
+}
