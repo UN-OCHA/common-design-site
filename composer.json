@@ -38,11 +38,12 @@
             "composer/installers": true,
             "cweagans/composer-patches": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
-            "drupal/console-extend-plugin": true,
             "oomphinc/composer-installers-extender": true,
-            "symfony/flex": true
+            "orakili/composer-drupal-info-file-patch-helper": true,
+            "phpstan/extension-installer": true
         }
     },
     "extra": {
