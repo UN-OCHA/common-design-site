@@ -56,42 +56,40 @@
         "patchLevel": {
             "drupal/core": "-p2"
         },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
-            "installer-types": [
-                "bower-asset",
-                "npm-asset"
+            "html/core": [
+                "type:drupal-core"
             ],
-            "installer-paths": {
-                "html/core": [
-                    "type:drupal-core"
-                ],
-                "html/libraries/ckeditor/plugins/{$name}": [
-                    "vendor:ckeditor-plugin"
-                ],
-                "html/libraries/{$name}": [
-                    "type:drupal-library",
-                    "type:bower-asset",
-                    "type:npm-asset"
-                ],
-                "html/modules/contrib/{$name}": [
-                    "type:drupal-module"
-                ],
-                "html/profiles/contrib/{$name}": [
-                    "type:drupal-profile"
-                ],
-                "html/themes/contrib/{$name}": [
-                    "type:drupal-theme"
-                ],
-                "html/modules/custom/{$name}": [
-                    "type:drupal-custom-module"
-                ],
-                "html/themes/custom/{$name}": [
-                    "type:drupal-custom-theme"
-                ],
-                "drush/Commands/{$name}": [
-                    "type:drupal-drush"
-                ]
-            }
+            "html/libraries/ckeditor/plugins/{$name}": [
+                "vendor:ckeditor-plugin"
+            ],
+            "html/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "html/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "html/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "html/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "html/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "html/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
         },
         "drupal-scaffold": {
             "file-mapping": {
