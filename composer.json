@@ -94,9 +94,17 @@
             }
         },
         "drupal-scaffold": {
-            "initial": {
-                ".editorconfig": "../.editorconfig",
-                ".gitattributes": "../.gitattributes"
+            "file-mapping": {
+                "[web-root]/sites/default/services.yml": {
+                    "mode": "replace",
+                    "path": "html/core/assets/scaffold/files/default.services.yml",
+                    "overwrite": false
+                },
+                "[web-root]/sites/default/settings.php": {
+                    "mode": "replace",
+                    "path": "html/core/assets/scaffold/files/default.settings.php",
+                    "overwrite": false
+                }
             },
             "locations": {
                 "web-root": "html/"
@@ -132,9 +140,6 @@
         ],
         "post-update-cmd": [
           "@git-hooks"
-        ],
-        "pre-pool-create": [
-            "scripts\\composer\\DrupalLenientRequirement::changeVersionConstraint"
         ]
     },
     "require": {
