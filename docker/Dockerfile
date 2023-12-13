@@ -1,8 +1,11 @@
 FROM public.ecr.aws/unocha/php-k8s:8.2-stable as builder
 COPY . /srv/www
 WORKDIR /srv/www
-RUN composer install --no-dev && \
-    cp -a docker/settings.php docker/services.yml html/sites/default
+# Clean up previous composer installation and run new one.
+RUN rm -rf ./vendor && composer install --no-interaction --no-dev
+
+# Copy settings to default site location.
+RUN cp -a docker/settings.php docker/services.yml docker/memcache.services.yml html/sites/default
 
 FROM public.ecr.aws/unocha/php-k8s:8.2-stable
 
