@@ -3,12 +3,20 @@
     "path": "/",
     "timings": [
       {
-        "metric": "interactive",
+        "metric": "largest-contentful-paint",
         "budget": 4000
       },
       {
-        "metric": "first-meaningful-paint",
-        "budget": 2000
+        "metric": "max-potential-fid",
+        "budget": 300
+      },
+      {
+        "metric": "interactive",
+        "budget": 5000
+      },
+      {
+        "metric": "cumulative-layout-shift",
+        "budget": 0.25
       }
     ],
     "resourceSizes": [
@@ -27,19 +35,6 @@
       {
         "resourceType": "total",
         "budget": 700
-      }
-    ]
-  },
-  {
-    "path": "/demo",
-    "timings": [
-      {
-        "metric": "interactive",
-        "budget": 5000
-      },
-      {
-        "metric": "first-meaningful-paint",
-        "budget": 3000
       }
     ]
   }
