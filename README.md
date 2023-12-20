@@ -1,6 +1,6 @@
-# Common Design Demo | [![Build Status](https://travis-ci.com/UN-OCHA/common-design-site.svg?branch=master)](https://travis-ci.com/UN-OCHA/common-design-site)
+# Common Design Demo
 
-This is the Common Design Drupal 8 site. The code for this project is managed with composer.
+This is the Common Design Drupal 10 site. The code for this project is managed with composer.
 
 To install security updates for Drupal, run `composer update drupal/core drupal/core-dev --with-dependencies`.
 
@@ -29,9 +29,11 @@ and stage_file_proxy.
 
 ### Remote
 
-Automatic testing is run via Travis CI. Code syntax, style and quality are inspected.
+Automatic testing is run via GitHub Actions.
+Code syntax, style and quality are inspected by default, based on [drupal-starterkit run-tests.yml](https://github.com/UN-OCHA/drupal-starterkit/blob/develop/.github/workflows/run-tests.yml)
 
-With a small alteration, these tests could run via GitHub Actions.
+To run Lighthouse tests, add the label "performance" to the PR.
+To run end-to-end test with Jest, add the label "e2e" to the PR.
 
 ### Locally
 
@@ -79,3 +81,6 @@ fin composer outdated drupal/*
 fin composer update drupal/* --with-dependencies
 fin drush updb -y && fin drush cr
 ```
+
+### Set up with local stack
+See [/local/README](https://github.com/UN-OCHA/common-design-site/tree/develop/local)
