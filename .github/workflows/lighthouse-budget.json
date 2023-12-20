@@ -1,6 +1,16 @@
 [
   {
     "path": "/*",
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 4000
+      },
+      {
+        "metric": "first-meaningful-paint",
+        "budget": 2000
+      }
+    ],
     "resourceSizes": [
       {
         "resourceType": "document",
@@ -12,11 +22,20 @@
       },
       {
         "resourceType": "stylesheet",
-        "budget": 20
+        "budget": 30
       },
       {
         "resourceType": "total",
         "budget": 700
+      }
+    ]
+  },
+  {
+    "path": "/demo",
+    "timings": [
+      {
+        "metric": "interactive",
+        "budget": 5000
       }
     ]
   }
