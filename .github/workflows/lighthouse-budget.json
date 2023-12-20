@@ -36,6 +36,10 @@
       {
         "metric": "interactive",
         "budget": 5000
+      },
+      {
+        "metric": "first-meaningful-paint",
+        "budget": 3000
       }
     ]
   }
