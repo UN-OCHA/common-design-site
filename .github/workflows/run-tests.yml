@@ -145,9 +145,16 @@ jobs:
         env:
           fail-fast: true
 
+      - name: Set up node
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        uses: actions/setup-node@v4
+        with:
+          node-version: '^18.16.1'
+          run: npm --version
+
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
         id: e2e
         uses: cafuego/command-output@main
         with:
