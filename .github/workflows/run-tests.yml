@@ -145,6 +145,12 @@ jobs:
       #   env:
       #     fail-fast: true
 
+      - name: Cache node modules
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
+
       - name: Set up node
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
         uses: actions/setup-node@v4
