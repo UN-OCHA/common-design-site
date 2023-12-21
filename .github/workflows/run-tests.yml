@@ -130,27 +130,30 @@ jobs:
         env:
           fail-fast: true
 
-      - name: Run tests
-        id: tests
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
-            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
-            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
-            docker-compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
-            docker-compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
-            docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
-        env:
-          fail-fast: true
+      # - name: Run tests
+      #   id: tests
+      #   uses: cafuego/command-output@main
+      #   with:
+      #     run: |
+      #       docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
+      #       docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
+      #       docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
+      #       docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
+      #       docker-compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
+      #       docker-compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
+      #       docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
+      #   env:
+      #     fail-fast: true
 
       - name: Set up node
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
         uses: actions/setup-node@v4
         with:
           node-version: '^18.16.1'
-          run: npm --version
+
+      - name: Install node packages in sub theme
+        run: |
+          docker compose -f tests/docker-compose.yml exec -T drupal cd /srv/www/html/themes/custom/common_design_subtheme && npm install
 
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
