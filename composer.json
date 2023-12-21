@@ -219,10 +219,10 @@
         "release:minor": "conventional-changelog --minor",
         "release:major": "conventional-changelog --major",
         "git-hooks": "git config core.hooksPath git-hooks || true",
-        "npm-prepare": "test -d cd html/themes/contrib/common_design && npm install",
-        "npm-cleanup": "test -d cd html/themes/contrib/common_design && rm -rf ./node_modules",
+        "npm-prepare": "test -d html/themes/custom/common_design_subtheme && npm install",
+        "npm-cleanup": "test -d html/themes/custom/common_design_subtheme && rm -rf ./node_modules",
         "sub-theme": "test -d html/themes/custom/common_design_subtheme || (cp -r html/themes/contrib/common_design/common_design_subtheme html/themes/custom/ && mv html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml.example html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml)",
-        "e2e-test": "test -d html/themes/contrib/common_design && npm run ci -- -t '^(?!.*Subtheme).*$'",
+        "e2e-test": "test -d html/themes/custom/common_design_subtheme && npm run ci -- -t '^(?!.*Subtheme).*$'",
         "e2e": [
             "@npm-prepare",
             "@e2e-test",
