@@ -153,7 +153,7 @@ jobs:
 
       - name: Install node packages in sub theme
         run: |
-          docker compose -f tests/docker-compose.yml exec -T drupal cd /srv/www/html/themes/custom/common_design_subtheme && npm install
+          docker compose -f tests/docker-compose.yml exec -T drupal /srv/www/html/themes/custom/common_design_subtheme && npm install
 
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
