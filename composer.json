@@ -110,7 +110,8 @@
             "drupal/core-project-message": true,
             "oomphinc/composer-installers-extender": true,
             "orakili/composer-drupal-info-file-patch-helper": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "php-http/discovery": true
         }
     },
     "extra": {
