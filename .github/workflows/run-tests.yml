@@ -157,6 +157,7 @@ jobs:
         with:
           node-version: '^18.16.1'
           cache: npm
+          cache-dependency-path: ./html/themes/custom/common_design_subtheme
 
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
