@@ -157,6 +157,9 @@ jobs:
         with:
           node-version: '^18.16.1'
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
