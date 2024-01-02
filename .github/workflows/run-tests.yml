@@ -158,7 +158,7 @@ jobs:
           node-version: '^18.16.1'
 
       - name: Install dependencies
-        run: docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme npm install
+        run: docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm install
 
       - name: Run e2e tests
         # Run Jest e2e tests if the PR has the label "performance"
@@ -167,7 +167,7 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme npm run ci -- -t '^(?!.*Subtheme).*$'
+            docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm run ci -- -t '^(?!.*Subtheme).*$'
         env:
           fail-fast: true
 
