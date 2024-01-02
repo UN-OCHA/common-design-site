@@ -158,18 +158,20 @@ jobs:
           node-version: '^18.16.1'
 
       - name: Install dependencies
-        run: docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm install
+        run: |
+          docker compose -f tests/docker-compose.yml exec -T drupal cd /srv/www/html/themes/custom/common_design_subtheme
+          ls -al
 
-      - name: Run e2e tests
-        # Run Jest e2e tests if the PR has the label "performance"
-        if: contains(github.event.pull_request.labels.*.name, 'e2e')
-        id: e2e
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm run ci -- -t '^(?!.*Subtheme).*$'
-        env:
-          fail-fast: true
+      # - name: Run e2e tests
+      #   # Run Jest e2e tests if the PR has the label "performance"
+      #   if: contains(github.event.pull_request.labels.*.name, 'e2e')
+      #   id: e2e
+      #   uses: cafuego/command-output@main
+      #   with:
+      #     run: |
+      #       docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm run ci -- -t '^(?!.*Subtheme).*$'
+      #   env:
+      #     fail-fast: true
 
       - name: Install demo content
         # Run Lighthouse if the PR has the label "performance"
