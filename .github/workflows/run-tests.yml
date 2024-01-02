@@ -159,7 +159,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          docker compose -f tests/docker-compose.yml exec -T drupal cd /srv/www/html/themes/custom/common_design_subtheme
+          docker compose -f test/docker-compose.yml exec -w /srv/www drupal sh
+          cd html/themes/custom/common_design_subtheme
           ls -al
 
       # - name: Run e2e tests
