@@ -159,7 +159,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          docker compose -f test/docker-compose.yml exec -w /srv/www drupal sh
+          docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
           cd html/themes/custom/common_design_subtheme
           ls -al
 
