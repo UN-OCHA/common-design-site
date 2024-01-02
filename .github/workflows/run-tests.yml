@@ -172,7 +172,6 @@ jobs:
         run: |
           docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
           cd html/themes/custom/common_design_subtheme
-          echo $NODE_ENV
           npm run ci -- -t '^(?!.*Subtheme).*$'
         env:
           fail-fast: true
