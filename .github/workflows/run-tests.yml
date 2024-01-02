@@ -152,27 +152,29 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
 
       - name: Set up node
+        # Run Jest e2e tests if the PR has the label "e2e"
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
         uses: actions/setup-node@v4
         with:
           node-version: '^18.16.1'
 
       - name: Install dependencies
+        # Run Jest e2e tests if the PR has the label "e2e"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
         run: |
           docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
           cd html/themes/custom/common_design_subtheme
           npm install
 
-      # - name: Run e2e tests
-      #   # Run Jest e2e tests if the PR has the label "performance"
-      #   if: contains(github.event.pull_request.labels.*.name, 'e2e')
-      #   id: e2e
-      #   uses: cafuego/command-output@main
-      #   with:
-      #     run: |
-      #       docker compose -f tests/docker-compose.yml exec -w /srv/www/html/themes/custom/common_design_subtheme -T drupal npm run ci -- -t '^(?!.*Subtheme).*$'
-      #   env:
-      #     fail-fast: true
+      - name: Run e2e tests
+        # Run Jest e2e tests if the PR has the label "e2e"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        run: |
+          docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
+          cd html/themes/custom/common_design_subtheme
+          npm run ci -- -t '^(?!.*Subtheme).*$'
+        env:
+          fail-fast: true
 
       - name: Install demo content
         # Run Lighthouse if the PR has the label "performance"
