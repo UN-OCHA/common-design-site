@@ -1,7 +1,7 @@
 name: Run tests
 on:
   pull_request:
-    types: [labeled, opened, edited, synchronize, reopened]
+    types: [labeled, opened, synchronize]
 
 jobs:
   setup:
@@ -164,7 +164,7 @@ jobs:
         with:
           node-version: '^18.16.1'
 
-      - name: Install dependencies
+      - name: Install node dependencies
         # Run Jest e2e tests if the PR has the label "e2e"
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
         run: |
