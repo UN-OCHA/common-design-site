@@ -157,12 +157,6 @@ jobs:
         env:
           fail-fast: true
 
-      # - name: Cache node modules
-      #   uses: actions/cache@v2
-      #   with:
-      #     path: '**/node_modules'
-      #     key: ${{ runner.os }}-modules-${{ hashFiles('**/package-lock.json') }}
-
       - name: Set up node
         # Run Jest e2e tests if the PR has the label "e2e"
         if: contains(github.event.pull_request.labels.*.name, 'e2e')
@@ -249,11 +243,11 @@ jobs:
             *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
           edit-mode: replace
 
-      - name: Debug Server
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker ps -a
+      # - name: Debug Server
+      #   uses: cafuego/command-output@main
+      #   with:
+      #     run: |
+      #       docker ps -a
 
       - name: Audit URLs using Lighthouse
         # Run Lighthouse if the PR has the label "performance"
