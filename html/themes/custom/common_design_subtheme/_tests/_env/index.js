@@ -4,10 +4,10 @@
 //
 const environments = {
   'local': {
-    baseUrl: 'https://commondesign.test',
+    baseUrl: 'https://common-design-local.test',
     testTimeout: 10000,
   },
-  'travis': {
+  'ci': {
     baseUrl: 'http://127.0.0.1:8080',
     testTimeout: 120000,
   },
