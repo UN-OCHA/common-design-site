@@ -145,6 +145,18 @@ jobs:
         env:
           fail-fast: true
 
+      - name: Install demo content
+        # Install Demo content if the PR has the label "e2e" or "performance"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e') || contains(github.event.pull_request.labels.*.name, 'performance')
+        id: content
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker-compose -f tests/docker-compose.yml exec -T drupal drush -y en unocha_demo_content
+            curl -v http://127.0.0.1:8080/demo
+        env:
+          fail-fast: true
+
       # - name: Cache node modules
       #   uses: actions/cache@v2
       #   with:
@@ -173,18 +185,6 @@ jobs:
           docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
           cd html/themes/custom/common_design_subtheme
           npm run ci -- -t '^(?!.*Subtheme).*$'
-        env:
-          fail-fast: true
-
-      - name: Install demo content
-        # Run Lighthouse if the PR has the label "performance"
-        if: contains(github.event.pull_request.labels.*.name, 'performance')
-        id: content
-        uses: cafuego/command-output@main
-        with:
-          run: |
-            docker-compose -f tests/docker-compose.yml exec -T drupal drush -y en unocha_demo_content
-            curl -v http://127.0.0.1:8080/demo
         env:
           fail-fast: true
 
