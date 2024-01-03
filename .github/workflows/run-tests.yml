@@ -1,7 +1,7 @@
 name: Run tests
 on:
   pull_request:
-    types: [labeled, unlabeled, opened, edited, synchronize, reopened]
+    types: [labeled, opened, edited, synchronize, reopened]
 
 jobs:
   setup:
