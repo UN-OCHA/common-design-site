@@ -219,15 +219,7 @@
         "release:minor": "conventional-changelog --minor",
         "release:major": "conventional-changelog --major",
         "git-hooks": "git config core.hooksPath git-hooks || true",
-        "npm-prepare": "cd html/themes/custom/common_design_subtheme && npm install",
-        "npm-cleanup": "cd html/themes/custom/common_design_subtheme && rm -rf ./node_modules",
         "sub-theme": "test -d html/themes/custom/common_design_subtheme || (cp -r html/themes/contrib/common_design/common_design_subtheme html/themes/custom/ && mv html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml.example html/themes/custom/common_design_subtheme/common_design_subtheme.info.yml)",
-        "e2e-test": "cd html/themes/custom/common_design_subtheme && npm run ci -- -t '^(?!.*Subtheme).*$'",
-        "e2e": [
-            "@npm-prepare",
-            "@e2e-test",
-            "@npm-cleanup"
-        ],
         "post-install-cmd": [
           "@git-hooks"
         ],
