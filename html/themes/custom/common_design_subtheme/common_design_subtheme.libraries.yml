@@ -22,19 +22,19 @@ global-styling:
 cds-header:
   css:
     theme:
-      components/cd/cd-header/cd-logo.css: {}
+      libraries/cd/cd-header/cd-logo.css: {}
 
 cd-language-switcher:
   css:
     theme:
-      components/cd-language-switcher/cd-language-switcher.css: {}
+      libraries/cd-language-switcher/cd-language-switcher.css: {}
 
 cds-paragraphs:
   css:
     component:
-      components/cds-paragraphs/cds-paragraphs.css: {}
+      libraries/cds-paragraphs/cds-paragraphs.css: {}
 
 google-cse:
   css:
     theme:
-      components/google-cse/google-cse.css: {}
+      libraries/google-cse/google-cse.css: {}
