@@ -10,7 +10,7 @@ volumes:
 
 services:
   mysql:
-    image: public.ecr.aws/unocha/mysql:10.6
+    image: public.ecr.aws/unocha/mysql:10.11
     hostname: common-design-test-mysql
     container_name: common-design-test-mysql
     environment:
