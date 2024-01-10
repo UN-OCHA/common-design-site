@@ -1,0 +1,57 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: d951be30-ccdc-40c5-a583-4007a2a949b9
+  bundle: basic
+  default_langcode: en
+  depends:
+    73462bd0-eecc-4812-b9e3-c979ffc85cf3: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sidebar First'
+  created:
+    -
+      value: 1579691404
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /layouts/sidebar-first
+      langcode: en
+  content_translation_source:
+    -
+      value: und
+  content_translation_outdated:
+    -
+      value: false
+  body:
+    -
+      value: "<h2>Default typography</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<p>Maecenas vulputate purus eu rutrum faucibus. Duis vehicula leo felis, at ullamcorper dolor gravida sed. Donec eget posuere arcu, quis ultricies turpis. Nunc eget risus tortor. Quisque a urna odio. Maecenas sagittis, ex nec pellentesque molestie, enim turpis sagittis lorem, vel tempus lacus purus nec purus. Fusce ut erat id ipsum egestas porttitor.</p>\r\n\r\n<ul>\r\n\t<li>Duis vehicula, ex vitae semper iaculis</li>\r\n\t<li>justo nulla dictum neque</li>\r\n\t<li>sit amet tristique nibh orci at dui</li>\r\n</ul>\r\n\r\n<p>Nam et tellus non velit elementum condimentum vitae semper tortor. Praesent vitae porttitor ante. Donec rutrum magna sed enim gravida sagittis.</p>\r\n\r\n<h2>This is heading 2 (30px)</h2>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<h3>This is heading 3 (26px)</h3>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<h4>This is heading 4 (22px)</h4>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<h5>This is heading 5 (18px)</h5>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<h6>This is heading 6 (16px)</h6>\r\n\r\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor leo risus, in consequat ipsum viverra eget. Vivamus non auctor nisi, et commodo diam. Sed aliquet lectus nec nulla pretium lacinia. Vestibulum maximus urna in aliquet eleifend. Nunc eu mi euismod, viverra lacus non, mollis augue. Praesent dignissim sollicitudin elit id efficitur. In ultricies est ex, in imperdiet lacus faucibus ut. Suspendisse fermentum iaculis facilisis. Cras dapibus convallis urna, et placerat elit sagittis eget.</p>\r\n\r\n<blockquote>Maecenas vulputate purus eu rutrum faucibus. Duis vehicula leo felis, at ullamcorper dolor gravida sed. Donec eget posuere arcu, quis ultricies turpis. Nunc eget risus tortor. Quisque a urna odio. Maecenas sagittis, ex nec pellentesque molestie, enim turpis sagittis lorem, vel tempus lacus purus nec purus. Fusce ut erat id ipsum egestas porttitor.</blockquote>\r\n\r\n<p>Morbi lobortis tellus lacinia est accumsan maximus et eget felis. Etiam sollicitudin sapien quis varius finibus. Suspendisse feugiat auctor sapien, suscipit accumsan ex pharetra vitae. Nulla porttitor imperdiet dictum. Aliquam purus magna, consequat ut efficitur et, tempor sit amet leo. Donec scelerisque tellus eu lectus placerat, vitae congue dui laoreet. Fusce eget velit rutrum, dapibus ipsum eu, auctor massa. Aenean tempus risus nec nisl scelerisque gravida. Phasellus neque nisl, bibendum ac velit ac, suscipit aliquam quam. Donec ut est eget nisl fermentum tincidunt et ac arcu. Nulla tempus orci vitae justo sodales, sit amet imperdiet sem vestibulum.</p>\r\n\r\n<ul>\r\n\t<li>Example point one</li>\r\n\t<li>Example point two</li>\r\n\t<li>Example point three</li>\r\n</ul>\r\n\r\n<p>Morbi lobortis tellus lacinia est accumsan maximus et eget felis. Etiam sollicitudin sapien quis varius finibus. Suspendisse feugiat auctor sapien, suscipit accumsan ex pharetra vitae. Nulla porttitor imperdiet dictum. Aliquam purus magna, consequat ut efficitur et, tempor sit amet leo. Donec scelerisque tellus eu lectus placerat, vitae congue dui laoreet. Fusce eget velit rutrum, dapibus ipsum eu, auctor massa. Aenean tempus risus nec nisl scelerisque gravida. Phasellus neque nisl, bibendum ac velit ac, suscipit aliquam quam. Donec ut est eget nisl fermentum tincidunt et ac arcu. Nulla tempus orci vitae justo sodales, sit amet imperdiet sem vestibulum.</p>\r\n\r\n<ol>\r\n\t<li>Example point one</li>\r\n\t<li>Example point two</li>\r\n\t<li>Example point three</li>\r\n</ol>\r\n\r\n<p>Maecenas vulputate purus eu rutrum faucibus. Duis vehicula leo felis, at ullamcorper dolor gravida sed. Donec eget posuere arcu, quis ultricies turpis. Nunc eget risus tortor. Quisque a urna odio. Maecenas sagittis, ex nec pellentesque molestie, enim turpis sagittis lorem, vel tempus lacus purus nec purus. Fusce ut erat id ipsum egestas porttitor.</p>\r\n"
+      format: full_html
+      summary: ''
+  field_example_boolean:
+    -
+      value: false
+  field_example_boolean_second:
+    -
+      value: false
+  field_taxonomy:
+    -
+      entity: 73462bd0-eecc-4812-b9e3-c979ffc85cf3

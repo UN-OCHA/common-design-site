@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 54745448-38e0-4fd5-b0a4-d284c1807067
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    0194a066-c6d5-4bd9-bd53-aa0343e54bc4: menu_link_content
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Sidebar First - Wide'
+  menu_name:
+    -
+      value: main
+  link:
+    -
+      uri: 'internal:/layouts/sidebar-first-wide'
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: true
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:0194a066-c6d5-4bd9-bd53-aa0343e54bc4'
+  revision_translation_affected:
+    -
+      value: true
