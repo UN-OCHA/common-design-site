@@ -84,3 +84,28 @@ fin drush updb -y && fin drush cr
 
 ### Set up with local stack
 See [/local/README](https://github.com/UN-OCHA/common-design-site/tree/develop/local)
+
+##  Performance or e2e tests with Github Actions
+Optional test steps - see `run-tests.yml`
+
+Custom Github labels need to be applied to the PR for the above test steps to run: `performance` or `e2e` depending.
+
+### Install demo content
+
+Enables unocha_demo_content module and imports nodes, menu items etc from json, set the frontpage
+
+### Set up node
+
+Github action to install node
+
+### Install node dependencies
+
+In sub theme, install packages including Jest for e2e
+
+### Run e2e tests
+
+Runs Jest e2e tests in sub theme using as ci at http://127.0.0.1:8080
+
+### Audit URLs using Lighthouse
+
+Runs multiple times on 2 URLS (http://127.0.0.1:8080 and http://127.0.0.1:8080/demo) against a performance budget and provides temporary links to Lighthouse reports.
