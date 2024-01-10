@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af890d76f087c82b080b4b0dfca5d398",
+    "content-hash": "3cbb5ccc62b32f000320a1e15f525b93",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -14621,20 +14621,20 @@
         },
         {
             "name": "unocha/common_design",
-            "version": "v9.2.2",
+            "version": "v9.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/UN-OCHA/common_design.git",
-                "reference": "f582963b5848d92b42de871b628f52c5a9f34930"
+                "reference": "5d5bba22242b2ac19716d45f4f385b9c9b2d020d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/f582963b5848d92b42de871b628f52c5a9f34930",
-                "reference": "f582963b5848d92b42de871b628f52c5a9f34930",
+                "url": "https://api.github.com/repos/UN-OCHA/common_design/zipball/5d5bba22242b2ac19716d45f4f385b9c9b2d020d",
+                "reference": "5d5bba22242b2ac19716d45f4f385b9c9b2d020d",
                 "shasum": ""
             },
             "require": {
-                "composer/installers": "^1.2",
+                "composer/installers": "^1.2 || ^2",
                 "drupal/stable": "^2.0"
             },
             "type": "drupal-theme",
@@ -14645,9 +14645,9 @@
             "description": "OCHA Common Design base theme for Drupal 9+",
             "support": {
                 "issues": "https://github.com/UN-OCHA/common_design/issues",
-                "source": "https://github.com/UN-OCHA/common_design/tree/v9.2.2"
+                "source": "https://github.com/UN-OCHA/common_design/tree/v9.3.0"
             },
-            "time": "2023-10-26T10:03:06+00:00"
+            "time": "2024-01-04T12:36:24+00:00"
         },
         {
             "name": "unocha/ocha_integrations",
@@ -16230,5 +16230,8 @@
         "php": ">=8.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.6.0"
+    "platform-overrides": {
+        "php": "8.2"
+    },
+    "plugin-api-version": "2.3.0"
 }
