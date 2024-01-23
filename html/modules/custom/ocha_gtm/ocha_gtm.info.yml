@@ -1,0 +1,10 @@
+name: OCHA GTM
+type: module
+description: Just the essentials.
+core_version_requirement: ^9.5 || ^10
+php: 8.1
+package: SEO
+dependencies:
+  - drupal:system (>=8.6)
+  - drupal:content_moderation (>=8.6)
+  - dynamic_entity_reference:dynamic_entity_reference

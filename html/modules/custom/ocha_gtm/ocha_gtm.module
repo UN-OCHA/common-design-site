@@ -1,0 +1,23 @@
+<?php
+
+declare(strict_types=1);
+
+use Drupal\ocha_gtm\Hooks\OchaGtmHooks;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function ocha_gtm_page_attachments(array &$attachments): void {
+  /** @var \Drupal\ocha_gtm\Hooks\OchaGtmHooks $hooks */
+  $hooks = \Drupal::classResolver(OchaGtmHooks::class);
+  $hooks->pageAttachments($attachments);
+}
+
+/**
+ * Implements hook_page_top().
+ */
+function ocha_gtm_page_top(array &$page_top): void {
+  /** @var \Drupal\ocha_gtm\Hooks\OchaGtmHooks $hooks */
+  $hooks = \Drupal::classResolver(OchaGtmHooks::class);
+  $hooks->pageTop($page_top);
+}
