@@ -50,6 +50,8 @@ services:
       # Mount configuration and allow overriding it.
       - "../config:/srv/www/config:rw"
       - "../config_dev:/srv/www/config_dev:rw"
+      # Mount assets directory.
+      - "../assets:/srv/www/assets:rw"
       # Mount the composer files and patches.
       - "../composer.json:/srv/www/composer.json:rw"
       - "../composer.patches.json:/srv/www/composer.patches.json:rw"
