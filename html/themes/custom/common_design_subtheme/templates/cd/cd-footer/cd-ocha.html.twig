@@ -1,0 +1,10 @@
+{% embed '@common_design/cd/cd-footer/cd-ocha.html.twig' %}
+
+  {% block related_platforms %}
+    <li class="cd-ocha-services__link"><a href="https://example.com">{{ 'Overridden in sub-theme'|t }}</a></li>
+    <li class="cd-ocha-services__link"><a href="https://example.com">{{ 'Custom link'|t }}</a></li>
+    <li class="cd-ocha-services__link"><a href="https://example.com">{{ 'Custom link'|t }}</a></li>
+    <li class="cd-ocha-services__link"><a href="https://example.com">{{ 'Custom link'|t }}</a></li>
+  {% endblock %}
+
+{% endembed %}
