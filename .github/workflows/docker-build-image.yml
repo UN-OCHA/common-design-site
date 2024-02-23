@@ -5,6 +5,8 @@ on:
     branches:
       - develop
       - 'cd-*'
+      - 'CD-*'
+      - 'OPS-*'
       - 'feature/**'
       - main
   release:
