@@ -1,0 +1,18 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      fields:
+        type:
+          label: 'نوع المحتوى'
+        changed:
+          label: Changed
+        operations:
+          label: عمليات
+      exposed_form:
+        options:
+          submit_button: انتقاء
+      filters:
+        type:
+          expose:
+            label: 'نوع المحتوى'

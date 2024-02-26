@@ -5,6 +5,7 @@ dependencies:
   module:
     - environment_indicator
     - media
+    - samples
     - search
     - system
 _core:
@@ -15,6 +16,7 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access content samples'
   - 'access environment indicator'
   - 'search content'
   - 'view media'

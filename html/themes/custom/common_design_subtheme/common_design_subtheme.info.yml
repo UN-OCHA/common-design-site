@@ -1,6 +1,6 @@
 name: Common Design Demo
 description: OCHA Common Design sub-theme
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 type: theme
 base theme: common_design
 logo: 'img/logos/ocha-lockup-blue.svg'
@@ -38,6 +38,8 @@ libraries:
 # @see common_design_subtheme.libraries.yml
 #
 libraries-extend:
+  common_design/cd-header:
+    - common_design_subtheme/cds-header
   ocha_search/google-cse:
     - common_design_subtheme/google-cse
 

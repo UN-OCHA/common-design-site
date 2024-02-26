@@ -1,15 +1,20 @@
 {
     "patches": {
-        "drupal/core": {
-          "Allow image style to be selected - https://www.drupal.org/project/drupal/issues/2061377": "https://www.drupal.org/files/issues/2022-12-16/2061377-434-9.5.x.patch",
-          "https://www.drupal.org/project/drupal/issues/3143617": "https://www.drupal.org/files/issues/2020-07-07/3143617-28_0.patch"
-        },
         "drupal/csp": {
             "Simplify log format": "PATCHES/csp-log-format.patch"
+        },
+        "drupal/default_content" : {
+            "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch"
+        },
+        "drupal/facets": {
+            "PHP82": "https://git.drupalcode.org/project/facets/-/merge_requests/129.diff"
         },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
             "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
+        },
+        "drupal/username_enumeration_prevention": {
+            "Avoid leaking the path via Drupal.settings json": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch"
         }
     }
 }

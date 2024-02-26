@@ -1,10 +1,17 @@
 name: Run tests
-
-on: [pull_request]
+on:
+  pull_request:
+    types: [labeled, opened, synchronize]
 
 jobs:
   tests:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      checks: write
+      pull-requests: write
+      actions: read
+      statuses: write
 
     steps:
       - name: Checkout Code
@@ -58,8 +65,7 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            # Uncomment this if we have custom modules.
-            # test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
+            test ! -d ./html/modules/custom || find -L ./html/modules/custom -iregex '.*\.\(php\|module\|inc\|install\)$' -print0 | xargs -0 -n 1 -P 4 php -l
             test ! -d ./html/themes/custom || find -L ./html/themes/custom -iregex '.*\.\(php\|theme\)$' -print0 | xargs -0 -n 1 -P 4 php -l
         env:
           fail-fast: true
@@ -67,7 +73,7 @@ jobs:
       - name: Configure AWS Credentials
         id: aws
         if: ${{ !env.ACT }}
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: ${{ secrets.ECR_AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.ECR_AWS_SECRET_ACCESS_KEY }}
@@ -79,7 +85,7 @@ jobs:
         uses: docker/login-action@v2.1.0
         with:
           registry: public.ecr.aws
-          username: ${{ secrets.ECR_AWS_ACCESS_KEY_I }}
+          username: ${{ secrets.ECR_AWS_ACCESS_KEY_ID }}
           password: ${{ secrets.ECR_AWS_SECRET_ACCESS_KEY }}
         env:
           AWS_REGION: us-east-1
@@ -105,12 +111,19 @@ jobs:
         env:
           fail-fast: true
 
+      - name: Install Subtheme
+        id: subtheme
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -w /srv/www -T drupal /usr/bin/composer run sub-theme
+
       - name: PHPCS
         id: phpcs
         uses: cafuego/command-output@main
         with:
           run: |
-            docker compose -f tests/docker-compose.yml exec -u appuser -w /srv/www -T drupal phpcs -p --report=full --standard=phpcs.xml ./html/themes/custom
+            docker compose -f tests/docker-compose.yml exec -u appuser -w /srv/www -T drupal phpcs -p --report=full --standard=phpcs.xml ./html/modules/custom ./html/themes/custom
         env:
           fail-fast: true
 
@@ -119,18 +132,113 @@ jobs:
         uses: cafuego/command-output@main
         with:
           run: |
-            # This isn't very useful as we're not actually running tests.
-            docker compose -f tests/docker-compose.yml exec -T drupal drush -y si --existing-config
-            docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
+            docker compose -f tests/docker-compose.yml exec -T drupal drush -y si --existing-config minimal install_configure_form.enable_update_status_emails=NULL
         env:
           fail-fast: true
+
+      - name: Run tests
+        id: tests
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -T drupal drush -y en dblog
+            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/sites/default/files /srv/www/html/sites/default/private
+            docker compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs
+            docker compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs
+            docker-compose -f tests/docker-compose.yml exec -T drupal mkdir -p /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
+            docker-compose -f tests/docker-compose.yml exec -T drupal chmod -R 777 /srv/www/html/build/logs /srv/www/html/sites/default/files/browser_output
+            docker compose -f tests/docker-compose.yml exec -T -w /srv/www -e XDEBUG_MODE=coverage -e BROWSERTEST_OUTPUT_DIRECTORY=/srv/www/html/sites/default/files/browser_output -e DTT_BASE_URL=http://127.0.0.1 drupal ./vendor/bin/phpunit --coverage-clover /srv/www/html/build/logs/clover.xml --debug
+        env:
+          fail-fast: true
+
+      - name: Copy Coveralls
+        id: copy_coveralls
+        if: success()
+        run: docker cp "$(docker compose -f tests/docker-compose.yml ps -q drupal)":/srv/www/html/build/logs/clover.xml . || echo "skip=true" >> "$GITHUB_OUTPUT"
+
+      - name: Monitor coverage
+        id: coveralls
+        if: ${{ steps.copy_coveralls.outputs.skip != 'true' }}
+        uses: slavcodev/coverage-monitor-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          coverage_path: "clover.xml"
+          threshold_alert: 0
+          threshold_warning: 50
+          threshold_metric: "lines"
+          comment_footer: false
+
+      - name: Install demo content
+        # Install Demo content if the PR has the label "e2e" or "performance"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e') || contains(github.event.pull_request.labels.*.name, 'performance')
+        id: content
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker-compose -f tests/docker-compose.yml exec -T drupal drush -y en unocha_demo_content
+            curl -v http://127.0.0.1:8080/demo
+        env:
+          fail-fast: true
+
+      - name: Set up node
+        # Run Jest e2e tests if the PR has the label "e2e"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        uses: actions/setup-node@v4
+        with:
+          node-version: '^18.16.1'
+
+      - name: Install node dependencies
+        # Run Jest e2e tests if the PR has the label "e2e"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        run: |
+          docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
+          cd html/themes/custom/common_design_subtheme
+          npm install
+
+      - name: Run e2e tests
+        # Run Jest e2e tests if the PR has the label "e2e"
+        if: contains(github.event.pull_request.labels.*.name, 'e2e')
+        run: |
+          docker compose -f tests/docker-compose.yml exec -w /srv/www drupal sh
+          cd html/themes/custom/common_design_subtheme
+          npm run ci -- -t '^(?!.*Subtheme).*$'
+        env:
+          fail-fast: true
+
+      # - name: Debug Server
+      #   uses: cafuego/command-output@main
+      #   with:
+      #     run: |
+      #       docker ps -a
+
+      - name: Audit URLs using Lighthouse
+      # Run Lighthouse if the PR has the label "performance"
+        if: contains(github.event.pull_request.labels.*.name, 'performance')
+        uses: treosh/lighthouse-ci-action@10.1.0
+        with:
+          urls: |
+            http://127.0.0.1:8080/
+            http://127.0.0.1:8080/demo
+          runs: 3
+          budgetPath: .github/workflows/lighthouse-budget.json # test performance budgets
+          configPath: .github/workflows/lighthouserc.js
+          uploadArtifacts: true # save results as an action artifacts
+          temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+
+      - name: DB Logs
+        id: dblog
+        if: failure()
+        uses: cafuego/command-output@main
+        with:
+          run: |
+            docker compose -f tests/docker-compose.yml exec -T drupal drush watchdog:show
 
       - name: Find Comment
         uses: peter-evans/find-comment@v2
         if: ${{ !env.ACT }}
         id: fc
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           issue-number: ${{ github.event.pull_request.number }}
           comment-author: 'github-actions[bot]'
           body-includes: Build output
@@ -139,7 +247,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v2
         if: ${{ !env.ACT }}
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           comment-id: ${{ steps.fc.outputs.comment-id }}
           issue-number: ${{ github.event.pull_request.number }}
           body: |
@@ -166,7 +274,7 @@ jobs:
         if: ${{ !env.ACT && success() }}
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: '${{ secrets.SLACK_CHANNEL }}'
+          channel-id: '${{ vars.SLACK_CHANNEL }}'
           payload: |
             {
               "text": "Tests passed for a pull request on ${{ github.repository }}",
@@ -193,7 +301,7 @@ jobs:
         if: ${{ !env.ACT && failure() }}
         uses: slackapi/slack-github-action@v1.23.0
         with:
-          channel-id: '${{ secrets.SLACK_CHANNEL }}'
+          channel-id: '${{ vars.SLACK_CHANNEL }}'
           payload: |
             {
               "text": "Tests failed for a pull request on ${{ github.repository }}",

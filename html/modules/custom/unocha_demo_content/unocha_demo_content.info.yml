@@ -1,0 +1,56 @@
+name: 'UNOCHA demo content'
+description: Manages demo content.
+type: module
+core_version_requirement: ^9 || ^10
+package: 'UNOCHA'
+dependencies:
+  - default_content:default_content
+default_content:
+  node:
+    - f46def63-23ca-47ec-9c73-2ac42be21a84
+    - 964e9c49-b28a-4538-88c6-76ed9135f3bb
+    - d951be30-ccdc-40c5-a583-4007a2a949b9
+    - e05b73a6-2b64-45f9-b742-7d2b2f9ad5bc
+    - 61e5e655-7e08-4311-b28d-912c1399a84a
+    - 62c4af11-91b3-4ad4-8b98-7f1e8f7452b4
+    - 62b40226-d72e-49cf-86af-8b3c33186e7a
+    - 9ee8560c-ecaf-4fe0-b500-e1b3ddb22196
+    - 9748c2cd-eb3f-478e-9bbc-b6ad92e75df5
+    - 9be6b0c4-e409-46c5-b57e-b77e3680e921
+    - f500b878-8865-4923-b691-fb84411f745f
+    - bfb80883-00e0-4fd4-adc4-1254426724cf
+    - 25042374-89ca-4a87-8156-53e98b4981f2
+    - f9fce6a7-6b55-4a50-bc0e-3e384739fa6e
+    - 6247967b-fd3e-47c7-b05a-6adce56356f7
+    - c973b4b3-3900-439b-bdae-6e7ae315323d
+    - fdd873e1-6dc9-4a3c-bb03-b7e98e8367b6
+    - 537659db-f3cf-48ae-9d7d-d18030b2f976
+    - d7dfe9e6-2077-4dd4-8273-762eb1681233
+    - a2440b58-fe56-4467-acdc-3b0bf9deb8e4
+  menu_link_content:
+    - d870ec39-eec4-4a64-bdfe-69f53c7f3ddb
+    - 2a10272a-e9aa-416a-b872-55b95b87ba14
+    - 93c7befd-b0fa-41c0-a981-3dbcb754be58
+    - 0194a066-c6d5-4bd9-bd53-aa0343e54bc4
+    - a814a986-8596-4852-b622-7ba1ef0fc9bb
+    - 14c0c9f6-a861-4b70-b7ba-1f6f213a1248
+    - 246753e8-01b6-45c3-9983-6a810bcee1e4
+    - bd674047-54bf-4d22-9f37-c2cf5410b7bc
+    - 6f40a835-8ad7-4923-abb4-48d005696830
+    - f2d5f639-1c8a-4429-9e40-90b50f5112ce
+    - 420537ac-ea8d-45c3-a376-ff919c6b03dc
+    - 1185c5ce-1b0d-4aac-9060-1a2e5d20b5c9
+    - e169c610-702a-4df1-b93a-bcb8d6fcb198
+    - 99931c2b-065a-48a8-83d0-cacce1a60637
+    - 51ea7dd1-edcc-4a3d-ad33-dd59bde3e54b
+    - 74aeb6d2-2f43-4cc6-8bca-6b18bd5eaaeb
+    - 41069f64-467d-49e9-9850-86ec640fc928
+    - 24f7e87d-1672-45e0-a2f0-09348b0cc0cd
+    - 54745448-38e0-4fd5-b0a4-d284c1807067
+    - ca72f402-b521-476f-9fb7-dff39033cd63
+  block_content:
+    - 6fdcaaf9-8d98-4379-8320-6debf05de797
+    - 18c1989f-2352-41f1-bced-0a421903e0e8
+  taxonomy_term:
+    - 73462bd0-eecc-4812-b9e3-c979ffc85cf3
+    - 659edf4e-463b-4795-b524-36f1058998e8

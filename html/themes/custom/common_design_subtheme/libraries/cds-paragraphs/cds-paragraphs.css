@@ -1,0 +1,78 @@
+/**
+ * Common Design Site: paragraph styles
+ */
+.paragraph--type--text-and-image {
+  clear: both;
+  margin-bottom: 2rem;
+}
+
+.paragraph--type--text-and-image .field--name-field-media-content-image {
+  max-width: 300px;
+  margin-bottom: 1rem;
+}
+
+.paragraph--type--text-and-image h2,
+.paragraph--type--text-and-image h3,
+.paragraph--type--text-and-image p {
+  margin-top: 0;
+}
+
+.paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-text p:last-child,
+.paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-text p:only-of-type {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-image {
+    margin-right: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-text {
+    margin-right: 2rem;
+  }
+}
+
+@supports (display: flex) {
+  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-image {
+    order: 2;
+  }
+}
+
+@supports (display: flex) {
+  .paragraph--type--text-and-image {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .paragraph--type--text-and-image .field--name-field-para-title {
+    flex: 1 0 100%;
+  }
+
+  .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-text,
+  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-text {
+    order: 2;
+  }
+
+  .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-image,
+  .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-image {
+    order: 1;
+  }
+
+  @media (min-width: 768px) {
+
+    .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-text,
+    .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-text {
+      flex: 1 0 300px;
+    }
+  }
+
+  @media (min-width: 768px) {
+
+    .paragraph--type--text-and-image.paragraph__image--align-left .field--name-field-media-content-image,
+    .paragraph--type--text-and-image.paragraph__image--align-right .field--name-field-media-content-image {
+      flex: 0 1 300px;
+    }
+  }
+}

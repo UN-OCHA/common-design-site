@@ -9,7 +9,9 @@
   <exclude-pattern>*.md</exclude-pattern>
   <exclude-pattern>*.css</exclude-pattern>
   <exclude-pattern>node_modules/*</exclude-pattern>
-  <exclude-pattern>gulpfile.js</exclude-pattern>
+  <exclude-pattern>jest*.js</exclude-pattern>
+  <exclude-pattern>_tests/*</exclude-pattern>
+
 
   <rule ref="Drupal" />
   <rule ref="DrupalPractice" />

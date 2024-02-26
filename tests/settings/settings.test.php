@@ -143,3 +143,6 @@ $settings['config_sync_directory'] = '/srv/www/config';
 
 // Hash salt.
 $settings['hash_salt'] = 'common-design-test-site-salt';
+
+$config['system.performance']['css']['preprocess'] = TRUE;
+$config['system.performance']['js']['preprocess'] = TRUE;

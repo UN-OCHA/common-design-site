@@ -11,6 +11,7 @@
 /html/sites/*/settings.php
 /html/sites/*/settings.local.php
 /html/sites/development.services.yml
+/database/
 
 # Ignore Drupal's file directory
 /html/sites/*/files/
