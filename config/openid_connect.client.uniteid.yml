@@ -5,11 +5,11 @@ dependencies:
   module:
     - openid_connect_windows_aad
 id: uniteid
-label: UniteID
+label: 'Azure B2C'
 plugin: windows_aad
 settings:
   client_id: 64661a42-4710-4bfd-97ab-916bcfeddb59
-  client_secret: b6ea6184_be93_4eeb_8407_6151fc6d7669
+  client_secret: 3ad9233a_021a_46e3_9d6a_a57c7eacce71
   authorization_endpoint_wa: 'https://login.microsoftonline.com/unb2c.onmicrosoft.com/oauth2/v2.0/authorize'
   token_endpoint_wa: 'https://login.microsoftonline.com/unb2c.onmicrosoft.com/oauth2/v2.0/token'
   userinfo_endpoint_wa: 'https://graph.microsoft.com/oidc/userinfo'
