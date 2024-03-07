@@ -9,6 +9,7 @@ label: 'User pages'
 weight: -9
 theme: common_design_subtheme
 admin_theme: common_design_subtheme
+conjunction: and
 visibility:
   request_path:
     id: request_path

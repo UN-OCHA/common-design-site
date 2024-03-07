@@ -6,5 +6,6 @@ dependencies:
     - paragraphs
 id: paragraph.grid
 label: Grid
+description: ''
 targetEntityType: paragraph
 cache: true

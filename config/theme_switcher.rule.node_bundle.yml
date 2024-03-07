@@ -9,6 +9,7 @@ label: 'Node bundle'
 weight: -8
 theme: common_design_subtheme
 admin_theme: common_design_subtheme
+conjunction: and
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'

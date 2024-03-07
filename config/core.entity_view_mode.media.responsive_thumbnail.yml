@@ -6,5 +6,6 @@ dependencies:
     - media
 id: media.responsive_thumbnail
 label: 'Responsive thumbnail'
+description: ''
 targetEntityType: media
 cache: true
