@@ -136,6 +136,21 @@ jobs:
         env:
           fail-fast: true
 
+      - name: Install lock-diff
+        id: install-lock-diff
+        if: ${{ github.base_ref == 'main' }}
+        shell: bash
+        run: composer global require davidrjonas/composer-lock-diff:^1.0
+        continue-on-error: true
+
+      - name: Run lock-diff
+        id: run-lock-diff
+        if: ${{ github.base_ref == 'main' }}
+        uses: cafuego/command-output@main
+        with:
+          run: ~/.composer/vendor/bin/composer-lock-diff --md
+        continue-on-error: true
+
       - name: Run tests
         id: tests
         uses: cafuego/command-output@main
