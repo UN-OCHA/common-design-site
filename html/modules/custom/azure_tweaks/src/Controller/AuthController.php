@@ -15,6 +15,7 @@ class AuthController extends ControllerBase {
     $url = $this->config('azure_tweaks.settings')->get('register_url');
     $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
     $redirect = Url::fromRoute('<front>')->setAbsolute()->toString();
+    $redirect .= '/openid-connect/uniteid';
 
     $url .= '&client_id=' . $client_id;
     $url .= '&redirect_uri=' . $redirect;
@@ -26,10 +27,16 @@ class AuthController extends ControllerBase {
   }
 
   public function redirectResetPassword() {
-    $config = $this->config('azure_tweaks.settings');
+    $url = $this->config('azure_tweaks.settings')->get('password_url');
+    $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
+    $redirect = Url::fromRoute('<front>')->setAbsolute()->toString();
+    $redirect .= '/openid-connect/uniteid';
+
+    $url .= '&client_id=' . $client_id;
+    $url .= '&redirect_uri=' . $redirect;
 
     /** @var \Drupal\Core\Routing\TrustedRedirectResponse|\Symfony\Component\HttpFoundation\RedirectResponse $response */
-    $response = new TrustedRedirectResponse($config->get('password_url'));
+    $response = new TrustedRedirectResponse($url);
 
     return $response->send();
   }
