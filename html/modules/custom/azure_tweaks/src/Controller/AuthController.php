@@ -15,7 +15,7 @@ class AuthController extends ControllerBase {
     $url = $this->config('azure_tweaks.settings')->get('register_url');
     $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
     $redirect = Url::fromRoute('<front>')->setAbsolute()->toString();
-    $redirect .= '/openid-connect/uniteid';
+    $redirect .= 'openid-connect/uniteid';
 
     $url .= '&client_id=' . $client_id;
     $url .= '&redirect_uri=' . $redirect;
@@ -30,7 +30,7 @@ class AuthController extends ControllerBase {
     $url = $this->config('azure_tweaks.settings')->get('password_url');
     $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
     $redirect = Url::fromRoute('<front>')->setAbsolute()->toString();
-    $redirect .= '/openid-connect/uniteid';
+    $redirect .= 'openid-connect/uniteid';
 
     $url .= '&client_id=' . $client_id;
     $url .= '&redirect_uri=' . $redirect;
