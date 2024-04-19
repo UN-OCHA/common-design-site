@@ -1,4 +1,4 @@
 _core:
   default_config_hash: TIPnIyFAvtUYyRrJ3PZfoG0mvxc-M7mUieId5CixGRk
 password_url: 'https://unb2c.b2clogin.com/unb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_OCHA_PASSWORD_RESET&nonce=defaultNonce&scope=openid&response_type=code&prompt=login'
-register_url: 'https://unb2c.b2clogin.com/unb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_OCHA_SIGNUP_SIGNIN&nonce=defaultNonce&response_type=code&prompt=login'
+register_url: 'https://unb2c.b2clogin.com/unb2c.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_OCHA_SIGNUP_SIGNIN&nonce=defaultNonce&response_type=code&prompt=login&scope=37f7f235-527c-4136-accd-4a02d197296e'
