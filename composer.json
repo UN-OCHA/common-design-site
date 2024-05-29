@@ -58,6 +58,7 @@
         "drupal/redirect": "^1.8",
         "drupal/samples": "^1.0@beta",
         "drupal/search_api": "^1.18",
+        "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^2",
         "drupal/social_auth_hid": "^3.2",
         "drupal/stable": "^2.0",
