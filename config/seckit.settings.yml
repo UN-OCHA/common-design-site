@@ -11,7 +11,7 @@ seckit_xss:
     script-src: "'self' 'unsafe-inline' fonts.googleapis.com www.gstatic.com https://*.google.com https://*.googletagmanager.com *.google-analytics.com"
     object-src: "'none'"
     style-src: "'self' 'unsafe-inline' fonts.googleapis.com"
-    img-src: "'self' data: https://*.google-analytics.com https://*.googletagmanager.com gstatic.com *.placeholder.com"
+    img-src: "'self' data: https://*.google-analytics.com https://*.googletagmanager.com gstatic.com *.youtube.com *.placeholder.com"
     media-src: "'none'"
     frame-src: "'self'"
     frame-ancestors: "'self'"
