@@ -9,6 +9,9 @@
         "drupal/facets": {
             "PHP82": "https://git.drupalcode.org/project/facets/-/merge_requests/129.diff"
         },
+        "drupal/openid_connect_windows_aad": {
+          "Failed to get authentication tokens for Windows Azure AD": "PATCHES/openid_connect_windows_aad-3346603-5.patch"
+        },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
             "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
