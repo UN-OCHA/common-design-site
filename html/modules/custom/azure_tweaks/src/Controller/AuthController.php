@@ -11,6 +11,9 @@ use Drupal\Core\Url;
  */
 class AuthController extends ControllerBase {
 
+  /**
+   * Redirect the user registration page.
+   */
   public function redirectRegister() {
     $url = $this->config('azure_tweaks.settings')->get('register_url');
     $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
@@ -26,6 +29,9 @@ class AuthController extends ControllerBase {
     return $response->send();
   }
 
+  /**
+   * Redirect the password reset page.
+   */
   public function redirectResetPassword() {
     $url = $this->config('azure_tweaks.settings')->get('password_url');
     $client_id = $this->config('openid_connect.client.uniteid')->get('settings.client_id');
