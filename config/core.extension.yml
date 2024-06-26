@@ -3,6 +3,8 @@ _core:
 module:
   admin_denied: 0
   azure_tweaks: 0
+  amazon_ses: 0
+  aws: 0
   big_pipe: 0
   block: 0
   block_content: 0
@@ -13,7 +15,6 @@ module:
   config_split: 0
   content_moderation: 0
   contextual: 0
-  csp: 0
   datetime: 0
   datetime_range: 0
   dynamic_entity_reference: 0
@@ -37,6 +38,7 @@ module:
   layout_discovery: 0
   link: 0
   locale: 0
+  mailsystem: 0
   media: 0
   media_library: 0
   menu_ui: 0
@@ -59,6 +61,7 @@ module:
   search: 0
   search_api: 0
   search_api_db: 0
+  seckit: 0
   select_a11y: 0
   serialization: 0
   syslog: 0
