@@ -9,9 +9,6 @@
         "drupal/default_content" : {
             "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch"
         },
-        "drupal/facets": {
-            "PHP82": "https://git.drupalcode.org/project/facets/-/merge_requests/129.diff"
-        },
         "drupal/openid_connect_windows_aad": {
           "Failed to get authentication tokens for Windows Azure AD": "PATCHES/openid_connect_windows_aad-3346603-5.patch"
         },
