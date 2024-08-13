@@ -9,6 +9,9 @@
         "drupal/default_content" : {
             "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch"
         },
+        "drupal/facets" : {
+            "https://www.drupal.org/project/facets/issues/3466886": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch"
+        },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
             "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
