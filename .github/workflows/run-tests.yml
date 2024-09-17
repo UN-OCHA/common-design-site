@@ -225,6 +225,14 @@ jobs:
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
 
+      - name: PHP Logs
+        id: phplog
+        if: failure()
+        uses: cafuego/command-output@main
+        with: 
+          run: |
+            docker compose -f tests/docker-compose.yml exec -T drupal grep -i fatal /var/log/php/error.log
+
       - name: DB Logs
         id: dblog
         if: failure()
@@ -264,6 +272,10 @@ jobs:
             </details>
             <details><summary>Drupal Logs</summary>
             <code>${{ steps.dblog.outputs.stdout }}</code>
+            </details>
+
+            <details><summary>PHP Logs</summary>
+            <code>${{ steps.phplog.outputs.stdout }}</code>
             </details>
 
             *Pusher: @${{ github.actor }}, Action: `${{ github.event_name }}`, Workflow: `${{ github.workflow }}`*
