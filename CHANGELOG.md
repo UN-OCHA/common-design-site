@@ -4,6 +4,20 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.5.6](https://github.com/UN-OCHA/common-design-site/compare/v1.5.5...v1.5.6) (2024-09-17)
+
+### Bug Fixes
+
+* Include core patch for aggregation error ([801b77](https://github.com/UN-OCHA/common-design-site/commit/801b7711ea2deb4336440e125f154339070f4e81))
+
+### Chores
+
+* Add tools [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867), [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867), [#OPS-10867](https://https://humanitarian.atlassian.net/browse/OPS-10867) ([c66e38](https://github.com/UN-OCHA/common-design-site/commit/c66e38a6e40432fd4bb956f17b14535b78f26b9f), [27c11d](https://github.com/UN-OCHA/common-design-site/commit/27c11d3e3a7556f96e39e30f32c08c0982115432), [6e0b0f](https://github.com/UN-OCHA/common-design-site/commit/6e0b0fc1c952aaf21e0bb89d0683c49a44c3564d))
+* Include php logs if tests fail ([7855fb](https://github.com/UN-OCHA/common-design-site/commit/7855fb13f72cd8d69a22ea3eade6ac71232c608f))
+* Pass on credentials to action ([130462](https://github.com/UN-OCHA/common-design-site/commit/13046234a055ba9a552da26403f6238579f6831c))
+* Remove patch which is blocking core update ([96c26b](https://github.com/UN-OCHA/common-design-site/commit/96c26b2801480ce4d0e37000c4a385496c077e8e))
+* Update all outdated drupal/* unocha/* drush/* packages. ([da4e33](https://github.com/UN-OCHA/common-design-site/commit/da4e338a9881353a142a08ba136c29d691b3938f), [2c3f53](https://github.com/UN-OCHA/common-design-site/commit/2c3f53a562590d125a84d3367b330561fde6c83f), [2317e5](https://github.com/UN-OCHA/common-design-site/commit/2317e597cb70bfafcb2218fa0918e423c491ceb4), [6eff89](https://github.com/UN-OCHA/common-design-site/commit/6eff89f2f4c0041b39ced0aed3e1973c2a377b14), [b5a700](https://github.com/UN-OCHA/common-design-site/commit/b5a70065007dc2e4b301efe5f2562aba9858cd6a))
+
 ## [1.4.7](https://github.com/UN-OCHA/common-design-site/compare/v1.4.6...v1.4.7) (2024-03-19)
 
 
