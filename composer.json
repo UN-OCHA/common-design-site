@@ -105,6 +105,12 @@
     "prefer-stable": true,
     "config": {
         "bin-dir": "vendor/bin/",
+        "audit": {
+            "abandoned": "report",
+            "ignore": {
+                "GHSA-mg8j-w93w-xjgc": "OPS-10899 - we do not store the hash salt in a file"
+             }
+        },
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
