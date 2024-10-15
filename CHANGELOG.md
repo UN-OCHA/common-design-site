@@ -4,6 +4,19 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.5.7](https://github.com/UN-OCHA/common-design-site/compare/v1.5.6...v1.5.7) (2024-10-15)
+
+### Chores
+
+* Csp config for UNTV ([c0a518](https://github.com/UN-OCHA/common-design-site/commit/c0a5182f01d485137927e157601018ea1f361ed2))
+* Ignore audit warning that doesn't affect us ([671dba](https://github.com/UN-OCHA/common-design-site/commit/671dba4a0a3efa571d5aa77dd6e37ad625b77b1e))
+* Remove csp module ([e69384](https://github.com/UN-OCHA/common-design-site/commit/e693841de9f1a98887880f7a4c9ed5c7bf7178bc))
+* Update all outdated drupal/* unocha/* drush/* packages. ([f157d4](https://github.com/UN-OCHA/common-design-site/commit/f157d41871d7a6151480b8284fbf00294e64cc78), [e1d877](https://github.com/UN-OCHA/common-design-site/commit/e1d877e7dea0500f1d847354186b2c140c42ae81), [f872e1](https://github.com/UN-OCHA/common-design-site/commit/f872e1ddba942cc710a93115a3992eb3021d08c4), [5e5330](https://github.com/UN-OCHA/common-design-site/commit/5e53306a2db6432e4ff2cf2d34bde06c5793d199))
+
+##### Deps
+
+* Bump drupal/core-recommended from 10.3.5 to 10.3.6 ([bafb59](https://github.com/UN-OCHA/common-design-site/commit/bafb59ad8ca56739a647a25a59407d1f621a444d))
+
 ## [1.5.6](https://github.com/UN-OCHA/common-design-site/compare/v1.5.5...v1.5.6) (2024-09-17)
 
 ### Bug Fixes
