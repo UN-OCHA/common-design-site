@@ -37,7 +37,6 @@
         "drupal/core-composer-scaffold": "^10",
         "drupal/core-dev": "^10",
         "drupal/core-recommended": "^10",
-        "drupal/csp": "^1.17",
         "drupal/default_content": "^2.0@alpha",
         "drupal/dynamic_entity_reference": "^3.2",
         "drupal/environment_indicator": "^4.0",
@@ -105,6 +104,12 @@
     "prefer-stable": true,
     "config": {
         "bin-dir": "vendor/bin/",
+        "audit": {
+            "abandoned": "report",
+            "ignore": {
+                "GHSA-mg8j-w93w-xjgc": "OPS-10899 - we do not store the hash salt in a file"
+            }
+        },
         "sort-packages": true,
         "allow-plugins": {
             "composer/installers": true,
@@ -115,8 +120,9 @@
             "drupal/core-project-message": true,
             "oomphinc/composer-installers-extender": true,
             "orakili/composer-drupal-info-file-patch-helper": true,
+            "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "php-http/discovery": true
+            "tbachert/spi": true
         }
     },
     "extra": {
@@ -235,5 +241,5 @@
             "@git-hooks"
         ]
     },
-    "version": "1.5.6"
+    "version": "1.5.7"
 }
