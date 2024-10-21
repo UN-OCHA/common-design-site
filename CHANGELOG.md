@@ -4,6 +4,12 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.5.8](https://github.com/UN-OCHA/common-design-site/compare/v1.5.7...v1.5.8) (2024-10-21)
+
+### Chores
+
+* Update all outdated drupal/* unocha/* drush/* packages. ([57322e](https://github.com/UN-OCHA/common-design-site/commit/57322effbc8ec90f4d9e87eece9b4e35ca39b815))
+
 ## [1.5.7](https://github.com/UN-OCHA/common-design-site/compare/v1.5.6...v1.5.7) (2024-10-15)
 
 ### Chores
