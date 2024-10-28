@@ -11,7 +11,7 @@ seckit_xss:
     script-src: "'self' 'unsafe-inline' 'unsafe-eval' fonts.googleapis.com www.gstatic.com https://*.google.com https://*.googletagmanager.com *.google-analytics.com https://tagmanager.google.com https://www.googleadservices.com  https://googleads.g.doubleclick.net"
     object-src: "'none'"
     style-src: "'self' 'unsafe-inline' https://googletagmanager.com https://tagmanager.google.com fonts.googleapis.com https://www.google.com"
-    img-src: "'self' https://*"
+    img-src: "'self' data: https://*"
     media-src: "'none'"
     frame-src: "'self' https://www.googletagmanager.com https://bid.g.doubleclick.net https://td.doubleclick.net *.un.org https://cdnapisec.kaltura.com"
     frame-ancestors: "'self'"
@@ -22,11 +22,11 @@ seckit_xss:
     upgrade-req: false
     policy-uri: ''
   x_xss:
+    select: 0
     seckit_x_xss_option_disable: Disabled
     seckit_x_xss_option_0: '0'
     seckit_x_xss_option_1: 1;
     seckit_x_xss_option_1_block: '1; mode=block'
-    select: 0
 seckit_csrf:
   origin: true
   origin_whitelist: ''
