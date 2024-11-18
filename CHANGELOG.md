@@ -4,6 +4,14 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.5.8](https://github.com/UN-OCHA/common-design-site/compare/v1.5.7...v1.5.8) (2024-11-18)
+
+### Chores
+
+* Csp restore data for img-src ([06a6c8](https://github.com/UN-OCHA/common-design-site/commit/06a6c8ec0902e4326cb61257c636a700bac8f0f3))
+* Disallow data: for csp ([949f5e](https://github.com/UN-OCHA/common-design-site/commit/949f5e6c6fdd14778544b2a92628516370c729ea))
+* Update all outdated drupal/* unocha/* drush/* packages. ([f80c59](https://github.com/UN-OCHA/common-design-site/commit/f80c59b80e9b1bfdda487c029c87aa5f8687463d), [78b3e7](https://github.com/UN-OCHA/common-design-site/commit/78b3e743a92aab1eaef95801674750f3c59e8889), [d528d2](https://github.com/UN-OCHA/common-design-site/commit/d528d2ef32efd23873cf49b7f709fa93ea78dd0a), [92c1c4](https://github.com/UN-OCHA/common-design-site/commit/92c1c42fdc21140c71264f7473c2ae5a51663c45), [57322e](https://github.com/UN-OCHA/common-design-site/commit/57322effbc8ec90f4d9e87eece9b4e35ca39b815))
+
 ## [1.5.7](https://github.com/UN-OCHA/common-design-site/compare/v1.5.6...v1.5.7) (2024-10-15)
 
 ### Chores
