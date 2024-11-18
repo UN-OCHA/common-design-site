@@ -16,17 +16,17 @@ seckit_xss:
     frame-src: "'self' https://www.googletagmanager.com https://bid.g.doubleclick.net https://td.doubleclick.net *.un.org https://cdnapisec.kaltura.com"
     frame-ancestors: "'self'"
     child-src: "'self'"
-    font-src: "'self' data: fonts.gstatic.com"
+    font-src: "'self' fonts.gstatic.com"
     connect-src: "'self' https://*"
     report-uri: /report-csp-violation
     upgrade-req: false
     policy-uri: ''
   x_xss:
+    select: 0
     seckit_x_xss_option_disable: Disabled
     seckit_x_xss_option_0: '0'
     seckit_x_xss_option_1: 1;
     seckit_x_xss_option_1_block: '1; mode=block'
-    select: 0
 seckit_csrf:
   origin: true
   origin_whitelist: ''
