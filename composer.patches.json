@@ -1,7 +1,7 @@
 {
     "patches": {
         "drupal/amazon_ses": {
-            "Cron fails on amazon_ses when not configured": "PATCHES/amazon_ses-3417090-cron-queue-14.patch"
+            "Cron fails on amazon_ses when not configured": "PATCHES/amazon_ses-cron-queue-3417090-8.patch"
         },
         "drupal/default_content" : {
             "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch"
