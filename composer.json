@@ -64,6 +64,7 @@
         "drupal/stage_file_proxy": "^3",
         "drupal/theme_switcher": "^2",
         "drupal/twig_tweak": "^3",
+        "drupal/upgrade_status": "^4.3",
         "drupal/user_display_name": "^1.1",
         "drupal/user_expire": "^1.1",
         "drupal/username_enumeration_prevention": "^1.3",
