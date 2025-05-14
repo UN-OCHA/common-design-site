@@ -41,7 +41,7 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/facets": "^2.0",
         "drupal/imageapi_optimize_binaries": "^1.0@beta",
-        "drupal/imageapi_optimize_webp": "^2.0",
+        "drupal/imageapi_optimize_webp": "^3@alpha",
         "drupal/imagemagick": "^4",
         "drupal/layout_paragraphs": "^2.0",
         "drupal/mailsystem": "^4.4",
