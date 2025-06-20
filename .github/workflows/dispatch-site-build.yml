@@ -36,4 +36,3 @@ jobs:
         docker_password: ${{ secrets.ECR_AWS_SECRET_ACCESS_KEY }}
         ecr_github_token: ${{ secrets.ECR_GITHUB_TOKEN }}
         ecr_jenkins_token: ${{ secrets.JENKINS_ECR_TOKEN }}
-        flowdock_token: ${{ secrets.FLOWDOCK_TOKEN }}
