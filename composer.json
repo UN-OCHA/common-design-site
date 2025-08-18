@@ -27,6 +27,7 @@
         "php": ">=8.3",
         "composer/installers": "^2",
         "cweagans/composer-patches": "^1.7",
+        "dealerdirect/phpcodesniffer-composer-installer": "1.0.0",
         "drupal/admin_denied": "^2.0",
         "drupal/amazon_ses": "^3",
         "drupal/aws": "dev-2.0.x",
