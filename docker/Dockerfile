@@ -1,4 +1,4 @@
-FROM public.ecr.aws/unocha/php-k8s:8.3-stable as builder
+FROM public.ecr.aws/unocha/php-k8s:8.3-stable AS builder
 COPY . /srv/www
 WORKDIR /srv/www
 # Clean up previous composer installation and run new one.
