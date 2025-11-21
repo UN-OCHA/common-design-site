@@ -28,7 +28,6 @@ describe('OCHAServices', () => {
     const otherOchaServicesCorporate = [
       'Financial Tracking Service',
       'Humanitarian Data Exchange',
-      'Humanitarian ID',
       'ReliefWeb Response',
       'Inter-Agency Standing Committee',
       'OCHA website',

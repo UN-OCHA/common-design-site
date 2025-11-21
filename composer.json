@@ -57,7 +57,6 @@
         "drupal/search_api": "^1.18",
         "drupal/seckit": "^2.0",
         "drupal/select_a11y": "^3",
-        "drupal/social_auth_hid": "^3.2",
         "drupal/stable": "^2.0",
         "drupal/stage_file_proxy": "^3",
         "drupal/theme_switcher": "^2",
