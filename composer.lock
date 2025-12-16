@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df5a21e0d0cac5c7560f5a6c93cbfac2",
+    "content-hash": "fbbb729cb1ee1ba3a6ca6469625a018c",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5956,49 +5956,6 @@
                 "source": "https://github.com/oomphinc/composer-installers-extender/tree/2.0.1"
             },
             "time": "2021-12-15T12:32:42+00:00"
-        },
-        {
-            "name": "orakili/composer-drupal-info-file-patch-helper",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/orakili/composer-drupal-info-file-patch-helper.git",
-                "reference": "26dc73c0ad6a55486c09c75fd1cd091c79f98967"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/orakili/composer-drupal-info-file-patch-helper/zipball/26dc73c0ad6a55486c09c75fd1cd091c79f98967",
-                "reference": "26dc73c0ad6a55486c09c75fd1cd091c79f98967",
-                "shasum": ""
-            },
-            "require": {
-                "composer-plugin-api": "^2.0",
-                "php": ">=8.1"
-            },
-            "type": "composer-plugin",
-            "extra": {
-                "class": "ComposerDrupalInfoFilePatchHelper\\Plugin"
-            },
-            "autoload": {
-                "psr-4": {
-                    "ComposerDrupalInfoFilePatchHelper\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "orakili",
-                    "homepage": "https://github.com/orakili"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/orakili/composer-drupal-info-file-patch-helper/issues",
-                "source": "https://github.com/orakili/composer-drupal-info-file-patch-helper/tree/1.0.1"
-            },
-            "time": "2022-12-20T03:47:48+00:00"
         },
         {
             "name": "pear/archive_tar",

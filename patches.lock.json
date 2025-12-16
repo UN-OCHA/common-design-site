@@ -1,4 +1,75 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "6fa2a59ff29a4bcf55fd14aaeea8bf698710978457ef1f33a10f69901c3e35a0",
+    "patches": {
+        "drupal/amazon_ses": [
+            {
+                "package": "drupal/amazon_ses",
+                "description": "Cron fails on amazon_ses when not configured",
+                "url": "PATCHES/amazon_ses-cron-queue-3417090-8.patch",
+                "sha256": "81d4d71fd01c1bf5d4e60a5ddc34e1001dbf794184b4d17ff9986083ba016ab9",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/default_content": [
+            {
+                "package": "drupal/default_content",
+                "description": "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107",
+                "url": "https://www.drupal.org/files/issues/2023-12-01/i2885285-exporting-menu-link-2.patch",
+                "sha256": "d5b70c4963534998183cc8b2d8fb43102e45686feafd156f387e9c90d5cd915c",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/facets": [
+            {
+                "package": "drupal/facets",
+                "description": "https://www.drupal.org/project/facets/issues/3466886",
+                "url": "https://www.drupal.org/files/issues/2024-08-09/3466886-searchapidisplay-getcount-not-returning.patch",
+                "sha256": "6c8e3a707fdbac61a7258a7b6f4db0d1ce554a874ad939bb6bc56271e5078098",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/user_expire": [
+            {
+                "package": "drupal/user_expire",
+                "description": "Allow the notification email to be customised",
+                "url": "PATCHES/user_expire-customize-notification-email.patch",
+                "sha256": "e64892a87661ed5b2f1f66e461060cb2b45219b84fe2357fdd1fa91c847c4cc3",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            },
+            {
+                "package": "drupal/user_expire",
+                "description": "Reset expiration when user is reactivated",
+                "url": "PATCHES/user_expire-reset-expiration-on-reactivation.patch",
+                "sha256": "5c4bb221bd3d203a1f1f2ce35b3694e0ec81d3b58ff43fb7282e51774393a05f",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/username_enumeration_prevention": [
+            {
+                "package": "drupal/username_enumeration_prevention",
+                "description": "Avoid leaking the path via Drupal.settings json",
+                "url": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288.patch",
+                "sha256": "20a8750f07bab522dd746f5127c8f31cf4cd0878bcbbc12f654269847a2e2a3a",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ]
+    }
 }

@@ -69,7 +69,6 @@
         "drupal/xmlsitemap": "^1.4",
         "drush/drush": "^12",
         "oomphinc/composer-installers-extender": "^2.0",
-        "orakili/composer-drupal-info-file-patch-helper": "^1",
         "unocha/common_design": "^9.4.0",
         "unocha/gtm_barebones": "^1.1",
         "unocha/ocha_integrations": "^2",
@@ -119,7 +118,6 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "oomphinc/composer-installers-extender": true,
-            "orakili/composer-drupal-info-file-patch-helper": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
             "tbachert/spi": true
@@ -187,6 +185,10 @@
                 "web-root": "html/"
             }
         },
+        "composer-patches": {
+           "patches-file": "composer.patches.json"
+         },
+        "composer-exit-on-patch-failure": true,
         "merge-plugin": {
             "include": [
                 "html/core/composer.json"
