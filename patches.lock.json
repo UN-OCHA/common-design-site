@@ -1,4 +1,53 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "4ea2d417ced49d3178034e66fae4df5fbf88a2b8cdc6fa3ec5eb393a8d56c3eb",
+    "patches": {
+        "drupal/default_content": [
+            {
+                "package": "drupal/default_content",
+                "description": "https://www.drupal.org/project/default_content/issues/2885285#comment-15342107",
+                "url": "PATCHES/i2885285-exporting-menu-link-2.patch",
+                "sha256": "d5b70c4963534998183cc8b2d8fb43102e45686feafd156f387e9c90d5cd915c",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/facets": [
+            {
+                "package": "drupal/facets",
+                "description": "https://www.drupal.org/project/facets/issues/3466886",
+                "url": "PATCHES/3466886-searchapidisplay-getcount-not-returning.patch",
+                "sha256": "6c8e3a707fdbac61a7258a7b6f4db0d1ce554a874ad939bb6bc56271e5078098",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/maintenance200": [
+            {
+                "package": "drupal/maintenance200",
+                "description": "D11 compatibility - #3431791",
+                "url": "PATCHES/maintenance200-D11-compatibility-3431791.patch",
+                "sha256": "a18c917b199168ded802407a11e2d9eb75b1933c75aea4e60701c3ba0f6ea623",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ],
+        "drupal/username_enumeration_prevention": [
+            {
+                "package": "drupal/username_enumeration_prevention",
+                "description": "Avoid leaking the path via Drupal.settings json",
+                "url": "PATCHES/username_enumeration_prevention-user-login-block-form-3312288-19.patch",
+                "sha256": "0f48a8741c0f4fda2f07262197572706af01a0bb95d72cfe3127262a7290aaac",
+                "depth": 1,
+                "extra": {
+                    "provenance": "patches-file:composer.patches.json"
+                }
+            }
+        ]
+    }
 }

@@ -68,6 +68,7 @@
         "drupal/viewsreference": "^2.0.0",
         "drupal/xmlsitemap": "^2.0",
         "drush/drush": "^13",
+        "mglaman/composer-drupal-lenient": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "unocha/common_design": "^9.4.0",
         "unocha/gtm_barebones": "^1.1",
@@ -116,6 +117,7 @@
             "drupal/console-extend-plugin": true,
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
+            "mglaman/composer-drupal-lenient": true,
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
@@ -123,9 +125,6 @@
         }
     },
     "extra": {
-        "enable-patching": true,
-        "composer-exit-on-patch-failure": true,
-        "patches-file": "composer.patches.json",
         "installer-types": [
             "bower-asset",
             "npm-asset"
@@ -215,7 +214,11 @@
             "allowed-list": [
                 "drupal/maintenance200"
             ]
-        }
+        },
+        "composer-patches": {
+           "patches-file": "composer.patches.json"
+         },
+         "composer-exit-on-patch-failure": true
     },
     "scripts": {
         "changelog": "conventional-changelog",
