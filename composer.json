@@ -70,6 +70,7 @@
         "drush/drush": "^13",
         "mglaman/composer-drupal-lenient": "^1.0",
         "oomphinc/composer-installers-extender": "^2.0",
+        "symfony/flex": "^2.10",
         "unocha/common_design": "^9.4.0",
         "unocha/gtm_barebones": "^1.1",
         "unocha/ocha_integrations": "^2",
@@ -121,6 +122,7 @@
             "oomphinc/composer-installers-extender": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
+            "symfony/flex": true,
             "tbachert/spi": true
         }
     },
