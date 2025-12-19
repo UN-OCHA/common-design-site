@@ -1,0 +1,12 @@
+diff --git a/src/Plugin/facets/facet_source/SearchApiDisplay.php b/src/Plugin/facets/facet_source/SearchApiDisplay.php
+index ffb357c..f2ea28d 100644
+--- a/src/Plugin/facets/facet_source/SearchApiDisplay.php
++++ b/src/Plugin/facets/facet_source/SearchApiDisplay.php
+@@ -471,6 +471,7 @@ class SearchApiDisplay extends FacetSourcePluginBase implements SearchApiFacetSo
+           ->getResultCount();
+       }
+     }
++    return 0;
+   }
+ 
+   /**
