@@ -9,6 +9,9 @@
         "drupal/facets" : {
             "https://www.drupal.org/project/facets/issues/3466886": "PATCHES/3466886-searchapidisplay-getcount-not-returning.patch"
         },
+        "drupal/maintenance200": {
+            "D11 compatibility - #3431791": "PATCHES/maintenance200-D11-compatibility-3431791.patch"
+        },
         "drupal/user_expire": {
             "Allow the notification email to be customised": "PATCHES/user_expire-customize-notification-email.patch",
             "Reset expiration when user is reactivated": "PATCHES/user_expire-reset-expiration-on-reactivation.patch"
