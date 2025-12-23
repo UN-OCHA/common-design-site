@@ -1,0 +1,70 @@
+From 54567c6bbbaffd14e8b8da6bd7e8bdd067beb118 Mon Sep 17 00:00:00 2001
+From: Olivier Briat <olivier.briat@kleegroup.com>
+Date: Fri, 27 Jan 2023 17:49:03 +0100
+Subject: [PATCH] Fix destination.
+
+---
+ src/UserRouteEventSubscriber.php             | 12 +++++++++++-
+ username_enumeration_prevention.services.yml |  2 +-
+ 2 files changed, 12 insertions(+), 2 deletions(-)
+
+diff --git a/src/UserRouteEventSubscriber.php b/src/UserRouteEventSubscriber.php
+index af95de3..bca4ce4 100644
+--- a/src/UserRouteEventSubscriber.php
++++ b/src/UserRouteEventSubscriber.php
+@@ -5,6 +5,7 @@ namespace Drupal\username_enumeration_prevention;
+ use Drupal\Core\Cache\Cache;
+ use Drupal\Core\Cache\CacheBackendInterface;
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\Core\Routing\RedirectDestinationInterface;
+ use Drupal\Core\Routing\RouteMatch;
+ use Drupal\Core\Routing\RouteProviderInterface;
+ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+@@ -34,6 +35,13 @@ class UserRouteEventSubscriber implements EventSubscriberInterface {
+    */
+   protected $routeProvider;
+ 
++  /**
++   * Redirect destination.
++   *
++   * @var \Drupal\Core\Routing\RedirectDestinationInterface
++   */
++  protected $redirectDestination;
++
+   /**
+    * Entity type manager.
+    *
+@@ -51,8 +59,9 @@ class UserRouteEventSubscriber implements EventSubscriberInterface {
+   /**
+    * {@inheritdoc}
+    */
+-  public function __construct(RouteProviderInterface $routeProvider, EntityTypeManagerInterface $entityTypeManager, CacheBackendInterface $cache) {
++  public function __construct(RouteProviderInterface $routeProvider, RedirectDestinationInterface $redirect_destination, EntityTypeManagerInterface $entityTypeManager, CacheBackendInterface $cache) {
+     $this->routeProvider = $routeProvider;
++    $this->redirectDestination = $redirect_destination;
+     $this->entityTypeManager = $entityTypeManager;
+     $this->cache = $cache;
+   }
+@@ -63,6 +72,7 @@ class UserRouteEventSubscriber implements EventSubscriberInterface {
+   public function onException(ExceptionEvent $event) {
+     $routeMatch = RouteMatch::createFromRequest($event->getRequest());
+     if ($event->getThrowable() instanceof AccessDeniedHttpException && in_array($routeMatch->getRouteName(), $this->getUserRoutes())) {
++      $this->redirectDestination->set('/');
+       $event->setThrowable(new NotFoundHttpException());
+     }
+   }
+diff --git a/username_enumeration_prevention.services.yml b/username_enumeration_prevention.services.yml
+index 7bb4454..86b5e40 100644
+--- a/username_enumeration_prevention.services.yml
++++ b/username_enumeration_prevention.services.yml
+@@ -1,6 +1,6 @@
+ services:
+   username_enumeration_prevention.user_route_subscriber:
+     class: Drupal\username_enumeration_prevention\UserRouteEventSubscriber
+-    arguments: ['@router.route_provider', '@entity_type.manager', '@cache.default']
++    arguments: ['@router.route_provider', '@redirect.destination', '@entity_type.manager', '@cache.default']
+     tags:
+       - name: event_subscriber
+-- 
+GitLab
+
