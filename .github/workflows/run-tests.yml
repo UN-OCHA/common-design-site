@@ -214,7 +214,7 @@ jobs:
       - name: Audit URLs using Lighthouse
       # Run Lighthouse if the PR has the label "performance"
         if: contains(github.event.pull_request.labels.*.name, 'performance')
-        uses: treosh/lighthouse-ci-action@12
+        uses: treosh/lighthouse-ci-action@v12
         with:
           urls: |
             http://127.0.0.1:8080/
