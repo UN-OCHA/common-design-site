@@ -1,4 +1,4 @@
-FROM public.ecr.aws/unocha/php-k8s:8.3-stable as builder
+FROM public.ecr.aws/unocha/php-k8s:8.4-stable AS builder
 COPY . /srv/www
 WORKDIR /srv/www
 # Clean up previous composer installation and run new one.
@@ -10,7 +10,7 @@ RUN rm -rf ./vendor && \
 # Copy settings to default site location.
 RUN cp -a docker/settings.php docker/services.yml html/sites/default
 
-FROM public.ecr.aws/unocha/php-k8s:8.3-stable
+FROM public.ecr.aws/unocha/php-k8s:8.4-stable
 
 ARG VCS_REF
 ARG VCS_URL
